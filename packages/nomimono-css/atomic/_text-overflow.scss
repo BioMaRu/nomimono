@@ -1,0 +1,9 @@
+.#{$atom-prefix}tovf-c   { text-overflow: clip !important; }
+.#{$atom-prefix}tovf-els { text-overflow: ellipsis !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}tovf-c-#{$breakpointName}   { text-overflow: clip !important; }
+		.#{$atom-prefix}tovf-els-#{$breakpointName} { text-overflow: ellipsis !important; }
+	};
+};

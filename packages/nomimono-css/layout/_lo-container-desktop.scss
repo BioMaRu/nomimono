@@ -1,0 +1,10 @@
+.lo-container-desktop {
+	display: grid;
+	width: 100%;
+	grid-template-columns: minmax(1rem, 1fr) minmax(calc(var(--breakpoint-lg) - 4rem), calc(var(--breakpoint-lg) - 4rem)) minmax(1rem, 1fr);
+	grid-template-rows: auto;
+
+	> * {
+		grid-column: 2 / 3;
+	}
+}

@@ -1,0 +1,39 @@
+.lo-1-11 { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 11fr; }
+.lo-2-10 { display: grid; min-width: 0; min-height: 0; grid-template-columns: 2fr 10fr; }
+.lo-3-9  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 3fr 9fr; }
+.lo-4-8  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 4fr 8fr; }
+.lo-5-7  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 5fr 7fr; }
+.lo-7-5  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 7fr 5fr; }
+.lo-8-4  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 8fr 4fr; }
+.lo-9-3  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 9fr 3fr; }
+.lo-10-2 { display: grid; min-width: 0; min-height: 0; grid-template-columns: 10fr 2fr; }
+.lo-11-1 { display: grid; min-width: 0; min-height: 0; grid-template-columns: 11fr 1fr; }
+
+.lo-1  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+.lo-2  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+.lo-3  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr; }
+.lo-4  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr; }
+.lo-6  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr; }
+.lo-12 { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.lo-1-11-#{$breakpointName} { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 11fr; }
+		.lo-2-10-#{$breakpointName} { display: grid; min-width: 0; min-height: 0; grid-template-columns: 2fr 10fr; }
+		.lo-3-9-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 3fr 9fr; }
+		.lo-4-8-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 4fr 8fr; }
+		.lo-5-7-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 5fr 7fr; }
+		.lo-7-5-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 7fr 5fr; }
+		.lo-8-4-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 8fr 4fr; }
+		.lo-9-3-#{$breakpointName}  { display: grid; min-width: 0; min-height: 0; grid-template-columns: 9fr 3fr; }
+		.lo-10-2-#{$breakpointName} { display: grid; min-width: 0; min-height: 0; grid-template-columns: 10fr 2fr; }
+		.lo-11-1-#{$breakpointName} { display: grid; min-width: 0; min-height: 0; grid-template-columns: 11fr 1fr; }
+
+		.lo-1-#{$breakpointName}    { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+		.lo-2-#{$breakpointName}    { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
+		.lo-3-#{$breakpointName}    { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr 1fr; }
+		.lo-4-#{$breakpointName}    { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr 1fr; }
+		.lo-6-#{$breakpointName}    { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr 1fr; }
+		.lo-12-#{$breakpointName}   { display: grid; min-width: 0; min-height: 0; grid-template-columns: 1fr; }
+	}
+};

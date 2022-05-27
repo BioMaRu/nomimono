@@ -1,0 +1,7 @@
+.#{$atom-prefix}bsd-n { box-shadow: none !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}bsd-n-#{$breakpointName} { box-shadow: none !important; }
+	};
+};

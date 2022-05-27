@@ -1,0 +1,23 @@
+@each $key, $value in $spacings {
+	.#{$atom-prefix}bdw-#{$key} { border-width: #{$value} !important; border-style: solid;}
+	.#{$atom-prefix}bdlw-#{$key} { border-left-width: #{$value} !important; border-left-style: solid; }
+	.#{$atom-prefix}bdrw-#{$key} { border-right-width: #{$value} !important; border-right-style: solid; }
+	.#{$atom-prefix}bdtw-#{$key} { border-top-width: #{$value} !important; border-top-style: solid; }
+	.#{$atom-prefix}bdbtw-#{$key} { border-bottom-width: #{$value} !important; border-bottom-style: solid; }
+	.#{$atom-prefix}bdvw-#{$key} { border-top-width: #{$value} !important; border-bottom-width: #{$value} !important; border-top-style: solid; border-bottom-style: solid; }
+	.#{$atom-prefix}bdhw-#{$key} { border-left-width: #{$value} !important; border-right-width: #{$value} !important; border-right-style: solid; border-left-style: solid; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $radiuses {
+			.#{$atom-prefix}bdw-#{$key}-#{$breakpointName} { border-width: #{$value} !important; border-style: solid; }
+			.#{$atom-prefix}bdlw-#{$key}-#{$breakpointName} { border-left-width: #{$value} !important; border-left-style: solid; }
+			.#{$atom-prefix}bdrw-#{$key}-#{$breakpointName} { border-right-width: #{$value} !important; border-right-style: solid; }
+			.#{$atom-prefix}bdtw-#{$key}-#{$breakpointName} { border-top-width: #{$value} !important; border-top-style: solid; }
+			.#{$atom-prefix}bdbtw-#{$key}-#{$breakpointName} { border-bottom-width: #{$value} !important; border-bottom-style: solid; }
+			.#{$atom-prefix}bdvw-#{$key}-#{$breakpointName} { border-top-width: #{$value} !important; border-bottom-width: #{$value} !important; border-top-style: solid; border-bottom-style: solid; }
+			.#{$atom-prefix}bdhw-#{$key}-#{$breakpointName} { border-left-width: #{$value} !important; border-right-width: #{$value} !important; border-right-style: solid; border-left-style: solid; }
+		};
+	};
+};

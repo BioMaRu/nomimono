@@ -1,0 +1,13 @@
+.#{$atom-prefix}pst-stt { position: static !important; }
+.#{$atom-prefix}pst-rlt { position: relative !important; }
+.#{$atom-prefix}pst-asl { position: absolute !important; }
+.#{$atom-prefix}pst-f   { position: fixed !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}pst-stt-#{$breakpointName} { position: static !important; }
+		.#{$atom-prefix}pst-rlt-#{$breakpointName} { position: relative !important; }
+		.#{$atom-prefix}pst-asl-#{$breakpointName} { position: absolute !important; }
+		.#{$atom-prefix}pst-f-#{$breakpointName}   { position: fixed !important; }
+	};
+};

@@ -1,0 +1,11 @@
+.#{$atom-prefix}f-1 { flex: 1 !important; }
+.#{$atom-prefix}f-n { flex: none !important; }
+.#{$atom-prefix}f-at { flex: auto !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}f-1-#{$breakpointName} { flex: 1 !important; }
+		.#{$atom-prefix}f-n-#{$breakpointName} { flex: none !important; }
+		.#{$atom-prefix}f-at-#{$breakpointName} { flex: auto !important; }
+	};
+};

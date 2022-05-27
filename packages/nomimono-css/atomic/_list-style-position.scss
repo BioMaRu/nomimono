@@ -1,0 +1,9 @@
+.#{$atom-prefix}lstpst-is { list-style-position: inside !important }
+.#{$atom-prefix}lstpst-os { list-style-position: outside !important }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}lstpst-is-#{$breakpointName} { list-style-position: inside !important }
+		.#{$atom-prefix}lstpst-os-#{$breakpointName} { list-style-position: outside !important }
+	};
+};

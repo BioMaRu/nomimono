@@ -1,0 +1,19 @@
+.#{$atom-prefix}od-0  { order: 0 !important; }
+.#{$atom-prefix}od-1  { order: 1 !important; }
+.#{$atom-prefix}od-2  { order: 2 !important; }
+.#{$atom-prefix}od-3  { order: 3 !important; }
+.#{$atom-prefix}od--1 { order: -1 !important; }
+.#{$atom-prefix}od--2 { order: -2 !important; }
+.#{$atom-prefix}od--3 { order: -3 !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}od-0-#{$breakpointName}  { order: 0 !important; }
+		.#{$atom-prefix}od-1-#{$breakpointName}  { order: 1 !important; }
+		.#{$atom-prefix}od-2-#{$breakpointName}  { order: 2 !important; }
+		.#{$atom-prefix}od-3-#{$breakpointName}  { order: 3 !important; }
+		.#{$atom-prefix}od--1-#{$breakpointName} { order: -1 !important; }
+		.#{$atom-prefix}od--2-#{$breakpointName} { order: -2 !important; }
+		.#{$atom-prefix}od--3-#{$breakpointName} { order: -3 !important; }
+	};
+};

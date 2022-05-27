@@ -1,0 +1,17 @@
+.#{$atom-prefix}alit-st  { align-items: start !important; }
+.#{$atom-prefix}alit-e   { align-items: end !important; }
+.#{$atom-prefix}alit-ct  { align-items: center !important; }
+.#{$atom-prefix}alit-str { align-items: stretch !important; }
+.#{$atom-prefix}alit-fst { align-items: flex-start !important; }
+.#{$atom-prefix}alit-fe  { align-items: flex-end !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}alit-st-#{$breakpointName}  { align-items: start !important; }
+		.#{$atom-prefix}alit-e-#{$breakpointName}   { align-items: end !important; }
+		.#{$atom-prefix}alit-ct-#{$breakpointName}  { align-items: center !important; }
+		.#{$atom-prefix}alit-str-#{$breakpointName} { align-items: stretch !important; }
+		.#{$atom-prefix}alit-fst-#{$breakpointName} { align-items: flex-start !important; }
+		.#{$atom-prefix}alit-fe-#{$breakpointName}  { align-items: flex-end !important; }
+	};
+};

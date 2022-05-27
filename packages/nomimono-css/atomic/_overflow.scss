@@ -1,0 +1,29 @@
+.#{$atom-prefix}ovf-vsb  { overflow: visible !important; }
+.#{$atom-prefix}ovf-at   { overflow: auto !important; }
+.#{$atom-prefix}ovf-hd   { overflow: hidden !important; }
+.#{$atom-prefix}ovf-sc   { overflow: scroll !important; }
+.#{$atom-prefix}ovfx-vsb { overflow-x: visible !important; }
+.#{$atom-prefix}ovfx-at  { overflow-x: auto !important; }
+.#{$atom-prefix}ovfx-hd  { overflow-x: hidden !important; }
+.#{$atom-prefix}ovfx-sc  { overflow-x: scroll !important; }
+.#{$atom-prefix}ovfy-vsb { overflow-y: visible !important; }
+.#{$atom-prefix}ovfy-at  { overflow-y: auto !important; }
+.#{$atom-prefix}ovfy-hd  { overflow-y: hidden !important; }
+.#{$atom-prefix}ovfy-sc  { overflow-y: scroll !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ovf-vsb-#{$breakpointName}  { overflow: visible !important; }
+		.#{$atom-prefix}ovf-at-#{$breakpointName}   { overflow: auto !important; }
+		.#{$atom-prefix}ovf-hd-#{$breakpointName}   { overflow: hidden !important; }
+		.#{$atom-prefix}ovf-sc-#{$breakpointName}   { overflow: scroll !important; }
+		.#{$atom-prefix}ovfx-vsb-#{$breakpointName} { overflow-x: visible !important; }
+		.#{$atom-prefix}ovfx-at-#{$breakpointName}  { overflow-x: auto !important; }
+		.#{$atom-prefix}ovfx-hd-#{$breakpointName}  { overflow-x: hidden !important; }
+		.#{$atom-prefix}ovfx-sc-#{$breakpointName}  { overflow-x: scroll !important; }
+		.#{$atom-prefix}ovfy-vsb-#{$breakpointName} { overflow-y: visible !important; }
+		.#{$atom-prefix}ovfy-at-#{$breakpointName}  { overflow-y: auto !important; }
+		.#{$atom-prefix}ovfy-hd-#{$breakpointName}  { overflow-y: hidden !important; }
+		.#{$atom-prefix}ovfy-sc-#{$breakpointName}  { overflow-y: scroll !important; }
+	};
+};

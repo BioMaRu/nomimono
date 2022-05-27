@@ -1,0 +1,27 @@
+.#{$atom-prefix}opct-100 { opacity: 1 !important; }
+.#{$atom-prefix}opct-90  { opacity: .9 !important; }
+.#{$atom-prefix}opct-80  { opacity: .8 !important; }
+.#{$atom-prefix}opct-70  { opacity: .7 !important; }
+.#{$atom-prefix}opct-60  { opacity: .6 !important; }
+.#{$atom-prefix}opct-50  { opacity: .5 !important; }
+.#{$atom-prefix}opct-40  { opacity: .4 !important; }
+.#{$atom-prefix}opct-30  { opacity: .3 !important; }
+.#{$atom-prefix}opct-20  { opacity: .2 !important; }
+.#{$atom-prefix}opct-10  { opacity: .1 !important; }
+.#{$atom-prefix}opct-0   { opacity: 0 !important;  }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}opct-100-#{$breakpointName} { opacity: 1 !important; }
+		.#{$atom-prefix}opct-90-#{$breakpointName}  { opacity: .9 !important; }
+		.#{$atom-prefix}opct-80-#{$breakpointName}  { opacity: .8 !important; }
+		.#{$atom-prefix}opct-70-#{$breakpointName}  { opacity: .7 !important; }
+		.#{$atom-prefix}opct-60-#{$breakpointName}  { opacity: .6 !important; }
+		.#{$atom-prefix}opct-50-#{$breakpointName}  { opacity: .5 !important; }
+		.#{$atom-prefix}opct-40-#{$breakpointName}  { opacity: .4 !important; }
+		.#{$atom-prefix}opct-30-#{$breakpointName}  { opacity: .3 !important; }
+		.#{$atom-prefix}opct-20-#{$breakpointName}  { opacity: .2 !important; }
+		.#{$atom-prefix}opct-10-#{$breakpointName}  { opacity: .1 !important; }
+		.#{$atom-prefix}opct-0-#{$breakpointName}   { opacity: 0 !important;  }
+	};
+};

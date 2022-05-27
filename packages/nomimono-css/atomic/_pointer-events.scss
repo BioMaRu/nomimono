@@ -1,0 +1,9 @@
+.#{$atom-prefix}ptev-at { pointer-events: auto !important; }
+.#{$atom-prefix}ptev-n { pointer-events: none !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ptev-at-#{$breakpointName} { pointer-events: auto !important; }
+		.#{$atom-prefix}ptev-n-#{$breakpointName} { pointer-events: none !important; }
+	};
+};

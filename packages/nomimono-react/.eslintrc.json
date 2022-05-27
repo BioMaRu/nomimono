@@ -1,0 +1,30 @@
+{
+	"extends": [
+		"plugin:@nrwl/nx/react",
+		"../../.eslintrc.json",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"standard",
+		"prettier"
+	],
+	"ignorePatterns": ["!**/*"],
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+			"rules": {}
+		},
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {
+				"dot-notation": "off",
+				"react/react-in-jsx-scope": "off",
+				"@typescript-eslint/no-empty-interface": "off",
+				"@typescript-eslint/ban-types": "off"
+			}
+		},
+		{
+			"files": ["*.js", "*.jsx"],
+			"rules": {}
+		}
+	]
+}

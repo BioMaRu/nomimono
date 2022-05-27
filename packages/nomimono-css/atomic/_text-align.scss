@@ -1,0 +1,13 @@
+.#{$atom-prefix}tal-l   { text-align: left !important; }
+.#{$atom-prefix}tal-r   { text-align: right !important; }
+.#{$atom-prefix}tal-ct  { text-align: center !important; }
+.#{$atom-prefix}tal-jtf { text-align: justify !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}tal-l-#{$breakpointName}   { text-align: left !important; }
+		.#{$atom-prefix}tal-r-#{$breakpointName}   { text-align: right !important; }
+		.#{$atom-prefix}tal-ct-#{$breakpointName}  { text-align: center !important; }
+		.#{$atom-prefix}tal-jtf-#{$breakpointName} { text-align: justify !important; }
+	};
+};

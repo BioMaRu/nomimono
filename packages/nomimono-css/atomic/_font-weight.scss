@@ -1,0 +1,11 @@
+@each $key, $value in $font-weights {
+	.#{$atom-prefix}fw-#{$key} { font-weight: #{$value} !important; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $font-weights {
+			.#{$atom-prefix}fw-#{$key}-#{$breakpointName} { font-weight: #{$value} !important; }
+		};
+	};
+};

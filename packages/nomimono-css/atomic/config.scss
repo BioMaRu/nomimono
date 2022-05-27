@@ -1,0 +1,166 @@
+$atom-prefix: '_';
+
+/*
+ * Color
+ *********************************************/
+ $colors: (
+	'primary-100': var(--color-primary-100),
+	'primary-200': var(--color-primary-200),
+	'primary-300': var(--color-primary-300),
+	'primary-400': var(--color-primary-400),
+	'primary-500': var(--color-primary-500),
+	'primary-600': var(--color-primary-600),
+	'primary-700': var(--color-primary-700),
+	'primary-800': var(--color-primary-800),
+	'primary-900': var(--color-primary-900),
+
+	'gray-100': var(--color-gray-100),
+	'gray-200': var(--color-gray-200),
+	'gray-300': var(--color-gray-300),
+	'gray-400': var(--color-gray-400),
+	'gray-500': var(--color-gray-500),
+	'gray-600': var(--color-gray-600),
+	'gray-700': var(--color-gray-700),
+	'gray-800': var(--color-gray-800),
+	'gray-900': var(--color-gray-900),
+
+	'positive-100': var(--color-positive-100),
+	'positive-200': var(--color-positive-200),
+	'positive-300': var(--color-positive-300),
+	'positive-400': var(--color-positive-400),
+	'positive-500': var(--color-positive-500),
+	'positive-600': var(--color-positive-600),
+	'positive-700': var(--color-positive-700),
+	'positive-800': var(--color-positive-800),
+	'positive-900': var(--color-positive-900),
+
+	'negative-100': var(--color-negative-100),
+	'negative-200': var(--color-negative-200),
+	'negative-300': var(--color-negative-300),
+	'negative-400': var(--color-negative-400),
+	'negative-500': var(--color-negative-500),
+	'negative-600': var(--color-negative-600),
+	'negative-700': var(--color-negative-700),
+	'negative-800': var(--color-negative-800),
+	'negative-900': var(--color-negative-900),
+
+	'info-100': var(--color-info-100),
+	'info-200': var(--color-info-200),
+	'info-300': var(--color-info-300),
+	'info-400': var(--color-info-400),
+	'info-500': var(--color-info-500),
+	'info-600': var(--color-info-600),
+	'info-700': var(--color-info-700),
+	'info-800': var(--color-info-800),
+	'info-900': var(--color-info-900),
+
+	'warning-100': var(--color-warning-100),
+	'warning-200': var(--color-warning-200),
+	'warning-300': var(--color-warning-300),
+	'warning-400': var(--color-warning-400),
+	'warning-500': var(--color-warning-500),
+	'warning-600': var(--color-warning-600),
+	'warning-700': var(--color-warning-700),
+	'warning-800': var(--color-warning-800),
+	'warning-900': var(--color-warning-900),
+
+	'text-light-primary': var(--color-text-light-primary),
+	'text-light-secondary': var(--color-text-light-secondary),
+	'text-dark-primary': var(--color-text-dark-primary),
+	'text-dark-secondary': var(--color-text-dark-secondary),
+
+	'shader': var(--color-shader),
+
+	'tpr': transparent
+);
+
+$radiuses: (
+	'0px': 0px,
+	'1px': 1px,
+	'2px': 2px,
+	'3px': 3px,
+	'4px': 4px,
+	'8px': 8px,
+	'12px': 12px,
+	'16px': 16px,
+	'24px': 24px,
+	'32px': 32px,
+	'48px': 48px,
+	'64px': 64px,
+	'50pct': 50%,
+	'max': 9999px,
+	'at': auto
+);
+
+$spacings: (
+	'0px': 0px,
+	'1px': 1px,
+	'2px': 2px,
+	'4px': 4px,
+	'8px': 8px,
+	'12px': 12px,
+	'16px': 16px,
+	'24px': 24px,
+	'32px': 32px,
+	'48px': 48px,
+	'64px': 64px,
+	'128px': 128px,
+	'256px': 256px,
+	'320px': 320px,
+	'50pct': 50%,
+	'100pct': 100%,
+	'100vw': 100vw,
+	'100vh': 100vh,
+	'at': auto,
+	'us': unset,
+);
+
+$font-families: (
+	'primary': var(--font-family-primary),
+	'secondary': var(--font-family-secondary, --font-family-primary)
+);
+
+$font-sizes: (
+	'1200': var(--font-size-1200),
+	'1100': var(--font-size-1100),
+	'1000': var(--font-size-1000),
+	'900': var(--font-size-900),
+	'800': var(--font-size-800),
+	'700': var(--font-size-700),
+	'600': var(--font-size-600),
+	'500': var(--font-size-500),
+	'400': var(--font-size-400),
+	'300': var(--font-size-300),
+	'200': var(--font-size-200),
+	'100': var(--font-size-100)
+);
+
+$font-weights: (
+	'100': 100,
+	'200': 200,
+	'300': 300,
+	'400': 400,
+	'500': 500,
+	'600': 600,
+	'700': 700,
+	'800': 800,
+	'900': 900,
+);
+
+$line-heights: (
+	'100pct': 1,
+	'115pct': 1.15,
+	'125pct': 1.25,
+	'150pct': 1.50,
+	'165pct': 1.65,
+);
+
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
+
+$breakpoints: (
+	'sm': $sm,
+	'md': $md,
+	'lg': $lg
+);

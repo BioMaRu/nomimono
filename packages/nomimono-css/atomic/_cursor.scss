@@ -1,0 +1,17 @@
+.#{$atom-prefix}cs-pt  { cursor: pointer !important; }
+.#{$atom-prefix}cs-h   { cursor: help !important; }
+.#{$atom-prefix}cs-nal { cursor: not-allowed !important; }
+.#{$atom-prefix}cs-m   { cursor: move !important; }
+.#{$atom-prefix}cs-w   { cursor: wait !important; }
+.#{$atom-prefix}cs-at  { cursor: auto !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}cs-pt-#{$breakpointName}  { cursor: pointer !important; }
+		.#{$atom-prefix}cs-h-#{$breakpointName}   { cursor: help !important; }
+		.#{$atom-prefix}cs-nal-#{$breakpointName} { cursor: not-allowed !important; }
+		.#{$atom-prefix}cs-m-#{$breakpointName}   { cursor: move !important; }
+		.#{$atom-prefix}cs-w-#{$breakpointName}   { cursor: wait !important; }
+		.#{$atom-prefix}cs-at-#{$breakpointName}  { cursor: auto !important; }
+	};
+};

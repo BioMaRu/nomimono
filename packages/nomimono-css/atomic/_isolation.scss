@@ -1,0 +1,9 @@
+.#{$atom-prefix}islt-at  { isolation: auto !important; }
+.#{$atom-prefix}islt-isl { isolation: isolate !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}islt-at-#{$breakpointName}  { isolation: auto !important; }
+		.#{$atom-prefix}islt-isl-#{$breakpointName} { isolation: isolate !important; }
+	};
+};

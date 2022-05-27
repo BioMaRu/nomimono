@@ -1,0 +1,9 @@
+.#{$atom-prefix}bfvsblt-hd   { backface-visibility: hidden !important; }
+.#{$atom-prefix}bfvsblt-vsb  { backface-visibility: visible !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}bfvsblt-hd-#{$breakpointName}   { backface-visibility: hidden !important; }
+		.#{$atom-prefix}bfvsblt-vsb-#{$breakpointName}  { backface-visibility: visible !important; }
+	};
+};

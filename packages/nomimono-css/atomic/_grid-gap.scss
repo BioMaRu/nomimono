@@ -1,0 +1,15 @@
+@each $key, $value in $spacings {
+	.#{$atom-prefix}gg-#{$key} { grid-gap: #{$value} !important; }
+	.#{$atom-prefix}grg-#{$key} { grid-row-gap: #{$value} !important; }
+	.#{$atom-prefix}gclg-#{$key} { grid-column-gap: #{$value} !important; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $spacings {
+			.#{$atom-prefix}gg-#{$key}-#{$breakpointName} { grid-gap: #{$value} !important; }
+			.#{$atom-prefix}grg-#{$key}-#{$breakpointName} { grid-row-gap: #{$value} !important; }
+			.#{$atom-prefix}gclg-#{$key}-#{$breakpointName} { grid-column-gap: #{$value} !important; }
+		};
+	};
+};

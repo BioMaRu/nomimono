@@ -1,0 +1,47 @@
+@each $key, $value in $colors {
+	.#{$atom-prefix}bdcl-#{$key} { border-color: #{$value} !important; }
+	.#{$atom-prefix}bdtcl-#{$key} { border-top-color: #{$value} !important; }
+	.#{$atom-prefix}bdbtcl-#{$key} { border-bottom-color: #{$value} !important; }
+	.#{$atom-prefix}bdlcl-#{$key} { border-left-color: #{$value} !important; }
+	.#{$atom-prefix}bdrcl-#{$key} { border-right-color: #{$value} !important; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $colors {
+			.#{$atom-prefix}bdcl-#{$key}-#{$breakpointName} { border-color: #{$value} !important; }
+			.#{$atom-prefix}bdtcl-#{$key}-#{$breakpointName} { border-top-color: #{$value} !important; }
+			.#{$atom-prefix}bdbtcl-#{$key}-#{$breakpointName} { border-bottom-color: #{$value} !important; }
+			.#{$atom-prefix}bdlcl-#{$key}-#{$breakpointName} { border-left-color: #{$value} !important; }
+			.#{$atom-prefix}bdrcl-#{$key}-#{$breakpointName} { border-right-color: #{$value} !important; }
+		};
+	};
+};
+
+@each $key, $value in $colors {
+	.#{$atom-prefix}bdcl-#{$key}-hover {
+		&:hover {
+			border-color: #{$value} !important;
+		}
+	}
+	.#{$atom-prefix}bdtcl-#{$key}-hover {
+		&:hover {
+			border-top-color: #{$value} !important;
+		}
+	}
+	.#{$atom-prefix}bdbtcl-#{$key}-hover {
+		&:hover {
+			border-bottom-color: #{$value} !important;
+		}
+	}
+	.#{$atom-prefix}bdlcl-#{$key}-hover {
+		&:hover {
+			border-left-color: #{$value} !important;
+		}
+	}
+	.#{$atom-prefix}bdrcl-#{$key}-hover {
+		&:hover {
+			border-right-color: #{$value} !important;
+		}
+	}
+};

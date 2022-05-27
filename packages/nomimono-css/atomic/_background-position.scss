@@ -1,0 +1,23 @@
+.#{$atom-prefix}bgpst-t   { background-position: top !important; }
+.#{$atom-prefix}bgpst-tr  { background-position: top right !important; }
+.#{$atom-prefix}bgpst-tl  { background-position: top left !important; }
+.#{$atom-prefix}bgpst-bt  { background-position: bottom !important; }
+.#{$atom-prefix}bgpst-btr { background-position: bottom right !important; }
+.#{$atom-prefix}bgpst-btl { background-position: bottom left !important; }
+.#{$atom-prefix}bgpst-ct  { background-position: center !important; }
+.#{$atom-prefix}bgpst-ctr { background-position: center right !important; }
+.#{$atom-prefix}bgpst-ctl { background-position: center left!important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}bgpst-t-#{$breakpointName}   { background-position: top !important; }
+		.#{$atom-prefix}bgpst-tr-#{$breakpointName}  { background-position: top right !important; }
+		.#{$atom-prefix}bgpst-tl-#{$breakpointName}  { background-position: top left !important; }
+		.#{$atom-prefix}bgpst-bt-#{$breakpointName}  { background-position: bottom !important; }
+		.#{$atom-prefix}bgpst-btr-#{$breakpointName} { background-position: bottom right !important; }
+		.#{$atom-prefix}bgpst-btl-#{$breakpointName} { background-position: bottom left !important; }
+		.#{$atom-prefix}bgpst-ct-#{$breakpointName}  { background-position: center !important; }
+		.#{$atom-prefix}bgpst-ctr-#{$breakpointName} { background-position: center right !important; }
+		.#{$atom-prefix}bgpst-ctl-#{$breakpointName} { background-position: center left!important; }
+	};
+};

@@ -1,0 +1,13 @@
+.#{$atom-prefix}bgrp-rp  { background-repeat: repeat !important; }
+.#{$atom-prefix}bgrp-rpx { background-repeat: repeat-x !important; }
+.#{$atom-prefix}bgrp-rpy { background-repeat: repeat-y !important; }
+.#{$atom-prefix}bgrp-nrp { background-repeat: no-repeat !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}bgrp-rp-#{$breakpointName}  { background-repeat: repeat !important; }
+		.#{$atom-prefix}bgrp-rpx-#{$breakpointName} { background-repeat: repeat-x !important; }
+		.#{$atom-prefix}bgrp-rpy-#{$breakpointName} { background-repeat: repeat-y !important; }
+		.#{$atom-prefix}bgrp-nrp-#{$breakpointName} { background-repeat: no-repeat !important; }
+	};
+};

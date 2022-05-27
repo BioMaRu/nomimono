@@ -1,0 +1,11 @@
+{
+  "name": "@nomimono/nomimono-css",
+  "version": "0.0.0",
+  "keywords": [
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "BioMaRu <Bio.Color.Palette@gmail.com>"
+}

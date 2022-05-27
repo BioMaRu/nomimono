@@ -1,0 +1,13 @@
+.#{$atom-prefix}fdrt-r { flex-direction: row !important; }
+.#{$atom-prefix}fdrt-cl { flex-direction: column !important; }
+.#{$atom-prefix}fdrt-rrv { flex-direction: row-reverse !important; }
+.#{$atom-prefix}fdrt-clrv { flex-direction: column-reverse !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}fdrt-r-#{$breakpointName} { flex-direction: row !important; }
+		.#{$atom-prefix}fdrt-cl-#{$breakpointName} { flex-direction: column !important; }
+		.#{$atom-prefix}fdrt-rrv-#{$breakpointName} { flex-direction: row-reverse !important; }
+		.#{$atom-prefix}fdrt-clrv-#{$breakpointName} { flex-direction: column-reverse !important; }
+	};
+};

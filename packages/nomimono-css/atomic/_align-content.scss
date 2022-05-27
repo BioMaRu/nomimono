@@ -1,0 +1,27 @@
+.#{$atom-prefix}alct-st    { align-content: start !important; }
+.#{$atom-prefix}alct-e     { align-content: end !important; }
+.#{$atom-prefix}alct-l     { align-content: left !important; }
+.#{$atom-prefix}alct-r     { align-content: right !important; }
+.#{$atom-prefix}alct-ct    { align-content: center !important; }
+.#{$atom-prefix}alct-str   { align-content: stretch !important; }
+.#{$atom-prefix}alct-fst   { align-content: flex-start !important; }
+.#{$atom-prefix}alct-fe    { align-content: flex-end !important; }
+.#{$atom-prefix}alct-spbtw { align-content: space-between !important; }
+.#{$atom-prefix}alct-spar  { align-content: space-around !important; }
+.#{$atom-prefix}alct-spevl { align-content: space-evenly !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}alct-st-#{$breakpointName}    { align-content: start !important; }
+		.#{$atom-prefix}alct-e-#{$breakpointName}     { align-content: end !important; }
+		.#{$atom-prefix}alct-l-#{$breakpointName}     { align-content: left !important; }
+		.#{$atom-prefix}alct-r-#{$breakpointName}     { align-content: right !important; }
+		.#{$atom-prefix}alct-ct-#{$breakpointName}    { align-content: center !important; }
+		.#{$atom-prefix}alct-str-#{$breakpointName}   { align-content: stretch !important; }
+		.#{$atom-prefix}alct-fst-#{$breakpointName}   { align-content: flex-start !important; }
+		.#{$atom-prefix}alct-fe-#{$breakpointName}    { align-content: flex-end !important; }
+		.#{$atom-prefix}alct-spbtw-#{$breakpointName} { align-content: space-between !important; }
+		.#{$atom-prefix}alct-spar-#{$breakpointName}  { align-content: space-around !important; }
+		.#{$atom-prefix}alct-spevl-#{$breakpointName} { align-content: space-evenly !important; }
+	};
+};

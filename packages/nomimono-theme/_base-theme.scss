@@ -1,0 +1,97 @@
+/*
+ * Color
+ *********************************************/
+:root {
+	--color-primary-100: hsl(217, 85%, 95%);
+	--color-primary-200: hsl(217, 85%, 92%);
+	--color-primary-300: hsl(217, 85%, 87%);
+	--color-primary-400: hsl(217, 77%, 61%);
+	--color-primary-500: hsl(217, 77%, 56%);
+	--color-primary-600: hsl(217, 77%, 51%);
+	--color-primary-700: hsl(217, 67%, 36%);
+	--color-primary-800: hsl(217, 67%, 30%);
+	--color-primary-900: hsl(217, 67%, 25%);
+
+	--color-gray-100: hsl(216, 15%, 97%);
+	--color-gray-200: hsl(216, 15%, 92%);
+	--color-gray-300: hsl(216, 15%, 86%);
+	--color-gray-400: hsl(216, 15%, 66%);
+	--color-gray-500: hsl(216, 15%, 59%);
+	--color-gray-600: hsl(216, 15%, 52%);
+	--color-gray-700: hsl(216, 15%, 33%);
+	--color-gray-800: hsl(216, 15%, 26%);
+	--color-gray-900: hsl(216, 15%, 20%);
+
+	--color-positive-100: hsl(168, 75%, 95%);
+	--color-positive-200: hsl(168, 75%, 90%);
+	--color-positive-300: hsl(168, 75%, 83%);
+	--color-positive-400: hsl(168, 76%, 48%);
+	--color-positive-500: hsl(168, 76%, 45%);
+	--color-positive-600: hsl(168, 76%, 41%);
+	--color-positive-700: hsl(168, 66%, 25%);
+	--color-positive-800: hsl(168, 66%, 20%);
+	--color-positive-900: hsl(163, 80%, 15%);
+
+	--color-negative-100: hsl(8, 85%, 97%);
+	--color-negative-200: hsl(8, 85%, 93%);
+	--color-negative-300: hsl(8, 85%, 89%);
+	--color-negative-400: hsl(8, 78%, 67%);
+	--color-negative-500: hsl(8, 78%, 61%);
+	--color-negative-600: hsl(8, 78%, 55%);
+	--color-negative-700: hsl(8, 68%, 38%);
+	--color-negative-800: hsl(8, 68%, 34%);
+	--color-negative-900: hsl(8, 68%, 30%);
+
+	--color-info-100: hsl(283, 90%, 96%);
+	--color-info-200: hsl(283, 90%, 92%);
+	--color-info-300: hsl(283, 90%, 88%);
+	--color-info-400: hsl(283, 40%, 55%);
+	--color-info-500: hsl(283, 40%, 50%);
+	--color-info-600: hsl(283, 40%, 45%);
+	--color-info-700: hsl(283, 66%, 28%);
+	--color-info-800: hsl(283, 66%, 25%);
+	--color-info-900: hsl(283, 66%, 22%);
+
+	--color-warning-100: hsl(45, 80%, 95%);
+	--color-warning-200: hsl(45, 80%, 90%);
+	--color-warning-300: hsl(45, 80%, 85%);
+	--color-warning-400: hsl(45, 90%, 55%);
+	--color-warning-500: hsl(45, 90%, 48%);
+	--color-warning-600: hsl(45, 90%, 45%);
+	--color-warning-700: hsl(45, 90%, 31%);
+	--color-warning-800: hsl(45, 90%, 27%);
+	--color-warning-900: hsl(45, 90%, 27%);
+
+	--color-line-400: hsla(216, 26%, 87%, 0.95); // suitable for line, border color
+	--color-line-500: hsla(221, 17%, 78%, 0.95); // suitable for line, border hover state color
+
+	--color-text-light-primary: hsla(0, 0%, 100%, .95);
+	--color-text-light-secondary: rgba(226, 226, 226, 0.95);
+	--color-text-dark-primary: hsla(215, 15%, 28%, 0.96);
+	--color-text-dark-secondary: hsla(220, 10%, 47%, 0.95);
+
+	--color-shader: rgba(0, 0, 0 , 0.12);
+}
+
+/*
+ * Font family
+ *********************************************/
+:root {
+	--font-family-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--font-family-secondary: 'Kanit', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+	--font-size-1200: 3rem;    // 48px
+	--font-size-1100: 2.5rem;  // 40px
+	--font-size-1000: 2.25rem; // 36px
+	--font-size-900: 2rem;     // 32px
+	--font-size-800: 1.75rem;  // 28px
+	--font-size-700: 1.5rem;   // 24px
+	--font-size-600: 1.25rem;  // 20px
+	--font-size-500: 1.125rem; // 18px
+	--font-size-400: 1rem;     // 16px
+	--font-size-300: 0.875rem; // 14px
+	--font-size-200: 0.75rem;  // 12px
+	--font-size-100: 0.6875rem; // 11px
+}

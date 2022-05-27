@@ -1,0 +1,19 @@
+@each $key, $value in $colors {
+	.#{$atom-prefix}bgcl-#{$key} { background-color: #{$value} !important; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $colors {
+			.#{$atom-prefix}bgcl-#{$key}-#{$breakpointName} { background-color: #{$value} !important; }
+		};
+	};
+};
+
+@each $key, $value in $colors {
+	.#{$atom-prefix}bgcl-#{$key}-hover {
+		&:hover {
+			background-color: #{$value} !important;
+		}
+	}
+};

@@ -1,0 +1,11 @@
+@each $key, $value in $spacings {
+	.#{$atom-prefix}mnw-#{$key} { min-width: #{$value} !important; }
+};
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		@each $key, $value in $spacings {
+			.#{$atom-prefix}mnw-#{$key}-#{$breakpointName} { min-width: #{$value} !important; }
+		};
+	};
+};

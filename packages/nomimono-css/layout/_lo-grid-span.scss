@@ -1,0 +1,6 @@
+.lo-grid-span-horizontal {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 1rem;
+	justify-content: start;
+}

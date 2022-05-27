@@ -1,0 +1,23 @@
+.#{$atom-prefix}dp-b   { display: block !important; }
+.#{$atom-prefix}dp-f   { display: flex !important; }
+.#{$atom-prefix}dp-g   { display: grid !important; }
+.#{$atom-prefix}dp-il  { display: inline !important; }
+.#{$atom-prefix}dp-ilb { display: inline-block !important; }
+.#{$atom-prefix}dp-ilf { display: inline-flex !important; }
+.#{$atom-prefix}dp-tb  { display: table !important; }
+.#{$atom-prefix}dp-tbc { display: table-cell !important; }
+.#{$atom-prefix}dp-n   { display: none !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}dp-b-#{$breakpointName}   { display: block !important; }
+		.#{$atom-prefix}dp-f-#{$breakpointName}   { display: flex !important; }
+		.#{$atom-prefix}dp-g-#{$breakpointName}   { display: grid !important; }
+		.#{$atom-prefix}dp-il-#{$breakpointName}  { display: inline !important; }
+		.#{$atom-prefix}dp-ilb-#{$breakpointName} { display: inline-block !important; }
+		.#{$atom-prefix}dp-ilf-#{$breakpointName} { display: inline-flex !important; }
+		.#{$atom-prefix}dp-tb-#{$breakpointName}  { display: table !important; }
+		.#{$atom-prefix}dp-tbc-#{$breakpointName} { display: table-cell !important; }
+		.#{$atom-prefix}dp-n-#{$breakpointName}   { display: none !important; }
+	};
+};

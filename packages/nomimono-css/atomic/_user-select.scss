@@ -1,0 +1,9 @@
+.#{$atom-prefix}ussl-n { user-select: none !important; }
+.#{$atom-prefix}ussl-t { user-select: text !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ussl-n-#{$breakpointName} { user-select: none !important; }
+		.#{$atom-prefix}ussl-t-#{$breakpointName} { user-select: text !important; }
+	};
+};

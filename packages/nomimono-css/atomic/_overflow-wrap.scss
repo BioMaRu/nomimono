@@ -1,0 +1,9 @@
+.#{$atom-prefix}ovfw-nm  { overflow-wrap: normal !important; }
+.#{$atom-prefix}ovfw-bw  { overflow-wrap: break-word !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ovfw-nm-#{$breakpointName}  { overflow-wrap: visible !important; }
+		.#{$atom-prefix}ovfw-bw-#{$breakpointName}  { overflow-wrap: break-word !important; }
+	};
+};

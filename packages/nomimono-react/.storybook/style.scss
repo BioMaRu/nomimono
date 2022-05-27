@@ -1,0 +1,29 @@
+.sbdocs-title {
+	display: none;
+}
+.sidebar-container * {
+	font-size: 105%;
+}
+
+.sidebar-container .sidebar-item[data-selected="true"],
+.sidebar-container .sidebar-item[data-selected="true"]:focus,
+.sidebar-container .sidebar-item[data-selected="true"]:hover {
+	background: linear-gradient(321deg, rgb(176, 236, 255) 0%, #0048ff 100%);
+}
+
+.os-content button:hover {
+	background: linear-gradient(321deg, rgb(202, 222, 255) 0%, rgb(165, 194, 255) 100%);
+
+	.sb-root-custom {
+		.sb-root-custom-label {
+			//color: white;
+		}
+	}
+}
+
+.sb-root-custom {
+	.sb-root-custom-label {
+		letter-spacing: 1.5px;
+		color: #193370;
+	}
+}

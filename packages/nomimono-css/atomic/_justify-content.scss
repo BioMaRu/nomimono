@@ -1,0 +1,23 @@
+.#{$atom-prefix}jtfct-st    { justify-content: start !important; }
+.#{$atom-prefix}jtfct-e     { justify-content: end !important; }
+.#{$atom-prefix}jtfct-ct    { justify-content: center !important; }
+.#{$atom-prefix}jtfct-str   { justify-content: stretch !important; }
+.#{$atom-prefix}jtfct-fst   { justify-content: flex-start !important; }
+.#{$atom-prefix}jtfct-fe    { justify-content: flex-end !important; }
+.#{$atom-prefix}jtfct-spbtw { justify-content: space-between !important; }
+.#{$atom-prefix}jtfct-spar  { justify-content: space-around !important; }
+.#{$atom-prefix}jtfct-spevl { justify-content: space-evenly !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}jtfct-st-#{$breakpointName}    { justify-content: start !important; }
+		.#{$atom-prefix}jtfct-e-#{$breakpointName}     { justify-content: end !important; }
+		.#{$atom-prefix}jtfct-ct-#{$breakpointName}    { justify-content: center !important; }
+		.#{$atom-prefix}jtfct-str-#{$breakpointName}   { justify-content: stretch !important; }
+		.#{$atom-prefix}jtfct-fst-#{$breakpointName}   { justify-content: flex-start !important; }
+		.#{$atom-prefix}jtfct-fe-#{$breakpointName}    { justify-content: flex-end !important; }
+		.#{$atom-prefix}jtfct-spbtw-#{$breakpointName} { justify-content: space-between !important; }
+		.#{$atom-prefix}jtfct-spar-#{$breakpointName}  { justify-content: space-around !important; }
+		.#{$atom-prefix}jtfct-spevl-#{$breakpointName} { justify-content: space-evenly !important; }
+	};
+};

@@ -1,0 +1,12 @@
+{
+  "name": "@nomimono/nomimono-react",
+  "version": "0.0.0",
+  "keywords": [
+    "react",
+    "components"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "BioMaRu <Bio.Color.Palette@gmail.com>"
+}

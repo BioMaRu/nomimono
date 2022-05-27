@@ -1,0 +1,18 @@
+// code will load into preview iframe
+
+@import '!style-loader!css-loader!sass-loader!../../packages/nomimono-theme/main.scss';
+@import '!style-loader!css-loader!sass-loader!../../packages/nomimono-css/atomic/all.scss';
+@import '!style-loader!css-loader!sass-loader!../../packages/nomimono-css/layout/all.scss';
+
+.sbdocs-title {
+	display: none !important;
+}
+
+#stories {
+	display: none !important;
+}
+
+.sbdocs.sbdocs-h3 {
+	font-size: 24px !important;
+	font-weight: 500 !important;
+}

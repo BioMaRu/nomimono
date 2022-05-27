@@ -1,0 +1,13 @@
+.#{$atom-prefix}ojf-cv { object-fit: cover !important; }
+.#{$atom-prefix}ojf-ct { object-fit: contain !important; }
+.#{$atom-prefix}ojf-f  { object-fit: fill !important; }
+.#{$atom-prefix}ojf-n  { object-fit: none !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ojf-cv-#{$breakpointName} { object-fit: cover !important; }
+		.#{$atom-prefix}ojf-ct-#{$breakpointName} { object-fit: contain !important; }
+		.#{$atom-prefix}ojf-f-#{$breakpointName}  { object-fit: fill !important; }
+		.#{$atom-prefix}ojf-n-#{$breakpointName}  { object-fit: none !important; }
+	};
+};

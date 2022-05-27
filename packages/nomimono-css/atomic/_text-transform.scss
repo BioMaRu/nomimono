@@ -1,0 +1,13 @@
+.#{$atom-prefix}ttf-cptl { text-transform: capitalize !important; }
+.#{$atom-prefix}ttf-lwc  { text-transform: lowercase !important; }
+.#{$atom-prefix}ttf-upc  { text-transform: uppercase !important; }
+.#{$atom-prefix}ttf-n    { text-transform: none !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}ttf-cptl-#{$breakpointName} { text-transform: capitalize !important; }
+		.#{$atom-prefix}ttf-lwc-#{$breakpointName}  { text-transform: lowercase !important; }
+		.#{$atom-prefix}ttf-upc-#{$breakpointName}  { text-transform: uppercase !important; }
+		.#{$atom-prefix}ttf-n-#{$breakpointName}    { text-transform: none !important; }
+	};
+};

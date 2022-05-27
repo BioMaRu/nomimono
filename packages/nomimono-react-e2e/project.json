@@ -1,0 +1,28 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "packages/nomimono-react-e2e/src",
+	"projectType": "application",
+	"targets": {
+		"e2e": {
+			"executor": "@nrwl/cypress:cypress",
+			"options": {
+				"cypressConfig": "packages/nomimono-react-e2e/cypress.json",
+				"devServerTarget": "nomimono-react:storybook"
+			},
+			"configurations": {
+				"ci": {
+					"devServerTarget": "nomimono-react:storybook:ci"
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["packages/nomimono-react-e2e/**/*.{js,ts}"]
+			}
+		}
+	},
+	"tags": [],
+	"implicitDependencies": ["nomimono-react"]
+}

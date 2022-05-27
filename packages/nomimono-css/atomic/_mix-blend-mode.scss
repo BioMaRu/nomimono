@@ -1,0 +1,13 @@
+.#{$atom-prefix}mbm-nm  { mix-blend-mode: normal !important; }
+.#{$atom-prefix}mbm-mtp { mix-blend-mode: multiply !important; }
+.#{$atom-prefix}mbm-sc  { mix-blend-mode: screen !important; }
+.#{$atom-prefix}mbm-ovl { mix-blend-mode: overlay !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}mbm-nm-#{$breakpointName}  { mix-blend-mode: normal !important; }
+		.#{$atom-prefix}mbm-mtp-#{$breakpointName} { mix-blend-mode: multiply !important; }
+		.#{$atom-prefix}mbm-sc-#{$breakpointName}  { mix-blend-mode: screen !important; }
+		.#{$atom-prefix}mbm-ovl-#{$breakpointName} { mix-blend-mode: overlay !important; }
+	};
+};

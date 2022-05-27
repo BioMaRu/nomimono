@@ -1,0 +1,13 @@
+.#{$atom-prefix}jtfit-st  { justify-items: start !important; }
+.#{$atom-prefix}jtfit-e  { justify-items: end !important; }
+.#{$atom-prefix}jtfit-ct { justify-items: center !important; }
+.#{$atom-prefix}jtfit-str { justify-items: stretch !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}jtfit-st-#{$breakpointName}  { justify-items: start !important; }
+		.#{$atom-prefix}jtfit-e-#{$breakpointName}  { justify-items: end !important; }
+		.#{$atom-prefix}jtfit-ct-#{$breakpointName} { justify-items: center !important; }
+		.#{$atom-prefix}jtfit-str-#{$breakpointName} { justify-items: stretch !important; }
+	};
+};

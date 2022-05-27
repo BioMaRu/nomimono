@@ -1,0 +1,88 @@
+import { Meta, Story, Canvas, Source } from '@storybook/addon-docs';
+import dedent from 'ts-dedent'
+
+<Meta
+    title="Getting start"
+    parameters={{
+        previewTabs: { canvas: { hidden: true }}
+    }}
+/>
+
+<div
+    class="_bdrd-8px _pdh-32px _pdt-32px _bgs-cv _bgpst-tl"
+    style={{ height: 80, backgroundImage: 'url(/images/story-bg.png)' }}
+>
+    <h1 class="_fs-900 _fw-600">Getting Start</h1>
+</div>
+
+<br/>
+<br/>
+
+## Install packages
+
+**nomimono** compose of three main packages.
+- `@nomimono/nomimono-react` react components
+- `@nomimono/nomimono-theme` default nomimono theme
+- `@nomimono/nomimono-css` *(Optional)* useful utility class for apply style and create layout (based on [biomatic](https://github.com/moonrhythm/biomatic)) and reset css
+
+To install nomimono, open a terminal at the root of your project workspace and run the following command:
+
+<Source language='bash'
+        dark
+        format={false}
+        code={dedent`
+            yarn install @nomimono/nomimono-react @nomimono/nomimono-theme @nomimono/nomimono-css
+            # or if you use npm
+            npm install @nomimono/nomimono-react @nomimono/nomimono-theme @nomimono/nomimono-css
+        `}
+/>
+
+The command will install all packages in the node_modules folder of your application.
+
+<br/>
+
+## Import style
+
+Import CSS for nomimono default theme and component style
+
+<Source language='jsx'
+        dark
+        format={false}
+        code={dedent`
+            @import '@nomimono/nomimono-css/reset.css'; // optional
+            @import '@nomimono/nomimono-theme/default.css';
+            @import '@nomimono/nomimono-react/index.esm.css';
+            @import '@nomimono/nomimono-css/atomic.css'; // optional, for utility class
+            @import '@nomimono/nomimono-css/layout.css'; // optional, for layout class
+            ...
+        `}
+/>
+
+Or you can add it directly at the `<head />` of your HTML file.
+
+<Source language='html'
+        dark
+        format={false}
+        code={dedent`
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/reset.css"> <!-- optional -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-theme/default.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-react/index.esm.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/atomic.css"> <!-- optional, for utility class -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/layout.css"> <!-- optional, for layout class -->
+        `}
+/>
+
+## Start building
+
+You're all set! You can start building your application
+
+<Source language='jsx'
+        dark
+        format={false}
+        code={dedent`
+            import { Button } from '@nomimono/nomimono-react'
+            export const App = () => (
+                <Button size={'L'}>Hello</Button>
+            );
+        `}
+/>

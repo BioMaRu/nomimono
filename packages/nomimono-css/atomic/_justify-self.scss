@@ -1,0 +1,17 @@
+.#{$atom-prefix}jtfs-st  { justify-self: start !important; }
+.#{$atom-prefix}jtfs-e   { justify-self: end !important; }
+.#{$atom-prefix}jtfs-fst { justify-self: flex-start !important; }
+.#{$atom-prefix}jtfs-fe  { justify-self: flex-end !important; }
+.#{$atom-prefix}jtfs-ct  { justify-self: center !important; }
+.#{$atom-prefix}jtfs-str { justify-self: stretch !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}jtfs-st-#{$breakpointName}  { justify-self: start !important; }
+		.#{$atom-prefix}jtfs-e-#{$breakpointName}   { justify-self: end !important; }
+		.#{$atom-prefix}jtfs-fst-#{$breakpointName} { justify-self: flex-start !important; }
+		.#{$atom-prefix}jtfs-fe-#{$breakpointName}  { justify-self: flex-end !important; }
+		.#{$atom-prefix}jtfs-ct-#{$breakpointName}  { justify-self: center !important; }
+		.#{$atom-prefix}jtfs-str-#{$breakpointName} { justify-self: stretch !important; }
+	};
+};

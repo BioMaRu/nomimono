@@ -1,0 +1,9 @@
+.#{$atom-prefix}f-crcl   { fill: currentColor !important; }
+.#{$atom-prefix}st-crcl   { stroke: currentColor !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}f-crcl-#{$breakpointName}   { fill: currentColor !important; }
+		.#{$atom-prefix}st-crcl-#{$breakpointName}   { stroke: currentColor !important; }
+	};
+};

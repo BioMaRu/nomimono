@@ -1,0 +1,11 @@
+.#{$atom-prefix}fw-nw { flex-wrap: nowrap; }
+.#{$atom-prefix}fw-w { flex-wrap: wrap; }
+.#{$atom-prefix}fw-wrv { flex-wrap: wrap-reverse; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}fw-nw-#{$breakpointName} { flex-wrap: nowrap !important; }
+		.#{$atom-prefix}fw-w-#{$breakpointName} { flex-wrap: wrap !important; }
+		.#{$atom-prefix}fw-wrv-#{$breakpointName} { flex-wrap: wrap-reverse !important; }
+	};
+};

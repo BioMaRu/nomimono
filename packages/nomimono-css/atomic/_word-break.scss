@@ -1,0 +1,13 @@
+.#{$atom-prefix}wb-nm   { word-break: normal !important; }
+.#{$atom-prefix}wb-ba   { word-break: break-all !important; }
+.#{$atom-prefix}wb-bw   { word-break: break-word !important; }
+.#{$atom-prefix}wb-ka   { word-break: keep-all !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}wb-nm-#{$breakpointName}   { word-break: normal !important; }
+		.#{$atom-prefix}wb-ba-#{$breakpointName}   { word-break: break-all !important; }
+		.#{$atom-prefix}wb-bw-#{$breakpointName}   { word-break: break-word !important; }
+		.#{$atom-prefix}wb-ka-#{$breakpointName}   { word-break: keep-all !important; }
+	};
+};

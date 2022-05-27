@@ -1,0 +1,17 @@
+.#{$atom-prefix}als-st  { align-self: start !important; }
+.#{$atom-prefix}als-e   { align-self: end !important; }
+.#{$atom-prefix}als-fst { align-self: flex-start !important; }
+.#{$atom-prefix}als-fe  { align-self: flex-end !important; }
+.#{$atom-prefix}als-ct  { align-self: center !important; }
+.#{$atom-prefix}als-str { align-self: stretch !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}als-st-#{$breakpointName}  { align-self: start !important; }
+		.#{$atom-prefix}als-e-#{$breakpointName}   { align-self: end !important; }
+		.#{$atom-prefix}als-fst-#{$breakpointName} { align-self: flex-start !important; }
+		.#{$atom-prefix}als-fe-#{$breakpointName}  { align-self: flex-end !important; }
+		.#{$atom-prefix}als-ct-#{$breakpointName}  { align-self: center !important; }
+		.#{$atom-prefix}als-str-#{$breakpointName} { align-self: stretch !important; }
+	};
+};

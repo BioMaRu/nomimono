@@ -1,0 +1,15 @@
+.#{$atom-prefix}wsp-nm { white-space: normal !important; }
+.#{$atom-prefix}wsp-nw { white-space: nowrap !important; }
+.#{$atom-prefix}wsp-p  { white-space: pre !important; }
+.#{$atom-prefix}wsp-pl { white-space: pre-line !important; }
+.#{$atom-prefix}wsp-pw { white-space: pre-wrap !important; }
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}wsp-nm-#{$breakpointName} { white-space: normal !important; }
+		.#{$atom-prefix}wsp-nw-#{$breakpointName} { white-space: nowrap !important; }
+		.#{$atom-prefix}wsp-p-#{$breakpointName}  { white-space: pre !important; }
+		.#{$atom-prefix}wsp-pl-#{$breakpointName} { white-space: pre-line !important; }
+		.#{$atom-prefix}wsp-pw-#{$breakpointName} { white-space: pre-wrap !important; }
+	};
+};
