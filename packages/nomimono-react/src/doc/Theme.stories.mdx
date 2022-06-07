@@ -25,9 +25,10 @@ import { Meta } from '@storybook/addon-docs';
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
 			{[50, 100, 200, 300, 400, 500, 600, 700, 800, 900].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-primary-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-primary-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-primary-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-primary-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -39,9 +40,10 @@ import { Meta } from '@storybook/addon-docs';
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
 			{[50, 100, 200, 300, 400, 500, 600, 700, 800, 900].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-neutral-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-neutral-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-neutral-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-neutral-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -53,17 +55,19 @@ import { Meta } from '@storybook/addon-docs';
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
 			{['default-100', 'default-200', 'default-300'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-white-100 _cl-text-${it} _pd-8px _fw-500`}>Nomimono</div>
+					<div className={`_bgcl-white-100 _cl-text-${it} _pd-16px _fw-500`}>Nomimono</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-text-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-text-${it}`)}</div>
 					</div>
 				</div>
 			))}
 			{['invert-100', 'invert-200', 'invert-300'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-primary-500 _cl-text-${it} _pd-8px _fw-500`}>Nomimono</div>
+					<div className={`_bgcl-primary-500 _cl-text-${it} _pd-16px _fw-500`}>Nomimono</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-text-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-text-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -84,11 +88,12 @@ import { Meta } from '@storybook/addon-docs';
 		<h3>Positive</h3>
 		<p className={'_mg-0px _cl-text-default-200'}>For indicate safe action and message</p>
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
-			{[50, 100, 200, 300].map(it => (
+			{[50, 100, 200, 300, 400].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-positive-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-positive-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-positive-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-positive-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -98,11 +103,12 @@ import { Meta } from '@storybook/addon-docs';
 		<h3>Negative</h3>
 		<p className={'_mg-0px _cl-text-default-200'}>For indicate danger action and message</p>
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
-			{[50, 100, 200, 300].map(it => (
+			{[50, 100, 200, 300, 400].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-negative-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-negative-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-negative-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-negative-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -112,11 +118,12 @@ import { Meta } from '@storybook/addon-docs';
 		<h3>Warning</h3>
 		<p className={'_mg-0px _cl-text-default-200'}>For indicate caution action and message</p>
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
-			{[50, 100, 200, 300].map(it => (
+			{[50, 100, 200, 300, 400].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-warning-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-warning-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-warning-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-warning-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -126,11 +133,12 @@ import { Meta } from '@storybook/addon-docs';
 		<h3>Info</h3>
 		<p className={'_mg-0px _cl-text-default-200'}>For indicate informative action and message</p>
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
-			{[50, 100, 200, 300].map(it => (
+			{[50, 100, 200, 300, 400].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={`_bgcl-info-${it} _w-48px _h-32px`}/>
+					<div className={`_bgcl-info-${it} _w-48px _h-48px`}/>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-info-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-info-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -153,23 +161,25 @@ import { Meta } from '@storybook/addon-docs';
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
 			{['black-100', 'black-200', 'black-300', 'black-400', 'black-500'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={'_w-48px _h-32px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
+					<div className={'_w-48px _h-48px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
 						<div className={`_bgcl-${it} _pst-asl _l-0px _t-0px _bt-0px _r-0px _zid-1`}></div>
 						<div className={`_h-32px _dp-f _alit-ct`}><i className="fas fa-glass-champagne _fs-500"></i></div>
 					</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-${it}`)}</div>
 					</div>
 				</div>
 			))}
 			{['white-100', 'white-200', 'white-300', 'white-400', 'white-500'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={'_w-48px _h-32px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
+					<div className={'_w-48px _h-48px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
 						<div className={`_bgcl-${it} _pst-asl _l-0px _t-0px _bt-0px _r-0px _zid-1`}></div>
 						<div className={`_h-32px _dp-f _alit-ct`}><i className="fas fa-glass-champagne _fs-500"></i></div>
 					</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-${it}`)}</div>
 					</div>
 				</div>
 			))}
@@ -181,23 +191,25 @@ import { Meta } from '@storybook/addon-docs';
 		<div className={'lo-12 _gg-0px _bdw-1px _pd-12px _bdcl-neutral-300 _bdrd-4px'}>
 			{['shade-300', 'shade-200', 'shade-100'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={'_w-48px _h-32px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
+					<div className={'_w-48px _h-48px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
 						<div className={`_bgcl-${it} _pst-asl _l-0px _t-0px _bt-0px _r-0px _zid-1`}></div>
 						<div className={`_h-32px _dp-f _alit-ct`}><i className="fas fa-glass-champagne _fs-500"></i></div>
 					</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-${it}`)}</div>
 					</div>
 				</div>
 			))}
 			{['tint-100', 'tint-200', 'tint-300'].map(it => (
 				<div key={it} className={'_dp-f _alit-ct _gg-16px'}>
-					<div className={'_w-48px _h-32px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
+					<div className={'_w-48px _h-48px _pst-rlt _dp-f _alit-ct _jtfct-ct'}>
 						<div className={`_bgcl-${it} _pst-asl _l-0px _t-0px _bt-0px _r-0px _zid-1`}></div>
 						<div className={`_h-32px _dp-f _alit-ct`}><i className="fas fa-glass-champagne _fs-500"></i></div>
 					</div>
 					<div className={'lo-12 _gg-4px'}>
 						<strong><code>{`--color-${it}`}</code></strong>
+						<div className={'_fs-200 _cl-text-default-200 _pdl-4px'}>{getComputedStyle(document.documentElement).getPropertyValue(`--color-${it}`)}</div>
 					</div>
 				</div>
 			))}
