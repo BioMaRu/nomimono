@@ -1,13 +1,14 @@
 import { create } from '@storybook/theming'
+import logo from '../assets/images/logo-full-design-system.svg?v=2'
 
 export default create({
 	base: 'light',
 
-	// colorPrimary: 'hotpink',
-	// colorSecondary: 'deepskyblue',
+	colorPrimary: '#9d53f9',
+	colorSecondary: '#fc2385',
 	//
 	// // UI
-	appBg: '#e9efff',
+	appBg: '#fef8ff',
 	appContentBg: 'white',
 	// appBorderColor: 'grey',
 	appBorderRadius: 8,
@@ -33,6 +34,6 @@ export default create({
 	//
 	brandTitle: 'Nomimono UI framework',
 	// brandUrl: '',
-	// brandImage: logo,
+	brandImage: logo,
 	// brandTarget: '_self',
 })

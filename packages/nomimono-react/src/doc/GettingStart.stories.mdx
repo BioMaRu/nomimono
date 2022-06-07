@@ -9,10 +9,10 @@ import dedent from 'ts-dedent'
 />
 
 <div
-    class="_bdrd-8px _pdh-32px _pdt-32px _bgs-cv _bgpst-tl"
-    style={{ height: 80, backgroundImage: 'url(/images/story-bg.png)' }}
+    className="_bdrd-8px _pdh-32px _pdt-32px _bgs-cv _bgpst-tl"
+    style={{ height: 100, backgroundImage: 'url(/images/header-bg.png)' }}
 >
-    <h1 class="_fs-900 _fw-600">Getting Start</h1>
+    <h1 className="_fs-900 _fw-600">Getting Start</h1>
 </div>
 
 <br/>
@@ -20,61 +20,63 @@ import dedent from 'ts-dedent'
 
 ## Install packages
 
-**nomimono** compose of three main packages.
-- `@nomimono/nomimono-react` react components
-- `@nomimono/nomimono-theme` default nomimono theme
-- `@nomimono/nomimono-css` *(Optional)* useful utility class for apply style and create layout (based on [biomatic](https://github.com/moonrhythm/biomatic)) and reset css
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	First, install the required packages for react version of Nomimono.
+</p>
 
-To install nomimono, open a terminal at the root of your project workspace and run the following command:
+- `@nomimono/nomimono-react` main package of Nomimono react components
+- `@nomimono/nomimono-theme` theme package
+
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	Open a terminal at the root of your project workspace and run the following command:
+</p>
 
 <Source language='bash'
         dark
         format={false}
         code={dedent`
-            yarn install @nomimono/nomimono-react @nomimono/nomimono-theme @nomimono/nomimono-css
+            yarn install @nomimono/nomimono-react @nomimono/nomimono-theme
             # or if you use npm
-            npm install @nomimono/nomimono-react @nomimono/nomimono-theme @nomimono/nomimono-css
+            npm install @nomimono/nomimono-react @nomimono/nomimono-theme
         `}
 />
 
-The command will install all packages in the node_modules folder of your application.
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	The command will install all packages in the node_modules folder of your application.
+</p>
 
 <br/>
 
-## Import style
+## Import CSS
 
-Import CSS for nomimono default theme and component style
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	Import required CSS files into your project.
+</p>
 
 <Source language='jsx'
         dark
         format={false}
         code={dedent`
-            @import '@nomimono/nomimono-css/reset.css'; // optional
-            @import '@nomimono/nomimono-theme/default.css';
-            @import '@nomimono/nomimono-react/index.esm.css';
-            @import '@nomimono/nomimono-css/atomic.css'; // optional, for utility class
-            @import '@nomimono/nomimono-css/layout.css'; // optional, for layout class
+            @import '@nomimono/nomimono-css/reset.css'; // reset browser default style (optional)
+            @import '@nomimono/nomimono-theme/default.css'; // default 'Nom Yen' theme
+            @import '@nomimono/nomimono-react/style.css'; // component CSS
             ...
         `}
 />
 
-Or you can add it directly at the `<head />` of your HTML file.
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	To use reset.css you need to install core CSS package first by typing <code>npm install @nomimono/nomimono-css</code> in your terminal.
+</p>
 
-<Source language='html'
-        dark
-        format={false}
-        code={dedent`
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/reset.css"> <!-- optional -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-theme/default.css">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-react/index.esm.css">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/atomic.css"> <!-- optional, for utility class -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/layout.css"> <!-- optional, for layout class -->
-        `}
-/>
+<br />
 
 ## Start building
 
-You're all set! You can start building your application
+<p className={'_fs-400 _mxw-80ch _lh-165pct'}>
+	You're all set! You can start building your application.
+</p>
+
+<div className={'nomi-button'}>Hello</div>
 
 <Source language='jsx'
         dark

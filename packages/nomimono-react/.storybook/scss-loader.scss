@@ -1,6 +1,7 @@
 // code will load into preview iframe
 
 @import '!style-loader!css-loader!sass-loader!../../packages/nomimono-theme/main.scss';
+@import '!style-loader!css-loader!sass-loader!../../packages/nomimono-css/reset.scss';
 @import '!style-loader!css-loader!sass-loader!../../packages/nomimono-css/atomic/all.scss';
 @import '!style-loader!css-loader!sass-loader!../../packages/nomimono-css/layout/all.scss';
 

@@ -3,7 +3,8 @@ $atom-prefix: '_';
 /*
  * Color
  *********************************************/
- $colors: (
+$colors: (
+	'primary-50': var(--color-primary-50),
 	'primary-100': var(--color-primary-100),
 	'primary-200': var(--color-primary-200),
 	'primary-300': var(--color-primary-300),
@@ -14,99 +15,120 @@ $atom-prefix: '_';
 	'primary-800': var(--color-primary-800),
 	'primary-900': var(--color-primary-900),
 
-	'gray-100': var(--color-gray-100),
-	'gray-200': var(--color-gray-200),
-	'gray-300': var(--color-gray-300),
-	'gray-400': var(--color-gray-400),
-	'gray-500': var(--color-gray-500),
-	'gray-600': var(--color-gray-600),
-	'gray-700': var(--color-gray-700),
-	'gray-800': var(--color-gray-800),
-	'gray-900': var(--color-gray-900),
+	'neutral-50': var(--color-neutral-50),
+	'neutral-100': var(--color-neutral-100),
+	'neutral-200': var(--color-neutral-200),
+	'neutral-300': var(--color-neutral-300),
+	'neutral-400': var(--color-neutral-400),
+	'neutral-500': var(--color-neutral-500),
+	'neutral-600': var(--color-neutral-600),
+	'neutral-700': var(--color-neutral-700),
+	'neutral-800': var(--color-neutral-800),
+	'neutral-900': var(--color-neutral-900),
 
+	'positive-50': var(--color-positive-50),
 	'positive-100': var(--color-positive-100),
 	'positive-200': var(--color-positive-200),
 	'positive-300': var(--color-positive-300),
 	'positive-400': var(--color-positive-400),
-	'positive-500': var(--color-positive-500),
-	'positive-600': var(--color-positive-600),
-	'positive-700': var(--color-positive-700),
-	'positive-800': var(--color-positive-800),
-	'positive-900': var(--color-positive-900),
 
+	'negative-50': var(--color-negative-50),
 	'negative-100': var(--color-negative-100),
 	'negative-200': var(--color-negative-200),
 	'negative-300': var(--color-negative-300),
 	'negative-400': var(--color-negative-400),
-	'negative-500': var(--color-negative-500),
-	'negative-600': var(--color-negative-600),
-	'negative-700': var(--color-negative-700),
-	'negative-800': var(--color-negative-800),
-	'negative-900': var(--color-negative-900),
 
+	'info-50': var(--color-info-50),
 	'info-100': var(--color-info-100),
 	'info-200': var(--color-info-200),
 	'info-300': var(--color-info-300),
 	'info-400': var(--color-info-400),
-	'info-500': var(--color-info-500),
-	'info-600': var(--color-info-600),
-	'info-700': var(--color-info-700),
-	'info-800': var(--color-info-800),
-	'info-900': var(--color-info-900),
 
+	'warning-50': var(--color-warning-50),
 	'warning-100': var(--color-warning-100),
 	'warning-200': var(--color-warning-200),
 	'warning-300': var(--color-warning-300),
 	'warning-400': var(--color-warning-400),
-	'warning-500': var(--color-warning-500),
-	'warning-600': var(--color-warning-600),
-	'warning-700': var(--color-warning-700),
-	'warning-800': var(--color-warning-800),
-	'warning-900': var(--color-warning-900),
 
-	'text-light-primary': var(--color-text-light-primary),
-	'text-light-secondary': var(--color-text-light-secondary),
-	'text-dark-primary': var(--color-text-dark-primary),
-	'text-dark-secondary': var(--color-text-dark-secondary),
+	'text-default-100': var(--color-text-default-100),
+	'text-default-200': var(--color-text-default-200),
+	'text-default-300': var(--color-text-default-300),
 
-	'shader': var(--color-shader),
+	'text-invert-100': var(--color-text-invert-100),
+	'text-invert-200': var(--color-text-invert-200),
+	'text-invert-300': var(--color-text-invert-300),
+
+	'black-100': var(--color-black-100),
+	'black-200': var(--color-black-200),
+	'black-300': var(--color-black-300),
+	'black-400': var(--color-black-400),
+	'black-500': var(--color-black-500),
+
+	'white-100': var(--color-white-100),
+	'white-200': var(--color-white-200),
+	'white-300': var(--color-white-300),
+	'white-400': var(--color-white-400),
+	'white-500': var(--color-white-500),
 
 	'tpr': transparent
 );
 
-$radiuses: (
-	'0px': 0px,
-	'1px': 1px,
-	'2px': 2px,
-	'3px': 3px,
-	'4px': 4px,
-	'8px': 8px,
-	'12px': 12px,
-	'16px': 16px,
-	'24px': 24px,
-	'32px': 32px,
-	'48px': 48px,
-	'64px': 64px,
+$border-radius: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'3px': toRem(3),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'32px': toRem(32),
+	'48px': toRem(48),
+	'64px': toRem(64),
 	'50pct': 50%,
 	'max': 9999px,
-	'at': auto
+	'at': auto,
 );
 
-$spacings: (
-	'0px': 0px,
-	'1px': 1px,
-	'2px': 2px,
-	'4px': 4px,
-	'8px': 8px,
-	'12px': 12px,
-	'16px': 16px,
-	'24px': 24px,
-	'32px': 32px,
-	'48px': 48px,
-	'64px': 64px,
-	'128px': 128px,
-	'256px': 256px,
-	'320px': 320px,
+$margin_padding: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'32px': toRem(32),
+	'40px': toRem(40),
+	'48px': toRem(48),
+	'64px': toRem(64),
+	'128px': toRem(128),
+	'256px': toRem(256),
+	'50pct': 50%,
+	'100pct': 100%,
+	'at': auto,
+	'us': unset,
+);
+
+// [min-max] width height
+$width_height: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'32px': toRem(32),
+	'40px': toRem(40),
+	'48px': toRem(48),
+	'64px': toRem(64),
+	'128px': toRem(128),
+	'256px': toRem(256),
+	'80ch': 80ch,
 	'50pct': 50%,
 	'100pct': 100%,
 	'100vw': 100vw,
@@ -115,12 +137,65 @@ $spacings: (
 	'us': unset,
 );
 
+$top_right_bottom_left: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'32px': toRem(32),
+	'40px': toRem(40),
+	'48px': toRem(48),
+	'64px': toRem(64),
+	'128px': toRem(128),
+	'256px': toRem(256),
+	'50pct': 50%,
+	'100pct': 100%,
+	'at': auto,
+	'us': unset,
+);
+
+$grid-gap: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'32px': toRem(32),
+	'40px': toRem(40),
+	'48px': toRem(48),
+	'64px': toRem(64),
+	'128px': toRem(128),
+	'256px': toRem(256),
+	'us': unset,
+);
+
+$border-width: (
+	'0px': toRem(0),
+	'1px': toRem(1),
+	'2px': toRem(2),
+	'4px': toRem(4),
+	'8px': toRem(8),
+	'12px': toRem(12),
+	'16px': toRem(16),
+	'24px': toRem(24),
+	'us': unset,
+);
+
 $font-families: (
 	'primary': var(--font-family-primary),
-	'secondary': var(--font-family-secondary, --font-family-primary)
+	'secondary': var(--font-family-secondary),
 );
 
 $font-sizes: (
+	'1400': var(--font-size-1400),
+	'1300': var(--font-size-1300),
 	'1200': var(--font-size-1200),
 	'1100': var(--font-size-1100),
 	'1000': var(--font-size-1000),
@@ -132,7 +207,7 @@ $font-sizes: (
 	'400': var(--font-size-400),
 	'300': var(--font-size-300),
 	'200': var(--font-size-200),
-	'100': var(--font-size-100)
+	'100': var(--font-size-100),
 );
 
 $font-weights: (
@@ -155,12 +230,12 @@ $line-heights: (
 	'165pct': 1.65,
 );
 
-$sm: 768px;
-$md: 1024px;
-$lg: 1280px;
+$sm: toRem(768);
+$md: toRem(1024);
+$lg: toRem(1280);
 
 $breakpoints: (
 	'sm': $sm,
 	'md': $md,
-	'lg': $lg
+	'lg': $lg,
 );

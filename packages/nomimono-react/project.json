@@ -13,8 +13,9 @@
 				"project": "packages/nomimono-react/package.json",
 				"entryFile": "packages/nomimono-react/src/index.ts",
 				"external": ["react/jsx-runtime"],
-				"rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+				"rollupConfig": "packages/nomimono-react/rollup.config.js",
 				"compiler": "babel",
+				"format": ["esm"],
 				"assets": [
 					{
 						"glob": "packages/nomimono-react/README.md",

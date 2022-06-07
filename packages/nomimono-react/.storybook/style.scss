@@ -1,6 +1,46 @@
+[data-nodetype="document"] svg {
+	color: hsl(033, 97%, 56%);
+}
+
+[data-nodetype="root"] {
+	span:first-child {
+		color: hsl(333, 97%, 56%);
+	}
+
+	svg {
+		color: hsl(333, 97%, 56%);
+	}
+}
+
+[data-nodetype="component"] {
+	span:first-child {
+		color: hsl(333, 97%, 56%);
+	}
+
+	svg {
+		color: hsl(333, 97%, 56%);
+	}
+}
+
+[data-nodetype="story"] svg {
+	color: hsl(267, 93%, 65%);
+}
+
+
+.sidebar-header > div {
+	margin-right: 8px;
+}
+
+.sidebar-header img {
+	width: 138px;
+	margin-right: 0;
+	object-fit: contain;
+}
+
 .sbdocs-title {
 	display: none;
 }
+
 .sidebar-container * {
 	font-size: 105%;
 }
@@ -8,11 +48,13 @@
 .sidebar-container .sidebar-item[data-selected="true"],
 .sidebar-container .sidebar-item[data-selected="true"]:focus,
 .sidebar-container .sidebar-item[data-selected="true"]:hover {
-	background: linear-gradient(321deg, rgb(176, 236, 255) 0%, #0048ff 100%);
+	background: linear-gradient(321deg, hsl(51, 100%, 85%) 0%, hsl(276, 100%, 50%) 150%) !important;
 }
 
-.os-content button:hover {
-	background: linear-gradient(321deg, rgb(202, 222, 255) 0%, rgb(165, 194, 255) 100%);
+.os-content button:hover,
+.sidebar-container .sidebar-item:hover,
+.sidebar-container .sidebar-item:focus {
+	background: linear-gradient(321deg, hsla(243, 100%, 93%, 0.14) 0%, hsl(280, 100%, 87%) 150%) !important;
 
 	.sb-root-custom {
 		.sb-root-custom-label {
@@ -24,6 +66,11 @@
 .sb-root-custom {
 	.sb-root-custom-label {
 		letter-spacing: 1.5px;
-		color: #193370;
+		color: #710277;
 	}
+}
+
+[role="main"] {
+	border: 1px solid #fde1ff;
+	border-radius: 6px;
 }

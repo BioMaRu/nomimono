@@ -1,13 +1,14 @@
 export type IButtonConst = {
 	size: {
-		small: 'S'
-		medium: 'M'
-		large: 'L'
+		small: 'small'
+		medium: 'medium'
+		large: 'large'
 	}
 	variant: {
 		primary: 'primary'
 		secondary: 'secondary'
 		tertiary: 'tertiary'
+		ghost: 'ghost'
 		positive: 'positive'
 		negative: 'negative'
 	}

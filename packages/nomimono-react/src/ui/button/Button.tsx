@@ -1,53 +1,66 @@
-import styles from './Button.module.scss'
-import React from 'react'
+import './Button.scss'
+import React, { ReactNode } from 'react'
 import classNames from 'classnames'
 import { IButtonConst } from './type'
 
 export const BUTTON = {
 	size: {
-		small: 'S',
-		medium: 'M',
-		large: 'L',
+		small: 'small',
+		medium: 'medium',
+		large: 'large',
 	},
 	variant: {
 		primary: 'primary',
 		secondary: 'secondary',
 		tertiary: 'tertiary',
+		ghost: 'ghost',
 		positive: 'positive',
 		negative: 'negative',
 	},
 } as IButtonConst
 
-/* eslint-disable-next-line */
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	size?: 'S' | 'M' | 'L'
-	variant?: 'primary' | 'secondary' | 'tertiary' | 'positive' | 'negative'
+	size?: 'small' | 'medium' | 'large'
+	variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'positive' | 'negative'
+	startIconClass?: string
+	endIconClass?: string
 	isLoading?: boolean
 	isFluid?: boolean
 	isPill?: boolean
 	disabled?: boolean
-	children?: React.ReactNode
+	children?: ReactNode
 }
 
 export function Button(props: ButtonProps) {
 	return (
 		<button
 			{...props}
-			className={classNames(styles['button'], props?.className, {
-				[styles['is-size-s']]: props.size === BUTTON.size.small,
-				[styles['is-size-l']]: props.size === BUTTON.size.large,
-				[styles['is-size-m']]: props.size === BUTTON.size.medium,
-				[styles['is-variant-primary']]: props.variant === BUTTON.variant.primary,
-				[styles['is-variant-secondary']]: props.variant === BUTTON.variant.secondary,
-				[styles['is-variant-tertiary']]: props.variant === BUTTON.variant.tertiary,
-				[styles['is-variant-positive']]: props.variant === BUTTON.variant.positive,
-				[styles['is-variant-negative']]: props.variant === BUTTON.variant.negative,
-				[styles['is-loading']]: props.isLoading,
-				[styles['is-fluid']]: props.isFluid,
-				[styles['is-pill']]: props.isPill,
+			className={classNames('nomi-button', props?.className, {
+				'is-size-small': props.size === BUTTON.size.small,
+				'is-size-medium': props.size === BUTTON.size.medium,
+				'is-size-large': props.size === BUTTON.size.large,
+				'is-variant-primary': props.variant === BUTTON.variant.primary,
+				'is-variant-secondary': props.variant === BUTTON.variant.secondary,
+				'is-variant-tertiary': props.variant === BUTTON.variant.tertiary,
+				'is-variant-ghost': props.variant === BUTTON.variant.ghost,
+				'is-variant-positive': props.variant === BUTTON.variant.positive,
+				'is-variant-negative': props.variant === BUTTON.variant.negative,
+				'is-loading': props.isLoading,
+				'is-fluid': props.isFluid,
+				'is-pill': props.isPill,
 			})}
 		>
+			{props.startIconClass && (
+				<span className={'start-icon'}>
+					<i className={`${props.startIconClass}`}></i>
+				</span>
+			)}
 			<span>{props.children}</span>
+			{props.endIconClass && (
+				<span className={'end-icon'}>
+					<i className={`${props.endIconClass}`}></i>
+				</span>
+			)}
 		</button>
 	)
 }

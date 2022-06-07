@@ -1,10 +1,10 @@
-@each $key, $value in $spacings {
+@each $key, $value in $width_height {
 	.#{$atom-prefix}mnh-#{$key} { min-height: #{$value} !important; }
 };
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-height: $breakpointSize) {
-		@each $key, $value in $spacings {
+		@each $key, $value in $width_height {
 			.#{$atom-prefix}mnh-#{$key}-#{$breakpointName} { min-height: #{$value} !important; }
 		};
 	};

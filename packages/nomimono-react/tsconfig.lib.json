@@ -22,7 +22,8 @@
 		"**/*.stories.js",
 		"**/*.stories.jsx",
 		"**/*.stories.tsx",
-		"**/*.stories.mdx"
+		"**/*.stories.mdx",
+		"**/*.module.scss"
 	],
 	"include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"]
 }

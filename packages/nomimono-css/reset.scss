@@ -1,6 +1,6 @@
 html {
 	font-family: var(--font-family-primary, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif);
-	font-size: 16px;
+	font-size: 100%;
 	line-height: 1.15;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -12,7 +12,7 @@ html, body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: var(--color-text-dark-primary, hsla(215, 15%, 28%, 0.96));
+	color: var(--color-text-default-100, hsla(215, 15%, 28%, 0.96));
 }
 
 main {
@@ -25,7 +25,7 @@ main {
 
 p {
 	font-family: var(--font-family-primary);
-	line-height: var(--line-height-paragraph);
+	line-height: 1.65;
 	margin: 0;
 	padding: 0;
 }

@@ -9,7 +9,7 @@ const sassOption = {
 	includePaths: 'node_modules',
 }
 
-gulp.task('default', gulp.series(reset, atomic, layout))
+gulp.task('default', gulp.series(reset, atomic, layout, component))
 
 function atomic() {
 	return gulp
@@ -49,6 +49,21 @@ function reset() {
 		.pipe(
 			rename({
 				basename: 'reset',
+				suffix: '',
+				extname: '.css',
+			}),
+		)
+		.pipe(gulp.dest('../../dist/packages/nomimono-css/'))
+}
+
+function component() {
+	return gulp
+		.src('./component/all.scss')
+		.pipe(sass(sassOption).on('error', sass.logError))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
+		.pipe(
+			rename({
+				basename: 'component',
 				suffix: '',
 				extname: '.css',
 			}),

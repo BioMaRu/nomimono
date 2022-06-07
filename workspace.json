@@ -2,9 +2,9 @@
 	"$schema": "./node_modules/nx/schemas/workspace-schema.json",
 	"version": 2,
 	"projects": {
+		"nomimono-css": "packages/nomimono-css",
 		"nomimono-react": "packages/nomimono-react",
 		"nomimono-react-e2e": "packages/nomimono-react-e2e",
-		"nomimono-css": "packages/nomimono-css",
 		"nomimono-theme": "packages/nomimono-theme"
 	}
 }

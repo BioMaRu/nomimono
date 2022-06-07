@@ -1,0 +1,244 @@
+@import '../helper/all';
+
+.nomi-button {
+	font-family: var(--button-font-family);
+	font-size: var(--button-medium-font-size);
+	font-weight: var(--button-font-weight);
+	line-height: 100%;
+
+	position: relative;
+	display: inline-flex;
+
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	min-height: var(--button-medium-height);
+
+	padding: 0 toRem(18);
+	cursor: pointer;
+
+	user-select: none;
+	transition: all 0.16s ease-in-out;
+	color: var(--color-text-invert-100);
+	border: none;
+
+	border-radius: var(--button-border-radius);
+	outline: none;
+
+	background: var(--color-primary-500);
+
+	> span {
+		z-index: 1;
+	}
+
+	.start-icon,
+	.end-icon {
+		display: flex;
+		align-items: center;
+		min-width: toRem(22);
+	}
+
+	.end-icon {
+		justify-content: flex-end;
+	}
+
+	&:before {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		transition: all 0.16s ease-in-out;
+		pointer-events: none;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 .175rem var(--color-primary-300);
+	}
+
+	&:hover {
+		&:before {
+			background: var(--color-shade-100);
+		}
+	}
+
+	&.is-loading {
+		color: transparent;
+
+		&:after {
+			position: absolute;
+			right: 0;
+			left: 0;
+			width: 1em;
+			height: 1em;
+			margin: auto;
+			content: '';
+			animation: ButtonLoadingSpin 0.48s infinite linear;
+			border: 2px solid;
+			border-top-color: var(--color-text-invert-100);
+			border-right-color: var(--color-text-invert-100);
+			border-radius: 999px;
+		}
+	}
+
+	&.is-size-small {
+		font-size: var(--button-small-font-size);
+		min-height: var(--button-small-height);
+		padding: 0 toRem(16);
+
+		.start-icon,
+		.end-icon {
+			min-width: toRem(18);
+		}
+	}
+
+	&.is-size-medium {
+		font-size: var(--button-medium-font-size);
+		min-height: var(--button-medium-height);
+		padding: 0 toRem(18);
+
+		.start-icon,
+		.end-icon {
+			min-width: toRem(22);
+		}
+	}
+
+	&.is-size-large {
+		font-size: var(--button-large-font-size);
+		min-height: var(--button-large-height);
+		padding: 0 toRem(20);
+
+		.start-icon,
+		.end-icon {
+			min-width: toRem(26);
+		}
+	}
+
+	//&.is-size-auto {
+	//	min-height: 0 toEm(40) !important;
+	//	padding: 0 toEm(20) !important;
+	//}
+	//
+
+	&.is-variant-negative {
+		background: var(--color-negative-200);
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-negative-100);
+		}
+
+		&.is-loading{
+			color: transparent;
+
+			&:after {
+				border-top-color: var(--color-text-invert-100);
+				border-right-color: var(--color-text-invert-100);
+			}
+		}
+	}
+
+	&.is-variant-positive {
+		background: var(--color-positive-200);
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-positive-100);
+		}
+
+		&.is-loading{
+			color: transparent;
+
+			&:after {
+				border-top-color: var(--color-text-invert-100);
+				border-right-color: var(--color-text-invert-100);
+			}
+		}
+	}
+
+	&.is-variant-secondary {
+		color: var(--color-primary-500);
+		border: 1px solid var(--color-neutral-200);
+		background: transparent;
+
+		&:hover {
+			color: var(--color-primary-500);
+			border: 1px solid var(--color-neutral-300);
+
+			&:before {
+				background: var(--color-shade-100);
+			}
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		}
+
+		&.is-loading{
+			color: transparent;
+
+			&:after {
+				border-top-color: var(--color-primary-500);
+				border-right-color: var(--color-primary-500);
+			}
+		}
+	}
+
+	&.is-variant-tertiary {
+		color: var(--color-text-default-100);
+		border: unset;
+		background: var(--color-neutral-100);
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		}
+
+		&.is-loading{
+			color: transparent;
+
+			&:after {
+				border-top-color: var(--color-text-default-200);
+				border-right-color: var(--color-text-default-200);
+			}
+		}
+	}
+
+	&.is-variant-ghost {
+		color: var(--color-text-default-100);
+		border: unset;
+		background: transparent;
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		}
+
+		&.is-loading{
+			color: transparent;
+
+			&:after {
+				border-top-color: var(--color-text-default-200);
+				border-right-color: var(--color-text-default-200);
+			}
+		}
+	}
+
+	&[disabled],
+	&.is-disabled {
+		cursor: not-allowed;
+		opacity: 0.6;
+	}
+
+	&.is-fluid {
+		width: 100%;
+	}
+
+	&.is-pill {
+		border-radius: 999px;
+	}
+
+}
+
+@keyframes ButtonLoadingSpin {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(359deg); }
+}

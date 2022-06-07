@@ -2,86 +2,92 @@
  * Color
  *********************************************/
 :root {
-	--color-primary-100: hsl(217, 85%, 95%);
-	--color-primary-200: hsl(217, 85%, 92%);
-	--color-primary-300: hsl(217, 85%, 87%);
-	--color-primary-400: hsl(217, 77%, 61%);
-	--color-primary-500: hsl(217, 77%, 56%);
-	--color-primary-600: hsl(217, 77%, 51%);
-	--color-primary-700: hsl(217, 67%, 36%);
-	--color-primary-800: hsl(217, 67%, 30%);
-	--color-primary-900: hsl(217, 67%, 25%);
+	--color-primary-50: hsl(333, 85%, 98.5%);
+	--color-primary-100: hsl(333, 85%, 96%);
+	--color-primary-200: hsl(333, 85%, 93%);
+	--color-primary-300: hsl(333, 85%, 88%);
+	--color-primary-400: hsl(333, 80%, 70%);
+	--color-primary-500: hsl(333, 80%, 64%);
+	--color-primary-600: hsl(333, 80%, 58%);
+	--color-primary-700: hsl(333, 90%, 36%);
+	--color-primary-800: hsl(333, 90%, 30%);
+	--color-primary-900: hsl(333, 90%, 25%);
 
-	--color-gray-100: hsl(216, 15%, 97%);
-	--color-gray-200: hsl(216, 15%, 92%);
-	--color-gray-300: hsl(216, 15%, 86%);
-	--color-gray-400: hsl(216, 15%, 66%);
-	--color-gray-500: hsl(216, 15%, 59%);
-	--color-gray-600: hsl(216, 15%, 52%);
-	--color-gray-700: hsl(216, 15%, 33%);
-	--color-gray-800: hsl(216, 15%, 26%);
-	--color-gray-900: hsl(216, 15%, 20%);
+	--color-neutral-50: hsl(216, 15%, 98.5%);
+	--color-neutral-100: hsl(216, 15%, 97%);
+	--color-neutral-200: hsl(216, 15%, 92%);
+	--color-neutral-300: hsl(216, 15%, 86%);
+	--color-neutral-400: hsl(216, 15%, 66%);
+	--color-neutral-500: hsl(216, 15%, 59%);
+	--color-neutral-600: hsl(216, 15%, 52%);
+	--color-neutral-700: hsl(216, 15%, 33%);
+	--color-neutral-800: hsl(216, 15%, 26%);
+	--color-neutral-900: hsl(216, 15%, 20%);
 
-	--color-positive-100: hsl(168, 75%, 95%);
-	--color-positive-200: hsl(168, 75%, 90%);
-	--color-positive-300: hsl(168, 75%, 83%);
-	--color-positive-400: hsl(168, 76%, 48%);
-	--color-positive-500: hsl(168, 76%, 45%);
-	--color-positive-600: hsl(168, 76%, 41%);
-	--color-positive-700: hsl(168, 66%, 25%);
-	--color-positive-800: hsl(168, 66%, 20%);
-	--color-positive-900: hsl(163, 80%, 15%);
+	--color-positive-50: hsl(168, 90%, 97.5%);
+	--color-positive-100: hsl(168, 75%, 83%);
+	--color-positive-200: hsl(168, 72%, 42%);
+	--color-positive-300: hsl(168, 72%, 35%);
+	--color-positive-400: hsl(168, 80%, 25%);
 
-	--color-negative-100: hsl(8, 85%, 97%);
-	--color-negative-200: hsl(8, 85%, 93%);
-	--color-negative-300: hsl(8, 85%, 89%);
-	--color-negative-400: hsl(8, 78%, 67%);
-	--color-negative-500: hsl(8, 78%, 61%);
-	--color-negative-600: hsl(8, 78%, 55%);
-	--color-negative-700: hsl(8, 68%, 38%);
-	--color-negative-800: hsl(8, 68%, 34%);
-	--color-negative-900: hsl(8, 68%, 30%);
+	--color-negative-50: hsl(5, 85%, 98.5%);
+	--color-negative-100: hsl(5, 85%, 89%);
+	--color-negative-200: hsl(5, 78%, 63%);
+	--color-negative-300: hsl(5, 78%, 54%);
+	--color-negative-400: hsl(5, 80%, 40%);
 
-	--color-info-100: hsl(283, 90%, 96%);
-	--color-info-200: hsl(283, 90%, 92%);
-	--color-info-300: hsl(283, 90%, 88%);
-	--color-info-400: hsl(283, 40%, 55%);
-	--color-info-500: hsl(283, 40%, 50%);
-	--color-info-600: hsl(283, 40%, 45%);
-	--color-info-700: hsl(283, 66%, 28%);
-	--color-info-800: hsl(283, 66%, 25%);
-	--color-info-900: hsl(283, 66%, 22%);
+	--color-info-50: hsl(197, 80%, 97.5%);
+	--color-info-100: hsl(197, 80%, 88%);
+	--color-info-200: hsl(197, 70%, 54%);
+	--color-info-300: hsl(197, 70%, 46%);
+	--color-info-400: hsl(197, 90%, 32%);
 
-	--color-warning-100: hsl(45, 80%, 95%);
-	--color-warning-200: hsl(45, 80%, 90%);
-	--color-warning-300: hsl(45, 80%, 85%);
-	--color-warning-400: hsl(45, 90%, 55%);
-	--color-warning-500: hsl(45, 90%, 48%);
-	--color-warning-600: hsl(45, 90%, 45%);
-	--color-warning-700: hsl(45, 90%, 31%);
-	--color-warning-800: hsl(45, 90%, 27%);
-	--color-warning-900: hsl(45, 90%, 27%);
+	--color-warning-50: hsl(45, 90%, 97.5%);
+	--color-warning-100: hsl(45, 80%, 85%);
+	--color-warning-200: hsl(45, 90%, 48%);
+	--color-warning-300: hsl(45, 90%, 43%);
+	--color-warning-400: hsl(45, 80%, 31%);
 
-	--color-line-400: hsla(216, 26%, 87%, 0.95); // suitable for line, border color
-	--color-line-500: hsla(221, 17%, 78%, 0.95); // suitable for line, border hover state color
+	--color-text-default-100: hsla(215, 15%, 20%, 0.95);
+	--color-text-default-200: hsla(215, 15%, 20%, 0.60);
+	--color-text-default-300: hsla(215, 15%, 20%, 0.40);
 
-	--color-text-light-primary: hsla(0, 0%, 100%, .95);
-	--color-text-light-secondary: rgba(226, 226, 226, 0.95);
-	--color-text-dark-primary: hsla(215, 15%, 28%, 0.96);
-	--color-text-dark-secondary: hsla(220, 10%, 47%, 0.95);
+	--color-text-invert-100: hsla(0, 0%, 100%, 0.95);
+	--color-text-invert-200: hsla(0, 0%, 100%, 0.85);
+	--color-text-invert-300: hsla(0, 0%, 100%, 0.65);
 
-	--color-shader: rgba(0, 0, 0 , 0.12);
+	--color-black-100: black;
+	--color-black-200: hsla(0, 0%, 0%, 0.8);
+	--color-black-300: hsla(0, 0%, 0%, 0.6);
+	--color-black-400: hsla(0, 0%, 0%, 0.4);
+	--color-black-500: hsla(0, 0%, 0%, 0.2);
+
+	--color-white-100: white;
+	--color-white-200: hsla(0, 0%, 100%, 0.8);
+	--color-white-300: hsla(0, 0%, 100%, 0.6);
+	--color-white-400: hsla(0, 0%, 100%, 0.4);
+	--color-white-500: hsla(0, 0%, 100%, 0.2);
+
+	--color-shade-100: rgba(0, 0, 0, 0.05);
+	--color-shade-200: rgba(0, 0, 0, 0.1);
+	--color-shade-300: rgba(0, 0, 0, 0.15);
+
+	--color-tint-100: rgba(255, 255, 255, 0.15);
+	--color-tint-200: rgba(255, 255, 255, 0.3);
+	--color-tint-300: rgba(255, 255, 255, 0.45);
 }
 
 /*
- * Font family
+ * Typography
  *********************************************/
 :root {
 	--font-family-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-	--font-family-secondary: 'Kanit', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--font-family-secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 :root {
+	--font-size-1400: 4.5rem;  // 72px
+	--font-size-1300: 3.5rem;  // 56px
 	--font-size-1200: 3rem;    // 48px
 	--font-size-1100: 2.5rem;  // 40px
 	--font-size-1000: 2.25rem; // 36px

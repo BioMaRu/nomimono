@@ -9,6 +9,7 @@ export const parameters = {
 				'Getting start',
 				'Buttons',
 				['Button', 'SelectButton'],
+				'Display Data',
 				'Widgets',
 				['Footer'],
 			],
