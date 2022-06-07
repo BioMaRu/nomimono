@@ -70,9 +70,9 @@ _2Size.parameters = {
 		source: {
 			state: 'open',
 			code: dedent`
-				 <Button size={'S'}>Button</Button>
-				 <Button size={'M'}>Button</Button>
-				 <Button size={'L'}>Button</Button>
+				 <Button size={'small'}>Button</Button>
+				 <Button size={'medium'}>Button</Button>
+				 <Button size={'large'}>Button</Button>
 		  `,
 		},
 	},
@@ -121,13 +121,13 @@ _3Variant.parameters = {
  ===================== */
 const TemplateLoading: Story<ButtonProps> = args => (
 	<>
-		<Button isLoading size={'S'}>
+		<Button isLoading size={'small'}>
 			Loading
 		</Button>
 		<Button isLoading variant={'positive'}>
 			Loading
 		</Button>
-		<Button isLoading variant={'negative'} size={'L'}>
+		<Button isLoading variant={'negative'} size={'large'}>
 			Loading
 		</Button>
 		<Button isLoading variant={'secondary'}>
@@ -154,9 +154,9 @@ _4Loading.parameters = {
 		source: {
 			state: 'open',
 			code: dedent`
-				<Button isLoading size={'S'}>Loading</Button>
+				<Button isLoading size={'small'}>Loading</Button>
 				<Button isLoading variant={'positive'}>Loading</Button>
-				<Button isLoading variant={'negative'} size={'L'}>Loading</Button>
+				<Button isLoading variant={'negative'} size={'large'}>Loading</Button>
 				<Button isLoading variant={'secondary'}>Loading</Button>
 				<Button isLoading variant={'tertiary'}>Loading</Button>
 		  `,
