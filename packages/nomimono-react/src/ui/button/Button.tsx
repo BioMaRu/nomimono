@@ -32,9 +32,21 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export function Button(props: ButtonProps) {
+	const {
+		size,
+		variant,
+		startIconClass,
+		endIconClass,
+		isLoading,
+		isFluid,
+		isPill,
+		children,
+		...buttonProps
+	} = props
+
 	return (
 		<button
-			{...props}
+			{...buttonProps}
 			className={classNames('nomi-button', props?.className, {
 				'is-size-small': props.size === BUTTON.size.small,
 				'is-size-medium': props.size === BUTTON.size.medium,
