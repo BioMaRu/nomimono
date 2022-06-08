@@ -1,0 +1,13 @@
+@import './helper';
+
+@use "sass:math";
+
+@function toRem($value) {
+	$r: math.div($value, 16) + rem;
+	@return $r;
+}
+
+@function toEm($value) {
+	$r: math.div($value, 16) + em;
+	@return $r;
+}
