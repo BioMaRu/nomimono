@@ -1,0 +1,39 @@
+@import '../helper/all';
+
+.nomi-tabs {
+	.tabs-menus {
+		display: flex;
+
+		> * {
+			font-family: var(--font-family-secondary);
+			font-size: toRem(16);
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: toRem(32);
+			padding: 0 toRem(16);
+			border-top-left-radius: toRem(6);
+			border-top-right-radius: toRem(6);
+			background-color: var(--color-neutral-300);
+		}
+	}
+
+	.tabs-button {
+		display: flex;
+		border: none;
+		outline: none;
+
+		&:focus {
+			box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		}
+
+		&.is-active {
+			background-color: var(--color-white-100);
+		}
+	}
+
+	.tabs-item {
+
+	}
+}

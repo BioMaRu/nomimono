@@ -19,11 +19,11 @@ export interface SelectButtonProps extends React.ButtonHTMLAttributes<HTMLButton
 }
 
 export function SelectButton(props: SelectButtonProps) {
-	const { isActive, children, ...buttonProps } = props
+	const { isActive, children, ...restProps } = props
 
 	return (
 		<button
-			{...buttonProps}
+			{...restProps}
 			className={classNames('nomi-select-button', props?.className, {
 				'is-size-small': props.size === SELECT_BUTTON.size.small,
 				'is-size-medium': props.size === SELECT_BUTTON.size.medium,
