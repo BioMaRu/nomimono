@@ -5,25 +5,31 @@ Tabs.Item.displayName = 'Tabs.Item'
 
 export default {
 	component: Tabs,
-	title: 'Tabs',
+	title: 'Navigation/Tabs',
 	subcomponents: { 'Tabs.Item': Tabs.Item },
+	actions: { handles: 'click .tabs-button' },
 } as Meta
 
 const Template: Story<TabsProps> = args => (
 	<Tabs {...args}>
-		<Tabs.Item id={'tab_a'} label={'Tab 1'}>
-			Content of tab 1
+		<Tabs.Item id={'tab_a'} label={'Show tab 1'}>
+			<p className={'_pd-24px'}>Content of tab id `tab_a`</p>
 		</Tabs.Item>
-		<Tabs.Item id={'tab_b'} label={'Tab 2'} labelIconClass={'fas fa-alien'}>
-			Content of tab 2
+		<Tabs.Item id={'tab_b'} label={'Show tab 2'} labelIconClass={'fas fa-alien'}>
+			<p className={'_pd-24px'}>Content of tab id `tab_b`</p>
 		</Tabs.Item>
-		<Tabs.Item id={'tab_c'} label={'Tab 3'}>
-			Content of tab 3
+		<Tabs.Item id={'tab_c'} label={'Show tab 3'}>
+			<p className={'_pd-24px'}>
+				Content of tab id `tab_c`
+				<br />
+				Second line
+			</p>
 		</Tabs.Item>
 	</Tabs>
 )
 
-export const Primary = Template.bind({})
-Primary.args = {
-	defaultActiveId: 'tab_b',
+export const _1Overview = Template.bind({})
+_1Overview.storyName = 'Overview'
+_1Overview.args = {
+	// defaultItemId: 'tab_b',
 }

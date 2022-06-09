@@ -2,38 +2,80 @@
 
 .nomi-tabs {
 	.tabs-menus {
+		position: relative;
+		z-index: 1;
 		display: flex;
-
-		> * {
-			font-family: var(--font-family-secondary);
-			font-size: toRem(16);
-			font-weight: 600;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: toRem(32);
-			padding: 0 toRem(16);
-			border-top-left-radius: toRem(6);
-			border-top-right-radius: toRem(6);
-			background-color: var(--color-neutral-300);
-		}
+		transform: translate3d(0, var(--tabs-border-width), 0);
 	}
 
 	.tabs-button {
+		font-family: var(--tabs-font-family);
+		font-size: var(--tabs-font-size);
+		font-weight: var(--tabs-font-weight);
+		position: relative;
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: var(--tabs-height);
+		padding: var(--tabs-padding);
+		cursor: pointer;
+		transition: all 0.12s ease-in-out;
+		color: var(--color-neutral-700);
 		border: none;
+		border-top: var(--tabs-border-width) solid var(--ui-border-color-1);
+		border-right: var(--tabs-border-width) solid var(--ui-border-color-1);
+		border-left: var(--tabs-border-width) solid var(--ui-border-color-1);
+		border-top-left-radius: var(--tabs-border-radius);
+		border-top-right-radius: var(--tabs-border-radius);
 		outline: none;
+		background: var(--color-neutral-100);
 
 		&:focus {
+			z-index: 1;
+			border-top: var(--tabs-border-width) solid var(--color-primary-500);
+			border-right: var(--tabs-border-width) solid var(--color-primary-500);
+			border-left: var(--tabs-border-width) solid var(--color-primary-500);
 			box-shadow: 0 0 0 .175rem var(--color-primary-300);
 		}
 
 		&.is-active {
-			background-color: var(--color-white-100);
+			z-index: 1;
+			color: var(--color-primary-500);
+			background: var(--ui-background-1);
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: toRem(1);
+			content: ' ';
+			background: var(--ui-border-color-1);
+		}
+
+		.tabs-button-icon {
+			display: flex;
+			min-width: toRem(24);
 		}
 	}
 
-	.tabs-item {
+	.tabs-contents {
+		border: var(--tabs-border-width) solid var(--ui-border-color-1);
+		border-top-right-radius: var(--tabs-content-border-radius);
+		border-bottom-right-radius: var(--tabs-content-border-radius);
+		border-bottom-left-radius: var(--tabs-content-border-radius);
+		box-shadow: var(--tabs-box-shadow);
+	}
 
+	.tabs-content {
+		position: relative;
+		z-index: 2;
+		border-radius: inherit;
+		background: var(--ui-background-1);
 	}
 }

@@ -1,6 +1,14 @@
-@import 'packages/nomimono-css/helper/all';
+@import './helper';
 
-// form elements
+/* map theme color by basic use-case */
+:root {
+	--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
+	--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
+	--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
+	--ui-border-color-1-hover: var(--color-neutral-400);  /* border-color when hover for card, panel, etc. */
+}
+
+/* form elements */
 :root {
 	--form-element-small-height: #{toRem(28)};
 	--form-element-small-font-size: #{toRem(12)};
@@ -11,19 +19,19 @@
 
 	--form-element-border-radius: #{toRem(6)};
 	--form-element-label-font-size: #{toRem(14)};
-	--form-element-label-font-family: var(--font-family-primary);
+	--form-element-label-font-family: var(--font-family-secondary);
 	--form-element-label-font-weight: 600;
 
 	--select-font-weight: 400;
 }
 
-// message
+/* message */
 :root {
 	--message-font-size: #{toRem(15)};
 	--message-icon-font-size: #{toRem(26)};
 }
 
-// button
+/* button */
 :root {
 	--button-border-radius: #{toRem(4)};
 	--button-font-weight: 600;
@@ -32,12 +40,12 @@
 	--button-small-height: #{toRem(28)};
 	--button-small-font-size: #{toRem(13)};
 	--button-medium-height: #{toRem(40)};
-	--button-medium-font-size: #{toRem(14)};
+	--button-medium-font-size: #{toRem(15)};
 	--button-large-height: #{toRem(48)};
 	--button-large-font-size: #{toRem(18)};
 }
 
-// select-button
+/* select-button */
 :root {
 	--select-button-font-weight: 400;
 	--select-button-font-family: var(--font-family-primary);
@@ -48,4 +56,17 @@
 	--select-button-medium-font-size: #{toRem(14)};
 	--select-button-large-height: #{toRem(42)};
 	--select-button-large-font-size: #{toRem(18)};
+}
+
+/* tabs */
+:root {
+	--tabs-font-weight: 500;
+	--tabs-font-size: #{toRem(15)};
+	--tabs-font-family: var(--font-family-secondary);
+	--tabs-height: #{toRem(40)};
+	--tabs-padding: 0 #{toRem(20)};
+	--tabs-border-radius: #{toRem(8)};
+	--tabs-border-width: #{toRem(1)};
+	--tabs-content-border-radius: #{toRem(8)};
+	--tabs-box-shadow: var(--ui-box-shadow-1);
 }
