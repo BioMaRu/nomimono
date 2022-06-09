@@ -18,6 +18,7 @@
 			"rules": {
 				"dot-notation": "off",
 				"react/react-in-jsx-scope": "off",
+				"no-unused-vars": "warn",
 				"@typescript-eslint/no-empty-interface": "off",
 				"@typescript-eslint/ban-types": "off"
 			}
