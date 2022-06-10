@@ -1,6 +1,7 @@
 @import '../helper/all';
+@import 'config';
 
-.nomi-tabs {
+.#{$prefix}-tabs {
 	.tabs-menus {
 		position: relative;
 		z-index: 1;

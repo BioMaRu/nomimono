@@ -1,3 +1,4 @@
+export * from './ui/table/Table'
 export * from './ui/tabs/Tabs'
 export * from './ui/select/Select'
 export * from './ui/checkbox/Checkbox'

@@ -1,6 +1,7 @@
 @import '../helper/all';
+@import 'config';
 
-.nomi-button {
+.#{$prefix}-button {
 	font-family: var(--button-font-family);
 	font-size: var(--button-medium-font-size);
 	font-weight: var(--button-font-weight);
@@ -158,12 +159,12 @@
 
 	&.is-variant-secondary {
 		color: var(--color-primary-500);
-		border: 1px solid var(--color-neutral-200);
+		border: toRem(1) solid var(--color-neutral-200);
 		background: transparent;
 
 		&:hover {
 			color: var(--color-primary-500);
-			border: 1px solid var(--color-neutral-300);
+			border: toRem(1) solid var(--color-neutral-300);
 
 			&:before {
 				background: var(--color-shade-100);

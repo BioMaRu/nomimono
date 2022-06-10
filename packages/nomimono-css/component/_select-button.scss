@@ -1,6 +1,7 @@
 @import '../helper/all';
+@import 'config';
 
-.nomi-select-button {
+.#{$prefix}-select-button {
 	font-family: var(--select-button-font-family);
 	font-size: var(--select-button-medium-font-size);
 	font-weight: var(--select-button-font-weight);
@@ -12,13 +13,13 @@
 	cursor: pointer;
 	transition: all 0.16s ease-in-out;
 	color: var(--color-text-default-100);
-	border: 1px solid var(--ui-border-color-1);
+	border: toRem(1) solid var(--ui-border-color-1);
 	border-radius: 999px;
 	background-color: transparent;
 
 	&:hover,
 	&:focus {
-		border: 1px solid var(--ui-border-color-1-hover);
+		border: toRem(1) solid var(--ui-border-color-1-hover);
 		background: transparent;
 	}
 

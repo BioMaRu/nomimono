@@ -4,8 +4,11 @@
 :root {
 	--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
 	--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
+
 	--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
 	--ui-border-color-1-hover: var(--color-neutral-400);  /* border-color when hover for card, panel, etc. */
+
+	--ui-border-color-2: var(--color-neutral-200);        /* border-color for card, panel, etc. */
 }
 
 /* form elements */

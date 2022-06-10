@@ -1,0 +1,107 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}-table-container {
+	position: relative;
+	overflow-x: auto;
+	overflow-y: visible;
+	border: toRem(1) solid var(--ui-border-color-1);
+	border-radius: toRem(8);
+
+	//.row {
+	//	cursor: pointer;
+	//
+	//	&:hover {
+	//		background-color: rgba(247, 247, 247, 0.8);
+	//	}
+	//}
+}
+
+.#{$prefix}-table {
+	overflow-x: auto;
+	overflow-y: visible;
+
+	width: 100%;
+	max-width: 100%;
+
+	border-spacing: 0;
+
+	border-collapse: collapse;
+	word-break: normal;
+
+	thead {
+		font-size: 15px;
+		font-weight: 500;
+		overflow: hidden;
+		color: var(--color-neutral-700);
+		background: var(--color-neutral-100);
+	}
+
+	th, td {
+		padding: toRem(12) 0 toRem(12) 0;
+		text-align: left;
+		vertical-align: middle;
+
+		&:first-child {
+			padding-left: toRem(12);
+		}
+
+		&:not(:first-child) {
+			padding-left: toRem(24);
+		}
+
+		&:last-child {
+			padding-right: toRem(12);
+		}
+	}
+
+	td {
+		font-size: toRem(14);
+	}
+
+	th {
+		border-bottom: toRem(1) solid var(--ui-border-color-2);
+	}
+
+	tr:not(:last-child) {
+		border-bottom: toRem(1) solid var(--ui-border-color-2);
+	}
+
+	&.-ruled {
+		tbody tr {
+			border-bottom: 1px solid var(--color-neutral-300);
+		}
+
+		thead tr {
+			padding-right: .5rem;
+			padding-left: .5rem;
+		}
+
+		&:not(.-no-top-rule) {
+			thead tr {
+				border-bottom: 2px solid var(--color-neutral-300);
+			}
+		}
+	}
+
+	&.-striped {
+		tbody tr:nth-child(even) {
+			background-color: var(--color-neutral-100);
+		}
+	}
+
+	&.-list {
+		tbody tr td:first-child {
+			font-weight: 700;
+			white-space: nowrap;
+		}
+
+		tbody tr td:last-child {
+			text-align: right;
+		}
+	}
+
+	.collapse {
+		width: 1%;
+	}
+}
