@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react'
 import { Tabs, TabsProps } from './Tabs'
+import dedent from 'ts-dedent'
 
 Tabs.Item.displayName = 'Tabs.Item'
 
@@ -7,7 +8,24 @@ export default {
 	component: Tabs,
 	title: 'Navigation/Tabs',
 	subcomponents: { 'Tabs.Item': Tabs.Item },
-	actions: { handles: 'click .tabs-button' },
+	parameters: {
+		docs: {
+			description: {
+				component: dedent`
+						<div
+							class="_bdrd-8px _pdh-32px _dp-f _alit-ct _bgs-cv _bgpst-tl"
+							style="height: 100px; background-image: url(/images/header-bg.png);"
+						>
+							<h1 class="_fs-1000 _fw-600 _mg-0px">Tabs</h1>
+						</div>
+						<h2 class="_fs-600 _fw-600 _mgt-32px">Overview</h2>
+						<p class="_lh-165pct" style="font-size: 16px;">
+							<code>&lt;Tabs /&gt;</code> for tabs based navigation
+						</p>
+					`,
+			},
+		},
+	},
 } as Meta
 
 const Template: Story<TabsProps> = args => (

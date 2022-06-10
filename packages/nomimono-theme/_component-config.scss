@@ -6,9 +6,10 @@
 	--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
 
 	--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
-	--ui-border-color-1-hover: var(--color-neutral-400);  /* border-color when hover for card, panel, etc. */
+	--ui-border-color-1-hover: var(--color-neutral-400);
 
-	--ui-border-color-2: var(--color-neutral-200);        /* border-color for card, panel, etc. */
+	--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
+	--ui-border-color-2-hover: var(--color-neutral-300);
 }
 
 /* form elements */
@@ -72,4 +73,21 @@
 	--tabs-border-width: #{toRem(1)};
 	--tabs-content-border-radius: #{toRem(8)};
 	--tabs-box-shadow: var(--ui-box-shadow-1);
+}
+
+/* table */
+:root {
+	--table-border-width: #{toRem(1)};
+	--table-border-radius: #{toRem(8)};
+
+	--table-head-font-weight: 500;
+	--table-head-font-size: #{toRem(14)};
+	--table-head-font-family: var(--font-family-secondary);
+	--table-head-vertical-padding: #{toRem(12)};
+
+	--table-data-vertical-padding: #{toRem(16)};
+	--table-data-font-size: #{toRem(14)};
+
+	--table-gutter: #{toRem(24)};
+	--table-side-padding: #{toRem(16)};
 }

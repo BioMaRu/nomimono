@@ -7,7 +7,7 @@ export interface TabsItemProps {
 	id: string
 	label: string
 	labelIconClass?: string
-	children?: ReactNode
+	children: ReactNode
 }
 
 export interface TabsProps extends React.AllHTMLAttributes<HTMLDivElement> {

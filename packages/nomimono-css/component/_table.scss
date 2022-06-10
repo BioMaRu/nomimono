@@ -5,16 +5,8 @@
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border: toRem(1) solid var(--ui-border-color-1);
-	border-radius: toRem(8);
-
-	//.row {
-	//	cursor: pointer;
-	//
-	//	&:hover {
-	//		background-color: rgba(247, 247, 247, 0.8);
-	//	}
-	//}
+	border: var(--table-border-width) solid var(--ui-border-color-2);
+	border-radius: var(--table-border-radius);
 }
 
 .#{$prefix}-table {
@@ -29,79 +21,66 @@
 	border-collapse: collapse;
 	word-break: normal;
 
+	&.is-variant-primary {
+		thead {
+			color: var(--color-text-invert-100);
+			background: var(--color-primary-500);
+		}
+	}
+
 	thead {
-		font-size: 15px;
-		font-weight: 500;
+		font-family: var(--table-head-font-family);
+		font-size: var(--table-head-font-size);
+		font-weight: var(--table-head-font-weight);
 		overflow: hidden;
 		color: var(--color-neutral-700);
 		background: var(--color-neutral-100);
 	}
 
 	th, td {
-		padding: toRem(12) 0 toRem(12) 0;
 		text-align: left;
 		vertical-align: middle;
 
 		&:first-child {
-			padding-left: toRem(12);
+			padding-left: var(--table-side-padding);
 		}
 
 		&:not(:first-child) {
-			padding-left: toRem(24);
+			padding-left: var(--table-gutter);
 		}
 
 		&:last-child {
-			padding-right: toRem(12);
-		}
-	}
-
-	td {
-		font-size: toRem(14);
-	}
-
-	th {
-		border-bottom: toRem(1) solid var(--ui-border-color-2);
-	}
-
-	tr:not(:last-child) {
-		border-bottom: toRem(1) solid var(--ui-border-color-2);
-	}
-
-	&.-ruled {
-		tbody tr {
-			border-bottom: 1px solid var(--color-neutral-300);
+			padding-right: var(--table-side-padding);
 		}
 
-		thead tr {
-			padding-right: .5rem;
-			padding-left: .5rem;
+		&.is-align-left {
+			text-align: left;
 		}
 
-		&:not(.-no-top-rule) {
-			thead tr {
-				border-bottom: 2px solid var(--color-neutral-300);
-			}
-		}
-	}
-
-	&.-striped {
-		tbody tr:nth-child(even) {
-			background-color: var(--color-neutral-100);
-		}
-	}
-
-	&.-list {
-		tbody tr td:first-child {
-			font-weight: 700;
-			white-space: nowrap;
+		&.is-align-center {
+			text-align: center;
 		}
 
-		tbody tr td:last-child {
+		&.is-align-right {
 			text-align: right;
 		}
 	}
 
-	.collapse {
-		width: 1%;
+	td {
+		font-size: var(--table-data-font-size);
+		padding: var(--table-data-vertical-padding) 0 var(--table-data-vertical-padding) 0;
+	}
+
+	th {
+		padding: var(--table-head-vertical-padding) 0 var(--table-head-vertical-padding) 0;
+		border-bottom: toRem(1) solid var(--ui-border-color-2);
+
+		&.is-collapse {
+			width: 1%;
+		}
+	}
+
+	tr:not(:last-child) {
+		border-bottom: toRem(1) solid var(--ui-border-color-2);
 	}
 }
