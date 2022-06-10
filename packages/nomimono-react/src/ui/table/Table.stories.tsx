@@ -37,7 +37,9 @@ export default {
 const Template: Story<TableProps> = args => (
 	<Table {...args}>
 		<Table.Head>Name</Table.Head>
-		<Table.Head align={'right'}>Join at</Table.Head>
+		<Table.Head align={'right'} width={150}>
+			Join at
+		</Table.Head>
 		<Table.Head align={'right'}>Power</Table.Head>
 		<Table.Head isCollapse></Table.Head>
 
@@ -66,7 +68,7 @@ _1Overview.parameters = {
 			code: dedent`
 			<Table>
 			  <Table.Head>Name</Table.Head>
-			  <Table.Head align={'right'}>Join at</Table.Head>
+			  <Table.Head align={'right'} width={150}>Join at</Table.Head>
 			  <Table.Head align={'right'}>Power</Table.Head>
 			  <Table.Head isCollapse></Table.Head>
 

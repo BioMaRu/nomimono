@@ -32,6 +32,7 @@ export interface TableRowProps extends React.BaseHTMLAttributes<HTMLTableRowElem
 
 export interface TableHeadProps extends React.BaseHTMLAttributes<HTMLElement> {
 	align?: keyof ITableHead['align']
+	width?: string | number
 	isCollapse?: boolean
 	children?: ReactNode
 }
@@ -96,6 +97,11 @@ export const Table: FC<TableProps> & {
 export const TableRow: FC<TableRowProps> = props => <tr>{props.children}</tr>
 export const TableHead: FC<TableHeadProps> = props => (
 	<th
+		style={{
+			width: props.width,
+			minWidth: props.width,
+			maxWidth: props.width,
+		}}
 		className={classNames(props?.className, {
 			'is-align-left': props.align === TABLE_HEAD.align.left,
 			'is-align-right': props.align === TABLE_HEAD.align.right,
