@@ -28,7 +28,7 @@ export interface SelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectE
 }
 
 export function Select(props: SelectProps) {
-	const { size, variant, label, info, children, ...selectProps } = props
+	const { size, variant, label, info, children, ...rest } = props
 
 	return (
 		<div
@@ -43,7 +43,7 @@ export function Select(props: SelectProps) {
 		>
 			{!!props.label && <label htmlFor={props.id}>{props.label}</label>}
 			<div className={classNames('nomi-select', {})}>
-				<select {...selectProps} className={classNames(props?.className, {})}>
+				<select {...rest} className={classNames(props?.className, {})}>
 					{props.children}
 				</select>
 			</div>

@@ -1,3 +1,4 @@
+export * from './ui/input/Input'
 export * from './ui/table/Table'
 export * from './ui/tabs/Tabs'
 export * from './ui/select/Select'
