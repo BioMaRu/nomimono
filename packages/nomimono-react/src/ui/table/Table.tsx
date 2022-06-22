@@ -1,7 +1,7 @@
 import './Table.scss'
 import React, { ReactNode, ReactElement, FC } from 'react'
 import classNames from 'classnames'
-import { ITable, ITableData, ITableHead } from './type'
+import { ITable, ITableData, ITableHead, ITableRow } from './type'
 
 export const TABLE = {
 	variant: {
@@ -9,6 +9,12 @@ export const TABLE = {
 		primary: 'primary',
 	},
 } as ITable
+
+export const TABLE_ROW = {
+	variant: {
+		compact: 'compact',
+	},
+} as ITableRow
 
 export const TABLE_HEAD = {
 	align: {
@@ -27,6 +33,7 @@ export const TABLE_DATA = {
 } as ITableData
 
 export interface TableRowProps extends React.BaseHTMLAttributes<HTMLTableRowElement> {
+	variant?: keyof ITableRow['variant']
 	children?: ReactNode
 }
 
@@ -39,6 +46,8 @@ export interface TableHeadProps extends React.BaseHTMLAttributes<HTMLElement> {
 
 export interface TableDataProps extends React.BaseHTMLAttributes<HTMLElement> {
 	align?: keyof ITableData['align']
+	colSpan?: number
+	rowSpan?: number
 	children?: ReactNode
 }
 
@@ -85,44 +94,91 @@ export const Table: FC<TableProps> & {
 					<tr>{th}</tr>
 				</thead>
 				<tbody>
-					{tr.map((it, idx) => (
-						<tr key={idx}>{it.props?.children}</tr>
-					))}
+					{tr.map((it, idx) => {
+						const { children, className, variant, __TYPE, ...rest } =
+							props as TableRowProps & {
+								__TYPE: string
+							}
+
+						return (
+							<tr
+								{...rest}
+								className={classNames(props?.className, {
+									'is-variant-compact':
+										it.props.variant === TABLE_ROW.variant.compact,
+								})}
+								key={idx}
+							>
+								{it.props?.children}
+							</tr>
+						)
+					})}
 				</tbody>
 			</table>
 		</div>
 	)
 }
 
-export const TableRow: FC<TableRowProps> = props => <tr>{props.children}</tr>
-export const TableHead: FC<TableHeadProps> = props => (
-	<th
-		style={{
-			width: props.width,
-			minWidth: props.width,
-			maxWidth: props.width,
-		}}
-		className={classNames(props?.className, {
-			'is-align-left': props.align === TABLE_HEAD.align.left,
-			'is-align-right': props.align === TABLE_HEAD.align.right,
-			'is-align-center': props.align === TABLE_HEAD.align.center,
-			'is-collapse': props.isCollapse,
-		})}
-	>
-		{props.children}
-	</th>
-)
-export const TableData: FC<TableDataProps> = props => (
-	<td
-		className={classNames(props?.className, {
-			'is-align-left': props.align === TABLE_DATA.align.left,
-			'is-align-right': props.align === TABLE_DATA.align.right,
-			'is-align-center': props.align === TABLE_DATA.align.center,
-		})}
-	>
-		{props.children}
-	</td>
-)
+export const TableRow: FC<TableRowProps> = props => {
+	const { children, className, variant, __TYPE, ...rest } = props as TableRowProps & {
+		__TYPE: string
+	}
+	console.log('props')
+	return (
+		<tr
+			{...rest}
+			className={classNames(props?.className, {
+				'is-variant-compact': props.variant === TABLE_ROW.variant.compact,
+			})}
+		>
+			{props.children}
+		</tr>
+	)
+}
+export const TableHead: FC<TableHeadProps> = props => {
+	const { className, children, style, isCollapse, __TYPE, ...rest } = props as TableHeadProps & {
+		__TYPE: string
+	}
+
+	return (
+		<th
+			{...rest}
+			style={{
+				width: props.width,
+				minWidth: props.width,
+				maxWidth: props.width,
+				...style,
+			}}
+			className={classNames(props?.className, {
+				'is-align-left': props.align === TABLE_HEAD.align.left,
+				'is-align-right': props.align === TABLE_HEAD.align.right,
+				'is-align-center': props.align === TABLE_HEAD.align.center,
+				'is-collapse': props.isCollapse,
+			})}
+		>
+			{props.children}
+		</th>
+	)
+}
+
+export const TableData: FC<TableDataProps> = props => {
+	const { align, className, children, __TYPE, ...rest } = props as TableDataProps & {
+		__TYPE: string
+	}
+
+	return (
+		<td
+			{...rest}
+			className={classNames(props?.className, {
+				'is-align-left': props.align === TABLE_DATA.align.left,
+				'is-align-right': props.align === TABLE_DATA.align.right,
+				'is-align-center': props.align === TABLE_DATA.align.center,
+			})}
+		>
+			{props.children}
+		</td>
+	)
+}
 ;(TableRow as any).defaultProps = {
 	__TYPE: 'TableRow',
 }

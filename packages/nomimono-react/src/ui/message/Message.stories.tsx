@@ -27,6 +27,11 @@ export default {
 				`,
 			},
 		},
+		actions: { argTypesRegex: '^on' },
+		cssprops: {
+			'message-font-size': { value: '15px' },
+			'message-icon-font-size': { value: '22px' },
+		},
 	},
 } as Meta
 

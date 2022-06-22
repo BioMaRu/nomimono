@@ -22,6 +22,23 @@ export default {
 					`,
 			},
 		},
+		actions: { argTypesRegex: '^on' },
+		cssprops: {
+			'form-element-small-height': { value: '28px' },
+			'form-element-small-font-size': { value: '12px' },
+			'form-element-medium-height': { value: '40px' },
+			'form-element-medium-font-size': { value: '14px' },
+			'form-element-large-height': { value: '48px' },
+			'form-element-large-font-size': { value: '16px' },
+			'form-element-border-radius': { value: '6px' },
+			'form-element-label-font-size': { value: '14px' },
+			'form-element-label-font-family': {
+				value: 'var(--font-family-secondary)',
+				control: 'text',
+			},
+			'form-element-label-font-weight': { value: '600' },
+			'select-font-weight': { value: '400' },
+		},
 	},
 } as Meta
 

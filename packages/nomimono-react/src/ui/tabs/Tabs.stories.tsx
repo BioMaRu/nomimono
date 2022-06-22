@@ -25,6 +25,20 @@ export default {
 					`,
 			},
 		},
+		actions: { argTypesRegex: '^on' },
+		cssprops: {
+			'tabs-font-weight': { value: '500' },
+			'tabs-font-size': { value: '15px' },
+			'tabs-font-family': { value: `var(--font-family-secondary)`, control: 'text' },
+			'tabs-height': { value: '40px' },
+			'tabs-padding': { value: '0 20px' },
+			'tabs-border-radius': { value: '8px' },
+			'tabs-border-width': { value: '1px' },
+			'tabs-content-border-radius': { value: '8px' },
+			'tabs-box-shadow': { value: `var(--ui-box-shadow-1)`, control: 'text' },
+			'table-border-width': { value: '1px' },
+			'table-border-radius': { value: '8px' },
+		},
 	},
 } as Meta
 
@@ -49,5 +63,5 @@ const Template: Story<TabsProps> = args => (
 export const _1Overview = Template.bind({})
 _1Overview.storyName = 'Overview'
 _1Overview.args = {
-	// defaultItemId: 'tab_b',
+	defaultTabId: 'tab_b',
 }

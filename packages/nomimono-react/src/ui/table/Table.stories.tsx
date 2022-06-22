@@ -31,6 +31,22 @@ export default {
 					`,
 			},
 		},
+		actions: { argTypesRegex: '^on' },
+		cssprops: {
+			'table-border-width': { value: '1px' },
+			'table-border-radius': { value: '8px' },
+
+			'table-head-font-weight': { value: '500' },
+			'table-head-font-size': { value: '14px' },
+			'table-head-font-family': { value: `var(--font-family-secondary)`, control: 'text' },
+			'table-head-vertical-padding': { value: '12px' },
+
+			'table-data-vertical-padding': { value: '16px' },
+			'table-data-font-size': { value: '14px' },
+
+			'table-gutter': { value: '24px' },
+			'table-side-padding': { value: '16px' },
+		},
 	},
 } as Meta
 
@@ -51,6 +67,12 @@ const Template: Story<TableProps> = args => (
 				<Table.Data>✍️</Table.Data>
 			</Table.Row>
 		))}
+
+		<Table.Row variant={'compact'}>
+			<Table.Data colSpan={4} align={'right'}>
+				Total: 3
+			</Table.Data>
+		</Table.Row>
 	</Table>
 )
 
@@ -80,6 +102,12 @@ _1Overview.parameters = {
 			      <Table.Data>✍️</Table.Data>
 			    </Table.Row>
 			  ))}
+
+			  <Table.Row variant={'compact'}>
+			    <Table.Data colSpan={4} align={'right'}>
+			      Total: 3
+			    </Table.Data>
+			  </Table.Row>
 			</Table>
 		  `,
 		},

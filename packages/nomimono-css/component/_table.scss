@@ -29,9 +29,6 @@
 	}
 
 	thead {
-		font-family: var(--table-head-font-family);
-		font-size: var(--table-head-font-size);
-		font-weight: var(--table-head-font-weight);
 		overflow: hidden;
 		color: var(--color-neutral-700);
 		background: var(--color-neutral-100);
@@ -72,6 +69,9 @@
 	}
 
 	th {
+		font-family: var(--table-head-font-family);
+		font-size: var(--table-head-font-size);
+		font-weight: var(--table-head-font-weight);
 		padding: var(--table-head-vertical-padding) 0 var(--table-head-vertical-padding) 0;
 		border-bottom: toRem(1) solid var(--ui-border-color-2);
 
@@ -82,5 +82,14 @@
 
 	tr:not(:last-child) {
 		border-bottom: toRem(1) solid var(--ui-border-color-2);
+	}
+
+	tr {
+		&.is-variant-compact {
+			td {
+				padding-top: var(--table-data-variant-compact-vertical-padding);
+				padding-bottom: var(--table-data-variant-compact-vertical-padding);
+			}
+		}
 	}
 }

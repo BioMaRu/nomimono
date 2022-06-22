@@ -76,6 +76,7 @@
 		"url-loader": "^3.0.0"
 	},
 	"dependencies": {
+		"@ljcl/storybook-addon-cssprops": "^2.3.2",
 		"classnames": "^2.3.1",
 		"core-js": "^3.6.5",
 		"eslint-config-standard": "^17.0.0",

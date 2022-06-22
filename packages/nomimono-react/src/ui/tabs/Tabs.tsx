@@ -11,21 +11,23 @@ export interface TabsItemProps {
 }
 
 export interface TabsProps extends React.AllHTMLAttributes<HTMLDivElement> {
-	defaultItemId?: string
-	onActiveTabChange?: (activeId: string) => void
+	defaultTabId?: string
+	onTabChange?: (payload: { activeTabId: string }) => void
 	children?: ReactElement<TabsItemProps>[]
 }
 
 export const Tabs: FC<TabsProps> & { Item: React.FC<TabsItemProps> } = (props: TabsProps) => {
-	const defaultActive = props.defaultItemId || props?.children?.[0]?.props.id || ''
+	const defaultActive = props.defaultTabId || props?.children?.[0]?.props.id || ''
 	const [activeId, setActiveId] = useState<string>(defaultActive)
 
 	const handleActiveChange = useCallback(
 		(id = '') => {
 			setActiveId(id)
-			props.onActiveTabChange?.(id)
+			props.onTabChange?.({
+				activeTabId: activeId,
+			})
 		},
-		[setActiveId, props],
+		[setActiveId, activeId, props],
 	)
 
 	return (

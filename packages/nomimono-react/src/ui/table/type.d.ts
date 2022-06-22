@@ -5,6 +5,12 @@ export type ITable = {
 	}
 }
 
+export type ITableRow = {
+	variant: {
+		compact: 'compact'
+	}
+}
+
 export type ITableHead = {
 	align: {
 		left: 'left'
