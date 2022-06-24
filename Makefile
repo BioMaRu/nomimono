@@ -38,7 +38,6 @@ publish-nomimono-theme:
 zpatch-nomimono-theme:
 	make build-nomimono-theme && make patch-nomimono-theme && make publish-nomimono-theme
 
-
 #==============================
 # {libs} nomimono-css
 #==============================
