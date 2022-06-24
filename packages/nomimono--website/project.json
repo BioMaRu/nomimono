@@ -1,0 +1,20 @@
+{
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "application",
+	"sourceRoot": "packages/nomimono--website/src",
+	"tags": [],
+	"targets": {
+		"dev": {
+			"executor": "@nrwl/workspace:run-commands",
+			"options": {
+				"command": "cd packages/nomimono--website && npx svelte-kit dev"
+			}
+		},
+		"build": {
+			"executor": "@nrwl/workspace:run-commands",
+			"options": {
+				"command": "cd packages/nomimono--website && npx svelte-kit build"
+			}
+		}
+	}
+}
