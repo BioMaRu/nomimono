@@ -42,6 +42,8 @@
 <style lang="scss">
 	.hero {
 		height: 600px;
+		background-image: radial-gradient(#ababab 0.45px, transparent 0.45px);
+		background-size: 11px 11px;
 	}
 
 	.nomi-slate {
