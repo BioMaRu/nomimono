@@ -1,0 +1,69 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}dropdown {
+	position: relative;
+
+	--gap: #{toEm(4)};
+
+	label {
+		font-weight: 500;
+		position: relative;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	&:not(.is-hover-open) {
+		&:focus-within {
+			.#{$prefix}dropdown-content {
+				transition: all 0.16s ease-in-out;
+				transform: translate3d(0, 0, 0);
+				pointer-events: all;
+				opacity: 1;
+			}
+		}
+	}
+
+	&.is-position-bottom-right {
+		.#{$prefix}dropdown-content {
+			right: 0;
+		}
+	}
+
+	&.is-hover-open {
+		&:after {
+			position: absolute;
+			z-index: 0;
+			bottom: calc(-1 * var(--gap));
+			left: 0;
+			width: 100%;
+			height: var(--gap);
+			content: ' ';
+		}
+
+		&:hover {
+			.#{$prefix}dropdown-content {
+				transition: all 0.16s ease-in-out;
+				transform: translate3d(0, 0, 0);
+				pointer-events: all;
+				opacity: 1;
+			}
+		}
+
+		.#{$prefix}dropdown-content:hover {
+			transition: all 0.16s ease-in-out;
+			transform: translate3d(0, 0, 0);
+			pointer-events: all;
+			opacity: 1;
+		}
+	}
+
+	.#{$prefix}dropdown-content {
+		position: absolute;
+		z-index: 1;
+		top: calc(100%  + var(--gap));
+		transform: translate3d(0, -8px, 0);
+		pointer-events: none;
+		opacity: 0;
+	}
+}

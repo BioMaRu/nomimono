@@ -5,11 +5,8 @@
 
 <Navbar />
 
-<main class="layout lo-container">
-	<div>
-		<h1>AAAAAA</h1>
-		<slot />
-	</div>
+<main class="layout">
+	<slot />
 </main>
 
 <footer>
@@ -17,6 +14,10 @@
 </footer>
 
 <style lang="scss">
+	:root {
+		--navbar-height: 70px;
+	}
+
 	.layout {
 		padding-top: var(--navbar-height);
 	}

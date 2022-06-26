@@ -2,14 +2,17 @@
 
 /* map theme color by basic use-case */
 :root {
-	--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
-	--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
+	//--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
+	//--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
+	//
+	//--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
+	//--ui-border-color-1-hover: var(--color-neutral-400);
+	//
+	//--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
+	//--ui-border-color-2-hover: var(--color-neutral-300);
 
-	--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
-	--ui-border-color-1-hover: var(--color-neutral-400);
-
-	--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
-	--ui-border-color-2-hover: var(--color-neutral-300);
+	--u-border-color: 222deg 15% 86%; // h s l
+	--u-shadow-color: 333deg 0% 50%;  // h s l
 }
 
 /* form elements */
@@ -62,17 +65,17 @@
 	--select-button-large-font-size: #{toRem(18)};
 }
 
-/* tabs */
+/* tab */
 :root {
-	--tabs-font-weight: 500;
-	--tabs-font-size: #{toRem(15)};
-	--tabs-font-family: var(--font-family-secondary);
-	--tabs-height: #{toRem(40)};
-	--tabs-padding: 0 #{toRem(20)};
-	--tabs-border-radius: #{toRem(8)};
-	--tabs-border-width: #{toRem(1)};
-	--tabs-content-border-radius: #{toRem(8)};
-	--tabs-box-shadow: var(--ui-box-shadow-1);
+	--tab-font-weight: 500;
+	--tab-font-size: #{toRem(15)};
+	--tab-font-family: var(--font-family-secondary);
+	--tab-height: #{toRem(40)};
+	--tab-padding: 0 #{toRem(20)};
+	--tab-border-radius: #{toRem(8)};
+	--tab-border-width: #{toRem(1)};
+	--tab-content-border-radius: #{toRem(8)};
+	--tab-box-shadow: var(--ui-box-shadow-1);
 }
 
 /* table */

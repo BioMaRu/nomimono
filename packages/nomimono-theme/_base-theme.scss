@@ -2,7 +2,7 @@
  * Color
  *********************************************/
 :root {
-	--color-primary-50: hsl(333, 85%, 98.5%);
+	--color-primary-50:  hsl(333, 85%, 98.5%);
 	--color-primary-100: hsl(333, 85%, 96%);
 	--color-primary-200: hsl(333, 85%, 93%);
 	--color-primary-300: hsl(333, 85%, 88%);
@@ -13,36 +13,36 @@
 	--color-primary-800: hsl(333, 90%, 30%);
 	--color-primary-900: hsl(333, 90%, 25%);
 
-	--color-neutral-50: hsl(216, 15%, 98.5%);
-	--color-neutral-100: hsl(216, 15%, 97%);
-	--color-neutral-200: hsl(216, 15%, 92%);
-	--color-neutral-300: hsl(216, 15%, 86%);
-	--color-neutral-400: hsl(216, 15%, 66%);
-	--color-neutral-500: hsl(216, 15%, 59%);
-	--color-neutral-600: hsl(216, 15%, 52%);
-	--color-neutral-700: hsl(216, 15%, 33%);
-	--color-neutral-800: hsl(216, 15%, 26%);
-	--color-neutral-900: hsl(216, 15%, 20%);
+	--color-neutral-50:  hsl(222, 15%, 100%);
+	--color-neutral-100: hsl(222, 15%, 97%);
+	--color-neutral-200: hsl(222, 15%, 92%);
+	--color-neutral-300: hsl(222, 15%, 87%);
+	--color-neutral-400: hsl(222, 15%, 82%);
+	--color-neutral-500: hsl(222, 15%, 70%);
+	--color-neutral-600: hsl(222, 15%, 60%);
+	--color-neutral-700: hsl(222, 15%, 55%);
+	--color-neutral-800: hsl(222, 15%, 50%);
+	--color-neutral-900: hsl(222, 15%, 45%);
 
-	--color-positive-50: hsl(168, 90%, 97.5%);
+	--color-positive-50:  hsl(168, 90%, 97.5%);
 	--color-positive-100: hsl(168, 75%, 83%);
 	--color-positive-200: hsl(168, 72%, 42%);
 	--color-positive-300: hsl(168, 72%, 35%);
 	--color-positive-400: hsl(168, 80%, 25%);
 
-	--color-negative-50: hsl(5, 85%, 98.5%);
+	--color-negative-50:  hsl(5, 85%, 98.5%);
 	--color-negative-100: hsl(5, 85%, 89%);
 	--color-negative-200: hsl(5, 78%, 63%);
 	--color-negative-300: hsl(5, 78%, 54%);
 	--color-negative-400: hsl(5, 80%, 40%);
 
-	--color-info-50: hsl(197, 80%, 97.5%);
+	--color-info-50:  hsl(197, 80%, 97.5%);
 	--color-info-100: hsl(197, 80%, 88%);
 	--color-info-200: hsl(197, 70%, 54%);
 	--color-info-300: hsl(197, 70%, 46%);
 	--color-info-400: hsl(197, 90%, 32%);
 
-	--color-warning-50: hsl(45, 90%, 97.5%);
+	--color-warning-50:  hsl(45, 90%, 97.5%);
 	--color-warning-100: hsl(45, 80%, 85%);
 	--color-warning-200: hsl(45, 90%, 48%);
 	--color-warning-300: hsl(45, 90%, 43%);
@@ -106,4 +106,36 @@
 	--breakpoint-sm: 768px;
 	--breakpoint-md: 1024px;
 	--breakpoint-lg: 1280px;
+}
+
+:root {
+	--box-shadow-100:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.05),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.05),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.05),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.05);
+
+	--box-shadow-200:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.075),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.075),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.075),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.075),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.075);
+
+	--box-shadow-300:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.1),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.1),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.1),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.1),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.1),
+		0 32px 32px hsl(var(--u-shadow-color) / 0.1);
+
+	--box-shadow-400:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.15),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.15),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.15),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.15),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.15),
+		0 32px 32px hsl(var(--u-shadow-color) / 0.15),
+		0 64px 64px hsl(var(--u-shadow-color) / 0.15);
 }

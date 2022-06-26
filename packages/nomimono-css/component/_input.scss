@@ -3,7 +3,7 @@
 
 $SIZES: 'small', 'medium', 'large';
 
-.#{$prefix}-field {
+.#{$prefix}field {
 	display: inline-flex;
 	flex-direction: column;
 	gap: toEm(6);
@@ -11,7 +11,7 @@ $SIZES: 'small', 'medium', 'large';
 	// size
 	@each $s in $SIZES {
 		&.is-size-#{$s} {
-			.#{$prefix}-input {
+			.#{$prefix}input {
 				height: var(--form-element-#{$s}-height);
 
 				input {
@@ -23,7 +23,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-variant-negative {
-		.#{$prefix}-input {
+		.#{$prefix}input {
 			input {
 				color: var(--color-negative-400);
 				border-color: var(--color-negative-200);
@@ -44,7 +44,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-variant-positive {
-		.#{$prefix}-input {
+		.#{$prefix}input {
 			input {
 				color: var(--color-positive-400);
 				border-color: var(--color-positive-200);
@@ -79,7 +79,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-disabled {
-		.#{$prefix}-input {
+		.#{$prefix}input {
 			opacity: 0.8;
 
 			input {
@@ -90,7 +90,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 }
 
-.#{$prefix}-input {
+.#{$prefix}input {
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;

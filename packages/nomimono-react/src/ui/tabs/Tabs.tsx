@@ -31,18 +31,18 @@ export const Tabs: FC<TabsProps> & { Item: React.FC<TabsItemProps> } = (props: T
 	)
 
 	return (
-		<div className={'nomi-tabs'}>
-			<div className={'tabs-menus'}>
+		<div className={'nomi-tab'}>
+			<div className={'tab-menus'}>
 				{props?.children?.map((it, idx) => (
 					<button
 						key={idx}
 						onMouseDown={() => handleActiveChange(it?.props?.id)}
-						className={classNames('tabs-button', {
+						className={classNames('tab-button', {
 							'is-active': activeId === it.props.id,
 						})}
 					>
 						{it.props.labelIconClass && (
-							<div className={'tabs-button-icon'}>
+							<div className={'tab-button-icon'}>
 								<i className={it?.props.labelIconClass}></i>
 							</div>
 						)}

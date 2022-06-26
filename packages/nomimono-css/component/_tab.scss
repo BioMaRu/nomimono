@@ -1,0 +1,82 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}tab {
+	.tab-menus {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		transform: translate3d(0, var(--tab-border-width), 0);
+	}
+
+	.tab-button {
+		font-family: var(--tab-font-family);
+		font-size: var(--tab-font-size);
+		font-weight: var(--tab-font-weight);
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: var(--tab-height);
+		padding: var(--tab-padding);
+		cursor: pointer;
+		transition: all 0.12s ease-in-out;
+		color: var(--color-neutral-700);
+		border: none;
+		border-top: var(--tab-border-width) solid var(--ui-border-color-1);
+		border-right: var(--tab-border-width) solid var(--ui-border-color-1);
+		border-left: var(--tab-border-width) solid var(--ui-border-color-1);
+		border-top-left-radius: var(--tab-border-radius);
+		border-top-right-radius: var(--tab-border-radius);
+		outline: none;
+		background: var(--color-neutral-100);
+
+		&:focus {
+			z-index: 1;
+			border-top: var(--tab-border-width) solid var(--color-primary-500);
+			border-right: var(--tab-border-width) solid var(--color-primary-500);
+			border-left: var(--tab-border-width) solid var(--color-primary-500);
+			box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		}
+
+		&.is-active {
+			z-index: 1;
+			color: var(--color-primary-500);
+			background: var(--ui-background-1);
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: toRem(1);
+			content: ' ';
+			background: var(--ui-border-color-1);
+		}
+
+		.tab-button-icon {
+			display: flex;
+			min-width: toRem(24);
+		}
+	}
+
+	.tab-contents {
+		border: var(--tab-border-width) solid var(--ui-border-color-1);
+		border-top-right-radius: var(--tab-content-border-radius);
+		border-bottom-right-radius: var(--tab-content-border-radius);
+		border-bottom-left-radius: var(--tab-content-border-radius);
+		box-shadow: var(--tab-box-shadow);
+	}
+
+	.tab-content {
+		position: relative;
+		z-index: 2;
+		border-radius: inherit;
+		background: var(--ui-background-1);
+	}
+}

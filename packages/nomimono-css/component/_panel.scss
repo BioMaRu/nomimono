@@ -1,0 +1,61 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}panel {
+	//border: 1px solid hsl(var(--u-border-color) / 0.75);
+	border-radius: 8px;
+	background: var(--color-neutral-50);
+
+	&:hover {
+		//border: 1px solid hsl(var(--u-border-color) / 1);
+	}
+
+	.variant-none {
+
+	}
+
+	.level-100 {
+		color: var(--color-text-default-100);
+		background: var(--color-neutral-100);
+	}
+
+	.level-200 {
+		color: var(--color-text-default-100);
+		background: var(--color-neutral-200);
+	}
+
+	.level-300 {
+		color: var(--color-text-default-100);
+		background: var(--color-neutral-300);
+	}
+
+	.level-400 {
+		color: var(--color-text-default-100);
+		background: var(--color-neutral-400);
+	}
+
+	.level-500 {
+		color: var(--color-text-invert-100);
+		background: var(--color-neutral-500);
+	}
+
+	.level-600 {
+		color: var(--color-text-invert-100);
+		background: var(--color-neutral-600);
+	}
+
+	.level-700 {
+		color: var(--color-text-invert-100);
+		background: var(--color-neutral-700);
+	}
+
+	.level-800 {
+		color: var(--color-text-invert-100);
+		background: var(--color-neutral-800);
+	}
+
+	.level-900 {
+		color: var(--color-text-invert-100);
+		background: var(--color-neutral-900);
+	}
+}

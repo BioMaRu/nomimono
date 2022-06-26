@@ -1,7 +1,7 @@
 @import '../helper/all';
 @import 'config';
 
-.#{$prefix}-select-button {
+.#{$prefix}select-button {
 	font-family: var(--select-button-font-family);
 	font-size: var(--select-button-medium-font-size);
 	font-weight: var(--select-button-font-weight);

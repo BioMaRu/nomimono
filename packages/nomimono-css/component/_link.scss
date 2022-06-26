@@ -1,0 +1,17 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}link {
+	text-decoration: none;
+	color: var(--color-text-default-100);
+
+	&:hover {
+		color: var(--color-primary-500);
+	}
+
+	&.is-variant-none {
+		&:hover {
+			color: var(--color-text-default-100);
+		}
+	}
+}

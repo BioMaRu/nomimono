@@ -3,7 +3,7 @@
 
 $SIZES: 'small', 'medium', 'large';
 
-.#{$prefix}-field {
+.#{$prefix}field {
 	display: inline-flex;
 	flex-direction: column;
 	gap: toRem(6);
@@ -11,7 +11,7 @@ $SIZES: 'small', 'medium', 'large';
 	// size
 	@each $s in $SIZES {
 		&.is-size-#{$s} {
-			.#{$prefix}-select {
+			.#{$prefix}select {
 				height: var(--form-element-#{$s}-height);
 
 				select {
@@ -23,7 +23,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-variant-negative {
-		.#{$prefix}-select {
+		.#{$prefix}select {
 			select {
 				color: var(--color-negative-400);
 				border-color: var(--color-negative-200);
@@ -44,7 +44,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-variant-positive {
-		.#{$prefix}-select {
+		.#{$prefix}select {
 			select {
 				color: var(--color-positive-400);
 				border-color: var(--color-positive-200);
@@ -79,7 +79,7 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-disabled {
-		.#{$prefix}-select {
+		.#{$prefix}select {
 			opacity: 0.8;
 
 			select {
@@ -88,12 +88,12 @@ $SIZES: 'small', 'medium', 'large';
 		}
 	}
 
-	//.#{$prefix}-select {
+	//.#{$prefix}select {
 	//	select {}
 	//}
 }
 
-.#{$prefix}-select {
+.#{$prefix}select {
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;

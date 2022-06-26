@@ -1,7 +1,7 @@
 @import '../helper/all';
 @import 'config';
 
-.#{$prefix}-table-container {
+.#{$prefix}table-container {
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
@@ -9,7 +9,7 @@
 	border-radius: var(--table-border-radius);
 }
 
-.#{$prefix}-table {
+.#{$prefix}table {
 	overflow-x: auto;
 	overflow-y: visible;
 

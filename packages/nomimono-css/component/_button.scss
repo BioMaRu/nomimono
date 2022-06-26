@@ -1,7 +1,7 @@
 @import '../helper/all';
 @import 'config';
 
-.#{$prefix}-button {
+.#{$prefix}button {
 	font-family: var(--button-font-family);
 	font-size: var(--button-medium-font-size);
 	font-weight: var(--button-font-weight);

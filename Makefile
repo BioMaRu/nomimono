@@ -65,3 +65,6 @@ serve-storybook:
 
 build-storybook:
 	nx run nomimono-react:build-storybook
+
+dev-website:
+	nx run nomimono--website:dev

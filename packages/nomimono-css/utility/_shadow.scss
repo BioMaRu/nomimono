@@ -1,0 +1,37 @@
+.u-shadow-100 {
+	box-shadow:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.05),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.05),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.05),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.05);
+}
+
+.u-shadow-200 {
+	box-shadow:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.075),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.075),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.075),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.075),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.075);
+}
+
+.u-shadow-300 {
+	box-shadow:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.1),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.1),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.1),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.1),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.1),
+		0 32px 32px hsl(var(--u-shadow-color) / 0.1);
+}
+
+.u-shadow-400 {
+	box-shadow:
+		0 1px 1px hsl(var(--u-shadow-color) / 0.15),
+		0 2px 2px hsl(var(--u-shadow-color) / 0.15),
+		0 4px 4px hsl(var(--u-shadow-color) / 0.15),
+		0 8px 8px hsl(var(--u-shadow-color) / 0.15),
+		0 16px 16px hsl(var(--u-shadow-color) / 0.15),
+		0 32px 32px hsl(var(--u-shadow-color) / 0.15),
+		0 64px 64px hsl(var(--u-shadow-color) / 0.15);
+}
