@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	// import heroImg from '$assets/hero.svg'
 </script>
 
 <svelte:head>
@@ -11,44 +11,48 @@
 	<meta content="Svelte demo app" name="description" />
 </svelte:head>
 
-<section class="hero _bgcl-neutral-100 _pdt-32px">
-	<div class="_dp-f _gg-48px _pd-24px">
+<section class="hero _bgcl-neutral-100">
+	<div class="lo-container _h-100pct">
+		<div class="_dp-f _alit-ct _gg-24px _h-100pct _pdv-24px _pst-rlt">
+			<div class="_f-1 _pst-rlt _zid-1">
+				<h1 class="_fw-700">Nomimono</h1>
+				<p class="_fs-600 _mgt-4px">
+					Simple yet highly customizable UI Framework.
+				</p>
+				<div class="_dp-f _gg-12px _mgt-48px">
+					<a class="nomi-button is-size-large" href="#">
+						Get started
+					</a>
+					<div class="nomi-slate">
+						npm i @nomimono/nomimono-css
+					</div>
+				</div>
+			</div>
 
-<!--		<div class="nomi-panel _pdh-32px _pdv-12px">-->
-<!--			Hello-->
-<!--			<div class="nomi-panel level-100 _pdh-32px _pdv-12px">-->
-<!--				Hello 100-->
-<!--				<div class="nomi-panel level-200 _pdh-32px _pdv-12px">-->
-<!--					Hello 200-->
-<!--					<div class="nomi-panel level-300 _pdh-32px _pdv-12px">-->
-<!--						Hello 300-->
-<!--						<div class="nomi-panel level-400 _pdh-32px _pdv-12px">-->
-<!--							Hello 400-->
-<!--							<div class="nomi-panel level-500 _pdh-32px _pdv-12px">-->
-<!--								Hello 500-->
-<!--								<div class="nomi-panel level-600 _pdh-32px _pdv-12px">-->
-<!--									Hello 600-->
-<!--									<div class="nomi-panel level-700 _pdh-32px _pdv-12px">-->
-<!--										Hello 700-->
-<!--										<div class="nomi-panel level-800 _pdh-32px _pdv-12px">-->
-<!--											Hello 800-->
-<!--											<div class="nomi-panel level-900 _pdh-32px _pdv-12px">-->
-<!--												Hello 900-->
-<!--											</div>-->
-<!--										</div>-->
-<!--									</div>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</div>-->
+			<img
+				alt="Nomimono"
+				class="_pst-asl _zid-0 _r-0px"
+				src="hero.svg"
+				style="height: 500px; transform: scale(1.2); transform-origin: top right;"
+			>
+		</div>
 	</div>
 </section>
 
 <style lang="scss">
 	.hero {
-		height: 500px;
+		height: 600px;
+	}
+
+	.nomi-slate {
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 16px;
+		border: 2px solid var(--color-neutral-500);
+		border-radius: 8px;
+		background: var(--color-neutral-200);
+
 	}
 </style>
