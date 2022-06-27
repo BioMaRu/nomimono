@@ -68,3 +68,7 @@ build-storybook:
 
 dev-website:
 	nx run nomimono--website:dev
+
+
+build-website:
+	nx run nomimono--website:build

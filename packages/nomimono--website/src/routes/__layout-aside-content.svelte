@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../styles/main.scss'
 	import SideMenu from '$components/SideMenu.svelte';
-	import BrushIcon from '$components/icons/BrushIcon.svelte'
 </script>
 
 <svelte:head>
