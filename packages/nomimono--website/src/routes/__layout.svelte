@@ -1,22 +1,19 @@
 <script lang="ts">
 	import '../styles/main.scss'
-	import Navbar from '$lib/navbar/Navbar.svelte';
+	import Navbar from '$components/Navbar.svelte';
 </script>
 
 <Navbar />
 
-<main class="layout lo-container">
-	<div>
-		<h1>AAAAAA</h1>
-		<slot />
-	</div>
+<main class="layout">
+	<slot />
 </main>
 
-<footer>
-
-</footer>
-
 <style lang="scss">
+	:root {
+		--navbar-height: 70px;
+	}
+
 	.layout {
 		padding-top: var(--navbar-height);
 	}

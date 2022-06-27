@@ -1,16 +1,5 @@
 .lo-page-aside-content {
-	--w: 300px;
-
-	> .nav,
-	> nav {
-		position: fixed;
-		z-index: 1;
-		display: flex;
-		align-items: center;
-		width: 100%;
-		height: var(--h);
-		border-bottom: 1px solid var(--color-neutral-200);
-	}
+	--aside-width: var(--lo-page-aside-content--aside-width, 300px);
 
 	> .aside,
 	> aside {
@@ -19,7 +8,7 @@
 		top: 0;
 		bottom: 0;
 		overflow: auto;
-		width: var(--w);
+		width: var(--aside-width);
 		border-right: 1px solid var(--color-neutral-200);
 		background-color: var(--color-neutral-100);
 	}
@@ -27,6 +16,6 @@
 	> .main,
 	> main {
 		flex: 1 0 auto;
-		margin-left: var(--w);
+		padding-left: var(--aside-width);
 	}
 }

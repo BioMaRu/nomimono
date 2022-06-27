@@ -55,11 +55,12 @@
 		pointer-events: none;
 	}
 
-	&:focus {
+	&:not(.is-no-focus-ring):focus {
 		box-shadow: 0 0 0 .175rem var(--color-primary-300);
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		&:before {
 			background: var(--color-shade-100);
 		}
@@ -126,7 +127,7 @@
 	&.is-variant-negative {
 		background: var(--color-negative-200);
 
-		&:focus {
+		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 .175rem var(--color-negative-100);
 		}
 
@@ -143,7 +144,7 @@
 	&.is-variant-positive {
 		background: var(--color-positive-200);
 
-		&:focus {
+		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 .175rem var(--color-positive-100);
 		}
 
@@ -171,7 +172,7 @@
 			}
 		}
 
-		&:focus {
+		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 .175rem var(--color-primary-300);
 		}
 
@@ -190,7 +191,7 @@
 		border: unset;
 		background: var(--color-neutral-100);
 
-		&:focus {
+		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 .175rem var(--color-primary-300);
 		}
 
@@ -209,7 +210,7 @@
 		border: unset;
 		background: transparent;
 
-		&:focus {
+		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 .175rem var(--color-primary-300);
 		}
 

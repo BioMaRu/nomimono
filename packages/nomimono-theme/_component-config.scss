@@ -15,6 +15,10 @@
 	--u-shadow-color: 333deg 0% 50%;  // h s l
 }
 
+:root {
+	--lo-page-aside-content--aside-width: #{toRem(300)};
+}
+
 /* form elements */
 :root {
 	--form-element-small-height: #{toRem(28)};

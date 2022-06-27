@@ -6,7 +6,7 @@
 
 	--gap: #{toEm(4)};
 
-	label {
+	> *:first-child {
 		font-weight: 500;
 		position: relative;
 		z-index: 1;
@@ -15,7 +15,7 @@
 
 	&:not(.is-hover-open) {
 		&:focus-within {
-			.#{$prefix}dropdown-content {
+			> *:nth-child(2) {
 				transition: all 0.16s ease-in-out;
 				transform: translate3d(0, 0, 0);
 				pointer-events: all;
@@ -25,7 +25,7 @@
 	}
 
 	&.is-position-bottom-right {
-		.#{$prefix}dropdown-content {
+		:nth-child(2) {
 			right: 0;
 		}
 	}
@@ -42,7 +42,7 @@
 		}
 
 		&:hover {
-			.#{$prefix}dropdown-content {
+			> *:nth-child(2) {
 				transition: all 0.16s ease-in-out;
 				transform: translate3d(0, 0, 0);
 				pointer-events: all;
@@ -50,7 +50,7 @@
 			}
 		}
 
-		.#{$prefix}dropdown-content:hover {
+		:nth-child(2):hover {
 			transition: all 0.16s ease-in-out;
 			transform: translate3d(0, 0, 0);
 			pointer-events: all;
@@ -58,7 +58,7 @@
 		}
 	}
 
-	.#{$prefix}dropdown-content {
+	> *:nth-child(2) {
 		position: absolute;
 		z-index: 1;
 		top: calc(100%  + var(--gap));
