@@ -11,7 +11,9 @@
 <div class="lo-page-aside-content">
 	<aside>
 		<div class="aside-top" style="height: var(--nav-height);">
-			<img alt="nomimono" height="40" src="/logo-symbol.svg">
+			<a href="/">
+				<img alt="nomimono" height="40" src="/logo-symbol.svg">
+			</a>
 		</div>
 
 		<div class="menu">
@@ -31,12 +33,12 @@
 						<ul class="nomi-menu _bsd-100">
 							<li>
 								<div>
-									AAAA
+									Nom-Yen
 								</div>
 							</li>
 							<li>
 								<div>
-									BBBBBBB
+									Dark Nom-Yen
 								</div>
 							</li>
 						</ul>
@@ -46,7 +48,9 @@
 		</div>
 
 		<div class="content">
-			<slot />
+			<div style="max-width: 800px;">
+				<slot />
+			</div>
 		</div>
 	</main>
 </div>

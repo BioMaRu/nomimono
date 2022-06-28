@@ -5,7 +5,7 @@
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border: var(--table-border-width) solid var(--ui-border-color-2);
+	border: var(--table-border-width) solid hsl(var(--u-border-color) / 0.5);
 	border-radius: var(--table-border-radius);
 }
 
@@ -81,7 +81,7 @@
 	}
 
 	tr:not(:last-child) {
-		border-bottom: toRem(1) solid var(--ui-border-color-2);
+		border-bottom: toRem(1) solid hsl(var(--u-border-color) / 0.25);
 	}
 
 	tr {

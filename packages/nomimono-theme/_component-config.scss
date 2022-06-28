@@ -88,7 +88,7 @@
 	--table-border-radius: #{toRem(8)};
 
 	--table-head-font-weight: 500;
-	--table-head-font-size: #{toRem(14)};
+	--table-head-font-size: #{toRem(15)};
 	--table-head-font-family: var(--font-family-secondary);
 	--table-head-vertical-padding: #{toEm(12)};
 
@@ -97,5 +97,5 @@
 	--table-data-variant-compact-vertical-padding: #{toEm(8)};
 
 	--table-gutter: #{toRem(24)};
-	--table-side-padding: #{toEm(16)};
+	--table-side-padding: #{toEm(24)};
 }

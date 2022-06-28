@@ -20,7 +20,7 @@
 					Simple yet highly customizable UI Framework.
 				</p>
 				<div class="_dp-f _gg-12px _mgt-48px">
-					<a class="nomi-button is-size-large" href="#">
+					<a class="nomi-button is-size-large" href="/atomic/display">
 						Get started
 					</a>
 					<div class="nomi-slate">

@@ -6,8 +6,9 @@
 	font-size: var(--button-medium-font-size);
 	font-weight: var(--button-font-weight);
 	line-height: 100%;
-
 	position: relative;
+
+	z-index: 0;
 	display: inline-flex;
 
 	overflow: hidden;
@@ -28,7 +29,7 @@
 
 	background: var(--color-primary-500);
 
-	> span {
+	> * {
 		z-index: 1;
 	}
 
@@ -45,7 +46,7 @@
 
 	&:before {
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -117,12 +118,6 @@
 			min-width: toRem(26);
 		}
 	}
-
-	//&.is-size-auto {
-	//	min-height: 0 toEm(40) !important;
-	//	padding: 0 toEm(20) !important;
-	//}
-	//
 
 	&.is-variant-negative {
 		background: var(--color-negative-200);

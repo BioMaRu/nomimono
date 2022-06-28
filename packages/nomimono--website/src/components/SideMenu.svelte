@@ -35,7 +35,7 @@
 		Atomic
 	</li>
 	<li class:is-active="{pathname === '/atomic/display'}">
-		<a href="/atomic/display">display</a>
+		<a href="/atomic/display">Display</a>
 	</li>
 </ul>
 
