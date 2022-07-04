@@ -14482,6 +14482,11 @@ pretty-hrtime@^1.0.0, pretty-hrtime@^1.0.3:
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
+prism-svelte@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/prism-svelte/-/prism-svelte-0.4.7.tgz#fbc6709450b4e2ed660ddb82c3718817fc584cbe"
+  integrity sha512-yABh19CYbM24V7aS7TuPYRNMqthxwbvx6FF/Rw920YbyBWO3tnyPIqRMgHuSVsLmuHkkBS1Akyof463FVdkeDQ==
+
 prismjs@^1.21.0, prismjs@^1.27.0:
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.28.0.tgz#0d8f561fa0f7cf6ebca901747828b149147044b6"
@@ -16581,6 +16586,14 @@ svelte-preprocess@^4.0.0, svelte-preprocess@^4.10.6:
     magic-string "^0.25.7"
     sorcery "^0.10.0"
     strip-indent "^3.0.0"
+
+svelte-prism@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/svelte-prism/-/svelte-prism-1.1.5.tgz#60efc41f94ee225c002d3d25a1b57c05fba74de9"
+  integrity sha512-VjMy3scksS5FVRtPkcVDXwXx/B74JGFxOOaLZTHBfqK5KafjGTtjh2xNO8gasDM+Y2UqG22fj3O0wXbpunYOwA==
+  dependencies:
+    prism-svelte "^0.4.7"
+    prismjs "^1.27.0"
 
 svelte@^3.46.0:
   version "3.48.0"

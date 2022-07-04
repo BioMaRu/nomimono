@@ -1,0 +1,36 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}badge {
+	font-family: var(--font-family-secondary);
+	font-size: var(--fs-3);
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: toEm(28);
+	padding: toEm(12);
+	color: hsl(var(--hsl-content) / 1);
+	border-radius: toRem(6);
+	background: hsl(var(--hsl-primary) / 0.3);
+
+	&.is-variant-positive {
+		color: var(--color-positive-400);
+		background: var(--color-positive-100);
+	}
+
+	&.is-variant-negative {
+		color: var(--color-negative-400);
+		background: var(--color-negative-100);
+	}
+
+	&.is-variant-warning {
+		color: var(--color-warning-400);
+		background: var(--color-warning-100);
+	}
+
+	&.is-variant-info {
+		color: var(--color-info-400);
+		background: var(--color-info-100);
+	}
+}

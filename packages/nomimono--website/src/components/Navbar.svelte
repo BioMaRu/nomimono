@@ -1,6 +1,5 @@
 <script>
 	function changeTheme(themeName) {
-		console.log('change theme')
 		document.querySelector('html').dataset['theme'] = themeName
 	}
 </script>

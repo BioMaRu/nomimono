@@ -8,12 +8,12 @@ $background-colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bgcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bgcl-opacity)),
 
-	/* for create layout, card, line color */
 	'base-100': hsl(var(--hsl-base-100) / var(--bgcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bgcl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--bgcl-opacity)),
 	'base-400': hsl(var(--hsl-base-400) / var(--bgcl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--bgcl-opacity)),
+	'content-inv': hsl(var(--hsl-content-inv) / var(--bgcl-opacity)),
 
 	'positive': hsl(var(--hsl-positive) / var(--bgcl-opacity)),
 	'positive-content': hsl(var(--hsl-positive-content) / var(--bgcl-opacity)),
@@ -24,80 +24,15 @@ $background-colors: (
 	'info': hsl(var(--hsl-info) / var(--bgcl-opacity)),
 	'info-content': hsl(var(--hsl-info-content) / var(--bgcl-opacity)),
 
-	'purple': hsl(var(--hsl-purple) / var(--bgcl-opacity)),
-	'purple-content': hsl(var(--hsl-purple-content) / var(--bgcl-opacity)),
-	'content-inv': hsl(var(--hsl-content-inv) / var(--bgcl-opacity)),
+	//'purple': hsl(var(--hsl-purple) / var(--bgcl-opacity)),
+	//'purple-content': hsl(var(--hsl-purple-content) / var(--bgcl-opacity)),
 
 	'black': hsl(var(--hsl-black) / var(--bgcl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--bgcl-opacity)),
 
-	//'neutral-50': var(--cl-neutral-50),
-	//'neutral-100': var(--cl-neutral-100),
-	//'neutral-200': var(--cl-neutral-200),
-	//'neutral-300': var(--cl-neutral-300),
-	//'neutral-400': var(--cl-neutral-400),
-	//'neutral-500': var(--cl-neutral-500),
-	//'neutral-600': var(--cl-neutral-600),
-	//'neutral-700': var(--cl-neutral-700),
-	//'neutral-800': var(--cl-neutral-800),
-	//'neutral-900': var(--cl-neutral-900),
-	//
-	//'positive-50': var(--cl-positive-50),
-	//'positive-100': var(--cl-positive-100),
-	//'positive-200': var(--cl-positive-200),
-	//'positive-300': var(--cl-positive-300),
-	//'positive-400': var(--cl-positive-400),
-	//
-	//'negative-50': var(--cl-negative-50),
-	//'negative-100': var(--cl-negative-100),
-	//'negative-200': var(--cl-negative-200),
-	//'negative-300': var(--cl-negative-300),
-	//'negative-400': var(--cl-negative-400),
-	//
-	//'info-50': var(--cl-info-50),
-	//'info-100': var(--cl-info-100),
-	//'info-200': var(--cl-info-200),
-	//'info-300': var(--cl-info-300),
-	//'info-400': var(--cl-info-400),
-	//
-	//'warning-50': var(--cl-warning-50),
-	//'warning-100': var(--cl-warning-100),
-	//'warning-200': var(--cl-warning-200),
-	//'warning-300': var(--cl-warning-300),
-	//'warning-400': var(--cl-warning-400),
-	//
-	//'text-100': var(--cl-text-100),
-	//'text-200': var(--cl-text-200),
-	//'text-300': var(--cl-text-300),
-	//
-	//'text-invert-100': var(--cl-text-invert-100),
-	//'text-invert-200': var(--cl-text-invert-200),
-	//'text-invert-300': var(--cl-text-invert-300),
-	//
-
-	//'black-200': var(--cl-black-200),
-	//'black-300': var(--cl-black-300),
-	//'black-400': var(--cl-black-400),
-	//'black-500': var(--cl-black-500),
-	//
-	//'white-100': var(--cl-white-100),
-	//'white-200': var(--cl-white-200),
-	//'white-300': var(--cl-white-300),
-	//'white-400': var(--cl-white-400),
-	//'white-500': var(--cl-white-500),
-	//
-	//'tint-100': var(--cl-tint-100),
-	//'tint-200': var(--cl-tint-200),
-	//'tint-300': var(--cl-tint-300),
-	//
-	//'shade-100': var(--cl-shade-100),
-	//'shade-200': var(--cl-shade-200),
-	//'shade-300': var(--cl-shade-300),
-
-	//'blue':
-	//'tpr': transparent,
-	//'crcl': currentColor,
-	//'ihr': inherit,
+	'tpr': transparent,
+	'crcl': currentColor,
+	'ihr': inherit,
 );
 
 $colors: (
@@ -119,6 +54,10 @@ $colors: (
 
 	'black': hsl(var(--hsl-black) / var(--cl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--cl-opacity)),
+
+	'tpr': transparent,
+	'crcl': currentColor,
+	'ihr': inherit,
 );
 
 $border-colors: (
@@ -144,9 +83,7 @@ $border-colors: (
 
 	'black': hsl(var(--hsl-black) / var(--bdcl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--bdcl-opacity)),
-);
 
-$arbitrary-colors: (
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,

@@ -6,8 +6,8 @@
 	 *********************************************/
 	--hue-primary: 333;
 	--hsl-primary: var(--hue-primary) 80% 65%; // base
-	--hsl-primary-active: var(--hue-primary) 80% 60%; // hover, focus, active state
-	--hsl-primary-content: var(--hue-primary) 80% 30%; // text, border
+	--hsl-primary-active: var(--hue-primary) 80% 58%; // hover, focus, active state
+	--hsl-primary-content: var(--hue-primary) 0% 100%; // text, border
 
 	--hue-base: 222;
 	--hsl-base-100: var(--hue-base) 20% 19%;

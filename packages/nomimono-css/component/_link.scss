@@ -3,10 +3,10 @@
 
 .#{$prefix}link {
 	text-decoration: none;
-	color: var(--color-text-100);
+	color: hsl(var(--hsl-primary));
 
 	&:hover {
-		color: var(--color-primary-500);
+		color: hsl(var(--hsl-primary-active));
 	}
 
 	&.is-variant-none {
