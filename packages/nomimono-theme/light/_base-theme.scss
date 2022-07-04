@@ -1,0 +1,123 @@
+@import '../helper';
+[data-theme="light"] {
+	/*
+	* Color
+	*********************************************/
+	--hue-primary: 333;
+	--hsl-primary: var(--hue-primary) 80% 65%;
+	--hsl-primary-active: var(--hue-primary) 80% 60%;
+	--hsl-primary-content: var(--hue-primary) 80% 30%;
+
+	--hsl-base-100: 210 30% 100%;
+	--hsl-base-200: 210 30% 97%;
+	--hsl-base-300: 210 30% 92%;
+	--hsl-base-400: 210 30% 87%;
+	--hsl-content: 215 15% 20%;
+	--hsl-content-inv: 0 0% 100%;
+
+	--hsl-positive: 168 72% 42%;
+	--hsl-positive-content: 168 80% 25%;
+	--hsl-negative: 5 78% 63%;
+	--hsl-negative-content: 5 80% 40%;
+	--hsl-warning: 45 90% 48%;
+	--hsl-warning-content: 45 80% 31%;
+	--hsl-info: 197 70% 54%;
+	--hsl-info-content: 197 90% 32%;
+
+	//--cl-neutral-400: hsl(210, 30%, 82%);
+	//--cl-neutral-500: hsl(210, 25%, 70%);
+	//--cl-neutral-600: hsl(210, 20%, 60%);
+	//--cl-neutral-700: hsl(210, 20%, 55%);
+	//--cl-neutral-800: hsl(210, 20%, 50%);
+	//--cl-neutral-900: hsl(210, 20%, 45%);
+
+
+	//--hsl-content: hsla(215, 15%, 20%, 0.95);
+
+	//--cl-text-300: hsla(215, 15%, 20%, 0.40);
+	//
+	//--hsla-text-invert-100: hsla(0, 0%, 100%, 0.95);
+	//--cl-text-invert-200: hsla(0, 0%, 100%, 0.85);
+	//--cl-text-invert-300: hsla(0, 0%, 100%, 0.65);
+	//
+	--hsl-black: 0 0% 0%;
+	--hsl-white: 0 0% 100%;
+
+	//
+	//--cl-shade-100: rgba(0, 0, 0, 0.05);
+	//--cl-shade-200: rgba(0, 0, 0, 0.1);
+	//--cl-shade-300: rgba(0, 0, 0, 0.15);
+	//
+	//--cl-tint-100: rgba(255, 255, 255, 0.15);
+	//--cl-tint-200: rgba(255, 255, 255, 0.3);
+	//--cl-tint-300: rgba(255, 255, 255, 0.45);
+
+
+	/*
+	* Typography
+	*********************************************/
+
+	--ffml-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--ffml-secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+
+	--fs-14: #{toRem(72)};
+	--fs-13: #{toRem(56)};
+	--fs-12: #{toRem(48)};
+	--fs-11: #{toRem(40)};
+	--fs-10: #{toRem(36)};
+	--fs-9: #{toRem(32)};
+	--fs-8: #{toRem(28)};
+	--fs-7: #{toRem(24)};
+	--fs-6: #{toRem(20)};
+	--fs-5: #{toRem(18)};
+	--fs-4: #{toRem(16)};
+	--fs-3: #{toRem(14)};
+	--fs-2: #{toRem(12)};
+	--fs-1: #{toRem(11)};
+
+
+	/*
+	* Spacing
+	*********************************************/
+
+	--spc-0: #{toRem(0)};
+	--spc-1: #{toRem(1)};
+	--spc-2: #{toRem(2)};
+	--spc-3: #{toRem(4)};
+	--spc-4: #{toRem(8)};
+	--spc-5: #{toRem(12)};
+	--spc-6: #{toRem(16)};
+	--spc-7: #{toRem(24)};
+	--spc-8: #{toRem(32)};
+	--spc-9: #{toRem(40)};
+	--spc-10: #{toRem(48)};
+	--spc-11: #{toRem(64)};
+	--spc-12: #{toRem(96)};
+	--spc-13: #{toRem(128)};
+
+	--bsd-100: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.05),
+	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.05),
+	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.05),
+	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.05);
+
+	--bsd-200: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.075),
+	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.075),
+	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.075),
+	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.075),
+	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.075);
+
+	--bsd-300: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.1),
+	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.1),
+	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.1),
+	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.1),
+	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.1),
+	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.1);
+
+	--bsd-400: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.15),
+	0 #{toRem(64)} #{toRem(64)} hsl(var(--u-shadow-color) / 0.15);
+}

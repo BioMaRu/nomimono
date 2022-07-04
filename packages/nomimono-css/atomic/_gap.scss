@@ -1,24 +1,14 @@
-@each $key, $value in $grid-gap {
-	.#{$atom-prefix}gg-#{$key},
+@each $key, $value in $gap {
 	.#{$atom-prefix}g-#{$key} { gap: #{$value} !important; }
-
-	.#{$atom-prefix}grg-#{$key},
 	.#{$atom-prefix}rg-#{$key} { row-gap: #{$value} !important; }
-
-	.#{$atom-prefix}gclg-#{$key},
 	.#{$atom-prefix}clg-#{$key} { column-gap: #{$value} !important; }
 };
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $grid-gap {
-			.#{$atom-prefix}gg-#{$key},
+		@each $key, $value in $gap {
 			.#{$atom-prefix}g-#{$key} { gap: #{$value} !important; }
-
-			.#{$atom-prefix}grg-#{$key},
 			.#{$atom-prefix}rg-#{$key} { row-gap: #{$value} !important; }
-
-			.#{$atom-prefix}gclg-#{$key},
 			.#{$atom-prefix}clg-#{$key} { column-gap: #{$value} !important; }
 		};
 	};

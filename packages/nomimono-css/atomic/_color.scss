@@ -1,11 +1,23 @@
 @each $key, $value in $colors {
-	.#{$atom-prefix}cl-#{$key} { color: #{$value} !important; }
+	.#{$atom-prefix}cl-#{$key} {
+		--cl-opacity: 1;
+		color: #{$value} !important;
+	}
+};
+
+@each $key, $value in $opacity {
+	.#{$atom-prefix}cl-opacity-#{$key} {
+		--cl-opacity: #{$value};
+	}
 };
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $colors {
-			.#{$atom-prefix}cl-#{$key}-#{$breakpointName} { color: #{$value} !important; }
+			.#{$atom-prefix}cl-#{$key}-#{$breakpointName} {
+				--cl-opacity: 1;
+				color: #{$value} !important;
+			}
 		};
 	};
 };

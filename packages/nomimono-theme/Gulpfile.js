@@ -5,20 +5,26 @@ const rename = require('gulp-rename')
 const sync = require('gulp-sync')(gulp).sync
 
 const sassOption = {
-	outputStyle: 'compressed',
+	outputStyle: 'expanded',
 	includePaths: 'node_modules',
 }
 
-gulp.task('default', gulp.series(build))
+gulp.task(
+	'default',
+	gulp.series(
+		() => build('light'),
+		() => build('dark'),
+	),
+)
 
-function build() {
+function build(themeName) {
 	return gulp
-		.src('./main.scss')
+		.src(`./${themeName}/main.scss`)
 		.pipe(sass(sassOption).on('error', sass.logError))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
 		.pipe(
 			rename({
-				basename: 'default',
+				basename: `${themeName}`,
 				suffix: '',
 				extname: '.css',
 			}),

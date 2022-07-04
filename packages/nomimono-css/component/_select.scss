@@ -75,7 +75,7 @@ $SIZES: 'small', 'medium', 'large';
 
 	.info {
 		font-size: toRem(12);
-		color: var(--color-text-default-200);
+		color: var(--color-text-200);
 	}
 
 	&.is-disabled {
@@ -119,7 +119,7 @@ $SIZES: 'small', 'medium', 'large';
 		content: '';
 		transform: rotate(-45deg) translate(0, calc(-50% - #{toRem(4)}));
 		pointer-events: none;
-		border-bottom: 2px solid var(--color-text-default-300);
-		border-left: 2px solid var(--color-text-default-300);
+		border-bottom: 2px solid var(--color-text-300);
+		border-left: 2px solid var(--color-text-300);
 	}
 }

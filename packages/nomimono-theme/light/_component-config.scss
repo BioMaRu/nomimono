@@ -1,7 +1,7 @@
-@import './helper';
+@import '../helper';
 
-/* map theme color by basic use-case */
-:root {
+[data-theme="light"] {
+
 	//--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
 	//--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
 	//
@@ -11,16 +11,16 @@
 	//--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
 	//--ui-border-color-2-hover: var(--color-neutral-300);
 
-	--u-border-color: 222deg 15% 86%; // h s l
-	--u-shadow-color: 333deg 0% 50%;  // h s l
-}
+	//--u-border-color: 222deg 15% 86%; // h s l
+	//--u-shadow-color: 333deg 0% 50%;  // h s l
 
-:root {
+
+
 	--lo-page-aside-content--aside-width: #{toRem(300)};
-}
+
 
 /* form elements */
-:root {
+
 	--form-element-small-height: #{toRem(28)};
 	--form-element-small-font-size: #{toRem(12)};
 	--form-element-medium-height: #{toRem(40)};
@@ -34,16 +34,16 @@
 	--form-element-label-font-weight: 600;
 
 	--select-font-weight: 400;
-}
+
 
 /* message */
-:root {
+
 	--message-font-size: #{toRem(15)};
 	--message-icon-font-size: #{toRem(22)};
-}
+
 
 /* button */
-:root {
+
 	--button-border-radius: #{toRem(8)};
 	--button-font-weight: 600;
 	--button-font-family: var(--font-family-primary);
@@ -54,10 +54,10 @@
 	--button-medium-font-size: #{toRem(15)};
 	--button-large-height: #{toRem(48)};
 	--button-large-font-size: #{toRem(18)};
-}
+
 
 /* select-button */
-:root {
+
 	--select-button-font-weight: 400;
 	--select-button-font-family: var(--font-family-primary);
 
@@ -67,10 +67,10 @@
 	--select-button-medium-font-size: #{toRem(14)};
 	--select-button-large-height: #{toRem(42)};
 	--select-button-large-font-size: #{toRem(18)};
-}
+
 
 /* tab */
-:root {
+
 	--tab-font-weight: 500;
 	--tab-font-size: #{toRem(15)};
 	--tab-font-family: var(--font-family-secondary);
@@ -80,10 +80,10 @@
 	--tab-border-width: #{toRem(1)};
 	--tab-content-border-radius: #{toRem(8)};
 	--tab-box-shadow: var(--ui-box-shadow-1);
-}
+
 
 /* table */
-:root {
+
 	--table-border-width: #{toRem(1)};
 	--table-border-radius: #{toRem(8)};
 

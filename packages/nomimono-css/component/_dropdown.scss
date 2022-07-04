@@ -6,13 +6,6 @@
 
 	--gap: #{toEm(4)};
 
-	> *:first-child {
-		font-weight: 500;
-		position: relative;
-		z-index: 1;
-		cursor: pointer;
-	}
-
 	&:not(.is-hover-open) {
 		&:focus-within {
 			> *:nth-child(2) {
@@ -58,9 +51,16 @@
 		}
 	}
 
+	> *:first-child {
+		font-weight: 500;
+		position: relative;
+		z-index: 1;
+		cursor: pointer;
+	}
+
 	> *:nth-child(2) {
 		position: absolute;
-		z-index: 1;
+		z-index: 2;
 		top: calc(100%  + var(--gap));
 		transform: translate3d(0, -8px, 0);
 		pointer-events: none;

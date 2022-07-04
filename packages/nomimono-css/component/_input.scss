@@ -75,7 +75,7 @@ $SIZES: 'small', 'medium', 'large';
 
 	.info {
 		font-size: toRem(12);
-		color: var(--color-text-default-200);
+		color: var(--color-text-200);
 	}
 
 	&.is-disabled {

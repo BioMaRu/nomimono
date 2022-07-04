@@ -12,7 +12,7 @@ html, body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: var(--color-text-default-100, hsla(215, 15%, 28%, 0.96));
+	color: hsl(var(--hsl-content) / 1);
 }
 
 main {
@@ -50,7 +50,7 @@ pre {
 
 a {
 	text-decoration: none;
-	color: var(--color-text-default-100);
+	color: hsl(var(--hsl-content));
 	background-color: transparent;
 }
 
@@ -219,5 +219,5 @@ hr {
 	height: 1px;
 	margin: 0;
 	border: none;
-	background: var(--color-neutral-200);
+	background: hsl(var(--hsl-content) / 0.2);
 }
