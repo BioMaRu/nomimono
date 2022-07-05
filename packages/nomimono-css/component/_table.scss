@@ -80,7 +80,9 @@
 	}
 
 	tr:not(:last-child) {
-		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
+		td {
+			border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
+		}
 	}
 
 	&.is-variant-compact {

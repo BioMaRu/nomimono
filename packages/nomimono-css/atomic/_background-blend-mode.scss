@@ -5,9 +5,9 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}bgbm-nm-#{$breakpointName}  { background-blend-mode: normal !important; }
-		.#{$atom-prefix}bgbm-mtp-#{$breakpointName} { background-blend-mode: multiply !important; }
-		.#{$atom-prefix}bgbm-sc-#{$breakpointName}  { background-blend-mode: screen !important; }
-		.#{$atom-prefix}bgbm-ovl-#{$breakpointName} { background-blend-mode: overlay !important; }
+		.#{$atom-prefix}bgbm-nm\:#{$breakpointName}  { background-blend-mode: normal !important; }
+		.#{$atom-prefix}bgbm-mtp\:#{$breakpointName} { background-blend-mode: multiply !important; }
+		.#{$atom-prefix}bgbm-sc\:#{$breakpointName}  { background-blend-mode: screen !important; }
+		.#{$atom-prefix}bgbm-ovl\:#{$breakpointName} { background-blend-mode: overlay !important; }
 	};
 };

@@ -2,6 +2,17 @@
 	import { page } from '$app/stores'
 
 	$: pathname = $page.url.pathname
+
+	const atomics = [
+		'align-content',
+		'align-items',
+		'align-self',
+		'backface-visibility',
+		'background-attachment',
+		'background-blend-mode',
+		'background-color',
+		'display',
+	]
 </script>
 
 <ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
@@ -37,9 +48,11 @@
 	<li class="group-label">
 		Atomic
 	</li>
-	<li class:is-active="{pathname === '/atomic/display'}">
-		<a href="/atomic/display">Display</a>
+	{#each atomics as it}
+	<li class:is-active="{pathname === `/atomic/${it}`}">
+		<a href={`/atomic/${it}`}>{`${it}`}</a>
 	</li>
+	{/each}
 </ul>
 
 <style lang="scss">

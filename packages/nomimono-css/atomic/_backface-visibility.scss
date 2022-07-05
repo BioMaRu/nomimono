@@ -3,7 +3,7 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}bfvsblt-hd-#{$breakpointName}   { backface-visibility: hidden !important; }
-		.#{$atom-prefix}bfvsblt-vsb-#{$breakpointName}  { backface-visibility: visible !important; }
+		.#{$atom-prefix}bfvsblt-hd\:#{$breakpointName}   { backface-visibility: hidden !important; }
+		.#{$atom-prefix}bfvsblt-vsb\:#{$breakpointName}  { backface-visibility: visible !important; }
 	};
 };
