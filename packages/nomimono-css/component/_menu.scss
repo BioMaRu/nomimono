@@ -2,10 +2,11 @@
 @import 'config';
 
 .#{$prefix}menu {
+	font-weight: 500;
 	display: inline-flex;
 	flex-direction: column;
-	border-radius: #{toEm(12)};
-	background: hsl(var(--hsl-base-100) / 1);
+	border-radius: var(--menu-border-radius, toEm(12));
+	background: var(--menu-background, hsl(var(--hsl-base-100) / 1));
 
 	> *:first-child {
 		border-top-left-radius: inherit;
@@ -18,14 +19,14 @@
 	}
 
 	&.is-compact {
-		li:not(.group-label) > * {
-			font-size: var(--font-size-300);
+		> *:not(.group-label) > * {
+			font-size: var(--fs-3);
 			min-height: toEm(44);
 			padding: 0 toRem(16);
 		}
 
 		.group-label {
-			font-size: var(--font-size-200);
+			font-size: var(--fs-2);
 			padding: 0 toRem(16);
 		}
 	}
@@ -33,34 +34,54 @@
 	&.is-variant-inset {
 		padding: 12px;
 
-		li:not(.group-label) {
+		> *:not(.group-label) {
 			border-radius: toEm(8);
 		}
 	}
 
 	.group-label {
-		font-size: var(--font-size-300);
+		font-size: var(--fs-3);
 		margin-bottom: toEm(8);
 		padding: 0 toRem(24);
-		color: var(--color-text-200);
+		color: hsl(var(--hsl-content) / 0.5);
 
 		&:not(:first-child) {
 			margin-top: toEm(24);
 		}
 	}
 
-	> *:not(.group-label) {
-		//transition: all 0.4s ease-in-out;
-
+	&.is-active-variant-simple > *:not(.group-label) {
 		&.is-active {
-			background: var(--color-primary-100);
+			color: hsl(var(--hsl-primary) / 1);
+			background: transparent;
 
 			> * {
-				color: var(--color-primary-700);
+				color: hsl(var(--hsl-primary) / 1);
 			}
 
 			&:hover {
-				background: var(--color-primary-100);
+				background: hsl(var(--hsl-content) / 0.05);
+			}
+		}
+
+		&:hover {
+			background: hsl(var(--hsl-content) / 0.05);
+		}
+	}
+
+	> *:not(.group-label) {
+		transition: all 0.16s ease-in-out;
+
+		&.is-active {
+			color: hsl(var(--hsl-primary-content) / 1);
+			background: hsl(var(--hsl-primary) / 1);
+
+			> * {
+				color: hsl(var(--hsl-primary-content) / 1);
+			}
+
+			&:hover {
+				background: hsl(var(--hsl-primary) / 1);
 			}
 		}
 

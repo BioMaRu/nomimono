@@ -5,17 +5,17 @@
 	 * Color
 	 *********************************************/
 	--hue-primary: 333;
-	--hsl-primary: var(--hue-primary) 80% 65%; // base
-	--hsl-primary-active: var(--hue-primary) 80% 58%; // hover, focus, active state
-	--hsl-primary-content: var(--hue-primary) 0% 100%; // text, border
+	--hsl-primary: var(--hue-primary) 80% 65%;
+	--hsl-primary-active: var(--hue-primary) 80% 58%;
+	--hsl-primary-content: var(--hue-primary) 0% 100%;
 
 	--hue-base: 222;
 	--hsl-base-100: var(--hue-base) 20% 19%;
 	--hsl-base-200: var(--hue-base) 20% 16%;
 	--hsl-base-300: var(--hue-base) 20% 13%;
 	--hsl-base-400: var(--hue-base) 20% 10%;
-	--hsl-content: 0 0% 85%;
-	--hsl-content-inv: 215 15% 20%;
+	--hsl-content: 0 0% 75%;
+	--hsl-content-inv: 215 15% 12%;
 
 	--hsl-positive: 168 72% 42%;
 	--hsl-positive-content: 168 80% 25%;
@@ -49,9 +49,9 @@
 	--fs-6: #{toRem(20)};
 	--fs-5: #{toRem(18)};
 	--fs-4: #{toRem(16)};
-	--fs-3: #{toRem(14)};
-	--fs-2: #{toRem(12)};
-	--fs-1: #{toRem(11)};
+	--fs-3: #{toRem(15)};
+	--fs-2: #{toRem(14)};
+	--fs-1: #{toRem(12)};
 
 	/*
 	 * Spacing

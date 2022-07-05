@@ -4,8 +4,7 @@
 	$: pathname = $page.url.pathname
 </script>
 
-
-<ul class="nomi-menu is-variant-inset is-compact _w-100pct _fw-500">
+<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class:is-active="{pathname === '/doc/introduction'}">
 		<a href="/doc/introduction">Introduction</a>
 	</li>
@@ -17,20 +16,24 @@
 	</li>
 </ul>
 
-<hr>
+<div class="_pdh-7 _mgbt-4">
+	<hr>
+</div>
 
-<ul class="nomi-menu is-variant-inset is-compact _w-100pct _fw-500">
+<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class="group-label">
-		Badge
+		Component
 	</li>
 	<li class:is-active="{pathname === '/component/badge'}">
 		<a href="/component/badge">Badge</a>
 	</li>
 </ul>
 
-<hr>
+<div class="_pdh-7 _mgbt-4">
+	<hr>
+</div>
 
-<ul class="nomi-menu is-variant-inset is-compact _w-100pct _fw-500">
+<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class="group-label">
 		Atomic
 	</li>
@@ -41,7 +44,7 @@
 
 <style lang="scss">
 	.nomi-menu {
-		--menu-background: var(--color-neutral-100);
+		--menu-background: transparent;
 		--menu-background-hover: var(--color-neutral-200);
 		--menu-border-radius: 0;
 	}

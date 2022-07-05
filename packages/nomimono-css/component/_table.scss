@@ -5,8 +5,11 @@
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border: var(--table-border-width) solid hsl(var(--u-border-color) / 0.5);
-	border-radius: var(--table-border-radius);
+	border:
+		var(--table-border-width,
+		toRem(1)) solid
+		var(--table-border-color, hsl(var(--hsl-content) / 0.1));
+	border-radius: var(--table-border-radius, toRem(8));
 }
 
 .#{$prefix}table {
@@ -21,17 +24,15 @@
 	border-collapse: collapse;
 	word-break: normal;
 
-	&.is-variant-primary {
-		thead {
-			color: var(--color-text-invert-100);
-			background: var(--color-primary-500);
-		}
+	thead {
+		font-size: var(--table-head-font-size, toRem(15));
+		overflow: hidden;
+		color: hsl(var(--hsl-content) / 1);
+		background: var(--table-head-background, hsl(var(--hsl-content-inv) / 0.2));
 	}
 
-	thead {
-		overflow: hidden;
-		color: var(--color-neutral-700);
-		background: var(--color-neutral-100);
+	tbody {
+		font-size: var(--table-data-font-size, toRem(14));
 	}
 
 	th, td {
@@ -39,15 +40,15 @@
 		vertical-align: middle;
 
 		&:first-child {
-			padding-left: var(--table-side-padding);
+			padding-left: var(--table-side-padding, toEm(24));
 		}
 
 		&:not(:first-child) {
-			padding-left: var(--table-gutter);
+			padding-left: var(--table-gutter, toEm(24));
 		}
 
 		&:last-child {
-			padding-right: var(--table-side-padding);
+			padding-right: var(--table-side-padding, toEm(24));
 		}
 
 		&.is-align-left {
@@ -64,16 +65,14 @@
 	}
 
 	td {
-		font-size: var(--table-data-font-size);
-		padding: var(--table-data-vertical-padding) 0 var(--table-data-vertical-padding) 0;
+		padding: var(--table-data-vertical-padding, toRem(16)) 0;
 	}
 
 	th {
-		font-family: var(--table-head-font-family);
-		font-size: var(--table-head-font-size);
-		font-weight: var(--table-head-font-weight);
-		padding: var(--table-head-vertical-padding) 0 var(--table-head-vertical-padding) 0;
-		border-bottom: toRem(1) solid var(--ui-border-color-2);
+		font-family: var(--table-head-font-family, 'sans-serif');
+		font-weight: var(--table-head-font-weight, 600);
+		padding: var(--table-head-vertical-padding, toRem(16)) 0;
+		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
 
 		&.is-collapse {
 			width: 1%;
@@ -81,15 +80,13 @@
 	}
 
 	tr:not(:last-child) {
-		border-bottom: toRem(1) solid hsl(var(--u-border-color) / 0.25);
+		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
 	}
 
-	tr {
-		&.is-variant-compact {
-			td {
-				padding-top: var(--table-data-variant-compact-vertical-padding);
-				padding-bottom: var(--table-data-variant-compact-vertical-padding);
-			}
+	&.is-variant-compact {
+		tr td {
+			padding-top: toRem(10);
+			padding-bottom: toRem(10);
 		}
 	}
 }

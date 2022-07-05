@@ -8,13 +8,13 @@
 
 	input {
 		flex-shrink: 0;
-		width: toEm(24);
-		height: toEm(24);
+		width: toEm(22);
+		height: toEm(22);
 		cursor: pointer;
 		transition: all 0.16s ease-in-out;
-		border-width: toEm(1);
+		border-width: toEm(2);
 		border-style: solid;
-		border-color: var(--color-primary-500);
+		border-color: hsl(var(--hsl-content) / 0.3);
 		border-radius: 100%;
 		background: transparent;
 		-webkit-appearance: none;
@@ -23,18 +23,20 @@
 		&:checked {
 			animation: radio-animate 0.16s cubic-bezier(0.42, 0, 0.23, 1.89);
 			border-style: solid;
-			background: var(--color-primary-500);
-			box-shadow: 0 0 0 toEm(4) var(--color-primary-50) inset, 0 0 0 toEm(4) var(--color-primary-50) inset;
+			border-color: hsl(var(--hsl-primary));
+			background: hsl(var(--hsl-primary));
+			box-shadow: 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset, 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset;
 		}
 	}
 
 	label {
 		font-size: toRem(15);
 		font-weight: 500;
+		cursor: pointer;
 	}
 
 	@keyframes radio-animate {
-		0% { box-shadow: 0 0 0 0 var(--color-primary-50) inset, 0 0 0 0 var(--color-primary-50) inset; }
-		100% { box-shadow: 0 0 0 toEm(4) var(--color-primary-50) inset, 0 0 0 toEm(4) var(--color-primary-50) inset; }
+		0% { box-shadow: 0 0 0 0 hsl(var(--hsl-base-100)) inset, 0 0 0 0 hsl(var(--hsl-base-100)) inset; }
+		100% { box-shadow: 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset, 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset; }
 	}
 }
