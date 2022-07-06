@@ -25,7 +25,7 @@ export function Message(props: MessageProps) {
 	console.log(props.iconClass)
 	return (
 		<div
-			className={classNames('nomi-message', props?.className, {
+			className={classNames('nm-message', props?.className, {
 				'is-variant-primary': props.variant === MESSAGE.variant.primary,
 				'is-variant-positive': props.variant === MESSAGE.variant.positive,
 				'is-variant-negative': props.variant === MESSAGE.variant.negative,
@@ -76,7 +76,7 @@ export default Message
 // 	return (
 // 		<button
 // 			{...props}
-// 			className={classNames(styles['nomi-select-button'], props?.className, {
+// 			className={classNames(styles['nm-select-button'], props?.className, {
 // 				[styles['is-size-s']]: props.size === SELECT_BUTTON.size.small,
 // 				[styles['is-size-m']]: props.size === SELECT_BUTTON.size.medium,
 // 				[styles['is-size-l']]: props.size === SELECT_BUTTON.size.large,

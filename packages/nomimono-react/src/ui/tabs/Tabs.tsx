@@ -31,7 +31,7 @@ export const Tabs: FC<TabsProps> & { Item: React.FC<TabsItemProps> } = (props: T
 	)
 
 	return (
-		<div className={'nomi-tab'}>
+		<div className={'nm-tab'}>
 			<div className={'tab-menus'}>
 				{props?.children?.map((it, idx) => (
 					<button

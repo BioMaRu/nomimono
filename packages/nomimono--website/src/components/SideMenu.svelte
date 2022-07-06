@@ -3,6 +3,10 @@
 
 	$: pathname = $page.url.pathname
 
+	const components = [
+		// { label: 'Badge', path: 'badge' },
+		{ label: 'Button', path: 'button' },
+	]
 	const atomics = [
 		'align-content',
 		'align-items',
@@ -15,7 +19,7 @@
 	]
 </script>
 
-<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class:is-active="{pathname === '/doc/introduction'}">
 		<a href="/doc/introduction">Introduction</a>
 	</li>
@@ -31,20 +35,22 @@
 	<hr>
 </div>
 
-<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class="group-label">
 		Component
 	</li>
-	<li class:is-active="{pathname === '/component/badge'}">
-		<a href="/component/badge">Badge</a>
+	{#each components as it}
+	<li class:is-active="{pathname === `/component/${it.path}`}">
+		<a href={`/component/${it.path}`}>{`${it.label}`}</a>
 	</li>
+	{/each}
 </ul>
 
 <div class="_pdh-7 _mgbt-4">
 	<hr>
 </div>
 
-<ul class="nomi-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	<li class="group-label">
 		Atomic
 	</li>
@@ -56,7 +62,7 @@
 </ul>
 
 <style lang="scss">
-	.nomi-menu {
+	.nm-menu {
 		--menu-background: transparent;
 		--menu-background-hover: var(--color-neutral-200);
 		--menu-border-radius: 0;

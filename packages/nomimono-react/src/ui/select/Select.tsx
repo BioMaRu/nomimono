@@ -32,7 +32,7 @@ export function Select(props: SelectProps) {
 
 	return (
 		<div
-			className={classNames('nomi-field', {
+			className={classNames('nm-field', {
 				'is-size-small': props.size === SELECT.size.small,
 				'is-size-medium': props.size === SELECT.size.medium,
 				'is-size-large': props.size === SELECT.size.large,
@@ -42,7 +42,7 @@ export function Select(props: SelectProps) {
 			})}
 		>
 			{!!props.label && <label htmlFor={props.id}>{props.label}</label>}
-			<div className={classNames('nomi-select', {})}>
+			<div className={classNames('nm-select', {})}>
 				<select {...rest} className={classNames(props?.className, {})}>
 					{props.children}
 				</select>

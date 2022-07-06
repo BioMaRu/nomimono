@@ -1,7 +1,7 @@
 <script>
 	let active = 0
-	const activeClass = 'nomi-card _dp-f _pst-rlt _tst-2'
-	const inactiveClass = 'nomi-card _dp-f _pst-rlt _bgcl-tpr _bdcl-content _bdcl-opacity-10 _bgcl-content-hover _tst-2 _cs-pt _bgcl-opacity-5'
+	const activeClass = 'nm-card _dp-f _pst-rlt _tst-2'
+	const inactiveClass = 'nm-card _dp-f _pst-rlt _bgcl-tpr _bdcl-content _bdcl-opacity-10 _bgcl-content-hover _tst-2 _cs-pt _bgcl-opacity-5'
 
 	function selectItem (n) {
 		active = n
@@ -23,7 +23,7 @@
 				<div class="lo-12 _jtfit-st _f-1">
 					<div class="_fw-600">Nomimono CSS</div>
 					<p class="_fs-3 _cl-content _cl-opacity-60 _mgt-3">Core Nomimono CSS library</p>
-					<a class="nomi-link" href="/">
+					<a class="nm-link" href="/">
 						<div class="_mgt-4 _fw-600 _fs-3">Read more</div>
 					</a>
 				</div>
@@ -36,7 +36,7 @@
 				<div class="lo-12 _jtfit-st _f-1">
 					<div class="_fw-600">Nomimono Theme</div>
 					<p class="_fs-3 _cl-content _cl-opacity-60 _mgt-3">Collection of customizable themes</p>
-					<a class="nomi-link" href="/">
+					<a class="nm-link" href="/">
 						<div class="_mgt-4 _fw-600 _fs-3">Read more</div>
 					</a>
 				</div>
@@ -49,11 +49,11 @@
 				<div class="lo-12 _jtfit-st _f-1">
 					<div class="_fw-600">Nomimono React</div>
 					<p class="_fs-3 _cl-content _cl-opacity-60 _mgt-3">React component implementation of Nomimono</p>
-					<a class="nomi-link" href="/">
+					<a class="nm-link" href="/">
 						<div class="_mgt-4 _fw-600 _fs-3">Read more</div>
 					</a>
 				</div>
-				<div class="nomi-badge _pst-asl _t-5 _r-5">
+				<div class="nm-badge _pst-asl _t-5 _r-5">
 					Soon
 				</div>
 			</div>

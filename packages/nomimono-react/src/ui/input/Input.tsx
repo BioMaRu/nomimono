@@ -31,7 +31,7 @@ export function Input(props: InputProps) {
 
 	return (
 		<div
-			className={classNames('nomi-field', {
+			className={classNames('nm-field', {
 				'is-size-small': props.size === INPUT.size.small,
 				'is-size-medium': props.size === INPUT.size.medium,
 				'is-size-large': props.size === INPUT.size.large,
@@ -41,7 +41,7 @@ export function Input(props: InputProps) {
 			})}
 		>
 			{!!props.label && <label htmlFor={props?.id}>{props.label}</label>}
-			<div className="nomi-input">
+			<div className="nm-input">
 				<input id={props?.id} placeholder={'Placeholder'} {...rest} />
 			</div>
 			{!!props.info && <div className={'info'}>{props.info}</div>}

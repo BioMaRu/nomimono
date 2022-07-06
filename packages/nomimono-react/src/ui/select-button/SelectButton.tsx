@@ -24,7 +24,7 @@ export function SelectButton(props: SelectButtonProps) {
 	return (
 		<button
 			{...restProps}
-			className={classNames('nomi-select-button', props?.className, {
+			className={classNames('nm-select-button', props?.className, {
 				'is-size-small': props.size === SELECT_BUTTON.size.small,
 				'is-size-medium': props.size === SELECT_BUTTON.size.medium,
 				'is-size-large': props.size === SELECT_BUTTON.size.large,

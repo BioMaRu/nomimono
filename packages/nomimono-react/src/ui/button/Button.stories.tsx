@@ -260,7 +260,7 @@ _6Misc.parameters = {
  ===================== */
 // const TemplateCSSVar: Story = () => (
 // 	<>
-// 		<table className={'nomi-table'}>
+// 		<table className={'nm-table'}>
 // 			<thead>
 // 				<tr>
 // 					<td>aa</td>

@@ -83,10 +83,10 @@ export const Table: FC<TableProps> & {
 		})
 
 	return (
-		<div className={'nomi-table-container'}>
+		<div className={'nm-table-container'}>
 			<table
 				{...rest}
-				className={classNames('nomi-table', props?.className, {
+				className={classNames('nm-table', props?.className, {
 					'is-variant-primary': props.variant === TABLE.variant.primary,
 				})}
 			>

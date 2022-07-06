@@ -4,8 +4,8 @@
 
 <h1 class="_fs-8">Align content</h1>
 
-<section class="nomi-table-container _mgt-8">
-	<table class="nomi-table is-variant-compact">
+<section class="nm-table-container _mgt-8">
+	<table class="nm-table is-variant-compact">
 		<thead>
 		<tr>
 			<th>Class name</th>
@@ -29,19 +29,19 @@
 </section>
 
 <section class="lo-12 _g-4 _mgt-8">
-	<div class="nomi-radio">
+	<div class="nm-radio">
 		<input checked id="b" name="suffix" on:change={() => suffix = ''} type="radio">
 		<label for="b">Default</label>
 	</div>
-	<div class="nomi-radio">
+	<div class="nm-radio">
 		<input id="sm" name="suffix" on:change={() => suffix = ':sm'} type="radio">
 		<label for="sm">min-width: 768px; small</label>
 	</div>
-	<div class="nomi-radio">
+	<div class="nm-radio">
 		<input id="md" name="suffix" on:change={() => suffix = ':md'} type="radio">
 		<label for="md">min-width: 1024px; medium</label>
 	</div>
-	<div class="nomi-radio">
+	<div class="nm-radio">
 		<input id="lg" name="suffix" on:change={() => suffix = ':lg'} type="radio">
 		<label for="lg">min-width: 1280px; large</label>
 	</div>

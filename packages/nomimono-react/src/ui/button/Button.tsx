@@ -47,7 +47,7 @@ export function Button(props: ButtonProps) {
 	return (
 		<button
 			{...buttonProps}
-			className={classNames('nomi-button', props?.className, {
+			className={classNames('nm-button', props?.className, {
 				'is-size-small': props.size === BUTTON.size.small,
 				'is-size-medium': props.size === BUTTON.size.medium,
 				'is-size-large': props.size === BUTTON.size.large,

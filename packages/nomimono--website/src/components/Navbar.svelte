@@ -8,11 +8,11 @@
 	</a>
 
 	<div class="_dp-f _g-5 _mgl-9">
-		<div class="nomi-dropdown is-hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
-				<span class="nomi-button is-variant-ghost">Getting Start</span>
+				<span class="nm-button is-variant-ghost">Getting Start</span>
 			</div>
-			<ul class="nomi-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
+			<ul class="nm-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
 				<li>
 					<a href="/doc/introduction" sveltekit:prefetch>Introduction</a>
 				</li>
@@ -21,22 +21,22 @@
 				</li>
 			</ul>
 		</div>
-		<div class="nomi-dropdown is-hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
-				<span class="nomi-button is-variant-ghost">Document</span>
+				<span class="nm-button is-variant-ghost">Document</span>
 			</div>
-			<ul class="nomi-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
+			<ul class="nm-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
 				<li>
 					<a href="/component/badge" sveltekit:prefetch>Components</a>
 				</li>
 			</ul>
 		</div>
 
-		<div class="nomi-dropdown is-hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
-				<span class="nomi-button is-variant-ghost">Framework</span>
+				<span class="nm-button is-variant-ghost">Framework</span>
 			</div>
-			<ul class="nomi-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
+			<ul class="nm-menu _bsd-100 _bdw-1 _bdcl-content _bdcl-opacity-15">
 				<li>
 					<a href="/" sveltekit:prefetch>React component</a>
 				</li>

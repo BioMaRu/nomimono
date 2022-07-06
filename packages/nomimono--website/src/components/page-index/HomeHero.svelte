@@ -7,10 +7,10 @@
 					Simple yet highly customizable UI Framework.
 				</p>
 				<div class="_dp-f _g-5 _mgt-9">
-					<a class="nomi-button is-size-large" href="/atomic/display">
+					<a class="nm-button is-size-large" href="/atomic/display">
 						Get started
 					</a>
-					<div class="nomi-slate">
+					<div class="nm-slate">
 						<code>npm i @nomimono/nomimono-css</code>
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 		background-size: 11px 11px;
 	}
 
-	.nomi-slate {
+	.nm-slate {
 		font-weight: 500;
 		display: flex;
 		align-items: center;
