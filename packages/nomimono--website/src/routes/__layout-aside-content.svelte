@@ -3,8 +3,7 @@
 	import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 	import "prismjs/plugins/command-line/prism-command-line.css";
 	import "prismjs/plugins/line-highlight/prism-line-highlight.css";
-	// import "prismjs/themes/prism.css";
-	// import "prismjs/themes/prism-coy.css";
+	import '../styles/prism-theme.scss'
 
 	import SideMenu from '$components/SideMenu.svelte';
 	import ThemeDropdown from "$components/ThemeDropdown.svelte";

@@ -1,0 +1,98 @@
+@import '../helper/all';
+@import 'config';
+
+/* Custom props
+	--modal-z-index
+	--modal-panel-width
+	--modal-panel-padding
+	--modal-panel-border-radius
+	--modal-panel-background
+	--modal-background
+ */
+
+input[type="checkbox"].#{$prefix}modal-state {
+	display: none;
+
+	&:checked + .#{$prefix}modal {
+		visibility: visible;
+		pointer-events: all;
+		opacity: 1;
+
+		.#{$prefix}modal-panel {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+.#{$prefix}modal {
+	position: fixed;
+	z-index: var(--modal-z-index, 9999);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	visibility: hidden;
+	overflow-y: hidden;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transition-timing-function: cubic-bezier(0.3, 0, .25, 1);
+	transition-duration: 0.16s;
+	transition-property: transform, opacity;
+	pointer-events: none;
+	opacity: 0;
+	background: var(--modal-background, hsl(var(--hsl-black) / 0.2));
+	overscroll-behavior: contain;
+
+	&:before,
+	&:after {
+		display: block;
+		flex-grow: 1;
+		height: 1.5rem;
+		min-height: 2rem;
+		content: '';
+	}
+
+	.#{$prefix}modal-panel {
+		position: relative;
+		width: 100%;
+		max-width: var(--modal-panel-width, 32rem);
+		padding: var(--modal-panel-padding, 1.5rem);
+		transition: all 0.16s ease-in-out;
+		transform: translate3d(0, -12px, 0);
+		border-radius: var(--modal-panel-border-radius, 0.75rem);
+		background: var(--modal-panel-background, hsl(var(--hsl-base-100) / var(--bgcl-opacity)));
+		box-shadow: var(--box-shadow-200);
+		--bgcl-opacity: 1;
+	}
+
+	.#{$prefix}modal-close {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		cursor: pointer;
+		color: hsl(var(--hsl-content) / 0.7);
+		border-radius: 999px;
+		background: hsl(var(--hsl-base-300) / 0.5);
+
+		&:hover {
+			background: hsl(var(--hsl-base-300) / 0.8);
+		}
+	}
+
+	&.is-active {
+		visibility: visible;
+		pointer-events: all;
+		opacity: 1;
+
+		.#{$prefix}modal-panel {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}

@@ -6,6 +6,7 @@
 	const components = [
 		// { label: 'Badge', path: 'badge' },
 		{ label: 'Button', path: 'button' },
+		{ label: 'Modal', path: 'modal' },
 	]
 	const atomics = [
 		'align-content',
