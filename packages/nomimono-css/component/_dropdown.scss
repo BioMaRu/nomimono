@@ -6,7 +6,7 @@
 
 	--gap: #{toEm(4)};
 
-	&:not(.is-hover-open) {
+	&:not(.is\:hover-open) {
 		&:focus-within {
 			> *:nth-child(2) {
 				transition: all 0.16s ease-in-out;
@@ -23,7 +23,7 @@
 		}
 	}
 
-	&.is-hover-open {
+	&.is\:hover-open {
 		&:after {
 			position: absolute;
 			z-index: 0;

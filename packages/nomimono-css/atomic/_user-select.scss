@@ -3,7 +3,7 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ussl-n-#{$breakpointName} { user-select: none !important; }
-		.#{$atom-prefix}ussl-t-#{$breakpointName} { user-select: text !important; }
+		.#{$atom-prefix}ussl-n\:#{$breakpointName} { user-select: none !important; }
+		.#{$atom-prefix}ussl-t\:#{$breakpointName} { user-select: text !important; }
 	};
 };

@@ -1,7 +1,7 @@
 <script>
 	let active = 0
 	const activeClass = 'nm-card _dp-f _pst-rlt _tst-2'
-	const inactiveClass = 'nm-card _dp-f _pst-rlt _bgcl-tpr _bdcl-content _bdcl-opacity-10 _bgcl-content-hover _tst-2 _cs-pt _bgcl-opacity-5'
+	const inactiveClass = 'nm-card _dp-f _pst-rlt _bgcl-tpr _bdcl-content _bdcl-opacity-10 _bgcl-content\:hover _tst-2 _cs-pt _bgcl-opacity-5'
 
 	function selectItem (n) {
 		active = n

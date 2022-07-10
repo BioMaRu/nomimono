@@ -1,0 +1,39 @@
+<script lang="ts">
+	let suffix = ''
+</script>
+
+<h1 class="_fs-8">Background size</h1>
+
+<section class="nm-table-container _mgt-8">
+	<table class="nm-table is-variant-compact">
+		<thead>
+		<tr>
+			<th>Class name</th>
+			<th>Properties</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr><td><code>{`_bgs-ct${suffix}`}</code></td><td>background-size: contain</td></tr>
+		<tr><td><code>{`_bgs-cv${suffix}`}</code></td><td>background-size: cover</td></tr>
+		</tbody>
+	</table>
+</section>
+
+<section class="lo-12 _g-4 _mgt-8">
+	<div class="nm-radio">
+		<input checked id="b" name="suffix" on:change={() => suffix = ''} type="radio">
+		<label for="b">Default</label>
+	</div>
+	<div class="nm-radio">
+		<input id="sm" name="suffix" on:change={() => suffix = ':sm'} type="radio">
+		<label for="sm">min-width: 768px; small</label>
+	</div>
+	<div class="nm-radio">
+		<input id="md" name="suffix" on:change={() => suffix = ':md'} type="radio">
+		<label for="md">min-width: 1024px; medium</label>
+	</div>
+	<div class="nm-radio">
+		<input id="lg" name="suffix" on:change={() => suffix = ':lg'} type="radio">
+		<label for="lg">min-width: 1280px; large</label>
+	</div>
+</section>

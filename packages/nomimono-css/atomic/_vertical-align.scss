@@ -5,9 +5,9 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}vtcal-t-#{$breakpointName} { vertical-align: top !important; }
-		.#{$atom-prefix}vtcal-bt-#{$breakpointName} { vertical-align: bottom !important; }
-		.#{$atom-prefix}vtcal-bl-#{$breakpointName} { vertical-align: baseline !important; }
-		.#{$atom-prefix}vtcal-md-#{$breakpointName} { vertical-align: middle !important; }
+		.#{$atom-prefix}vtcal-t\:#{$breakpointName} { vertical-align: top !important; }
+		.#{$atom-prefix}vtcal-bt\:#{$breakpointName} { vertical-align: bottom !important; }
+		.#{$atom-prefix}vtcal-bl\:#{$breakpointName} { vertical-align: baseline !important; }
+		.#{$atom-prefix}vtcal-md\:#{$breakpointName} { vertical-align: middle !important; }
 	};
 };

@@ -6,10 +6,10 @@
 	//--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
 	//
 	//--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
-	//--ui-border-color-1-hover: var(--color-neutral-400);
+	//--ui-border-color-1\:hover: var(--color-neutral-400);
 	//
 	//--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
-	//--ui-border-color-2-hover: var(--color-neutral-300);
+	//--ui-border-color-2\:hover: var(--color-neutral-300);
 
 	//--u-border-color: 222deg 15% 86%; // h s l
 	//--u-shadow-color: 333deg 0% 50%;  // h s l
@@ -94,7 +94,7 @@
 
 	--table-data-font-size: #{toRem(14)};
 	--table-data-vertical-padding: #{toRem(16)};
-	--table-data-border-color: hsl(var(--hsl-content) / 0.10);
+	--table-data-border-color: hsl(var(--hsl-content) / 0.15);
 
 	--table-gutter: #{toRem(24)};
 	--table-side-padding: #{toRem(24)};

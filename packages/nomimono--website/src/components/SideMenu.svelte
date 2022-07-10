@@ -16,6 +16,11 @@
 		'background-attachment',
 		'background-blend-mode',
 		'background-color',
+		'background-position',
+		'background-repeat',
+		'background-size',
+		'border-color',
+		'border-radius',
 		'display',
 	]
 </script>
@@ -65,7 +70,9 @@
 <style lang="scss">
 	.nm-menu {
 		--menu-background: transparent;
-		--menu-background-hover: var(--color-neutral-200);
+		--menu-background\:hover: var(--color-neutral-200);
 		--menu-border-radius: 0;
+		--menu-item-min-height: 2.25rem;
+		--menu-item-font-size: 0.8125rem;
 	}
 </style>

@@ -2,6 +2,6 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}f-crcl-#{$breakpointName}   { fill: currentColor !important; }
+		.#{$atom-prefix}f-crcl\:#{$breakpointName}   { fill: currentColor !important; }
 	};
 };

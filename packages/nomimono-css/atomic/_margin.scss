@@ -11,13 +11,13 @@
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $margin_padding {
-			.#{$atom-prefix}mg-#{$key}-#{$breakpointName}   { margin: #{$value} !important; }
-			.#{$atom-prefix}mgl-#{$key}-#{$breakpointName}  { margin-left: #{$value} !important; }
-			.#{$atom-prefix}mgr-#{$key}-#{$breakpointName}  { margin-right: #{$value} !important; }
-			.#{$atom-prefix}mgt-#{$key}-#{$breakpointName}  { margin-top: #{$value} !important; }
-			.#{$atom-prefix}mgbt-#{$key}-#{$breakpointName} { margin-bottom: #{$value} !important; }
-			.#{$atom-prefix}mgv-#{$key}-#{$breakpointName}  { margin-top: #{$value} !important; margin-bottom: #{$value} !important; }
-			.#{$atom-prefix}mgh-#{$key}-#{$breakpointName}  { margin-left: #{$value} !important; margin-right: #{$value} !important; }
+			.#{$atom-prefix}mg-#{$key}\:#{$breakpointName}   { margin: #{$value} !important; }
+			.#{$atom-prefix}mgl-#{$key}\:#{$breakpointName}  { margin-left: #{$value} !important; }
+			.#{$atom-prefix}mgr-#{$key}\:#{$breakpointName}  { margin-right: #{$value} !important; }
+			.#{$atom-prefix}mgt-#{$key}\:#{$breakpointName}  { margin-top: #{$value} !important; }
+			.#{$atom-prefix}mgbt-#{$key}\:#{$breakpointName} { margin-bottom: #{$value} !important; }
+			.#{$atom-prefix}mgv-#{$key}\:#{$breakpointName}  { margin-top: #{$value} !important; margin-bottom: #{$value} !important; }
+			.#{$atom-prefix}mgh-#{$key}\:#{$breakpointName}  { margin-left: #{$value} !important; margin-right: #{$value} !important; }
 		};
 	};
 };

@@ -6,10 +6,10 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}zid-0-#{$breakpointName} { z-index: 0 !important; }
-		.#{$atom-prefix}zid-1-#{$breakpointName} { z-index: 1 !important; }
-		.#{$atom-prefix}zid-2-#{$breakpointName} { z-index: 2 !important; }
-		.#{$atom-prefix}zid--1-#{$breakpointName} { z-index: -1 !important; }
-		.#{$atom-prefix}zid-at-#{$breakpointName} { z-index: auto !important; }
+		.#{$atom-prefix}zid-0\:#{$breakpointName} { z-index: 0 !important; }
+		.#{$atom-prefix}zid-1\:#{$breakpointName} { z-index: 1 !important; }
+		.#{$atom-prefix}zid-2\:#{$breakpointName} { z-index: 2 !important; }
+		.#{$atom-prefix}zid--1\:#{$breakpointName} { z-index: -1 !important; }
+		.#{$atom-prefix}zid-at\:#{$breakpointName} { z-index: auto !important; }
 	};
 };

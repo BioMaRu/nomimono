@@ -5,9 +5,9 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}tdcrt-udl-#{$breakpointName} { text-decoration: underline !important; }
-		.#{$atom-prefix}tdcrt-ovl-#{$breakpointName} { text-decoration: overline !important; }
-		.#{$atom-prefix}tdcrt-lt-#{$breakpointName}  { text-decoration: line-through !important; }
-		.#{$atom-prefix}tdcrt-n-#{$breakpointName}   { text-decoration: none !important; }
+		.#{$atom-prefix}tdcrt-udl\:#{$breakpointName} { text-decoration: underline !important; }
+		.#{$atom-prefix}tdcrt-ovl\:#{$breakpointName} { text-decoration: overline !important; }
+		.#{$atom-prefix}tdcrt-lt\:#{$breakpointName}  { text-decoration: line-through !important; }
+		.#{$atom-prefix}tdcrt-n\:#{$breakpointName}   { text-decoration: none !important; }
 	};
 };

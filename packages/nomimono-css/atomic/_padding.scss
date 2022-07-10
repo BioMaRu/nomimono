@@ -11,13 +11,13 @@
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $margin_padding {
-			.#{$atom-prefix}pd-#{$key}-#{$breakpointName}   { padding: #{$value} !important; }
-			.#{$atom-prefix}pdl-#{$key}-#{$breakpointName}  { padding-left: #{$value} !important; }
-			.#{$atom-prefix}pdr-#{$key}-#{$breakpointName}  { padding-right: #{$value} !important; }
-			.#{$atom-prefix}pdt-#{$key}-#{$breakpointName}  { padding-top: #{$value} !important; }
-			.#{$atom-prefix}pdbt-#{$key}-#{$breakpointName} { padding-bottom: #{$value} !important; }
-			.#{$atom-prefix}pdv-#{$key}-#{$breakpointName}  { padding-top: #{$value} !important; padding-bottom: #{$value} !important; }
-			.#{$atom-prefix}pdh-#{$key}-#{$breakpointName}  { padding-left: #{$value} !important; padding-right: #{$value} !important; }
+			.#{$atom-prefix}pd-#{$key}\:#{$breakpointName}   { padding: #{$value} !important; }
+			.#{$atom-prefix}pdl-#{$key}\:#{$breakpointName}  { padding-left: #{$value} !important; }
+			.#{$atom-prefix}pdr-#{$key}\:#{$breakpointName}  { padding-right: #{$value} !important; }
+			.#{$atom-prefix}pdt-#{$key}\:#{$breakpointName}  { padding-top: #{$value} !important; }
+			.#{$atom-prefix}pdbt-#{$key}\:#{$breakpointName} { padding-bottom: #{$value} !important; }
+			.#{$atom-prefix}pdv-#{$key}\:#{$breakpointName}  { padding-top: #{$value} !important; padding-bottom: #{$value} !important; }
+			.#{$atom-prefix}pdh-#{$key}\:#{$breakpointName}  { padding-left: #{$value} !important; padding-right: #{$value} !important; }
 		};
 	};
 };

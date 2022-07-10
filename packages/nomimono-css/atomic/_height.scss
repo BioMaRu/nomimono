@@ -5,7 +5,7 @@
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $width_height {
-			.#{$atom-prefix}h-#{$key}-#{$breakpointName} { height: #{$value} !important; }
+			.#{$atom-prefix}h-#{$key}\:#{$breakpointName} { height: #{$value} !important; }
 		};
 	};
 };

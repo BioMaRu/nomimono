@@ -3,7 +3,7 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}lstpst-is-#{$breakpointName} { list-style-position: inside !important }
-		.#{$atom-prefix}lstpst-os-#{$breakpointName} { list-style-position: outside !important }
+		.#{$atom-prefix}lstpst-is\:#{$breakpointName} { list-style-position: inside !important }
+		.#{$atom-prefix}lstpst-os\:#{$breakpointName} { list-style-position: outside !important }
 	};
 };

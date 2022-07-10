@@ -3,7 +3,7 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ovfw-nm-#{$breakpointName}  { overflow-wrap: visible !important; }
-		.#{$atom-prefix}ovfw-bw-#{$breakpointName}  { overflow-wrap: break-word !important; }
+		.#{$atom-prefix}ovfw-nm\:#{$breakpointName}  { overflow-wrap: visible !important; }
+		.#{$atom-prefix}ovfw-bw\:#{$breakpointName}  { overflow-wrap: break-word !important; }
 	};
 };

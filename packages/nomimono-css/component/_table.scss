@@ -66,13 +66,28 @@
 
 	td {
 		padding: var(--table-data-vertical-padding, toRem(16)) 0;
+		white-space: nowrap;
+
+		p {
+			white-space: normal;
+		}
+
+		&.is-collapse {
+			width: 1%;
+		}
 	}
 
 	th {
 		font-family: var(--table-head-font-family, 'sans-serif');
 		font-weight: var(--table-head-font-weight, 600);
 		padding: var(--table-head-vertical-padding, toRem(16)) 0;
+		white-space: nowrap;
+
 		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
+
+		p {
+			white-space: normal;
+		}
 
 		&.is-collapse {
 			width: 1%;

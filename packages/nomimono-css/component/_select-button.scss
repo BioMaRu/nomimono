@@ -19,7 +19,7 @@
 
 	&:hover,
 	&:focus {
-		border: toRem(1) solid var(--ui-border-color-1-hover);
+		border: toRem(1) solid var(--ui-border-color-1\:hover);
 		background: transparent;
 	}
 

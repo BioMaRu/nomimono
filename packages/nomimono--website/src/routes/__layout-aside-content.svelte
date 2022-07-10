@@ -51,13 +51,14 @@
 
 		:where(.aside-top, .main-top) {
 			position: fixed;
+			z-index: 2;
 			top: 0;
 			display: flex;
 			align-items: center;
 			height: var(--nav-height);
 			padding: 0 24px;
 			border-bottom: 1px solid var(--color-neutral-200);
-			backdrop-filter: blur(5px);
+			//backdrop-filter: blur(2px);
 		}
 
 		.aside-top {
@@ -72,7 +73,7 @@
 		}
 
 		.content {
-			padding: 32px 24px 32px 24px;
+			padding: 32px 32px 32px 32px;
 		}
 	}
 

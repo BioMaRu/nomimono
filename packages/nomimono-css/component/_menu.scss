@@ -1,5 +1,8 @@
 @import '../helper/all';
 @import 'config';
+/*
+	--menu-item-min-height
+*/
 
 .#{$prefix}menu {
 	font-weight: 500;
@@ -20,8 +23,8 @@
 
 	&.is-compact {
 		> *:not(.group-label) > * {
-			font-size: var(--fs-3);
-			min-height: toEm(44);
+			font-size: var(--menu-item-font-size, var(--fs-3));
+			min-height: var(--menu-item-min-height, #{toEm(44)});
 			padding: 0 toRem(16);
 		}
 
@@ -90,9 +93,10 @@
 		}
 
 		> * {
+			font-size: var(--menu-item-font-size, var(--fs-4));
 			display: flex;
 			align-items: center;
-			min-height: toEm(52);
+			min-height: var(--menu-item-min-height, #{toEm(52)});
 			padding: 0 toEm(24);
 			cursor: pointer;
 			white-space: nowrap;

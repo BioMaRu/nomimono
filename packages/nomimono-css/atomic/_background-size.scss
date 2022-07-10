@@ -3,7 +3,7 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}bgs-cv-#{$breakpointName} { background-size: cover !important; }
-		.#{$atom-prefix}bgs-ct-#{$breakpointName} { background-size: contain !important; }
+		.#{$atom-prefix}bgs-cv\:#{$breakpointName} { background-size: cover !important; }
+		.#{$atom-prefix}bgs-ct\:#{$breakpointName} { background-size: contain !important; }
 	};
 };

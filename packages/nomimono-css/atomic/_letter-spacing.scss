@@ -8,12 +8,12 @@
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ltspc-1px-#{$breakpointName}  { letter-spacing: 1px !important; }
-		.#{$atom-prefix}ltspc-2px-#{$breakpointName}  { letter-spacing: 2px !important; }
-		.#{$atom-prefix}ltspc-4px-#{$breakpointName}  { letter-spacing: 4px !important; }
-		.#{$atom-prefix}ltspc-8px-#{$breakpointName}  { letter-spacing: 8px !important; }
-		.#{$atom-prefix}ltspc-16px-#{$breakpointName} { letter-spacing: 16px !important; }
-		.#{$atom-prefix}ltspc-24px-#{$breakpointName} { letter-spacing: 24px !important; }
-		.#{$atom-prefix}ltspc-32px-#{$breakpointName} { letter-spacing: 32px !important; }
+		.#{$atom-prefix}ltspc-1px\:#{$breakpointName}  { letter-spacing: 1px !important; }
+		.#{$atom-prefix}ltspc-2px\:#{$breakpointName}  { letter-spacing: 2px !important; }
+		.#{$atom-prefix}ltspc-4px\:#{$breakpointName}  { letter-spacing: 4px !important; }
+		.#{$atom-prefix}ltspc-8px\:#{$breakpointName}  { letter-spacing: 8px !important; }
+		.#{$atom-prefix}ltspc-16px\:#{$breakpointName} { letter-spacing: 16px !important; }
+		.#{$atom-prefix}ltspc-24px\:#{$breakpointName} { letter-spacing: 24px !important; }
+		.#{$atom-prefix}ltspc-32px\:#{$breakpointName} { letter-spacing: 32px !important; }
 	};
 };
