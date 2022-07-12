@@ -1,5 +1,5 @@
 html {
-	font-family: var(--font-family-primary, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif);
+	font-family: var(--ffml-primary, -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif);
 	font-size: 100%;
 	line-height: 1.15;
 	-moz-osx-font-smoothing: grayscale;
@@ -12,7 +12,8 @@ html, body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: hsl(var(--hsl-content) / 1);
+	color: hsl(var(--hsl-content));
+	--cl-opacity: 1;
 }
 
 main {
@@ -24,7 +25,7 @@ main {
 }
 
 p {
-	font-family: var(--font-family-primary);
+	font-family: var(--ffml-primary);
 	line-height: 1.65;
 	margin: 0;
 	padding: 0;

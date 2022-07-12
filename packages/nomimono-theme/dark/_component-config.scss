@@ -87,20 +87,20 @@
 
 
 	/* table */
-	--table-border-width: #{toRem(1)};
-	--table-border-radius: #{toRem(8)};
-	--table-border-color: hsl(var(--hsl-content) / 0.1);
-
-	--table-head-font-weight: 600;
-	--table-head-font-size: #{toRem(15)};
-	--table-head-font-family: var(--font-family-secondary);
-	--table-head-vertical-padding: #{toRem(12)};
-
-	--table-data-font-size: #{toRem(14)};
-	--table-data-vertical-padding: #{toRem(16)};
-	--table-data-border-color: hsl(var(--hsl-content) / 0.15);
-
-	--table-gutter: #{toRem(24)};
-	--table-side-padding: #{toRem(24)};
+	//--table-border-width: #{toRem(1)};
+	//--table-border-radius: #{toRem(8)};
+	//--table-border-color: hsl(var(--hsl-content) / 0.1);
+	//
+	//--table-head-font-weight: 600;
+	//--table-head-font-size: #{toRem(15)};
+	//--table-head-font-family: var(--font-family-secondary);
+	//--table-head-vertical-padding: #{toRem(12)};
+	//
+	//--table-data-font-size: #{toRem(14)};
+	//--table-data-vertical-padding: #{toRem(16)};
+	//--table-data-border-color: hsl(var(--hsl-content) / 0.15);
+	//
+	//--table-gutter: #{toRem(24)};
+	//--table-side-padding: #{toRem(24)};
 
 }

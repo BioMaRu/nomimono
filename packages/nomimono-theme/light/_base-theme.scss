@@ -1,18 +1,21 @@
 @import '../helper';
 [data-theme="light"] {
-	/*
-	* Color
-	*********************************************/
 	--hue-primary: 333;
 	--hsl-primary: var(--hue-primary) 80% 65%;
 	--hsl-primary-active: var(--hue-primary) 80% 58%;
-	--hsl-primary-content: var(--hue-primary) 80% 100%;
+	--hsl-primary-content: var(--hue-primary) 80% 98%;
+
+	--hue-secondary: 267;
+	--hsl-secondary: var(--hue-secondary) 93% 65%;
+	--hsl-secondary-active: var(--hue-secondary) 93% 60%;
+	--hsl-secondary-content: var(--hue-secondary) 93% 98%;
 
 	--hue-base: 222;
 	--hsl-base-100: var(--hue-base) 30% 100%;
 	--hsl-base-200: var(--hue-base) 30% 97%;
 	--hsl-base-300: var(--hue-base) 30% 92%;
 	--hsl-base-400: var(--hue-base) 30% 87%;
+	--hsl-line: 222 30% 90%;
 	--hsl-content: 215 15% 25%;
 	--hsl-content-inv: 0 0% 85%;
 
@@ -25,41 +28,15 @@
 	--hsl-info: 197 70% 54%;
 	--hsl-info-content: 197 90% 97%;
 
-	//--cl-neutral-400: hsl(210, 30%, 82%);
-	//--cl-neutral-500: hsl(210, 25%, 70%);
-	//--cl-neutral-600: hsl(210, 20%, 60%);
-	//--cl-neutral-700: hsl(210, 20%, 55%);
-	//--cl-neutral-800: hsl(210, 20%, 50%);
-	//--cl-neutral-900: hsl(210, 20%, 45%);
-
-
-	//--hsl-content: hsla(215, 15%, 20%, 0.95);
-
-	//--cl-text-300: hsla(215, 15%, 20%, 0.40);
-	//
-	//--hsla-text-invert-100: hsla(0, 0%, 100%, 0.95);
-	//--cl-text-invert-200: hsla(0, 0%, 100%, 0.85);
-	//--cl-text-invert-300: hsla(0, 0%, 100%, 0.65);
-	//
 	--hsl-black: 0 0% 0%;
 	--hsl-white: 0 0% 100%;
-
-	//
-	//--cl-shade-100: rgba(0, 0, 0, 0.05);
-	//--cl-shade-200: rgba(0, 0, 0, 0.1);
-	//--cl-shade-300: rgba(0, 0, 0, 0.15);
-	//
-	//--cl-tint-100: rgba(255, 255, 255, 0.15);
-	//--cl-tint-200: rgba(255, 255, 255, 0.3);
-	//--cl-tint-300: rgba(255, 255, 255, 0.45);
-
 
 	/*
 	* Typography
 	*********************************************/
 
-	--ffml-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-	--ffml-secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--ffml-primary: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--ffml-secondary: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 
 	--fs-14: #{toRem(72)};
 	--fs-13: #{toRem(56)};
@@ -76,11 +53,9 @@
 	--fs-2: #{toRem(14)};
 	--fs-1: #{toRem(12)};
 
-
 	/*
 	* Spacing
 	*********************************************/
-
 	--spc-0: #{toRem(0)};
 	--spc-1: #{toRem(1)};
 	--spc-2: #{toRem(2)};
@@ -96,29 +71,37 @@
 	--spc-12: #{toRem(96)};
 	--spc-13: #{toRem(128)};
 
-	--bsd-100: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.05);
+	/*
+	 * Box shadow
+	 *********************************************/
+	--bsd-hsl: 333deg 0% 50%;
+	--bsd-100:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.05);
 
-	--bsd-200: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.075);
+	--bsd-200:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.075);
 
-	--bsd-300: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.1);
+	--bsd-300:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.1);
 
-	--bsd-400: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(64)} #{toRem(64)} hsl(var(--u-shadow-color) / 0.15);
+	--bsd-400:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(64)} #{toRem(64)} hsl(var(--bsd-hsl) / 0.15);
 }

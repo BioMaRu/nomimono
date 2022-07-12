@@ -9,11 +9,17 @@
 	--hsl-primary-active: var(--hue-primary) 80% 58%;
 	--hsl-primary-content: var(--hue-primary) 0% 100%;
 
+	--hue-secondary: 267;
+	--hsl-secondary: var(--hue-secondary) 93% 65%;
+	--hsl-secondary-active: var(--hue-secondary) 93% 60%;
+	--hsl-secondary-content: var(--hue-secondary) 93% 98%;
+
 	--hue-base: 222;
 	--hsl-base-100: var(--hue-base) 20% 19%;
 	--hsl-base-200: var(--hue-base) 20% 16%;
 	--hsl-base-300: var(--hue-base) 20% 13%;
 	--hsl-base-400: var(--hue-base) 20% 10%;
+	--hsl-line: 222 20% 30%;
 	--hsl-content: 0 0% 75%;
 	--hsl-content-inv: 215 15% 12%;
 
@@ -71,32 +77,37 @@
 	--spc-12: #{toRem(96)};
 	--spc-13: #{toRem(128)};
 
+	/*
+	 * Box shadow
+	 *********************************************/
+	--bsd-hsl: 333deg 0% 50%;
+	--bsd-100:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.05);
 
+	--bsd-200:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.075);
 
-	--bsd-100: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.05),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.05);
+	--bsd-300:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.1);
 
-	--bsd-200: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.075),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.075);
-
-	--bsd-300: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.1),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.1);
-
-	--bsd-400: 0 #{toRem(1)} #{toRem(1)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--u-shadow-color) / 0.15),
-	0 #{toRem(64)} #{toRem(64)} hsl(var(--u-shadow-color) / 0.15);
-
+	--bsd-400:
+		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{toRem(64)} #{toRem(64)} hsl(var(--bsd-hsl) / 0.15);
 }

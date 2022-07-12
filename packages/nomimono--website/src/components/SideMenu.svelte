@@ -21,7 +21,7 @@
 		'background-size',
 		'border-color',
 		'border-radius',
-		'display',
+		// 'display',
 	]
 </script>
 

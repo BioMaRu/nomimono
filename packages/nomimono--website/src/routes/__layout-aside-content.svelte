@@ -73,7 +73,7 @@
 		}
 
 		.content {
-			padding: 32px 32px 32px 32px;
+			padding: 32px 32px 128px 32px;
 		}
 	}
 

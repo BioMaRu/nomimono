@@ -8,10 +8,15 @@ $background-colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bgcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bgcl-opacity)),
 
+	'secondary': hsl(var(--hsl-secondary) / var(--bgcl-opacity)),
+	'secondary-active': hsl(var(--hsl-secondary-active) / var(--bgcl-opacity)),
+	'secondary-content': hsl(var(--hsl-secondary-content) / var(--bgcl-opacity)),
+
 	'base-100': hsl(var(--hsl-base-100) / var(--bgcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bgcl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--bgcl-opacity)),
 	'base-400': hsl(var(--hsl-base-400) / var(--bgcl-opacity)),
+	'line': hsl(var(--hsl-line) / var(--bgcl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--bgcl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--bgcl-opacity)),
 
@@ -36,6 +41,15 @@ $colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--cl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--cl-opacity)),
 
+	'secondary': hsl(var(--hsl-secondary) / var(--cl-opacity)),
+	'secondary-active': hsl(var(--hsl-secondary-active) / var(--cl-opacity)),
+	'secondary-content': hsl(var(--hsl-secondary-content) / var(--cl-opacity)),
+
+	'base-100': hsl(var(--hsl-base-100) / var(--cl-opacity)),
+	'base-200': hsl(var(--hsl-base-200) / var(--cl-opacity)),
+	'base-300': hsl(var(--hsl-base-300) / var(--cl-opacity)),
+	'base-400': hsl(var(--hsl-base-400) / var(--cl-opacity)),
+	'line': hsl(var(--hsl-line) / var(--cl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--cl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--cl-opacity)),
 
@@ -61,10 +75,15 @@ $border-colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bdcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bdcl-opacity)),
 
+	'secondary': hsl(var(--hsl-secondary) / var(--bdcl-opacity)),
+	'secondary-active': hsl(var(--hsl-secondary-active) / var(--bdcl-opacity)),
+	'secondary-content': hsl(var(--hsl-secondary-content) / var(--bdcl-opacity)),
+
 	'base-100': hsl(var(--hsl-base-100) / var(--bdcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bdcl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--bdcl-opacity)),
 	'base-400': hsl(var(--hsl-base-400) / var(--bdcl-opacity)),
+	'line': hsl(var(--hsl-line) / var(--bdcl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--bdcl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--bdcl-opacity)),
 
@@ -92,12 +111,19 @@ $opacity: (
 	'20': 0.2,
 	'25': 0.25,
 	'30': 0.3,
+	'35': 0.35,
 	'40': 0.4,
+	'45': 0.45,
 	'50': 0.5,
+	'55': 0.55,
 	'60': 0.6,
+	'65': 0.65,
 	'70': 0.7,
+	'75': 0.75,
 	'80': 0.8,
+	'85': 0.85,
 	'90': 0.9,
+	'95': 0.95,
 	'100': 1,
 );
 

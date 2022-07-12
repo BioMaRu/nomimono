@@ -1,8 +1,16 @@
 <script lang="ts">
+	import ModifierSelector from "$components/ModifierSelector.svelte"
+
 	let suffix = ''
 </script>
 
 <h1 class="_fs-8">Backface visibility</h1>
+
+<br>
+
+<p class="_cl-content _cl-opacity-70">
+	The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
+</p>
 
 <section class="nm-table-container _mgt-8">
 	<table class="nm-table is-variant-compact">
@@ -13,27 +21,11 @@
 		</tr>
 		</thead>
 		<tbody>
-			<tr><td><code>{`_bfvsblt-hd${suffix}`}</code></td><td>backface-visibility: hidden</td></tr>
-			<tr><td><code>{`_bfvsblt-vsb${suffix}`}</code></td><td>backface-visibility: visible</td></tr>
+			<tr><td><code class="_cl-secondary">{`_bfvsblt-hd${suffix}`}</code></td><td>backface-visibility: hidden</td></tr>
+			<tr><td><code class="_cl-secondary">{`_bfvsblt-vsb${suffix}`}</code></td><td>backface-visibility: visible</td></tr>
 		</tbody>
 	</table>
 </section>
 
-<section class="lo-12 _g-4 _mgt-8">
-	<div class="nm-radio">
-		<input checked id="b" name="suffix" on:change={() => suffix = ''} type="radio">
-		<label for="b">Default</label>
-	</div>
-	<div class="nm-radio">
-		<input id="sm" name="suffix" on:change={() => suffix = ':sm'} type="radio">
-		<label for="sm">min-width: 768px; small</label>
-	</div>
-	<div class="nm-radio">
-		<input id="md" name="suffix" on:change={() => suffix = ':md'} type="radio">
-		<label for="md">min-width: 1024px; medium</label>
-	</div>
-	<div class="nm-radio">
-		<input id="lg" name="suffix" on:change={() => suffix = ':lg'} type="radio">
-		<label for="lg">min-width: 1280px; large</label>
-	</div>
-</section>
+<h6 class="_mgt-7 _mgbt-5">Modifier</h6>
+<ModifierSelector on:change={(v) => suffix = v.detail.value } />

@@ -1,0 +1,21 @@
+.u-scrollbar::-webkit-scrollbar {
+	width: 5px;
+	height: 4px;
+	background-color: hsl(var(--hsl-line) / 0.25);
+}
+
+.u-scrollbar::-webkit-scrollbar-thumb {
+	padding: 0;
+	border-radius: 9999px;
+	background-color: hsl(var(--hsl-line) / 0.75);
+}
+
+.u-scrollbar::-webkit-scrollbar-track {
+	padding: 0;
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.u-scrollbar::-webkit-scrollbar-corner {
+	background: hsl(var(--hsl-line) / 0.25);
+}

@@ -5,11 +5,31 @@
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border:
-		var(--table-border-width,
-		toRem(1)) solid
-		var(--table-border-color, hsl(var(--hsl-content) / 0.1));
-	border-radius: var(--table-border-radius, toRem(8));
+	//border:
+	//	var(--table-border-width, toRem(0)) solid var(--table-border-color, hsl(var(--hsl-line) / 0.8));
+
+	//border-bottom:
+	//	var(--table-border-width, toRem(1)) solid var(--table-border-color, hsl(var(--hsl-line) / 0.8));
+
+	border-radius: var(--table-border-radius, toRem(4));
+
+	&.is-scroll-padding {
+		padding-right: #{toRem(16)};
+
+		&:after {
+			padding-right: #{toRem(16)};
+		}
+	}
+
+	&:after {
+		position: sticky;
+		z-index: 1;
+		right: 0;
+		bottom: 1px;
+		display: block;
+		content: ' ';
+		border-bottom: var(--table-border-width, toRem(1)) solid var(--table-border-color, hsl(var(--hsl-line) / 0.8));
+	}
 }
 
 .#{$prefix}table {
@@ -20,15 +40,12 @@
 	max-width: 100%;
 
 	border-spacing: 0;
-
-	border-collapse: collapse;
+	border-collapse: separate;
 	word-break: normal;
 
 	thead {
 		font-size: var(--table-head-font-size, toRem(15));
 		overflow: hidden;
-		color: hsl(var(--hsl-content) / 1);
-		background: var(--table-head-background, hsl(var(--hsl-content-inv) / 0.2));
 	}
 
 	tbody {
@@ -78,12 +95,16 @@
 	}
 
 	th {
-		font-family: var(--table-head-font-family, 'sans-serif');
+		font-family: var(--table-head-font-family, var(--font-family-secondary));
 		font-weight: var(--table-head-font-weight, 600);
-		padding: var(--table-head-vertical-padding, toRem(16)) 0;
-		white-space: nowrap;
+		padding: var(--table-head-vertical-padding, #{toRem(12)}) 0;
+		border-spacing: 5px 5px;
 
-		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
+		border-collapse: separate;
+		white-space: nowrap;
+		color: hsl(var(--hsl-content) / 1);
+		border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
+		background: var(--table-head-background, hsl(var(--hsl-base-200)));
 
 		p {
 			white-space: normal;
@@ -96,7 +117,7 @@
 
 	tr:not(:last-child) {
 		td {
-			border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-content) / 0.15));
+			border-bottom: toRem(1) solid var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
 		}
 	}
 
@@ -104,6 +125,14 @@
 		tr td {
 			padding-top: toRem(10);
 			padding-bottom: toRem(10);
+		}
+	}
+
+	&.is-header-sticky {
+		tr th {
+			position: sticky;
+			z-index: 2;
+			top: 0;
 		}
 	}
 }
