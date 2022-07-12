@@ -17,7 +17,7 @@
 		<thead>
 		<tr>
 			<th>Base class</th>
-			<th>Class value (*)</th>
+			<th>{`{value}`}</th>
 			<th>Property value</th>
 			<th class="_tal-r is-collapse">default</th>
 		</tr>
@@ -26,11 +26,11 @@
 			<tr>
 				<td class="_vtcal-t _bdbtw-0 _bdrw-1 _bdcl-line _bdcl-opacity-50" rowspan="20">
 					<p>
-						<code class="_cl-secondary">{`_bdrd-*`}</code> <br>
-						<code class="_cl-secondary">{`_bdtrrd-*`}</code> <br>
-						<code class="_cl-secondary">{`_bdtlrd-*`}</code> <br>
-						<code class="_cl-secondary">{`_bdbtrrd-*`}</code> <br>
-						<code class="_cl-secondary">{`_bdbtlrd-*`}</code>
+						<code class="_cl-secondary">{`_bdrd-{value}`}</code> <br>
+						<code class="_cl-secondary">{`_bdtrrd-{value}`}</code> <br>
+						<code class="_cl-secondary">{`_bdtlrd-{value}`}</code> <br>
+						<code class="_cl-secondary">{`_bdbtrrd-{value}`}</code> <br>
+						<code class="_cl-secondary">{`_bdbtlrd-{value}`}</code>
 					</p>
 				</td>
 				<td><code class="_cl-secondary">1</code></td>
