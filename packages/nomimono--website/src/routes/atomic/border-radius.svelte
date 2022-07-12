@@ -12,7 +12,7 @@
 	The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 </p>
 
-<section class="nm-table-container is-scroll-padding _mgt-8" style="max-height: 400px;">
+<section class="nm-table-container is-scroll-padding u-scrollbar _mgt-8" style="max-height: 400px;">
 	<table class="nm-table is-variant-compact is-header-sticky">
 		<thead>
 		<tr>
@@ -59,7 +59,7 @@
 </section>
 
 <h2 class="_fs-6 _fw-500 _mgt-8">All classed</h2>
-<section class="nm-table-container is-scroll-padding _mgt-6" style="max-height: 400px;">
+<section class="nm-table-container is-scroll-padding u-scrollbar _mgt-6" style="max-height: 400px;">
 	<table class="nm-table is-variant-compact is-header-sticky">
 		<thead>
 		<tr>
