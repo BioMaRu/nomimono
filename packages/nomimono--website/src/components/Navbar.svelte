@@ -8,7 +8,7 @@
 	</a>
 
 	<div class="_dp-f _g-5 _mgl-9">
-		<div class="nm-dropdown is\:hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
 				<span class="nm-button is-variant-ghost">Getting Start</span>
 			</div>
@@ -21,7 +21,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="nm-dropdown is\:hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
 				<span class="nm-button is-variant-ghost">Document</span>
 			</div>
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 
-		<div class="nm-dropdown is\:hover-open">
+		<div class="nm-dropdown is-hover-open">
 			<div tabindex="0">
 				<span class="nm-button is-variant-ghost">Framework</span>
 			</div>
