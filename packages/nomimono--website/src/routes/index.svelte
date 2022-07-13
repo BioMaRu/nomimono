@@ -15,7 +15,12 @@
 
 <HomeHero />
 <HomeFeatures />
-<HomePackages />
+
+<div class="lo-container">
+	<div class="u-flex-middle">
+		<a class="nm-button is-size-large" href="/doc/introduction">Document</a>
+	</div>
+</div>
 
 <div class="_pdv-12">
 

@@ -7,7 +7,7 @@
 					Simple yet highly customizable UI Framework.
 				</p>
 				<div class="_dp-f _g-5 _mgt-9">
-					<a class="nm-button is-size-large" href="/atomic/display">
+					<a class="nm-button is-size-large" href="/doc/introduction">
 						Get started
 					</a>
 					<div class="nm-slate">
