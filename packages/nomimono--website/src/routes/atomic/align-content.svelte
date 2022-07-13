@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.
 </p>
 

@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The background-size CSS property sets the size of the element's background image. The image can be left to its natural size, stretched, or constrained to fit the available space.
 </p>
 

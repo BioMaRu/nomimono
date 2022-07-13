@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The align-self CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.
 </p>
 

@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The background-attachment CSS property sets whether a background image's position is fixed within the viewport, or scrolls with its containing block.
 </p>
 

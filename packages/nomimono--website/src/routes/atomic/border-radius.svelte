@@ -2,13 +2,21 @@
 	import ModifierSelector from "$components/ModifierSelector.svelte"
 
 	let suffix = ''
+
+	const CLASSES = [
+		'_bdrd-',
+		'_bdtlrd-',
+		'_bdtrrd-',
+		'_bdbtlrd-',
+		'_bdbtrrd-',
+	]
 </script>
 
 <h1 class="_fs-8">Border radius</h1>
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
 </p>
 
@@ -25,7 +33,7 @@
 		<tbody>
 			<tr>
 				<td class="_vtcal-t _bdbtw-0 _bdrw-1 _bdcl-line _bdcl-opacity-50" rowspan="20">
-					<p>
+					<p class="_pst-stk _t-11">
 						<code class="_cl-secondary">{`_bdrd-{value}`}</code> <br>
 						<code class="_cl-secondary">{`_bdtrrd-{value}`}</code> <br>
 						<code class="_cl-secondary">{`_bdtlrd-{value}`}</code> <br>
@@ -69,105 +77,27 @@
 		</tr>
 		</thead>
 		<tbody>
-			<tr><td><code class="_cl-secondary">{`_bdrd-1${suffix}`}</code></td><td>border-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-2${suffix}`}</code></td><td>border-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-3${suffix}`}</code></td><td>border-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-4${suffix}`}</code></td><td>border-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-5${suffix}`}</code></td><td>border-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-6${suffix}`}</code></td><td>border-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-7${suffix}`}</code></td><td>border-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-8${suffix}`}</code></td><td>border-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-9${suffix}`}</code></td><td>border-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-10${suffix}`}</code></td><td>border-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-11${suffix}`}</code></td><td>border-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-12${suffix}`}</code></td><td>border-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-13${suffix}`}</code></td><td>border-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-max${suffix}`}</code></td><td>border-radius: 9999px</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-50pct${suffix}`}</code></td><td>border-radius: 50%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-100pct${suffix}`}</code></td><td>border-radius: 100%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-at${suffix}`}</code></td><td>border-radius: auto</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-us${suffix}`}</code></td><td>border-radius: unset</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdrd-ihr${suffix}`}</code></td><td>border-radius: inherit</td><td class="_tal-r"></td></tr>
-
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-1${suffix}`}</code></td><td>border-top-left-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-2${suffix}`}</code></td><td>border-top-left-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-3${suffix}`}</code></td><td>border-top-left-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-4${suffix}`}</code></td><td>border-top-left-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-5${suffix}`}</code></td><td>border-top-left-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-6${suffix}`}</code></td><td>border-top-left-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-7${suffix}`}</code></td><td>border-top-left-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-8${suffix}`}</code></td><td>border-top-left-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-9${suffix}`}</code></td><td>border-top-left-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-10${suffix}`}</code></td><td>border-top-left-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-11${suffix}`}</code></td><td>border-top-left-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-12${suffix}`}</code></td><td>border-top-left-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-13${suffix}`}</code></td><td>border-top-left-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-max${suffix}`}</code></td><td>border-top-left-radius: 9999px</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-50pct${suffix}`}</code></td><td>border-top-left-radius: 50%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-100pct${suffix}`}</code></td><td>border-top-left-radius: 100%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-at${suffix}`}</code></td><td>border-top-left-radius: auto</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-us${suffix}`}</code></td><td>border-top-left-radius: unset</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtlrd-ihr${suffix}`}</code></td><td>border-top-left-radius: inherit</td><td class="_tal-r"></td></tr>
-
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-1${suffix}`}</code></td><td>border-top-right-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-2${suffix}`}</code></td><td>border-top-right-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-3${suffix}`}</code></td><td>border-top-right-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-4${suffix}`}</code></td><td>border-top-right-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-5${suffix}`}</code></td><td>border-top-right-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-6${suffix}`}</code></td><td>border-top-right-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-7${suffix}`}</code></td><td>border-top-right-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-8${suffix}`}</code></td><td>border-top-right-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-9${suffix}`}</code></td><td>border-top-right-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-10${suffix}`}</code></td><td>border-top-right-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-11${suffix}`}</code></td><td>border-top-right-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-12${suffix}`}</code></td><td>border-top-right-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-13${suffix}`}</code></td><td>border-top-right-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-max${suffix}`}</code></td><td>border-top-right-radius: 9999px</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-50pct${suffix}`}</code></td><td>border-top-right-radius: 50%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-100pct${suffix}`}</code></td><td>border-top-right-radius: 100%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-at${suffix}`}</code></td><td>border-top-right-radius: auto</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-us${suffix}`}</code></td><td>border-top-right-radius: unset</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdtrrd-ihr${suffix}`}</code></td><td>border-top-right-radius: inherit</td><td class="_tal-r"></td></tr>
-
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-1${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-2${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-3${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-4${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-5${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-6${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-7${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-8${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-9${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-10${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-11${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-12${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-13${suffix}`}</code></td><td>border-bottom-left-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-max${suffix}`}</code></td><td>border-bottom-left-radius: 9999px</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-50pct${suffix}`}</code></td><td>border-bottom-left-radius: 50%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-100pct${suffix}`}</code></td><td>border-bottom-left-radius: 100%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-at${suffix}`}</code></td><td>border-bottom-left-radius: auto</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-us${suffix}`}</code></td><td>border-bottom-left-radius: unset</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtlrd-ihr${suffix}`}</code></td><td>border-bottom-left-radius: inherit</td><td class="_tal-r"></td></tr>
-
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-1${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-2${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-3${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-4${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-5${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-6${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-7${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-8${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-9${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-10${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-11${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-12${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-13${suffix}`}</code></td><td>border-bottom-right-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-max${suffix}`}</code></td><td>border-bottom-right-radius: 9999px</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-50pct${suffix}`}</code></td><td>border-bottom-right-radius: 50%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-100pct${suffix}`}</code></td><td>border-bottom-right-radius: 100%</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-at${suffix}`}</code></td><td>border-bottom-right-radius: auto</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-us${suffix}`}</code></td><td>border-bottom-right-radius: unset</td><td class="_tal-r"></td></tr>
-			<tr><td><code class="_cl-secondary">{`_bdbtrrd-ihr${suffix}`}</code></td><td>border-bottom-right-radius: inherit</td><td class="_tal-r"></td></tr>
+		{#each CLASSES as c}
+			<tr><td><code class="_cl-secondary">{`${c}1${suffix}`}</code></td><td>border-radius: var(--spc-1)</td><td class="_tal-r">0rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}2${suffix}`}</code></td><td>border-radius: var(--spc-2)</td><td class="_tal-r">0.0625rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}3${suffix}`}</code></td><td>border-radius: var(--spc-3)</td><td class="_tal-r">0.125rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}4${suffix}`}</code></td><td>border-radius: var(--spc-4)</td><td class="_tal-r">0.25rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}5${suffix}`}</code></td><td>border-radius: var(--spc-5)</td><td class="_tal-r">0.5rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}6${suffix}`}</code></td><td>border-radius: var(--spc-6)</td><td class="_tal-r">0.75rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}7${suffix}`}</code></td><td>border-radius: var(--spc-7)</td><td class="_tal-r">1rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}8${suffix}`}</code></td><td>border-radius: var(--spc-8)</td><td class="_tal-r">1.5rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}9${suffix}`}</code></td><td>border-radius: var(--spc-9)</td><td class="_tal-r">2rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}10${suffix}`}</code></td><td>border-radius: var(--spc-10)</td><td class="_tal-r">2.5rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}11${suffix}`}</code></td><td>border-radius: var(--spc-11)</td><td class="_tal-r">3rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}12${suffix}`}</code></td><td>border-radius: var(--spc-12)</td><td class="_tal-r">4rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}13${suffix}`}</code></td><td>border-radius: var(--spc-13)</td><td class="_tal-r">6rem</td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}max${suffix}`}</code></td><td>border-radius: 9999px</td><td class="_tal-r"></td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}50pct${suffix}`}</code></td><td>border-radius: 50%</td><td class="_tal-r"></td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}100pct${suffix}`}</code></td><td>border-radius: 100%</td><td class="_tal-r"></td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}at${suffix}`}</code></td><td>border-radius: auto</td><td class="_tal-r"></td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}us${suffix}`}</code></td><td>border-radius: unset</td><td class="_tal-r"></td></tr>
+			<tr><td><code class="_cl-secondary">{`${c}ihr${suffix}`}</code></td><td>border-radius: inherit</td><td class="_tal-r"></td></tr>
+		{/each}
 		</tbody>
 	</table>
 </section>

@@ -46,7 +46,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The border-color CSS property sets the border color of an element.
 </p>
 
@@ -106,7 +106,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	Use with <code class="_cl-secondary">_bdcl-*</code> class to set the opacity of that border color. <br>
 	for example; class="<code class="_cl-secondary">_bdcl-primary _bdcl-opacity-50</code>"
 </p>

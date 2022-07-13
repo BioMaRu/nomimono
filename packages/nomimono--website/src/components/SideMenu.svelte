@@ -1,14 +1,21 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores'
 
 	$: pathname = $page.url.pathname
 
-	const components = [
+	const DOCS = [
+		{ label: 'Introduction', path: 'introduction' },
+		{ label: 'Installation', path: 'installation' },
+		{ label: 'Usage', path: 'usage' },
+		{ label: 'Theme variable', path: 'variable' },
+	]
+
+	const COMPONENTS = [
 		// { label: 'Badge', path: 'badge' },
 		{ label: 'Button', path: 'button' },
 		{ label: 'Modal', path: 'modal' },
 	]
-	const atomics = [
+	const ATOMICS = [
 		'align-content',
 		'align-items',
 		'align-self',
@@ -26,15 +33,11 @@
 </script>
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
-	<li class:is-active="{pathname === '/doc/introduction'}">
-		<a href="/doc/introduction">Introduction</a>
+	{#each DOCS as doc}
+	<li class:is-active="{pathname === `/doc/${doc.path}`}">
+		<a href={`/doc/${doc.path}`}>{doc.label}</a>
 	</li>
-	<li class:is-active="{pathname === '/doc/installation'}">
-		<a href="/doc/installation">Installation</a>
-	</li>
-	<li class:is-active="{pathname === '/doc/usage'}">
-		<a href="/doc/usage">Usage</a>
-	</li>
+	{/each}
 </ul>
 
 <div class="_pdh-7 _mgbt-4">
@@ -45,7 +48,7 @@
 	<li class="group-label">
 		Component
 	</li>
-	{#each components as it}
+	{#each COMPONENTS as it}
 	<li class:is-active="{pathname === `/component/${it.path}`}">
 		<a href={`/component/${it.path}`}>{`${it.label}`}</a>
 	</li>
@@ -60,7 +63,7 @@
 	<li class="group-label">
 		Atomic
 	</li>
-	{#each atomics as it}
+	{#each ATOMICS as it}
 	<li class:is-active="{pathname === `/atomic/${it}`}">
 		<a href={`/atomic/${it}`}>{`${it}`}</a>
 	</li>

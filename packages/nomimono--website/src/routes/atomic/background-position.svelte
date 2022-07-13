@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The background-position CSS property sets the initial position for each background image. The position is relative to the position layer set by background-origin.
 </p>
 

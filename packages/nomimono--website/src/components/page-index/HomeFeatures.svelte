@@ -5,7 +5,7 @@
 				<i class="fa-solid fa-bolt"></i>
 			</div>
 			<div class="_fs-5 _fw-600 _mgt-4">Zero Setup</div>
-			<p class="_cl-content _cl-opacity-70">Just import CSS files and you're ready to go!</p>
+			<p class="_cl-content _cl-opacity-70 _fs-3">Just import CSS files and you're ready to go!</p>
 		</div>
 
 		<div class="lo-12 _g-6 _jtfit-ct _alct-st _tal-ct">
@@ -13,7 +13,7 @@
 				<i class="fa-solid fa-blender"></i>
 			</div>
 			<div class="_fs-5 _fw-600 _mgt-4">Easy Mixing</div>
-			<p class="_cl-content _cl-opacity-70">Customize your own systems using just CSS custom properties</p>
+			<p class="_cl-content _cl-opacity-70 _fs-3">Customize your own systems using just CSS custom properties</p>
 		</div>
 
 		<div class="lo-12 _g-6 _jtfit-ct _alct-st _tal-ct">
@@ -21,7 +21,7 @@
 				<i class="fa-solid fa-battery-bolt"></i>
 			</div>
 			<div class="_fs-5 _fw-600 _mgt-4">Battery included</div>
-			<p class="_cl-content _cl-opacity-70">Component, atomic, utility class and theme switching</p>
+			<p class="_cl-content _cl-opacity-70 _fs-3">Component, atomic, utility class and theme switching</p>
 		</div>
 	</div>
 </section>

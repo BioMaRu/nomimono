@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
 </p>
 

@@ -46,7 +46,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The background-color CSS property sets the background color of an element.
 </p>
 
@@ -60,7 +60,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		{#each COLORS as color}
+			{#each COLORS as color}
 			<tr>
 				<td><code class="_cl-secondary">{`_bgcl-${color}${suffix}`}</code></td>
 				<td>
@@ -106,7 +106,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	Use with <code class="_cl-secondary">_bgcl-*</code> class to set the opacity of that background color. <br>
 	for example class="<code class="_cl-secondary">_bgcl-primary _bgcl-opacity-50</code>"
 </p>

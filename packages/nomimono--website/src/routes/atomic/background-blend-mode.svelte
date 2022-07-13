@@ -8,7 +8,7 @@
 
 <br>
 
-<p class="_cl-content _cl-opacity-70">
+<p class="_cl-content _cl-opacity-70 _fs-3">
 	The background-blend-mode CSS property sets how an element's background images should blend with each other and with the element's background color.
 </p>
 

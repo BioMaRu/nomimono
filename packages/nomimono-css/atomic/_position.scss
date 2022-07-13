@@ -2,6 +2,7 @@
 .#{$atom-prefix}pst-rlt { position: relative !important; }
 .#{$atom-prefix}pst-asl { position: absolute !important; }
 .#{$atom-prefix}pst-f   { position: fixed !important; }
+.#{$atom-prefix}pst-stk { position: sticky !important; }
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
@@ -9,5 +10,6 @@
 		.#{$atom-prefix}pst-rlt\:#{$breakpointName} { position: relative !important; }
 		.#{$atom-prefix}pst-asl\:#{$breakpointName} { position: absolute !important; }
 		.#{$atom-prefix}pst-f\:#{$breakpointName}   { position: fixed !important; }
+		.#{$atom-prefix}pst-stk\:#{$breakpointName} { position: sticky !important; }
 	};
 };
