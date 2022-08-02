@@ -25,42 +25,42 @@ $SIZES: 'small', 'medium', 'large';
 	&.is-variant-negative {
 		.#{$prefix}input {
 			input {
-				color: var(--color-negative-400);
-				border-color: var(--color-negative-200);
+				color: hsl(var(--hsl-negative));
+				border-color: hsl(var(--hsl-negative));
 
 				&:hover {
-					border-color: var(--color-negative-300);
+					border-color: hsl(var(--hsl-negative));
 				}
 
 				&:focus {
-					box-shadow: 0 0 0 .175em var(--color-negative-100);
+					box-shadow: 0 0 0 .175em hsl(var(--hsl-negative) / 0.3);
 				}
 			}
 		}
 
 		.info {
-			color: var(--color-negative-300);
+			color: hsl(var(--hsl-negative));
 		}
 	}
 
 	&.is-variant-positive {
 		.#{$prefix}input {
 			input {
-				color: var(--color-positive-400);
-				border-color: var(--color-positive-200);
+				color: hsl(var(--hsl-positive));
+				border-color: hsl(var(--hsl-positive));
 
 				&:hover {
-					border-color: var(--color-positive-300);
+					border-color: hsl(var(--hsl-positive));
 				}
 
 				&:focus {
-					box-shadow: 0 0 0 .175em var(--color-positive-100);
+					box-shadow: 0 0 0 .175em hsl(var(--hsl-positive) / 0.3);
 				}
 			}
 		}
 
 		.info {
-			color: var(--color-positive-300);
+			color: hsl(var(--hsl-positive));
 		}
 	}
 

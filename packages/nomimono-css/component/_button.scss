@@ -155,11 +155,11 @@
 
 	&.is-variant-secondary {
 		color: hsl(var(--hsl-content));
-		border: toRem(1) solid hsl(var(--hsl-content) / 0.2);
+		border: toRem(1) solid hsl(var(--hsl-content) / 0.15);
 		background: transparent;
 
 		&:hover {
-			border: toRem(1) solid hsl(var(--hsl-content) / 0.3);
+			border: toRem(1) solid hsl(var(--hsl-content) / 0.20);
 			background: hsl(var(--hsl-content) / 0.05);
 
 			&:before {
@@ -184,10 +184,10 @@
 	&.is-variant-tertiary {
 		color: hsl(var(--hsl-content) / 1);
 		border: unset;
-		background: hsl(var(--hsl-content) / 0.1);
+		background: hsl(var(--hsl-content) / 0.08);
 
 		&:hover {
-			background: hsl(var(--hsl-content) / 0.2);
+			background: hsl(var(--hsl-content) / 0.15);
 		}
 
 		&:not(.is-no-focus-ring):focus {
@@ -198,8 +198,8 @@
 			color: transparent;
 
 			&:after {
-				border-top-color: var(--color-text-200);
-				border-right-color: var(--color-text-200);
+				border-top-color: hsl(var(--hsl-content) / 1);
+				border-right-color: hsl(var(--hsl-content) / 1);
 			}
 		}
 	}
@@ -240,7 +240,6 @@
 	&.is-pill {
 		border-radius: 999px;
 	}
-
 }
 
 @keyframes ButtonLoadingSpin {

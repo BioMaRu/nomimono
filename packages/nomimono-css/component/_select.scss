@@ -1,125 +1,125 @@
-@import '../helper/all';
-@import 'config';
-
-$SIZES: 'small', 'medium', 'large';
-
-.#{$prefix}field {
-	display: inline-flex;
-	flex-direction: column;
-	gap: toRem(6);
-
-	// size
-	@each $s in $SIZES {
-		&.is-size-#{$s} {
-			.#{$prefix}select {
-				height: var(--form-element-#{$s}-height);
-
-				select {
-					font-size: var(--form-element-#{$s}-font-size);
-					padding: 0 calc(1em + 18px) 0 1em;
-				}
-			}
-		}
-	}
-
-	&.is-variant-negative {
-		.#{$prefix}select {
-			select {
-				color: var(--color-negative-400);
-				border-color: var(--color-negative-200);
-
-				&:hover {
-					border-color: var(--color-negative-300);
-				}
-
-				&:focus {
-					box-shadow: 0 0 0 .175rem var(--color-negative-100);
-				}
-			}
-		}
-
-		.info {
-			color: var(--color-negative-300);
-		}
-	}
-
-	&.is-variant-positive {
-		.#{$prefix}select {
-			select {
-				color: var(--color-positive-400);
-				border-color: var(--color-positive-200);
-
-				&:hover {
-					border-color: var(--color-positive-300);
-				}
-
-				&:focus {
-					box-shadow: 0 0 0 .175rem var(--color-positive-100);
-				}
-			}
-		}
-
-		.info {
-			color: var(--color-positive-300);
-		}
-	}
-
-	label {
-		font-family: var(--form-element-label-font-family);
-		font-size: var(--form-element-label-font-size);
-		font-weight: var(--form-element-label-font-weight);
-		display: flex;
-		align-items: baseline;
-		gap: toRem(4);
-	}
-
-	.info {
-		font-size: toRem(12);
-		color: var(--color-text-200);
-	}
-
-	&.is-disabled {
-		.#{$prefix}select {
-			opacity: 0.8;
-
-			select {
-				cursor: not-allowed;
-			}
-		}
-	}
-
-	//.#{$prefix}select {
-	//	select {}
-	//}
-}
-
-.#{$prefix}select {
-	position: relative;
-	display: inline-flex;
-	flex-direction: column;
-	height: var(--form-element-medium-height);
-	border-radius: var(--form-element-border-radius);
-	gap: toRem(6);
-
-	select {
-		@extend %base-input;
-
-		font-size: var(--form-element-medium-font-size);
-		font-weight: var(--select-font-weight);
-		padding-right: toRem(32);
-		cursor: pointer;
-	}
-
-	&:after {
-		position: absolute;
-		top: 50%;
-		right: 0.5em;
-		width: toRem(8);
-		height: toRem(8);
-		content: '';
-		transform: rotate(-45deg) translate(0, calc(-50% - #{toRem(4)}));
-		pointer-events: none;
-		border-bottom: 2px solid var(--color-text-300);
-		border-left: 2px solid var(--color-text-300);
-	}
-}
+//@import '../helper/all';
+//@import 'config';
+//
+//$SIZES: 'small', 'medium', 'large';
+//
+//.#{$prefix}field {
+//	display: inline-flex;
+//	flex-direction: column;
+//	gap: toRem(6);
+//
+//	// size
+//	@each $s in $SIZES {
+//		&.is-size-#{$s} {
+//			.#{$prefix}select {
+//				height: var(--form-element-#{$s}-height);
+//
+//				select {
+//					font-size: var(--form-element-#{$s}-font-size);
+//					padding: 0 calc(1em + 18px) 0 1em;
+//				}
+//			}
+//		}
+//	}
+//
+//	&.is-variant-negative {
+//		.#{$prefix}select {
+//			select {
+//				color: var(--color-negative-400);
+//				border-color: var(--color-negative-200);
+//
+//				&:hover {
+//					border-color: var(--color-negative-300);
+//				}
+//
+//				&:focus {
+//					box-shadow: 0 0 0 .175rem var(--color-negative-100);
+//				}
+//			}
+//		}
+//
+//		.info {
+//			color: var(--color-negative-300);
+//		}
+//	}
+//
+//	&.is-variant-positive {
+//		.#{$prefix}select {
+//			select {
+//				color: var(--color-positive-400);
+//				border-color: var(--color-positive-200);
+//
+//				&:hover {
+//					border-color: var(--color-positive-300);
+//				}
+//
+//				&:focus {
+//					box-shadow: 0 0 0 .175rem var(--color-positive-100);
+//				}
+//			}
+//		}
+//
+//		.info {
+//			color: var(--color-positive-300);
+//		}
+//	}
+//
+//	label {
+//		font-family: var(--form-element-label-font-family);
+//		font-size: var(--form-element-label-font-size);
+//		font-weight: var(--form-element-label-font-weight);
+//		display: flex;
+//		align-items: baseline;
+//		gap: toRem(4);
+//	}
+//
+//	.info {
+//		font-size: toRem(12);
+//		color: var(--color-text-200);
+//	}
+//
+//	&.is-disabled {
+//		.#{$prefix}select {
+//			opacity: 0.8;
+//
+//			select {
+//				cursor: not-allowed;
+//			}
+//		}
+//	}
+//
+//	//.#{$prefix}select {
+//	//	select {}
+//	//}
+//}
+//
+//.#{$prefix}select {
+//	position: relative;
+//	display: inline-flex;
+//	flex-direction: column;
+//	height: var(--form-element-medium-height);
+//	border-radius: var(--form-element-border-radius);
+//	gap: toRem(6);
+//
+//	select {
+//		@extend %base-input;
+//
+//		font-size: var(--form-element-medium-font-size);
+//		font-weight: var(--select-font-weight);
+//		padding-right: toRem(32);
+//		cursor: pointer;
+//	}
+//
+//	&:after {
+//		position: absolute;
+//		top: 50%;
+//		right: 0.5em;
+//		width: toRem(8);
+//		height: toRem(8);
+//		content: '';
+//		transform: rotate(-45deg) translate(0, calc(-50% - #{toRem(4)}));
+//		pointer-events: none;
+//		border-bottom: 2px solid var(--color-text-300);
+//		border-left: 2px solid var(--color-text-300);
+//	}
+//}

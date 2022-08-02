@@ -17,24 +17,24 @@
 	padding-left: toRem(12);
 	transition: all 0.16s ease-in-out;
 	vertical-align: top;
-	border: 1px solid var(--color-neutral-300);
+	border: 1px solid hsl(var(--hsl-content) / 0.15);
 
 	border-radius: inherit;
 
 	outline: none;
 
-	background-color: var(--color-white-100);
+	background-color: transparent;
 	-webkit-appearance: none;
 
 	-moz-appearance: none;
 	appearance: none;
 
 	&:hover {
-		border-color:  var(--color-neutral-500)
+		border-color: hsl(var(--hsl-content) / 0.25);
 	}
 
 	&:focus, :active {
-		border-color: var(--color-primary-500);
-		box-shadow: 0 0 0 .175rem var(--color-primary-300);
+		border-color: hsl(var(--hsl-primary));
+		box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
 	}
 }

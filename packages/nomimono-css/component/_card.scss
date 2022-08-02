@@ -6,4 +6,20 @@
 	border: 1px solid hsl(var(--hsl-content) / 0.1);
 	border-radius: 0.5em;
 	background-color: hsl(var(--hsl-base-100));
+
+	&.is-raised-100 {
+		box-shadow: var(--bsd-100);
+	}
+
+	&.is-raised-200 {
+		box-shadow: var(--bsd-200);
+	}
+
+	&.is-raised-300 {
+		box-shadow: var(--bsd-300);
+	}
+
+	&.is-raised-400 {
+		box-shadow: var(--bsd-400);
+	}
 }

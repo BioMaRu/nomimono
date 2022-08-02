@@ -13,6 +13,9 @@
 	const COMPONENTS = [
 		// { label: 'Badge', path: 'badge' },
 		{ label: 'Button', path: 'button' },
+		{ label: 'Card', path: 'card' },
+		{ label: 'Dropdown', path: 'dropdown' },
+		{ label: 'Input', path: 'input' },
 		{ label: 'Modal', path: 'modal' },
 	]
 	const ATOMICS = [
@@ -34,39 +37,35 @@
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
 	{#each DOCS as doc}
-	<li class:is-active="{pathname === `/doc/${doc.path}`}">
-		<a href={`/doc/${doc.path}`}>{doc.label}</a>
-	</li>
+		<li class:is-active={pathname === `/doc/${doc.path}`}>
+			<a href={`/doc/${doc.path}`}>{doc.label}</a>
+		</li>
 	{/each}
 </ul>
 
 <div class="_pdh-7 _mgbt-4">
-	<hr>
+	<hr />
 </div>
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
-	<li class="group-label">
-		Component
-	</li>
+	<li class="group-label">Component</li>
 	{#each COMPONENTS as it}
-	<li class:is-active="{pathname === `/component/${it.path}`}">
-		<a href={`/component/${it.path}`}>{`${it.label}`}</a>
-	</li>
+		<li class:is-active={pathname === `/component/${it.path}`}>
+			<a href={`/component/${it.path}`}>{`${it.label}`}</a>
+		</li>
 	{/each}
 </ul>
 
 <div class="_pdh-7 _mgbt-4">
-	<hr>
+	<hr />
 </div>
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
-	<li class="group-label">
-		Atomic
-	</li>
+	<li class="group-label">Atomic</li>
 	{#each ATOMICS as it}
-	<li class:is-active="{pathname === `/atomic/${it}`}">
-		<a href={`/atomic/${it}`}>{`${it}`}</a>
-	</li>
+		<li class:is-active={pathname === `/atomic/${it}`}>
+			<a href={`/atomic/${it}`}>{`${it}`}</a>
+		</li>
 	{/each}
 </ul>
 

@@ -21,6 +21,10 @@
 		border-bottom-left-radius: inherit;
 	}
 
+	&.is-card {
+		border: 1px solid hsl(var(--hsl-content) / 0.15);
+	}
+
 	&.is-compact {
 		> *:not(.group-label) > * {
 			font-size: var(--menu-item-font-size, var(--fs-3));
@@ -70,6 +74,10 @@
 		&:hover {
 			background: hsl(var(--hsl-content) / 0.05);
 		}
+	}
+
+	> * {
+		list-style: none;
 	}
 
 	> *:not(.group-label) {
