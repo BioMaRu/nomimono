@@ -125,3 +125,28 @@
 			</div>`}
 	</div>
 </Story>
+
+<h2 class="_fs-7 _mgt-10">Disabled</h2>
+<br />
+<Story>
+	<div class="lo-12 _g-7">
+		<div class="nm-field is-disabled">
+			<label for="small">Your name</label>
+			<div class="nm-input">
+				<input disabled id="disabled" placeholder="John Doe" type="text" />
+			</div>
+			<div class="info">This is information</div>
+		</div>
+	</div>
+
+	<div slot="code">
+		{dedent`
+			<div class="nm-field is-disabled">
+				<label for="small">Your name</label>
+				<div class="nm-input">
+					<input id="small" placeholder="John Doe" type="text" disabled />
+				</div>
+				<div class="info">This is information</div>
+			</div>`}
+	</div>
+</Story>

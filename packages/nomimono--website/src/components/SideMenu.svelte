@@ -21,6 +21,8 @@
 		{ label: 'Message', path: 'message' },
 		{ label: 'Modal', path: 'modal' },
 		{ label: 'Panel', path: 'panel' },
+		{ label: 'Radio', path: 'radio' },
+		{ label: 'Select', path: 'select' },
 	]
 
 	const ATOMICS = [

@@ -4,7 +4,7 @@
 </script>
 
 <h1 class="_fs-11 _fw-800 _mgbt-4">Panel</h1>
-<p>All-around component for contain and display data</p>
+<p>All-around component for contain and display data.</p>
 <br />
 <Story>
 	<div class="lo-12 _g-6">

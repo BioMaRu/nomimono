@@ -4,9 +4,7 @@
 $SIZES: 'small', 'medium', 'large';
 
 .#{$prefix}field {
-	display: inline-flex;
-	flex-direction: column;
-	gap: toEm(6);
+	@extend %base-field;
 
 	// size
 	@each $s in $SIZES {
@@ -64,27 +62,11 @@ $SIZES: 'small', 'medium', 'large';
 		}
 	}
 
-	label {
-		font-family: var(--form-element-label-font-family);
-		font-size: var(--form-element-label-font-size);
-		font-weight: var(--form-element-label-font-weight);
-		display: flex;
-		align-items: baseline;
-		gap: toEm(4);
-	}
-
-	.info {
-		font-size: toRem(12);
-		color: var(--color-text-200);
-	}
-
 	&.is-disabled {
 		.#{$prefix}input {
-			opacity: 0.8;
-
 			input {
 				cursor: not-allowed;
-				background: var(--color-neutral-100);
+				background: hsl(var(--hsl-content) / 0.05);
 			}
 		}
 	}

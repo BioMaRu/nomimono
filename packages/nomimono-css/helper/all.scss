@@ -10,6 +10,26 @@
 	@return $r;
 }
 
+%base-field {
+	display: inline-flex;
+	flex-direction: column;
+	gap: toEm(6);
+
+	label {
+		font-family: var(--form-element-label-font-family);
+		font-size: var(--form-element-label-font-size);
+		font-weight: var(--form-element-label-font-weight);
+		display: flex;
+		align-items: baseline;
+		gap: toEm(4);
+	}
+
+	.info {
+		font-size: toRem(12);
+		color: hsl(var(--hsl-content) / 0.7);
+	}
+}
+
 %base-input {
 	width: 100%;
 	height: 100%;
