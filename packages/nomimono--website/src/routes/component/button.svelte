@@ -92,11 +92,11 @@
 
 	<div slot="code">
 		{dedent`
-				<button class="nm-button" disabled>Button</button>
-				<button class="nm-button is-variant-secondary" disabled>Button</button>
-				<button class="nm-button is-variant-tertiary" disabled>Button</button>
-				<button class="nm-button is-variant-ghost" disabled>Button</button>
-				<button class="nm-button is-variant-positive" disabled>Button</button>
-				<button class="nm-button is-variant-negative" disabled>Button</button>`}
+			<button class="nm-button" disabled>Button</button>
+			<button class="nm-button is-variant-secondary" disabled>Button</button>
+			<button class="nm-button is-variant-tertiary" disabled>Button</button>
+			<button class="nm-button is-variant-ghost" disabled>Button</button>
+			<button class="nm-button is-variant-positive" disabled>Button</button>
+			<button class="nm-button is-variant-negative" disabled>Button</button>`}
 	</div>
 </Story>

@@ -100,18 +100,26 @@
 
 	<div slot="code">
 		{dedent`
-			<div class="nm-field is-size-large">
-				<label for="large">Your name</label>
+			<div class="nm-field is-size-small">
+				<label for="small">Your name</label>
 				<div class="nm-input">
-					<input id="large" placeholder="John Doe" type="text" />
+					<input id="small" placeholder="John Doe" type="text" />
 				</div>
 				<div class="info">This is information</div>
 			</div>
 
-			<div class="nm-field is-variant-positive">
-				<label for="input4">Your name</label>
+			<div class="nm-field">
+				<label for="medium">Your name</label>
 				<div class="nm-input">
-					<input id="input4" placeholder="John Doe" type="text" />
+					<input id="medium" placeholder="John Doe" type="text" />
+				</div>
+				<div class="info">This is information</div>
+			</div>
+
+			<div class="nm-field is-size-large">
+				<label for="large">Your name</label>
+				<div class="nm-input">
+					<input id="large" placeholder="John Doe" type="text" />
 				</div>
 				<div class="info">This is information</div>
 			</div>`}

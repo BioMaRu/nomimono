@@ -2,16 +2,24 @@
 @import 'config';
 
 .#{$prefix}link {
+	cursor: pointer;
 	text-decoration: none;
 	color: hsl(var(--hsl-primary));
 
 	&:hover {
+		text-decoration: underline;
 		color: hsl(var(--hsl-primary-active));
 	}
 
-	&.is-variant-none {
+	&.is-variant-underline {
+		text-decoration: underline;
+	}
+
+	&.is-variant-dot {
+		border-bottom: 1px dotted hsl(var(--hsl-primary));
+
 		&:hover {
-			color: var(--color-text-100);
+			text-decoration: none;
 		}
 	}
 }

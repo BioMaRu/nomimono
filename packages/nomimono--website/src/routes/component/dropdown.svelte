@@ -10,14 +10,14 @@
 <Story>
 	<div class="nm-dropdown">
 		<span tabindex="0">Click me</span>
-		<div>Hi mum</div>
+		<div tabindex="0">Hi mum</div>
 	</div>
 
 	<div slot="code">
 		{dedent`
 			<div class="nm-dropdown">
 				<span tabindex="0">Click me</span>
-				<div>Hi mum</div>
+				<div tabindex="0">Hi mum</div>
 			</div>`}
 	</div>
 </Story>
@@ -27,14 +27,14 @@
 <Story>
 	<div class="nm-dropdown is-hover-open">
 		<span>Hover me</span>
-		<div>Hi, mum</div>
+		<div tabindex="0">Hi, mum</div>
 	</div>
 
 	<div slot="code">
 		{dedent`
 			<div class="nm-dropdown is-hover-open">
 				<span>Hover me</span>
-				<div>
+				<div tabindex="0">
 					Hi, mum
 				</div>
 			</div>`}
@@ -44,10 +44,10 @@
 <h2 class="_fs-7 _mgt-10">Using <a href="/component/menu">nm-menu</a> for content</h2>
 <br />
 <Story>
-	<div class="nm-dropdown is-hover-open">
-		<button class="nm-button" tabindex="0">Open Dropdown</button>
+	<div class="nm-dropdown">
+		<button class="nm-button">Open Dropdown</button>
 
-		<ul class="nm-menu is-card">
+		<ul class="nm-menu is-card" tabindex="0">
 			<li>
 				<span>Menu 1</span>
 			</li>
@@ -59,10 +59,10 @@
 
 	<div slot="code">
 		{dedent`
-			<div class="nm-dropdown is-hover-open">
+			<div class="nm-dropdown">
 				<button class="nm-button" tabindex="0">Open Dropdown</button>
 
-				<ul class="nm-menu is-card">
+				<ul tabindex="0" class="nm-menu is-card">
 					<li>
 						<span>Menu 1</span>
 					</li>

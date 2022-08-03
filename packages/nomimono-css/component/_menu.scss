@@ -1,34 +1,40 @@
 @import '../helper/all';
 @import 'config';
-/*
-	--menu-item-min-height
-*/
 
 .#{$prefix}menu {
 	font-weight: 500;
 	display: inline-flex;
 	flex-direction: column;
-	border-radius: var(--menu-border-radius, toEm(12));
 	background: var(--menu-background, hsl(var(--hsl-base-100) / 1));
-
-	> *:first-child {
-		border-top-left-radius: inherit;
-		border-top-right-radius: inherit;
-	}
-
-	> *:last-child {
-		border-bottom-right-radius: inherit;
-		border-bottom-left-radius: inherit;
-	}
 
 	&.is-card {
 		border: 1px solid hsl(var(--hsl-content) / 0.15);
 	}
 
+	&.is-round-border {
+		border-radius: var(--menu-border-radius, toEm(12));
+
+		> *:first-child {
+			border-top-left-radius: inherit;
+			border-top-right-radius: inherit;
+		}
+
+		> *:last-child {
+			border-bottom-right-radius: inherit;
+			border-bottom-left-radius: inherit;
+		}
+
+		&.is-variant-inset {
+			> *:not(.group-label) {
+				border-radius: toEm(8);
+			}
+		}
+	}
+
 	&.is-compact {
 		> *:not(.group-label) > * {
 			font-size: var(--menu-item-font-size, var(--fs-3));
-			min-height: var(--menu-item-min-height, #{toEm(44)});
+			min-height: var(--menu-item-min-height, #{toEm(40)});
 			padding: 0 toRem(16);
 		}
 
@@ -40,10 +46,6 @@
 
 	&.is-variant-inset {
 		padding: 12px;
-
-		> *:not(.group-label) {
-			border-radius: toEm(8);
-		}
 	}
 
 	.group-label {

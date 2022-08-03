@@ -2,9 +2,9 @@
 @import 'config';
 
 .#{$prefix}card {
-	padding: 1.5em 1.5em;
+	padding: toEm(16) toEm(24);
 	border: 1px solid hsl(var(--hsl-content) / 0.1);
-	border-radius: 0.5em;
+	border-radius: toEm(8);
 	background-color: hsl(var(--hsl-base-100));
 
 	&.is-raised-100 {

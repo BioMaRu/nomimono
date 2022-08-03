@@ -16,8 +16,13 @@
 		{ label: 'Card', path: 'card' },
 		{ label: 'Dropdown', path: 'dropdown' },
 		{ label: 'Input', path: 'input' },
+		{ label: 'Link', path: 'link' },
+		{ label: 'Menu', path: 'menu' },
+		{ label: 'Message', path: 'message' },
 		{ label: 'Modal', path: 'modal' },
+		{ label: 'Panel', path: 'panel' },
 	]
+
 	const ATOMICS = [
 		'align-content',
 		'align-items',
