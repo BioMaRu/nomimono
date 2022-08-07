@@ -35,16 +35,18 @@
 	height: 100%;
 	transition: all 0.16s ease-in-out;
 	vertical-align: top;
+	color: hsl(var(--hsl-content));
+
 	border: 1px solid hsl(var(--hsl-content) / 0.15);
 
 	border-radius: inherit;
 
 	outline: none;
-
 	background-color: transparent;
-	-webkit-appearance: none;
 
+	-webkit-appearance: none;
 	-moz-appearance: none;
+
 	appearance: none;
 
 	&:hover {

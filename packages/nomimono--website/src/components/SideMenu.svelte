@@ -24,6 +24,7 @@
 		{ label: 'Radio', path: 'radio' },
 		{ label: 'Select', path: 'select' },
 		{ label: 'Textarea', path: 'textarea' },
+		{ label: 'Checkbox', path: 'checkbox' },
 	]
 
 	const ATOMICS = [

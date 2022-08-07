@@ -18,6 +18,17 @@
 		</div>
 	</div>
 
+	<div class="lo-12 _g-6 _mgt-6">
+		<div class="nm-radio">
+			<input disabled id="radio-d" name="radio" type="radio" />
+			<label for="radio-d">Disabled</label>
+		</div>
+		<div class="nm-radio">
+			<input checked disabled id="radio-dc" name="radio" type="radio" />
+			<label for="radio-dc">Checked disabled</label>
+		</div>
+	</div>
+
 	<div slot="code">
 		{dedent`
 			<div class="nm-radio">
@@ -27,6 +38,14 @@
 			<div class="nm-radio">
 				<input id="radio2" name="radio" type="radio" />
 				<label for="radio2">Radio 2</label>
+			</div>
+			<div class="nm-radio">
+				<input disabled id="radio-d" name="radio" type="radio" />
+				<label for="radio-d">Disabled</label>
+			</div>
+			<div class="nm-radio">
+				<input checked disabled id="radio-dc" name="radio" type="radio" />
+				<label for="radio-dc">Checked disabled</label>
 			</div>`}
 	</div>
 </Story>
