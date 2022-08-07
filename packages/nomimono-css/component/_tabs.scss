@@ -1,0 +1,100 @@
+@import '../helper/all';
+@import 'config';
+
+.#{$prefix}tabs {
+	position: relative;
+	display: inline-flex;
+
+	&.is-variant-underline {
+		.tab-button {
+			margin: 0;
+			padding: var(--tab-padding);
+
+			&.is-active {
+				&:after {
+					background-color: hsl(var(--hsl-primary));
+				}
+			}
+
+			&:after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				content: '';
+				background-color: hsl(var(--hsl-content) / 0.15);
+			}
+		}
+	}
+
+	&.is-variant-button {
+		border-radius: toEm(8);
+		background-color: hsl(var(--hsl-content-inv) / 0.3);
+
+		.tab-button {
+			margin: 0;
+			padding: var(--tab-padding);
+			border-radius: toEm(8);
+
+			&.is-active {
+				color: hsl(var(--hsl-primary-content));
+				background-color: hsl(var(--hsl-primary));
+			}
+		}
+	}
+
+	&.is-variant-bordered {
+		border-radius: toEm(8);
+
+		.tab-button {
+			margin: 0;
+			padding: var(--tab-padding);
+			border: none;
+
+			border-top: var(--tab-border-width) solid transparent;
+			border-right: var(--tab-border-width) solid transparent;
+			border-bottom: 1px solid hsl(var(--hsl-line));
+			border-left: var(--tab-border-width) solid transparent;
+			border-radius: var(--tab-border-radius) var(--tab-border-radius) toEm(0) toEm(0);
+
+			&.is-active {
+				border-top: var(--tab-border-width) solid hsl(var(--hsl-line));
+				border-right: var(--tab-border-width) solid hsl(var(--hsl-line));
+				border-bottom: 1px solid hsl(var(--hsl-line));
+				border-bottom-color: transparent;
+				border-left: var(--tab-border-width) solid hsl(var(--hsl-line));
+			}
+
+			&:not(.is-active):hover {
+				background-color: hsl(var(--hsl-content) / 0.025);
+			}
+		}
+	}
+
+	> .tab-button {
+		font-family: var(--tab-font-family);
+		font-size: var(--tab-font-size);
+		font-weight: var(--tab-font-weight);
+		position: relative;
+		z-index: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: var(--tab-height);
+		margin-right: 1rem;
+		padding: 0;
+		cursor: pointer;
+		transition: all 0.12s ease-in-out;
+		outline: none;
+
+		&.is-active {
+			color: hsl(var(--hsl-primary));
+		}
+
+		&:hover,
+		&:focus {
+			color: hsl(var(--hsl-primary));
+		}
+	}
+}
