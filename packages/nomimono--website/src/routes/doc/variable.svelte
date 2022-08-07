@@ -1,11 +1,11 @@
 <script lang="ts">
 	import dedent from 'ts-dedent'
-	import { onMount } from "svelte"
+	import { onMount } from 'svelte'
 
 	let Prism
 
 	onMount(async () => {
-		Prism = (await import("$components/Prism.svelte")).default
+		Prism = (await import('$components/Prism.svelte')).default
 	})
 
 	const COLORS = [
@@ -30,13 +30,23 @@
 		{ value: 'warning-content', description: '' },
 		{ value: 'info', description: '' },
 		{ value: 'info-content', description: '' },
-		{ value: 'black', description: ''  },
-		{ value: 'white', description: ''  },
+		{ value: 'black', description: '' },
+		{ value: 'white', description: '' },
 	]
 
 	const TYPOGRAPHYS = [
-		{ value: '--ffml-primary', default: '-apple-system, system-ui, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', sans-serif', description: 'Default font-family' },
-		{ value: '--ffml-secondary', default: '-apple-system, system-ui, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'Helvetica Neue\', sans-serif', description: 'Can be use in element that need different font, eg. label, header' },
+		{
+			value: '--ffml-primary',
+			default:
+				"-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
+			description: 'Default font-family',
+		},
+		{
+			value: '--ffml-secondary',
+			default:
+				"-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif",
+			description: 'Can be use in element that need different font, eg. label, header',
+		},
 		{ value: '--fs-1', default: '0.75rem', note: '(12px)' },
 		{ value: '--fs-2', default: '0.875rem', note: '(14px)' },
 		{ value: '--fs-3', default: '0.9375rem', note: '(15px)' },
@@ -72,140 +82,154 @@
 </script>
 
 <h1 class="_fs-8">Theme variable</h1>
-<br>
+<br />
 <p class="_cl-content _cl-opacity-70 _fs-3">
 	Theme variable is essential when you need to customize or create your theme or design systems.
 </p>
-<br>
+<br />
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	Nomimono uses most CSS custom properties.
-	You don't need any build setup. You can change the CSS custom properties in the CSS file or the runtime.
-	<br>
-	<br>
+	Nomimono uses most CSS custom properties. You don't need any build setup. You can change the CSS
+	custom properties in the CSS file or the runtime.
+	<br />
+	<br />
 	<a class="nm-link _tdcrt-udl" href="/doc/customization">Learn more about customization</a>.
 </p>
 
 <div>
-	<hr class="_mgt-9 _mgbt-8">
+	<hr class="_mgt-9 _mgbt-8" />
 	<h5 id="color">Color</h5>
-	<br>
+	<br />
 	<p class="_cl-content _cl-opacity-70 _fs-3">
-		For regular use cases, color is the only CSS custom property you need to change/override to create your theme.
-		<a class="nm-link _tdcrt-udl" href="/doc/customization#color">Learn more about color customization</a>.
+		For regular use cases, color is the only CSS custom property you need to change/override to
+		create your theme.
+		<a class="nm-link _tdcrt-udl" href="/doc/customization#color"
+			>Learn more about color customization</a
+		>.
 	</p>
-	<section class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8" style="max-height: 480px;">
+	<section
+		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
+		style="max-height: 480px;"
+	>
 		<table class="nm-table is-variant-compact is-header-sticky">
 			<thead>
-			<tr>
-				<th>Custom property</th>
-				<th>Default value</th>
-				<th class="is-collapse"></th>
-			</tr>
-			</thead>
-			<tbody>
-			{#each COLORS as color}
 				<tr>
-					<td><code class="_cl-secondary">{`--hsl-${color.value}`}</code></td>
-					<td>
-						<div>{`background-color: hsl(var(--hsl-${color.value}))`}</div>
-						<div class="_mgt-3 _cl-opacity-60 _cl-content">
-							{color.description}
-						</div>
-					</td>
-					<td>
-						<div class="u-flex-middle"><div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color.value}`}></div></div>
-					</td>
+					<th>Custom property</th>
+					<th>Default value</th>
+					<th class="is-collapse" />
 				</tr>
-			{/each}
-			</tbody>
-		</table>
-	</section>
-</div>
-
-<div>
-	<hr class="_mgt-9 _mgbt-8">
-	<h5 id="typography">Typography</h5>
-	<br>
-	<p class="_cl-content _cl-opacity-70 _fs-3">
-		These are the CSS custom properties related to design systems' typography (font family, font size). Usually, you may want to change the font family for your website.
-	</p>
-	<section class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8" style="max-height: 480px;">
-		<table class="nm-table is-variant-compact is-header-sticky">
-			<thead>
-			<tr>
-				<th>Custom property</th>
-				<th>Default value</th>
-			</tr>
 			</thead>
 			<tbody>
-			{#each TYPOGRAPHYS as it}
-				<tr>
-					<td><code class="_cl-secondary">{`${it.value}`}</code></td>
-					<td>
-						<div class="_wsp-nm _wb-bw">
-							{it.default}
-							{#if it.note}
-							<span class="_cl-opacity-60 _cl-content">{it.note}</span>
-							{/if}
-						</div>
-						{#if it.description}
-						<div class="_mgt-3 _cl-opacity-60 _cl-content _wb-bw">
-							{it.description}
-						</div>
-						{/if}
-					</td>
-				</tr>
-			{/each}
-			</tbody>
-		</table>
-	</section>
-</div>
-
-<div>
-	<hr class="_mgt-9 _mgbt-8">
-	<h5 id="spacing">Spacing</h5>
-	<br>
-	<p class="_cl-content _cl-opacity-70 _fs-3">
-		These are the CSS custom properties related to design systems' spacing,
-		specifically used for margin, padding, top, left, bottom, right, width and height.
-	</p>
-	<section class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8" style="max-height: 480px;">
-		<table class="nm-table is-variant-compact is-header-sticky">
-			<thead>
-			<tr>
-				<th>Custom property</th>
-				<th>Default value</th>
-			</tr>
-			</thead>
-			<tbody>
-			{#each SPACING as it}
-				<tr>
-					<td><code class="_cl-secondary">{`${it.value}`}</code></td>
-					<td>
-						<div class="_wsp-nm _wb-bw">
-							{it.default}
-							{#if it.note}
-								<span class="_cl-opacity-60 _cl-content">{it.note}</span>
-							{/if}
-						</div>
-						{#if it.description}
-							<div class="_mgt-3 _cl-opacity-60 _cl-content _wb-bw">
-								{it.description}
+				{#each COLORS as color}
+					<tr>
+						<td><code class="_cl-accent">{`--hsl-${color.value}`}</code></td>
+						<td>
+							<div>{`background-color: hsl(var(--hsl-${color.value}))`}</div>
+							<div class="_mgt-3 _cl-opacity-60 _cl-content">
+								{color.description}
 							</div>
-						{/if}
-					</td>
-				</tr>
-			{/each}
+						</td>
+						<td>
+							<div class="u-flex-middle">
+								<div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color.value}`} />
+							</div>
+						</td>
+					</tr>
+				{/each}
 			</tbody>
 		</table>
 	</section>
 </div>
 
+<div>
+	<hr class="_mgt-9 _mgbt-8" />
+	<h5 id="typography">Typography</h5>
+	<br />
+	<p class="_cl-content _cl-opacity-70 _fs-3">
+		These are the CSS custom properties related to design systems' typography (font family, font
+		size). Usually, you may want to change the font family for your website.
+	</p>
+	<section
+		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
+		style="max-height: 480px;"
+	>
+		<table class="nm-table is-variant-compact is-header-sticky">
+			<thead>
+				<tr>
+					<th>Custom property</th>
+					<th>Default value</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each TYPOGRAPHYS as it}
+					<tr>
+						<td><code class="_cl-accent">{`${it.value}`}</code></td>
+						<td>
+							<div class="_wsp-nm _wb-bw">
+								{it.default}
+								{#if it.note}
+									<span class="_cl-opacity-60 _cl-content">{it.note}</span>
+								{/if}
+							</div>
+							{#if it.description}
+								<div class="_mgt-3 _cl-opacity-60 _cl-content _wb-bw">
+									{it.description}
+								</div>
+							{/if}
+						</td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</section>
+</div>
 
 <div>
-	<hr class="_mgt-9 _mgbt-8">
+	<hr class="_mgt-9 _mgbt-8" />
+	<h5 id="spacing">Spacing</h5>
+	<br />
+	<p class="_cl-content _cl-opacity-70 _fs-3">
+		These are the CSS custom properties related to design systems' spacing, specifically used
+		for margin, padding, top, left, bottom, right, width and height.
+	</p>
+	<section
+		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
+		style="max-height: 480px;"
+	>
+		<table class="nm-table is-variant-compact is-header-sticky">
+			<thead>
+				<tr>
+					<th>Custom property</th>
+					<th>Default value</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each SPACING as it}
+					<tr>
+						<td><code class="_cl-accent">{`${it.value}`}</code></td>
+						<td>
+							<div class="_wsp-nm _wb-bw">
+								{it.default}
+								{#if it.note}
+									<span class="_cl-opacity-60 _cl-content">{it.note}</span>
+								{/if}
+							</div>
+							{#if it.description}
+								<div class="_mgt-3 _cl-opacity-60 _cl-content _wb-bw">
+									{it.description}
+								</div>
+							{/if}
+						</td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	</section>
+</div>
+
+<div>
+	<hr class="_mgt-9 _mgbt-8" />
 	<h5 id="other">Other Custom properties</h5>
-	<br>
+	<br />
 	<p class="_cl-content _cl-opacity-70 _fs-3">
 		[WIP] but it not that important for the systems, you can ignore it.
 	</p>

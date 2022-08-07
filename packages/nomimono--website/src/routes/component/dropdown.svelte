@@ -5,7 +5,7 @@
 
 <h1 class="_fs-11 _fw-800 _mgbt-4">Dropdown</h1>
 <p>Toggle contextual overlays for displaying contents.</p>
-<p>For non-focusable content you can use <code class="_cl-secondary">tabindex="0"</code></p>
+<p>For non-focusable content you can use <code class="_cl-accent">tabindex="0"</code></p>
 <br />
 <Story>
 	<div class="nm-dropdown">

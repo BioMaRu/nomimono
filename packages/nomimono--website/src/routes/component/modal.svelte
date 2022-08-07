@@ -10,7 +10,7 @@
 </p>
 <ul class="lo-12 _g-3 _mgt-5">
 	<li>Use label and checkbox technic hold active state</li>
-	<li>Use <code class="_cl-secondary">.nm-modal.is-active</code></li>
+	<li>Use <code class="_cl-accent">.nm-modal.is-active</code></li>
 </ul>
 <br />
 <Story>

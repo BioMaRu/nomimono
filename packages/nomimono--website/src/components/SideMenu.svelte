@@ -11,7 +11,7 @@
 	]
 
 	const COMPONENTS = [
-		// { label: 'Badge', path: 'badge' },
+		{ label: 'Badge', path: 'badge' },
 		{ label: 'Button', path: 'button' },
 		{ label: 'Card', path: 'card' },
 		{ label: 'Dropdown', path: 'dropdown' },

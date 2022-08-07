@@ -1,7 +1,7 @@
 .lo-container {
 	display: grid;
 	width: 100%;
-	grid-template-columns: 12px minmax(0px, auto) 12px;
+	grid-template-columns: var(--lo-container-side-padding) minmax(0px, auto) var(--lo-container-side-padding);
 	grid-template-rows: auto;
 
 	@each $breakpointName, $breakpointSize in $breakpoints {

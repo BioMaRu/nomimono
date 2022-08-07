@@ -4,86 +4,66 @@
 	html, body {
 		background-color: hsl(var(--hsl-base-100));
 	}
-	/* map theme color by basic use-case */
 
-		//--ui-background-1: var(--color-white-100);            /* background for card, panel, etc. */
-		//--ui-box-shadow-1: 0 0 1rem var(--color-neutral-200); /* box-shadow for card, panel, etc. */
-		//
-		//--ui-border-color-1: var(--color-neutral-300);        /* border-color for card, panel, etc. */
-		//--ui-border-color-1\:hover: var(--color-neutral-400);
-		//
-		//--ui-border-color-2: var(--color-neutral-200);        /* border-color for item inside card, panel, etc. */
-		//--ui-border-color-2\:hover: var(--color-neutral-300);
-
-		//--u-border-color: 222deg 15% 86%; // h s l
-		//--u-shadow-color: 333deg 0% 50%;  // h s l
-
-
-
-		--lo-page-aside-content--aside-width: #{toRem(300)};
-
+	--lo-page-aside-content--aside-width: #{toRem(300)};
+	--lo-container-side-padding: 24px;
 
 	/* form elements */
+	--form-element-small-height: #{toRem(28)};
+	--form-element-small-font-size: #{toRem(12)};
+	--form-element-medium-height: #{toRem(40)};
+	--form-element-medium-font-size: #{toRem(14)};
+	--form-element-large-height: #{toRem(48)};
+	--form-element-large-font-size: #{toRem(16)};
 
-		--form-element-small-height: #{toRem(28)};
-		--form-element-small-font-size: #{toRem(12)};
-		--form-element-medium-height: #{toRem(40)};
-		--form-element-medium-font-size: #{toRem(14)};
-		--form-element-large-height: #{toRem(48)};
-		--form-element-large-font-size: #{toRem(16)};
+	--form-element-border-radius: #{toRem(6)};
+	--form-element-label-font-size: #{toRem(14)};
+	--form-element-label-font-family: var(--font-family-secondary);
+	--form-element-label-font-weight: 600;
 
-		--form-element-border-radius: #{toRem(6)};
-		--form-element-label-font-size: #{toRem(14)};
-		--form-element-label-font-family: var(--font-family-secondary);
-		--form-element-label-font-weight: 600;
-
-		--select-font-weight: 400;
+	--select-font-weight: 400;
 
 
 	/* message */
-
-		--message-font-size: #{toRem(15)};
-		--message-icon-font-size: #{toRem(22)};
+	--message-font-size: #{toRem(15)};
+	--message-icon-font-size: #{toRem(22)};
 
 
 	/* button */
+	--button-border-radius: #{toRem(8)};
+	--button-font-weight: 600;
+	--button-font-family: var(--font-family-primary);
 
-		--button-border-radius: #{toRem(8)};
-		--button-font-weight: 600;
-		--button-font-family: var(--font-family-primary);
-
-		--button-small-height: #{toRem(28)};
-		--button-small-font-size: #{toRem(13)};
-		--button-medium-height: #{toRem(40)};
-		--button-medium-font-size: #{toRem(15)};
-		--button-large-height: #{toRem(48)};
-		--button-large-font-size: #{toRem(18)};
+	--button-small-height: #{toRem(28)};
+	--button-small-font-size: #{toRem(13)};
+	--button-medium-height: #{toRem(40)};
+	--button-medium-font-size: #{toRem(15)};
+	--button-large-height: #{toRem(48)};
+	--button-large-font-size: #{toRem(18)};
 
 
 	/* select-button */
+	--select-button-font-weight: 400;
+	--select-button-font-family: var(--font-family-primary);
 
-		--select-button-font-weight: 400;
-		--select-button-font-family: var(--font-family-primary);
-
-		--select-button-small-height: #{toRem(28)};
-		--select-button-small-font-size: #{toRem(12)};
-		--select-button-medium-height: #{toRem(32)};
-		--select-button-medium-font-size: #{toRem(14)};
-		--select-button-large-height: #{toRem(42)};
-		--select-button-large-font-size: #{toRem(18)};
+	--select-button-small-height: #{toRem(28)};
+	--select-button-small-font-size: #{toRem(12)};
+	--select-button-medium-height: #{toRem(32)};
+	--select-button-medium-font-size: #{toRem(14)};
+	--select-button-large-height: #{toRem(42)};
+	--select-button-large-font-size: #{toRem(18)};
 
 
 	/* tab */
-
-		--tab-font-weight: 500;
-		--tab-font-size: #{toRem(15)};
-		--tab-font-family: var(--font-family-secondary);
-		--tab-height: #{toRem(40)};
-		--tab-padding: 0 #{toRem(20)};
-		--tab-border-radius: #{toRem(8)};
-		--tab-border-width: #{toRem(1)};
-		--tab-content-border-radius: #{toRem(8)};
-		--tab-box-shadow: var(--ui-box-shadow-1);
+	--tab-font-weight: 500;
+	--tab-font-size: #{toRem(15)};
+	--tab-font-family: var(--font-family-secondary);
+	--tab-height: #{toRem(40)};
+	--tab-padding: 0 #{toRem(20)};
+	--tab-border-radius: #{toRem(8)};
+	--tab-border-width: #{toRem(1)};
+	--tab-content-border-radius: #{toRem(8)};
+	--tab-box-shadow: var(--ui-box-shadow-1);
 
 
 	/* table */

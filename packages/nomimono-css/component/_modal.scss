@@ -37,9 +37,7 @@ input[type="checkbox"].#{$prefix}modal-state {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	transition-timing-function: cubic-bezier(0.3, 0, .25, 1);
-	transition-duration: 0.16s;
-	transition-property: transform, opacity;
+	transition: all 0.16s ease;
 	pointer-events: none;
 	opacity: 0;
 	background: var(--modal-background, hsl(var(--hsl-black) / 0.2));

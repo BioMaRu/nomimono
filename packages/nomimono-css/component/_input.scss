@@ -74,7 +74,7 @@ $SIZES: 'small', 'medium', 'large';
 
 .#{$prefix}input {
 	position: relative;
-	display: inline-flex;
+	display: block;
 	flex-direction: column;
 	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);

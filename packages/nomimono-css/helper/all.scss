@@ -11,7 +11,7 @@
 }
 
 %base-field {
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
 	gap: toEm(6);
 
@@ -56,5 +56,11 @@
 	&:focus, :active {
 		border-color: hsl(var(--hsl-primary));
 		box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
+	}
+
+	input[readonly],
+	select[readonly],
+	textarea[readonly] {
+		background: hsl(var(--hsl-content) / 0.05);
 	}
 }

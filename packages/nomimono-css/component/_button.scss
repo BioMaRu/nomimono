@@ -67,6 +67,7 @@
 
 	&.is-loading {
 		color: transparent;
+		pointer-events: none;
 
 		&:after {
 			position: absolute;

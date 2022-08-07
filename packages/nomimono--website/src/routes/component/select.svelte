@@ -1,6 +1,6 @@
 <script>
-	import dedent from 'ts-dedent'
-	import Story from '../../components/Story.svelte'
+	import dedent from "ts-dedent";
+	import Story from "../../components/Story.svelte";
 </script>
 
 <h1 class="_fs-11 _fw-800 _mgbt-4">Select</h1>

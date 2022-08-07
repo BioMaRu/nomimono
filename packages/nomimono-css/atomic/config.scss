@@ -8,9 +8,9 @@ $background-colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bgcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bgcl-opacity)),
 
-	'secondary': hsl(var(--hsl-secondary) / var(--bgcl-opacity)),
-	'secondary-active': hsl(var(--hsl-secondary-active) / var(--bgcl-opacity)),
-	'secondary-content': hsl(var(--hsl-secondary-content) / var(--bgcl-opacity)),
+	'accent': hsl(var(--hsl-accent) / var(--bgcl-opacity)),
+	'accent-active': hsl(var(--hsl-accent-active) / var(--bgcl-opacity)),
+	'accent-content': hsl(var(--hsl-accent-content) / var(--bgcl-opacity)),
 
 	'base-100': hsl(var(--hsl-base-100) / var(--bgcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bgcl-opacity)),
@@ -41,9 +41,9 @@ $colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--cl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--cl-opacity)),
 
-	'secondary': hsl(var(--hsl-secondary) / var(--cl-opacity)),
-	'secondary-active': hsl(var(--hsl-secondary-active) / var(--cl-opacity)),
-	'secondary-content': hsl(var(--hsl-secondary-content) / var(--cl-opacity)),
+	'accent': hsl(var(--hsl-accent) / var(--cl-opacity)),
+	'accent-active': hsl(var(--hsl-accent-active) / var(--cl-opacity)),
+	'accent-content': hsl(var(--hsl-accent-content) / var(--cl-opacity)),
 
 	'base-100': hsl(var(--hsl-base-100) / var(--cl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--cl-opacity)),
@@ -75,9 +75,9 @@ $border-colors: (
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bdcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bdcl-opacity)),
 
-	'secondary': hsl(var(--hsl-secondary) / var(--bdcl-opacity)),
-	'secondary-active': hsl(var(--hsl-secondary-active) / var(--bdcl-opacity)),
-	'secondary-content': hsl(var(--hsl-secondary-content) / var(--bdcl-opacity)),
+	'accent': hsl(var(--hsl-accent) / var(--bdcl-opacity)),
+	'accent-active': hsl(var(--hsl-accent-active) / var(--bdcl-opacity)),
+	'accent-content': hsl(var(--hsl-accent-content) / var(--bdcl-opacity)),
 
 	'base-100': hsl(var(--hsl-base-100) / var(--bdcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bdcl-opacity)),
