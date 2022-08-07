@@ -1,0 +1,69 @@
+@import '../helper/all';
+@import 'config';
+
+$SIZES: 'small', 'medium', 'large';
+
+.#{$prefix}field {
+	@extend %base-field;
+
+	// size
+	@each $s in $SIZES {
+
+		&.is-size-#{$s} {
+			font-size: var(--form-element-#{$s}-font-size);
+
+			.#{$prefix}input,
+			.#{$prefix}select {
+				height: var(--form-element-#{$s}-height);
+			}
+
+			.#{$prefix}input,
+			.#{$prefix}select,
+			.#{$prefix}textarea {
+				font-size: var(--form-element-#{$s}-font-size);
+			}
+		}
+	}
+
+	&.is-variant-negative {
+		.#{$prefix}input input,
+		.#{$prefix}select select,
+		.#{$prefix}textarea textarea {
+			color: hsl(var(--hsl-negative));
+			border-color: hsl(var(--hsl-negative));
+
+			&:hover {
+				border-color: hsl(var(--hsl-negative));
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 .175em hsl(var(--hsl-negative) / 0.3);
+			}
+		}
+
+		.info {
+			color: hsl(var(--hsl-negative));
+		}
+	}
+
+	&.is-variant-positive {
+		.#{$prefix}input input,
+		.#{$prefix}select select,
+		.#{$prefix}textarea textarea {
+			color: hsl(var(--hsl-positive));
+			border-color: hsl(var(--hsl-positive));
+
+			&:hover {
+				border-color: hsl(var(--hsl-positive));
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 .175em hsl(var(--hsl-positive) / 0.3);
+			}
+		}
+
+		.info {
+			color: hsl(var(--hsl-positive));
+		}
+	}
+}

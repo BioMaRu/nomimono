@@ -1,28 +1,27 @@
 @import '../helper/all';
 @import 'config';
 
-.#{$prefix}input {
+.#{$prefix}textarea {
 	font-size: var(--form-element-medium-font-size);
 	font-weight: 400;
 	position: relative;
 	display: block;
 	flex-direction: column;
-	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);
 	gap: toEm(6);
 
-	input {
+	textarea {
 		@extend %base-input;
 
-		padding: 0 toEm(12);
+		padding: toEm(12) toEm(12);
 		cursor: pointer;
 	}
 
-	input[readonly] {
+	textarea[readonly] {
 		background: hsl(var(--hsl-content) / 0.05);
 	}
 
-	input[disabled] {
+	textarea[disabled] {
 		cursor: not-allowed;
 		background: hsl(var(--hsl-content) / 0.05);
 	}

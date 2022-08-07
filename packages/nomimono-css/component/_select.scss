@@ -1,102 +1,37 @@
 @import '../helper/all';
 @import 'config';
 
-$SIZES: 'small', 'medium', 'large';
-
-.#{$prefix}field {
-	@extend %base-field;
-
-	// size
-	@each $s in $SIZES {
-		&.is-size-#{$s} {
-			.#{$prefix}select {
-				height: var(--form-element-#{$s}-height);
-
-				select {
-					font-size: var(--form-element-#{$s}-font-size);
-					padding: 0 calc(1em + 18px) 0 1em;
-				}
-			}
-		}
-	}
-
-	&.is-variant-negative {
-		.#{$prefix}select {
-			select {
-				color: hsl(var(--hsl-negative));
-				border-color: hsl(var(--hsl-negative));
-
-				&:hover {
-					border-color: hsl(var(--hsl-negative));
-				}
-
-				&:focus {
-					box-shadow: 0 0 0 .175em hsl(var(--hsl-negative) / 0.3);
-				}
-			}
-		}
-
-		.info {
-			color: hsl(var(--hsl-negative));
-		}
-	}
-
-	&.is-variant-positive {
-		.#{$prefix}select {
-			select {
-				color: hsl(var(--hsl-positive));
-				border-color: hsl(var(--hsl-positive));
-
-				&:hover {
-					border-color: hsl(var(--hsl-positive));
-				}
-
-				&:focus {
-					box-shadow: 0 0 0 .175em hsl(var(--hsl-positive) / 0.3);
-				}
-			}
-		}
-
-		.info {
-			color: hsl(var(--hsl-positive));
-		}
-	}
-
-	&.is-disabled {
-		.#{$prefix}select {
-			select {
-				cursor: not-allowed;
-				background: hsl(var(--hsl-content) / 0.05);
-			}
-		}
-	}
-}
-
 .#{$prefix}select {
+	font-size: var(--form-element-medium-font-size);
+	font-weight: var(--select-font-weight);
 	position: relative;
 	display: inline-flex;
 	flex-direction: column;
 	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);
-	gap: toRem(6);
+	gap: toEm(6);
 
 	select {
 		@extend %base-input;
 
-		font-size: var(--form-element-medium-font-size);
-		font-weight: var(--select-font-weight);
-		padding-right: toRem(32);
+		padding-right: toEm(32);
+		padding-left: toEm(12);
 		cursor: pointer;
+	}
+
+	select[disabled] {
+		cursor: not-allowed;
+		background: hsl(var(--hsl-content) / 0.05);
 	}
 
 	&:after {
 		position: absolute;
 		top: 50%;
 		right: 0.5em;
-		width: toRem(8);
-		height: toRem(8);
+		width: toEm(8);
+		height: toEm(8);
 		content: '';
-		transform: rotate(-45deg) translate(0, calc(-50% - #{toRem(4)}));
+		transform: rotate(-45deg) translate(0, calc(-50% - #{toEm(4)}));
 		pointer-events: none;
 		border-bottom: 2px solid hsl(var(--hsl-content) / 0.7);
 		border-left: 2px solid hsl(var(--hsl-content) / 0.7);

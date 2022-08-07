@@ -19,7 +19,7 @@
 	<div class="nm-modal">
 		<div class="nm-modal-panel">
 			<label class="nm-modal-close" for="test-modal1">✕</label>
-			<h3>Hi, mum</h3>
+			<h3>Hi, mom</h3>
 			<div>
 				<label class="nm-button" for="test-modal1">Close modal</label>
 			</div>
@@ -33,7 +33,7 @@
 			<div class="nm-modal">
 				<div class="nm-modal-panel">
 					<label class="nm-modal-close" for="test-modal1">✕</label>
-					<h3>Hi, mum</h3>
+					<h3>Hi, mom</h3>
 					<div>
 						<label class="nm-button" for="test-modal1">Close modal</label>
 					</div>

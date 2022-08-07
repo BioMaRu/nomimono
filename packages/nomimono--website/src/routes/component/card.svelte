@@ -8,12 +8,12 @@
 <br />
 <br />
 <Story>
-	<div class="nm-card">Hi, mum.</div>
+	<div class="nm-card">Hi, mom.</div>
 
 	<div slot="code">
 		{dedent`
 				<div class="nm-card">
-					Hi, mum
+					Hi, mom
 				</div>`}
 	</div>
 </Story>
@@ -22,25 +22,25 @@
 <br />
 <Story>
 	<div class="_dp-f _g-6">
-		<div class="nm-card is-raised-100">Hi, mum.</div>
-		<div class="nm-card is-raised-200">Hi, mum.</div>
-		<div class="nm-card is-raised-300">Hi, mum.</div>
-		<div class="nm-card is-raised-400">Hi, mum.</div>
+		<div class="nm-card is-raised-100">Hi, mom.</div>
+		<div class="nm-card is-raised-200">Hi, mom.</div>
+		<div class="nm-card is-raised-300">Hi, mom.</div>
+		<div class="nm-card is-raised-400">Hi, mom.</div>
 	</div>
 
 	<div slot="code">
 		{dedent`
 			<div class="nm-card is-raised-100">
-				Hi, mum.
+				Hi, mom.
 			</div>
 			<div class="nm-card is-raised-200">
-				Hi, mum.
+				Hi, mom.
 			</div>
 			<div class="nm-card is-raised-300">
-				Hi, mum.
+				Hi, mom.
 			</div>
 			<div class="nm-card is-raised-400">
-				Hi, mum.
+				Hi, mom.
 			</div>`}
 	</div>
 </Story>

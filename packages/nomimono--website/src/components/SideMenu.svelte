@@ -23,6 +23,7 @@
 		{ label: 'Panel', path: 'panel' },
 		{ label: 'Radio', path: 'radio' },
 		{ label: 'Select', path: 'select' },
+		{ label: 'Textarea', path: 'textarea' },
 	]
 
 	const ATOMICS = [

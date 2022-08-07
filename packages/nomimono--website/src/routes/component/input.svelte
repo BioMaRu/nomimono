@@ -4,7 +4,7 @@
 </script>
 
 <h1 class="_fs-11 _fw-800 _mgbt-4">Input</h1>
-<p>For display field of input</p>
+<p>For display field of input. Usually use with <code class="_cl-accent">field</code></p>
 <br />
 <Story>
 	<div class="nm-field">
@@ -126,14 +126,14 @@
 	</div>
 </Story>
 
-<h2 class="_fs-7 _mgt-10">Disabled</h2>
+<h2 class="_fs-7 _mgt-10">Readonly</h2>
 <br />
 <Story>
 	<div class="lo-12 _g-7">
-		<div class="nm-field is-disabled">
-			<label for="small">Your name</label>
+		<div class="nm-field">
+			<label for="readonly">Your name</label>
 			<div class="nm-input">
-				<input disabled id="disabled" placeholder="John Doe" type="text" />
+				<input id="readonly" readonly type="text" value="Hello" />
 			</div>
 			<div class="info">This is information</div>
 		</div>
@@ -141,10 +141,33 @@
 
 	<div slot="code">
 		{dedent`
-			<div class="nm-field is-disabled">
-				<label for="small">Your name</label>
+			<div class="nm-field">
+				<label for="readonly">Your name</label>
 				<div class="nm-input">
-					<input id="small" placeholder="John Doe" type="text" disabled />
+					<input id="readonly" type="text" readonly value="Hello" />
+				</div>
+				<div class="info">This is information</div>
+			</div>`}
+	</div>
+</Story>
+
+<h2 class="_fs-7 _mgt-10">Disabled</h2>
+<br />
+<Story>
+	<div class="nm-field">
+		<label for="disabled">Your name</label>
+		<div class="nm-input">
+			<input disabled id="disabled" type="text" value="Hello" />
+		</div>
+		<div class="info">This is information</div>
+	</div>
+
+	<div slot="code">
+		{dedent`
+			<div class="nm-field">
+				<label for="disabled">Your name</label>
+				<div class="nm-input">
+					<input id="disabled" value="Hello" type="text" disabled />
 				</div>
 				<div class="info">This is information</div>
 			</div>`}

@@ -27,7 +27,7 @@
 <Story>
 	<div class="nm-dropdown is-hover-open">
 		<span>Hover me</span>
-		<div tabindex="0">Hi, mum</div>
+		<div tabindex="0">Hi, mom</div>
 	</div>
 
 	<div slot="code">
@@ -35,7 +35,7 @@
 			<div class="nm-dropdown is-hover-open">
 				<span>Hover me</span>
 				<div tabindex="0">
-					Hi, mum
+					Hi, mom
 				</div>
 			</div>`}
 	</div>

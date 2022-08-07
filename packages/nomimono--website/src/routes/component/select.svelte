@@ -1,10 +1,13 @@
 <script>
-	import dedent from "ts-dedent";
-	import Story from "../../components/Story.svelte";
+	import dedent from 'ts-dedent'
+	import Story from '../../components/Story.svelte'
 </script>
 
 <h1 class="_fs-11 _fw-800 _mgbt-4">Select</h1>
-<p>Select is used to pick a value from a list of options.</p>
+<p>
+	Select is used to pick a value from a list of options. Usually use with
+	<code class="_cl-accent">field</code>
+</p>
 <br />
 <Story>
 	<div class="lo-12 _g-6">
@@ -12,7 +15,7 @@
 			<label for="select1">Please select</label>
 			<div class="nm-select">
 				<select id="select1">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -26,7 +29,7 @@
 				<label for="select1">Please select</label>
 				<div class="nm-select">
 					<select id="select1">
-						<option value="">Hi, mum</option>
+						<option value="">Hi, mom</option>
 						<option value="">Hi, dad</option>
 					</select>
 				</div>
@@ -43,7 +46,7 @@
 			<label for="select2">Please select</label>
 			<div class="nm-select">
 				<select id="select2">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -54,7 +57,7 @@
 			<label for="select3">Please select</label>
 			<div class="nm-select">
 				<select id="select3">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -90,7 +93,7 @@
 			<label for="small">Please select</label>
 			<div class="nm-select">
 				<select id="small">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -101,7 +104,7 @@
 			<label for="small">Please select</label>
 			<div class="nm-select">
 				<select id="medium">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -112,7 +115,7 @@
 			<label for="large">Please select</label>
 			<div class="nm-select">
 				<select id="large">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -126,7 +129,7 @@
 				<label for="small">Please select</label>
 				<div class="nm-select">
 					<select id="small">
-						<option value="">Hi, mum</option>
+						<option value="">Hi, mom</option>
 						<option value="">Hi, dad</option>
 					</select>
 				</div>
@@ -137,7 +140,7 @@
 				<label for="medium">Please select</label>
 				<div class="nm-select">
 					<select id="medium">
-						<option value="">Hi, mum</option>
+						<option value="">Hi, mom</option>
 						<option value="">Hi, dad</option>
 					</select>
 				</div>
@@ -148,7 +151,7 @@
 				<label for="large">Please select</label>
 				<div class="nm-select">
 					<select id="large">
-						<option value="">Hi, mum</option>
+						<option value="">Hi, mom</option>
 						<option value="">Hi, dad</option>
 					</select>
 				</div>
@@ -161,11 +164,11 @@
 <br />
 <Story>
 	<div class="lo-12 _g-7">
-		<div class="nm-field is-disabled">
+		<div class="nm-field">
 			<label for="disabled">Please select</label>
 			<div class="nm-select">
 				<select disabled id="disabled">
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
@@ -175,11 +178,11 @@
 
 	<div slot="code">
 		{dedent`
-			<div class="nm-field is-disabled">
+			<div class="nm-field">
 			<label for="disabled">Please select</label>
 			<div class="nm-select">
 				<select id="disabled" disabled>
-					<option value="">Hi, mum</option>
+					<option value="">Hi, mom</option>
 					<option value="">Hi, dad</option>
 				</select>
 			</div>
