@@ -7,11 +7,9 @@ $background-colors: (
 	'primary': hsl(var(--hsl-primary) / var(--bgcl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bgcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bgcl-opacity)),
-
 	'accent': hsl(var(--hsl-accent) / var(--bgcl-opacity)),
 	'accent-active': hsl(var(--hsl-accent-active) / var(--bgcl-opacity)),
 	'accent-content': hsl(var(--hsl-accent-content) / var(--bgcl-opacity)),
-
 	'base-100': hsl(var(--hsl-base-100) / var(--bgcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bgcl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--bgcl-opacity)),
@@ -19,7 +17,6 @@ $background-colors: (
 	'line': hsl(var(--hsl-line) / var(--bgcl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--bgcl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--bgcl-opacity)),
-
 	'positive': hsl(var(--hsl-positive) / var(--bgcl-opacity)),
 	'positive-content': hsl(var(--hsl-positive-content) / var(--bgcl-opacity)),
 	'negative': hsl(var(--hsl-negative) / var(--bgcl-opacity)),
@@ -30,7 +27,6 @@ $background-colors: (
 	'info-content': hsl(var(--hsl-info-content) / var(--bgcl-opacity)),
 	'black': hsl(var(--hsl-black) / var(--bgcl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--bgcl-opacity)),
-
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
@@ -40,11 +36,9 @@ $colors: (
 	'primary': hsl(var(--hsl-primary) / var(--cl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--cl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--cl-opacity)),
-
 	'accent': hsl(var(--hsl-accent) / var(--cl-opacity)),
 	'accent-active': hsl(var(--hsl-accent-active) / var(--cl-opacity)),
 	'accent-content': hsl(var(--hsl-accent-content) / var(--cl-opacity)),
-
 	'base-100': hsl(var(--hsl-base-100) / var(--cl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--cl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--cl-opacity)),
@@ -52,7 +46,6 @@ $colors: (
 	'line': hsl(var(--hsl-line) / var(--cl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--cl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--cl-opacity)),
-
 	'positive': hsl(var(--hsl-positive) / var(--cl-opacity)),
 	'positive-content': hsl(var(--hsl-positive-content) / var(--cl-opacity)),
 	'negative': hsl(var(--hsl-negative) / var(--cl-opacity)),
@@ -61,10 +54,8 @@ $colors: (
 	'warning-content': hsl(var(--hsl-warning-content) / var(--cl-opacity)),
 	'info': hsl(var(--hsl-info) / var(--cl-opacity)),
 	'info-content': hsl(var(--hsl-info-content) / var(--cl-opacity)),
-
 	'black': hsl(var(--hsl-black) / var(--cl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--cl-opacity)),
-
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
@@ -74,11 +65,9 @@ $border-colors: (
 	'primary': hsl(var(--hsl-primary) / var(--bdcl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bdcl-opacity)),
 	'primary-content': hsl(var(--hsl-primary-content) / var(--bdcl-opacity)),
-
 	'accent': hsl(var(--hsl-accent) / var(--bdcl-opacity)),
 	'accent-active': hsl(var(--hsl-accent-active) / var(--bdcl-opacity)),
 	'accent-content': hsl(var(--hsl-accent-content) / var(--bdcl-opacity)),
-
 	'base-100': hsl(var(--hsl-base-100) / var(--bdcl-opacity)),
 	'base-200': hsl(var(--hsl-base-200) / var(--bdcl-opacity)),
 	'base-300': hsl(var(--hsl-base-300) / var(--bdcl-opacity)),
@@ -86,7 +75,6 @@ $border-colors: (
 	'line': hsl(var(--hsl-line) / var(--bdcl-opacity)),
 	'content': hsl(var(--hsl-content) / var(--bdcl-opacity)),
 	'content-inv': hsl(var(--hsl-content-inv) / var(--bdcl-opacity)),
-
 	'positive': hsl(var(--hsl-positive) / var(--bdcl-opacity)),
 	'positive-content': hsl(var(--hsl-positive-content) / var(--bdcl-opacity)),
 	'negative': hsl(var(--hsl-negative) / var(--bdcl-opacity)),
@@ -97,7 +85,6 @@ $border-colors: (
 	'info-content': hsl(var(--hsl-info-content) / var(--bdcl-opacity)),
 	'black': hsl(var(--hsl-black) / var(--bdcl-opacity)),
 	'white': hsl(var(--hsl-white) / var(--bdcl-opacity)),
-
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
@@ -297,9 +284,9 @@ $line-heights: (
 	'5': 1.65,
 );
 
-$sm: toRem(768);
-$md: toRem(1024);
-$lg: toRem(1280);
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
 
 $breakpoints: (
 	'sm': $sm,
