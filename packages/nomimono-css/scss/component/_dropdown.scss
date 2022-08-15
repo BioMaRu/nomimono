@@ -61,7 +61,7 @@
 	> *:nth-child(2) {
 		position: absolute;
 		z-index: 2;
-		top: calc(100%  + var(--gap));
+		top: calc(100% + var(--gap));
 		left: 0;
 		transform: translate3d(0, -8px, 0);
 		pointer-events: none;

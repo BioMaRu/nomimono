@@ -66,8 +66,8 @@
 	}
 
 	&.is-loading {
-		color: transparent;
 		pointer-events: none;
+		color: transparent;
 
 		&:after {
 			position: absolute;
@@ -126,7 +126,7 @@
 			box-shadow: 0 0 0 .175rem hsl(var(--hsl-negative) / 0.3);
 		}
 
-		&.is-loading{
+		&.is-loading {
 			color: transparent;
 
 			&:after {
@@ -144,7 +144,7 @@
 			box-shadow: 0 0 0 .175rem hsl(var(--hsl-positive) / 0.3);
 		}
 
-		&.is-loading{
+		&.is-loading {
 			color: transparent;
 
 			&:after {
@@ -172,7 +172,7 @@
 			box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
 		}
 
-		&.is-loading{
+		&.is-loading {
 			color: transparent;
 
 			&:after {
@@ -195,7 +195,7 @@
 			box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
 		}
 
-		&.is-loading{
+		&.is-loading {
 			color: transparent;
 
 			&:after {
@@ -218,7 +218,7 @@
 			background: hsl(var(--hsl-content) / 0.05);
 		}
 
-		&.is-loading{
+		&.is-loading {
 			color: transparent;
 
 			&:after {
@@ -244,6 +244,10 @@
 }
 
 @keyframes ButtonLoadingSpin {
-	from { transform: rotate(0deg); }
-	to   { transform: rotate(359deg); }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
 }

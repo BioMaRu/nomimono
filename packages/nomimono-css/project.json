@@ -4,7 +4,13 @@
 		"build": {
 			"executor": "@nrwl/workspace:run-commands",
 			"options": {
-				"command": "npx gulp --gulpfile packages/nomimono-css/Gulpfile.js"
+				"command": "npx gulp --gulpfile packages/nomimono-css/Gulpfile.js && cp -r packages/nomimono-css/scss dist/packages/nomimono-css/scss"
+			}
+		},
+		"prepare": {
+			"executor": "@nrwl/workspace:run-commands",
+			"options": {
+				"command": "cp -r packages/nomimono-css/scss dist/packages/nomimono-css/scss"
 			}
 		},
 		"version": {

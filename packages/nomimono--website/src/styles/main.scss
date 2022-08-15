@@ -1,7 +1,7 @@
 @import '../../packages/nomimono-theme/light/main.scss';
 @import '../../packages/nomimono-theme/dark/main.scss';
-@import '../../packages/nomimono-css/reset.scss';
-@import '../../packages/nomimono-css/atomic/all.scss';
-@import '../../packages/nomimono-css/layout/all.scss';
-@import '../../packages/nomimono-css/component/all.scss';
-@import '../../packages/nomimono-css/utility/all.scss';
+@import '../../../nomimono-css/scss/reset';
+@import '../../../nomimono-css/scss/atomic/all.scss';
+@import '../../../nomimono-css/scss/layout/all.scss';
+@import '../../../nomimono-css/scss/component/all.scss';
+@import '../../../nomimono-css/scss/utility/all.scss';
