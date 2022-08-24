@@ -1,6 +1,7 @@
 <script lang="ts">
 	import dedent from 'ts-dedent'
 	import { onMount } from 'svelte'
+	import FootNavigate from '$components/FootNavigate.svelte'
 
 	let Prism
 
@@ -81,32 +82,31 @@
 	]
 </script>
 
-<h1 class="_fs-8">Theme variable</h1>
-<br />
-<p class="_cl-content _cl-opacity-70 _fs-3">
+<h1 class="_fs-9">Theme variable</h1>
+<p>
 	Theme variable is essential when you need to customize or create your theme or design systems.
+	normally you will want to change it value but add more variables and generate more atomic
+	classed is possible too <a class="nm-link _tdcrt-udl" href="/doc/customization"
+		>Learn more about customization</a
+	>.
 </p>
-<br />
-<p class="_cl-content _cl-opacity-70 _fs-3">
+<p>
 	Nomimono uses most CSS custom properties. You don't need any build setup. You can change the CSS
 	custom properties in the CSS file or the runtime.
-	<br />
-	<br />
-	<a class="nm-link _tdcrt-udl" href="/doc/customization">Learn more about customization</a>.
 </p>
-
-<div>
-	<hr class="_mgt-9 _mgbt-8" />
+<p>
+	Color, Typography and Spacing is the most important things that you will need to change it value
+	to create your theme. below
+</p>
+<section>
 	<h5 id="color">Color</h5>
-	<br />
-	<p class="_cl-content _cl-opacity-70 _fs-3">
+	<p>
 		For regular use cases, color is the only CSS custom property you need to change/override to
-		create your theme.
-		<a class="nm-link _tdcrt-udl" href="/doc/customization#color"
-			>Learn more about color customization</a
+		create your theme. <a class="nm-link _tdcrt-udl" href="/doc/customization"
+			>Learn more about customization</a
 		>.
 	</p>
-	<section
+	<div
 		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
 		style="max-height: 480px;"
 	>
@@ -137,18 +137,16 @@
 				{/each}
 			</tbody>
 		</table>
-	</section>
-</div>
+	</div>
+</section>
 
-<div>
-	<hr class="_mgt-9 _mgbt-8" />
+<section>
 	<h5 id="typography">Typography</h5>
-	<br />
-	<p class="_cl-content _cl-opacity-70 _fs-3">
+	<p>
 		These are the CSS custom properties related to design systems' typography (font family, font
-		size). Usually, you may want to change the font family for your website.
+		size). Usually, you may want to change the font-family for your website.
 	</p>
-	<section
+	<div
 		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
 		style="max-height: 480px;"
 	>
@@ -180,18 +178,17 @@
 				{/each}
 			</tbody>
 		</table>
-	</section>
-</div>
+	</div>
+</section>
 
-<div>
-	<hr class="_mgt-9 _mgbt-8" />
+<section>
 	<h5 id="spacing">Spacing</h5>
-	<br />
-	<p class="_cl-content _cl-opacity-70 _fs-3">
+	<p>
 		These are the CSS custom properties related to design systems' spacing, specifically used
-		for margin, padding, top, left, bottom, right, width and height.
+		for margin, padding, top, left, bottom, right, width and height. normally you don't need to
+		change it at all.
 	</p>
-	<section
+	<div
 		class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
 		style="max-height: 480px;"
 	>
@@ -223,30 +220,13 @@
 				{/each}
 			</tbody>
 		</table>
-	</section>
-</div>
+	</div>
+</section>
 
-<div>
-	<hr class="_mgt-9 _mgbt-8" />
-	<h5 id="other">Other Custom properties</h5>
-	<br />
-	<p class="_cl-content _cl-opacity-70 _fs-3">
-		[WIP] but it not that important for the systems, you can ignore it.
-	</p>
-</div>
-
-<!--{#if typeof window !== "undefined"}-->
-<!--	<div class="nm-card _pd-0 _bgcl-black _bgcl-opacity-100 _fs-2 _mgt-6">-->
-<!--		<svelte:component this={Prism} language="css" isStandalone>-->
-<!--			{-->
-<!--				dedent`-->
-<!--				[data-theme="THEME_NAME"] {-->
-<!--					&#45;&#45;hsl-primary: 222 33% 33%;-->
-<!--					&#45;&#45;hsl-primary: 222 33% 33%;-->
-<!--					&#45;&#45;hsl-primary: 222 33% 33%;-->
-<!--					&#45;&#45;hsl-primary: 222 33% 33%;-->
-<!--				}`-->
-<!--			}-->
-<!--		</svelte:component>-->
-<!--	</div>-->
-<!--{/if}-->
+<FootNavigate
+	Introduction
+	nextPath="/doc/customization"
+	nextTitle="Customization"
+	prevPath="/doc/usage"
+	prevTitle="Usage"
+/>

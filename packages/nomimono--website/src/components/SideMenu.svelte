@@ -8,6 +8,7 @@
 		{ label: 'Installation', path: 'installation' },
 		{ label: 'Usage', path: 'usage' },
 		{ label: 'Theme variable', path: 'variable' },
+		{ label: 'Customization', path: 'customization' },
 	]
 
 	const COMPONENTS = [
