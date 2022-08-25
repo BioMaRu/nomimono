@@ -5,8 +5,9 @@ $atom-prefix: '_';
  * Color
  *********************************************/
 
-// Generate background-color class
-// => _bgcl-[key]
+/* Generate background-color class
+	=> _bgcl-[key]
+*/
 $background-colors: (
 	'primary': hsl(var(--hsl-primary) / var(--bgcl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bgcl-opacity)),
@@ -36,8 +37,9 @@ $background-colors: (
 	'ihr': inherit,
 );
 
-// Generate color class
-// => _cl-[key]
+/* Generate color class
+	=> _cl-[key]
+*/
 $colors: (
 	'primary': hsl(var(--hsl-primary) / var(--cl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--cl-opacity)),
@@ -67,8 +69,9 @@ $colors: (
 	'ihr': inherit,
 );
 
-// Generate border-color class
-// => _bdcl-[key]
+/* Generate border-color class
+	=> _bdcl-[key]
+*/
 $border-colors: (
 	'primary': hsl(var(--hsl-primary) / var(--bdcl-opacity)),
 	'primary-active': hsl(var(--hsl-primary-active) / var(--bdcl-opacity)),
@@ -98,10 +101,11 @@ $border-colors: (
 	'ihr': inherit,
 );
 
-// Generate opacity class
-// => _opct-[key]
-// Also use for generate color opacity class
-// => _cl-opacity-[key], _bgcl-opacity-[key], _bdcl-opacity-[key]
+/* Generate opacity class
+	=> _opct-[key]
+Also use for generate color opacity class
+	=> _cl-opacity-[key], _bgcl-opacity-[key], _bdcl-opacity-[key]
+ */
 $opacity: (
 	'0': 0,
 	'5': 0.05,
@@ -126,8 +130,9 @@ $opacity: (
 	'100': 1,
 );
 
-// Generate border-radius class
-// => _bdrd-[key], _bdtrrd-[key], _bdtlrd-[key], _bdbtrrd-[key], _bdbtlrd-[key]
+/* Generate border-radius class
+	=> _bdrd-[key], _bdtrrd-[key], _bdtlrd-[key], _bdbtrrd-[key], _bdbtlrd-[key]
+ */
 $border-radius: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -151,9 +156,10 @@ $border-radius: (
 	'max': 9999px,
 );
 
-// Generate margin / padding class
-// => _mg-[key], _mgt-[key], _mgr-[key], _mgl-[key], _mgbt-[key], _mgv-[key], _mgh-[key]
-// => _pd-[key], _pdt-[key], _pdr-[key], _pdl-[key], _pdbt-[key], _pdv-[key], _pdh-[key]
+/*Generate margin / padding class
+	=> _mg-[key], _mgt-[key], _mgr-[key], _mgl-[key], _mgbt-[key], _mgv-[key], _mgh-[key]
+	=> _pd-[key], _pdt-[key], _pdr-[key], _pdl-[key], _pdbt-[key], _pdv-[key], _pdh-[key]
+ */
 $margin_padding: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -176,9 +182,10 @@ $margin_padding: (
 	'ihr': inherit,
 );
 
-// Generate width/height class
-// => _w-[key], _mnw-[key], _mxw-[key]
-// => _h-[key], _mnh-[key], _mxh-[key]
+/* Generate width/height class
+	=> _w-[key], _mnw-[key], _mxw-[key]
+	=> _h-[key], _mnh-[key], _mxh-[key]
+ */
 $width_height: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -204,8 +211,9 @@ $width_height: (
 	'100vh': 100vh,
 );
 
-// Generate positional class
-// => _t-[key], _r-[key], _bt-[key], _l-[key]
+/* Generate positional class
+	=> _t-[key], _r-[key], _bt-[key], _l-[key]
+ */
 $top_right_bottom_left: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -227,8 +235,9 @@ $top_right_bottom_left: (
 	'us': unset,
 );
 
-// Generate gap class
-// => _g-[key]
+/* Generate gap class
+	=> _g-[key]
+ */
 $gap: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -247,8 +256,9 @@ $gap: (
 	'us': unset,
 );
 
-// Generate border-width class
-// => _bdw-[key], _bdtw-[key], _bdrw-[key], _bdbtw-[key], _bdlw-[key]
+/* Generate border-width class
+	=> _bdw-[key], _bdtw-[key], _bdrw-[key], _bdbtw-[key], _bdlw-[key]
+ */
 $border-width: (
 	'0': var(--spc-0),
 	'1': var(--spc-1),
@@ -267,15 +277,17 @@ $border-width: (
 	'us': unset,
 );
 
-// Generate font-family class
-// => _ffml-[key]
+/* Generate font-family class
+	=> _ffml-[key]
+ */
 $font-families: (
 	'primary': var(--ffml-primary),
 	'secondary': var(--ffml-secondary),
 );
 
-// Generate font-size class
-// => _fs-[key]
+/* Generate font-size class
+	=> _fs-[key]
+ */
 $font-sizes: (
 	'1': var(--fs-1),
 	'2': var(--fs-2),
@@ -293,8 +305,9 @@ $font-sizes: (
 	'14': var(--fs-14),
 );
 
-// Generate font-weight class
-// => _fw-[key]
+/* Generate font-weight class
+	=> _fw-[key]
+ */
 $font-weights: (
 	'100': 100,
 	'200': 200,
@@ -307,8 +320,9 @@ $font-weights: (
 	'900': 900,
 );
 
-// Generate line-height class
-// => _lh-[key]
+/* Generate line-height class
+	=> _lh-[key]
+ */
 $line-heights: (
 	'1': 1,
 	'2': 1.15,
@@ -317,7 +331,7 @@ $line-heights: (
 	'5': 1.65,
 );
 
-// Responsive lower bound breakpoint for :sm :md :lg class attributes
+/* Responsive lower bound breakpoint for :sm :md :lg class attributes */
 $sm: 768px;
 $md: 1024px;
 $lg: 1280px;
