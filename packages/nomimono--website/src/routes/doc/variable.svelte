@@ -82,7 +82,7 @@
 	]
 </script>
 
-<h1 class="_fs-9">Theme variable</h1>
+<h1 class="_fs-9">CSS variable</h1>
 <p>
 	Theme variable is essential when you need to customize or create your theme or design systems.
 	normally you will want to change it value but add more variables and generate more atomic
@@ -227,6 +227,6 @@
 	Introduction
 	nextPath="/doc/customization"
 	nextTitle="Customization"
-	prevPath="/doc/usage"
-	prevTitle="Usage"
+	prevPath="/doc/class-name"
+	prevTitle="Class name"
 />

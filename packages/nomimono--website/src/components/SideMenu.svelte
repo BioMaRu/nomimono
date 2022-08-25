@@ -6,8 +6,8 @@
 	const DOCS = [
 		{ label: 'Introduction', path: 'introduction' },
 		{ label: 'Installation', path: 'installation' },
-		{ label: 'Usage', path: 'usage' },
-		{ label: 'Theme variable', path: 'variable' },
+		{ label: 'Class name', path: 'class-name' },
+		{ label: 'CSS variable', path: 'variable' },
 		{ label: 'Customization', path: 'customization' },
 	]
 

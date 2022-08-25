@@ -10,7 +10,7 @@
 	})
 </script>
 
-<h1 class="_fs-9">Usage</h1>
+<h1 class="_fs-9">Class name</h1>
 
 <section>
 	<h4>Atomic class</h4>

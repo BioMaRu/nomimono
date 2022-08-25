@@ -121,10 +121,47 @@
 	<p>An now you're ready to go.</p>
 </section>
 
+<hr class="_mgt-8" />
+
+<section>
+	<h4>Use CDN</h4>
+	<p>
+		If you don't want to use a package manager like NPM or YARN, you can directly include the
+		CSS files into your HTML using CDN.
+	</p>
+	{#if typeof window !== 'undefined'}
+		<div class="nm-card _pd-0 _bgcl-black _bgcl-opacity-100 _fs-2 _mgt-6">
+			<svelte:component this={Prism} language="html" isStandalone>
+				{dedent`
+					<head>
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-theme/light.css" />
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/reset.css" />
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/atomic.css" />
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/layout.css" />
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/component.css" />
+					</head>
+					`}
+			</svelte:component>
+		</div>
+	{/if}
+
+	<h5 class="_mgt-8">Example</h5>
+
+	<div class="_mgt-6">
+		<iframe
+			allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+			sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+			src="https://codesandbox.io/embed/sad-kate-23hvkf?fontsize=14&hidenavigation=1&theme=dark"
+			style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+			title="sad-kate-23hvkf"
+		/>
+	</div>
+</section>
+
 <FootNavigate
 	Introduction
-	nextPath="/doc/usage"
-	nextTitle="Usage"
+	nextPath="/doc/class-name"
+	nextTitle="Class name"
 	prevPath="/doc/introduction"
 	prevTitle="Introduction"
 />
