@@ -15,7 +15,6 @@
 		@extend %base-input;
 
 		padding: 0 toEm(12);
-		cursor: pointer;
 	}
 
 	input[readonly] {
