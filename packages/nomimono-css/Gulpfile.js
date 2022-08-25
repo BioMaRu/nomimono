@@ -13,7 +13,7 @@ gulp.task('default', gulp.series(reset, atomic, layout, component, utility))
 
 function atomic() {
 	return gulp
-		.src('./scss/atomic/all.scss')
+		.src('./scss/atomic/main.scss')
 		.pipe(sass(sassOption).on('error', sass.logError))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
 		.pipe(
@@ -28,7 +28,7 @@ function atomic() {
 
 function layout() {
 	return gulp
-		.src('./scss/layout/all.scss')
+		.src('./scss/layout/main.scss')
 		.pipe(sass(sassOption).on('error', sass.logError))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
 		.pipe(
@@ -58,7 +58,7 @@ function reset() {
 
 function component() {
 	return gulp
-		.src('./scss/component/all.scss')
+		.src('./scss/component/main.scss')
 		.pipe(sass(sassOption).on('error', sass.logError))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
 		.pipe(
@@ -73,7 +73,7 @@ function component() {
 
 function utility() {
 	return gulp
-		.src('./scss/utility/all.scss')
+		.src('./scss/utility/main.scss')
 		.pipe(sass(sassOption).on('error', sass.logError))
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'] }))
 		.pipe(

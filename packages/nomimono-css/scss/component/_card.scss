@@ -1,6 +1,3 @@
-@import '../helper/all';
-@import 'config';
-
 .#{$prefix}card {
 	padding: toEm(16) toEm(24);
 	border: 1px solid hsl(var(--hsl-content) / 0.1);

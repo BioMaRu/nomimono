@@ -1,0 +1,60 @@
+@use "sass:math";
+
+@function toRem($value) {
+	$r: math.div($value, 16) + rem;
+	@return $r;
+}
+
+@function toEm($value) {
+	$r: math.div($value, 16) + em;
+	@return $r;
+}
+
+%base-field {
+	display: flex;
+	flex-direction: column;
+	gap: toEm(6);
+
+	label {
+		font-family: var(--form-element-label-font-family);
+		font-size: var(--form-element-label-font-size);
+		font-weight: var(--form-element-label-font-weight);
+		display: flex;
+		align-items: baseline;
+		gap: toEm(4);
+	}
+
+	.info {
+		font-size: toRem(12);
+		color: hsl(var(--hsl-content) / 0.7);
+	}
+}
+
+%base-input {
+	width: 100%;
+	height: 100%;
+	transition: all 0.16s ease-in-out;
+	vertical-align: top;
+	color: hsl(var(--hsl-content));
+
+	border: 1px solid hsl(var(--hsl-content) / 0.15);
+
+	border-radius: inherit;
+
+	outline: none;
+	background-color: transparent;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	appearance: none;
+
+	&:hover {
+		border-color: hsl(var(--hsl-content) / 0.25);
+	}
+
+	&:focus, :active {
+		border-color: hsl(var(--hsl-primary));
+		box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
+	}
+}

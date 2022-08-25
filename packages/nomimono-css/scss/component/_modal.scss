@@ -1,15 +1,3 @@
-@import '../helper/all';
-@import 'config';
-
-/* Custom props
-	--modal-z-index
-	--modal-panel-width
-	--modal-panel-padding
-	--modal-panel-border-radius
-	--modal-panel-background
-	--modal-background
- */
-
 input[type="checkbox"].#{$prefix}modal-state {
 	display: none;
 

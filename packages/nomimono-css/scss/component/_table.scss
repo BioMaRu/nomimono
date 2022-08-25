@@ -1,16 +1,7 @@
-@import '../helper/all';
-@import 'config';
-
 .#{$prefix}table-container {
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	//border:
-	//	var(--table-border-width, toRem(0)) solid var(--table-border-color, hsl(var(--hsl-line) / 0.8));
-
-	//border-bottom:
-	//	var(--table-border-width, toRem(1)) solid var(--table-border-color, hsl(var(--hsl-line) / 0.8));
-
 	border-radius: var(--table-border-radius, toRem(4));
 
 	&.is-scroll-padding {
