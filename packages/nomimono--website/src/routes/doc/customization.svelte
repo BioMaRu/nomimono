@@ -57,17 +57,18 @@
 <section>
 	<h4>Config and extend the systems</h4>
 	<p>
-		If you want to add new CSS variables, generate new atomic classed or change class name
-		prefix
+		If you want to add CSS variables, generate a new atomic class or change the class name
+		prefix.
 	</p>
 	<p>
-		To customize atomic class, in <a
+		To customize the atomic class, in <a
 			class="nm-link"
 			href="https://www.jsdelivr.com/package/npm/@nomimono/nomimono-css"
 			rel="noreferrer"
 			target="_blank">nomimono-css</a
 		>
-		after you install package, in scss folder you will find the config file of atomic class
+		, after you install the package, in the scss folder, you will find the config file of the atomic
+		class
 		<a
 			class="nm-link"
 			href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/scss/atomic/config.scss"
@@ -75,10 +76,10 @@
 			target="_blank"
 		>
 			(or use the CDN link here)
-		</a>.
+		</a>
 	</p>
-	<p>Create your own config file and copy the content in to your file.</p>
-	<p>After update your config file content, import it before import all atomic class.</p>
+	<p>Then create your own config file and copy the content into your file.</p>
+	<p>After updating your config file content, import it before importing all atomic classes.</p>
 	{#if typeof window !== 'undefined'}
 		<div class="nm-card _pd-0 _bgcl-black _bgcl-opacity-100 _fs-2 _mgt-6">
 			<svelte:component this={Prism} language="css" isStandalone>
