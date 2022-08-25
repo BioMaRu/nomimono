@@ -1,25 +1,24 @@
 <script lang="ts">
 	import '../styles/main.scss'
-	import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-	import "prismjs/plugins/command-line/prism-command-line.css";
-	import "prismjs/plugins/line-highlight/prism-line-highlight.css";
+	import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+	import 'prismjs/plugins/command-line/prism-command-line.css'
+	import 'prismjs/plugins/line-highlight/prism-line-highlight.css'
 	import '../styles/prism-theme.scss'
 
-	import SideMenu from '$components/SideMenu.svelte';
-	import ThemeDropdown from "$components/ThemeDropdown.svelte";
-
+	import SideMenu from '$components/SideMenu.svelte'
+	import ThemeDropdown from '$components/ThemeDropdown.svelte'
 </script>
 
 <svelte:head>
-	<title>Document – NomiMono</title>
-	<meta content="NomiMono UI framework" name="description">
+	<title>Document – Nomimono</title>
+	<meta content="NomiMono UI framework" name="description" />
 </svelte:head>
 
 <div class="lo-page-aside-content">
 	<aside>
 		<div class="aside-top" style="height: var(--nav-height);">
 			<a href="/">
-				<img alt="nomimono" height="40" src="/logo-symbol.svg">
+				<img alt="nomimono" height="40" src="/logo-symbol.svg" />
 			</a>
 		</div>
 
