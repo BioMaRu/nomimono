@@ -54,8 +54,11 @@ patch-nomimono-css:
 publish-nomimono-css:
 	nx run nomimono-css:publish
 
+prepare-nomimono-css:
+	nx run nomimono-css:prepare
+
 zpatch-nomimono-css:
-	make build-nomimono-css && make patch-nomimono-css && make publish-nomimono-css
+	make build-nomimono-css && make prepare-nomimono-css && make patch-nomimono-css && make publish-nomimono-css
 
 #==============================
 # storybook
