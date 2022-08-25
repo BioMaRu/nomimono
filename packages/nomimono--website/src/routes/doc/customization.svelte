@@ -38,12 +38,14 @@
 	{/if}
 	<p>
 		then copy the content in <a
+			class="nm-link"
 			href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-theme/light.css"
 			rel="noreferrer"
 			target="_blank">light.css</a
 		>
 		or
 		<a
+			class="nm-link"
 			href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-theme/dark.css"
 			rel="noreferrer"
 			target="_blank">dark.css</a
@@ -58,8 +60,43 @@
 		If you want to add new CSS variables, generate new atomic classed or change class name
 		prefix
 	</p>
-	<p>For each modules (atomic, component, layout)</p>
+	<p>
+		To customize atomic class, in <a
+			class="nm-link"
+			href="https://www.jsdelivr.com/package/npm/@nomimono/nomimono-css"
+			rel="noreferrer"
+			target="_blank">nomimono-css</a
+		>
+		after you install package, in scss folder you will find the config file of atomic class
+		<a
+			class="nm-link"
+			href="https://cdn.jsdelivr.net/npm/@nomimono/nomimono-css/scss/atomic/config.scss"
+			rel="noreferrer"
+			target="_blank"
+		>
+			(or use the CDN link here)
+		</a>.
+	</p>
+	<p>Create your own config file and copy the content in to your file.</p>
+	<p>After update your config file content, import it before import all atomic class.</p>
+	{#if typeof window !== 'undefined'}
+		<div class="nm-card _pd-0 _bgcl-black _bgcl-opacity-100 _fs-2 _mgt-6">
+			<svelte:component this={Prism} language="css" isStandalone>
+				{dedent`
+					@import '@nomimono/nomimono-theme/light.scss';
+					@import '@nomimono/nomimono-css/reset.css';
+					@import '@nomimono/nomimono-css/layout.css';
+					@import '@nomimono/nomimono-css/component.css';
+
+					@import 'path/to/your/config.scss';
+					@import '@nomimono/nomimono-css/scss/atomic/all.scss';
+					`}
+			</svelte:component>
+		</div>
+	{/if}
+	<p>You can do the same for component or others modules as well.</p>
 </section>
+
 <FootNavigate
 	Introduction
 	nextPath="/doc/customization"
