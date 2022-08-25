@@ -22,14 +22,12 @@
 
 
 	/* message */
-
 	--message-font-size: #{toRem(15)};
 	--message-icon-font-size: #{toRem(22)};
 
 
 	/* button */
-
-	--button-border-radius: #{toRem(8)};
+	--button-border-radius: #{toEm(8)};
 	--button-font-weight: 600;
 	--button-font-family: var(--font-family-primary);
 
@@ -42,7 +40,6 @@
 
 
 	/* select-button */
-
 	--select-button-font-weight: 400;
 	--select-button-font-family: var(--font-family-primary);
 
@@ -55,7 +52,6 @@
 
 
 	/* tab */
-
 	--tab-font-weight: 500;
 	--tab-font-size: #{toRem(15)};
 	--tab-font-family: var(--font-family-secondary);
