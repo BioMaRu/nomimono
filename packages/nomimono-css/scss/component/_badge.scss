@@ -14,9 +14,9 @@
 	border-radius: toRem(6);
 	background: hsl(var(--hsl-primary) / 0.075);
 
-	&.is-variant-secondary {
-		color: hsl(var(--hsl-secondary));
-		background: hsl(var(--hsl-secondary) / 0.075);
+	&.is-variant-accent {
+		color: hsl(var(--hsl-accent));
+		background: hsl(var(--hsl-accent) / 0.075);
 	}
 
 	&.is-variant-positive {
