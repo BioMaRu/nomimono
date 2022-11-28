@@ -1,25 +1,4 @@
 #==============================
-# {libs} nomimono-react
-#==============================
-build-nomimono-react:
-	nx build nomimono-react
-
-patch-nomimono-react:
-	nx run nomimono-react:version \
-		--releaseAs=patch \
-		--push=true \
-		--skipRootChangelog=true \
-		--skipProjectChangelog=true \
-
-publish-nomimono-react:
-	cd dist/packages/nomimono-react && npm publish
-
-zpatch-nomimono-react:
-	#prebuilt to check error before semver patch (because build will copy package.json to /dist after build)
-	make build-nomimono-react && \
-	make patch-nomimono-react && make build-nomimono-react && make publish-nomimono-react
-
-#==============================
 # {libs} nomimono-theme
 #==============================
 build-nomimono-theme:
