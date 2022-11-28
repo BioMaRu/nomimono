@@ -15,6 +15,7 @@
 		{ label: 'Badge', path: 'badge' },
 		{ label: 'Button', path: 'button' },
 		{ label: 'Card', path: 'card' },
+		{ label: 'Checkbox', path: 'checkbox' },
 		{ label: 'Dropdown', path: 'dropdown' },
 		{ label: 'Input', path: 'input' },
 		{ label: 'Link', path: 'link' },
@@ -24,9 +25,9 @@
 		{ label: 'Panel', path: 'panel' },
 		{ label: 'Radio', path: 'radio' },
 		{ label: 'Select', path: 'select' },
-		{ label: 'Textarea', path: 'textarea' },
-		{ label: 'Checkbox', path: 'checkbox' },
+		{ label: 'Switch', path: 'switch' },
 		{ label: 'Tabs', path: 'tabs' },
+		{ label: 'Textarea', path: 'textarea' },
 	]
 
 	const ATOMICS = [

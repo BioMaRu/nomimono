@@ -1,0 +1,71 @@
+.#{$prefix}switch {
+	display: inline-flex;
+
+	input[type=checkbox],
+	input[type=radio] {
+		flex-shrink: 0;
+		width: toRem(48);
+		height: toRem(24);
+		cursor: pointer;
+		transition: all 0.16s ease-in-out;
+		transition-timing-function: ease-in-out;
+		transition-duration: 0.28s;
+		border-radius: 999px;
+		background-color: hsl(var(--handle-color) / var(--handle-opacity));
+		box-shadow: var(--handleoffsetcalculator) 0 0 2px hsl(var(--base-color) / var(--base-opacity)) inset,
+		0 0 0 2px hsl(var(--base-color) / var(--base-opacity)) inset,
+		0 0;
+		-webkit-appearance: none;
+		appearance: none;
+
+		--handleoffset: 1.5rem;
+		--handleoffsetcalculator: calc(var(--handleoffset) * -1);
+
+		--handle-color: var(--hsl-white);
+		--handle-opacity: 1;
+
+		--base-color: var(--hsl-base-400);
+		--base-opacity: 1;
+
+
+		&:checked {
+			--handleoffsetcalculator: calc(var(--handleoffset));
+			--handle-opacity: 1;
+			--base-opacity: 1;
+			--handle-color: var(--hsl-white);
+			--base-color: var(--hsl-primary);
+			--border-color: var(--hsl-primary);
+		}
+
+		&[disabled] {
+			cursor: not-allowed;
+			opacity: 0.7;
+		}
+	}
+
+	label {
+		font-size: toRem(15);
+		font-weight: 500;
+		cursor: pointer;
+		user-select: none;
+	}
+
+
+	@keyframes checkbox-animate {
+		0% {
+			transform: scale(0.85);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes checkbox-int-animate {
+		0% {
+			transform: scale(0.85);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+}
