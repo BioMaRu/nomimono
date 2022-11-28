@@ -37,7 +37,7 @@ prepare-nomimono-css:
 	nx run nomimono-css:prepare
 
 zpatch-nomimono-css:
-	make build-nomimono-css && make prepare-nomimono-css && make patch-nomimono-css && make publish-nomimono-css
+	make build-nomimono-css && make patch-nomimono-css && make prepare-nomimono-css && make publish-nomimono-css
 
 #==============================
 # storybook

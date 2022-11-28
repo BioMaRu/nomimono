@@ -10,7 +10,7 @@
 		"prepare": {
 			"executor": "@nrwl/workspace:run-commands",
 			"options": {
-				"command": "cp -r packages/nomimono-css/scss dist/packages/nomimono-css/scss"
+				"command": "cp -r packages/nomimono-css/package.json dist/packages/nomimono-css/package.json"
 			}
 		},
 		"version": {
