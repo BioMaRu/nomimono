@@ -26,6 +26,7 @@
 		{ label: 'Radio', path: 'radio' },
 		{ label: 'Select', path: 'select' },
 		{ label: 'Switch', path: 'switch' },
+		{ label: 'Table', path: 'table' },
 		{ label: 'Tabs', path: 'tabs' },
 		{ label: 'Textarea', path: 'textarea' },
 	]
