@@ -1,0 +1,44 @@
+.#{$prefix}breadcrumb {
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: 500;
+	font-family: var(--font-family-secondary);
+
+	.#{$prefix}breadcrumb-item {
+		position: relative;
+		display: inline-block;
+
+		&:not(:first-child) {
+			padding-left: 40px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 24px;
+				width: toRem(8);
+				height: toRem(8);
+				border-bottom: 1px solid hsl(var(--hsl-content) / 0.3);
+				border-left: 1px solid hsl(var(--hsl-content) / 0.3);
+				pointer-events: none;
+				transform: rotate(-135deg)
+					translate(100%, calc(-0% - #{toRem(4)}));
+			}
+		}
+	}
+
+	&.is-variant-slash {
+		.#{$prefix}breadcrumb-item {
+			&:not(:first-child) {
+				&::before {
+					content: '/';
+					top: 0;
+					left: 18px;
+					border: none;
+					transform: unset;
+					color: hsl(var(--hsl-content) / 0.3);
+				}
+			}
+		}
+	}
+}

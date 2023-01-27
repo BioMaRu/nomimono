@@ -26,6 +26,7 @@
 	] as const
 
 	const NAVIGATION = [
+		{ label: 'Breadcrumb', path: 'breadcrumb' },
 		{ label: 'Link', path: 'link' },
 		{ label: 'Tabs', path: 'tabs' },
 		{ label: 'Menu', path: 'menu' },
