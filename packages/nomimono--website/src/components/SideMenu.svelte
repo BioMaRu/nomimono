@@ -9,27 +9,36 @@
 		{ label: 'Class name', path: 'class-name' },
 		{ label: 'CSS variable', path: 'variable' },
 		{ label: 'Customization', path: 'customization' },
-	]
+	] as const
 
-	const COMPONENTS = [
-		{ label: 'Badge', path: 'badge' },
+	const INTERACTION = [
 		{ label: 'Button', path: 'button' },
-		{ label: 'Card', path: 'card' },
-		{ label: 'Checkbox', path: 'checkbox' },
 		{ label: 'Dropdown', path: 'dropdown' },
+	] as const
+
+	const FORM = [
 		{ label: 'Input', path: 'input' },
-		{ label: 'Link', path: 'link' },
-		{ label: 'Menu', path: 'menu' },
-		{ label: 'Message', path: 'message' },
-		{ label: 'Modal', path: 'modal' },
-		{ label: 'Panel', path: 'panel' },
+		{ label: 'Checkbox', path: 'checkbox' },
 		{ label: 'Radio', path: 'radio' },
 		{ label: 'Select', path: 'select' },
 		{ label: 'Switch', path: 'switch' },
-		{ label: 'Table', path: 'table' },
-		{ label: 'Tabs', path: 'tabs' },
 		{ label: 'Textarea', path: 'textarea' },
-	]
+	] as const
+
+	const NAVIGATION = [
+		{ label: 'Link', path: 'link' },
+		{ label: 'Tabs', path: 'tabs' },
+		{ label: 'Menu', path: 'menu' },
+	] as const
+
+	const DISPLAY_DATA = [
+		{ label: 'Badge', path: 'badge' },
+		{ label: 'Card', path: 'card' },
+		{ label: 'Message', path: 'message' },
+		{ label: 'Panel', path: 'panel' },
+		{ label: 'Table', path: 'table' },
+		{ label: 'Modal', path: 'modal' },
+	] as const
 
 	const ATOMICS = [
 		'align-content',
@@ -45,7 +54,7 @@
 		'border-color',
 		'border-radius',
 		// 'display',
-	]
+	] as const
 </script>
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
@@ -61,8 +70,35 @@
 </div>
 
 <ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
-	<li class="group-label">Component</li>
-	{#each COMPONENTS as it}
+	<li class="group-label">Interaction</li>
+	{#each INTERACTION as it}
+		<li class:is-active={pathname === `/component/${it.path}`}>
+			<a href={`/component/${it.path}`}>{`${it.label}`}</a>
+		</li>
+	{/each}
+</ul>
+
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+	<li class="group-label">Form</li>
+	{#each FORM as it}
+		<li class:is-active={pathname === `/component/${it.path}`}>
+			<a href={`/component/${it.path}`}>{`${it.label}`}</a>
+		</li>
+	{/each}
+</ul>
+
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+	<li class="group-label">Navigation</li>
+	{#each NAVIGATION as it}
+		<li class:is-active={pathname === `/component/${it.path}`}>
+			<a href={`/component/${it.path}`}>{`${it.label}`}</a>
+		</li>
+	{/each}
+</ul>
+
+<ul class="nm-menu is-variant-inset is-active-variant-simple is-compact _w-100pct">
+	<li class="group-label">Display Data</li>
+	{#each DISPLAY_DATA as it}
 		<li class:is-active={pathname === `/component/${it.path}`}>
 			<a href={`/component/${it.path}`}>{`${it.label}`}</a>
 		</li>

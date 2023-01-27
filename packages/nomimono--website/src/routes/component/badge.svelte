@@ -19,6 +19,7 @@
 	<div slot="code">
 		{dedent`
 			<div class="nm-badge">Badge</div>
+			<div class="nm-badge is-variant-accent">Badge</div>
 			<div class="nm-badge is-variant-positive">Badge</div>
 			<div class="nm-badge is-variant-negative">Badge</div>
 			<div class="nm-badge is-variant-warning">Badge</div>
