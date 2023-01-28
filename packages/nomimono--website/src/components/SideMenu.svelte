@@ -45,6 +45,7 @@
 		'align-content',
 		'align-items',
 		'align-self',
+		'aspect-ratio',
 		'backface-visibility',
 		'background-attachment',
 		'background-blend-mode',
@@ -54,6 +55,7 @@
 		'background-size',
 		'border-color',
 		'border-radius',
+		'border-width',
 		// 'display',
 	] as const
 </script>
@@ -118,6 +120,13 @@
 		</li>
 	{/each}
 </ul>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <style lang="scss">
 	.nm-menu {
