@@ -1,29 +1,16 @@
 <script lang="ts">
 	import ModifierSelector from '$components/ModifierSelector.svelte'
-
-	import { afterUpdate } from 'svelte'
+	import { asValue } from '../../helpers'
 
 	let suffix = ''
-
-	afterUpdate(async () => {
-		const items = document.querySelectorAll(
-			'#border-color-table tbody tr td:last-child div div',
-		)
-		const ct = Array.from(document.querySelectorAll('#border-color-table tbody tr .computed'))
-
-		Array.from(items).forEach((it, idx) => {
-			const a = window.getComputedStyle(it)
-			ct[idx].innerText = a.backgroundColor
-		})
-	})
 
 	const COLORS = [
 		'primary',
 		'primary-active',
 		'primary-content',
-		'secondary',
-		'secondary-active',
-		'secondary-content',
+		'accent',
+		'accent-active',
+		'accent-content',
 		'base-100',
 		'base-200',
 		'base-300',
@@ -41,7 +28,12 @@
 		'info-content',
 		'black',
 		'white',
+		'crcl',
+		'tpr',
+		'ihr',
+		'us',
 	]
+	const NOT_COLOR = ['crcl', 'tpr', 'ihr', 'us']
 </script>
 
 <h1 class="_fs-8">Border color</h1>
@@ -54,7 +46,7 @@
 
 <section
 	class="nm-table-container is-scroll-padding u-scrollbar _ovfy-sc _mgt-8"
-	id="border-color-table"
+	id="color-table"
 	style="max-height: 480px;"
 >
 	<table class="nm-table is-variant-compact is-header-sticky">
@@ -70,39 +62,26 @@
 				<tr>
 					<td><code class="_cl-accent">{`_bdcl-${color}${suffix}`}</code></td>
 					<td>
-						<div>{`border-color: hsl(var(--hsl-${color}))`}</div>
+						{#if !NOT_COLOR.includes(color)}
+							<div>{`border-color: hsl(var(--hsl-${color}))`}</div>
+						{:else}
+							<div>{`border-color: ${asValue(color, 'hsl')}`}</div>
+						{/if}
 						<div class="_mgt-3 _cl-opacity-60 _cl-content">
-							= <span class="computed" />
+							{#if !NOT_COLOR.includes(color)}
+								hsl <span>{asValue(color, 'hsl')}</span>
+							{/if}
 						</div>
 					</td>
 					<td>
 						<div class="u-flex-middle">
-							<div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color}`} />
+							{#if !NOT_COLOR.includes(color)}
+								<div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color}`} />
+							{/if}
 						</div>
 					</td>
 				</tr>
 			{/each}
-			<tr>
-				<td><code class="_cl-accent">{`_bdcl-tpr${suffix}`}</code></td>
-				<td>
-					<div>border-color: transparent</div>
-				</td>
-				<td />
-			</tr>
-			<tr>
-				<td><code class="_cl-accent">{`_bdcl-crcl${suffix}`}</code></td>
-				<td>
-					<div>border-color: currentColor</div>
-				</td>
-				<td />
-			</tr>
-			<tr>
-				<td><code class="_cl-accent">{`_bdcl-ihr${suffix}`}</code></td>
-				<td>
-					<div>background-color: inherit</div>
-				</td>
-				<td />
-			</tr>
 		</tbody>
 	</table>
 </section>
@@ -112,14 +91,13 @@
 
 <hr class="_mgt-9" />
 
-<h5 class="_mgt-8">Background color opacity</h5>
+<h5 class="_mgt-8">Border color opacity</h5>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	Use with <code class="_cl-accent">_bdcl-*</code> class to set the opacity of that border color.
-	<br />
-	for example; class="<code class="_cl-accent">_bdcl-primary _bdcl-opacity-50</code>"
+	Use with <code class="_cl-accent">_bdcl-*</code> class to set the opacity of that color. <br />
+	for example class="<code class="_cl-accent">_bdcl-primary _bdcl-opacity-50</code>"
 </p>
 
 <section

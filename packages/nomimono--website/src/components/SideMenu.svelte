@@ -57,6 +57,7 @@
 		'border-radius',
 		'border-width',
 		'bottom',
+		'color',
 		'left',
 		'right',
 		'top',

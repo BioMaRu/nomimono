@@ -12,6 +12,10 @@ export function asValue(k: string | number, property: string) {
 			return 'inherit'
 		case 'us':
 			return 'unset'
+		case 'crcl':
+			return 'currentColor'
+		case 'tpr':
+			return 'transparent'
 		default:
 			return window
 				.getComputedStyle(document.documentElement)

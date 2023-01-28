@@ -35,6 +35,7 @@ $background-colors: (
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
+	'us': unset,
 );
 
 /* Generate color class
@@ -67,6 +68,7 @@ $colors: (
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
+	'us': unset,
 );
 
 /* Generate border-color class
@@ -99,6 +101,7 @@ $border-colors: (
 	'tpr': transparent,
 	'crcl': currentColor,
 	'ihr': inherit,
+	'us': unset,
 );
 
 /* Generate opacity class

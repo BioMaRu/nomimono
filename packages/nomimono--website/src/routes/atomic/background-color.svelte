@@ -1,31 +1,16 @@
 <script lang="ts">
 	import ModifierSelector from '$components/ModifierSelector.svelte'
-
-	import { afterUpdate } from 'svelte'
+	import { asValue } from '../../helpers'
 
 	let suffix = ''
-
-	afterUpdate(async () => {
-		const items = document.querySelectorAll(
-			'#background-color-table tbody tr td:last-child div div',
-		)
-		const ct = Array.from(
-			document.querySelectorAll('#background-color-table tbody tr .computed'),
-		)
-
-		Array.from(items).forEach((it, idx) => {
-			const a = window.getComputedStyle(it)
-			ct[idx].innerText = a.backgroundColor
-		})
-	})
 
 	const COLORS = [
 		'primary',
 		'primary-active',
 		'primary-content',
-		'secondary',
-		'secondary-active',
-		'secondary-content',
+		'accent',
+		'accent-active',
+		'accent-content',
 		'base-100',
 		'base-200',
 		'base-300',
@@ -43,7 +28,12 @@
 		'info-content',
 		'black',
 		'white',
+		'crcl',
+		'tpr',
+		'ihr',
+		'us',
 	]
+	const NOT_COLOR = ['crcl', 'tpr', 'ihr', 'us']
 </script>
 
 <h1 class="_fs-8">Background color</h1>
@@ -72,39 +62,26 @@
 				<tr>
 					<td><code class="_cl-accent">{`_bgcl-${color}${suffix}`}</code></td>
 					<td>
-						<div>{`background-color: hsl(var(--hsl-${color}))`}</div>
+						{#if !NOT_COLOR.includes(color)}
+							<div>{`background-color: hsl(var(--hsl-${color}))`}</div>
+						{:else}
+							<div>{`background-color: ${asValue(color, 'hsl')}`}</div>
+						{/if}
 						<div class="_mgt-3 _cl-opacity-60 _cl-content">
-							= <span class="computed" />
+							{#if !NOT_COLOR.includes(color)}
+								hsl <span>{asValue(color, 'hsl')}</span>
+							{/if}
 						</div>
 					</td>
 					<td>
 						<div class="u-flex-middle">
-							<div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color}`} />
+							{#if !NOT_COLOR.includes(color)}
+								<div class={`_bdrd-4 _w-9 _h-9 _bgcl-${color}`} />
+							{/if}
 						</div>
 					</td>
 				</tr>
 			{/each}
-			<tr>
-				<td><code class="_cl-accent">{`_bgcl-tpr${suffix}`}</code></td>
-				<td>
-					<div>background-color: transparent</div>
-				</td>
-				<td />
-			</tr>
-			<tr>
-				<td><code class="_cl-accent">{`_bgcl-crcl${suffix}`}</code></td>
-				<td>
-					<div>background-color: currentColor</div>
-				</td>
-				<td />
-			</tr>
-			<tr>
-				<td><code class="_cl-accent">{`_bgcl-ihr${suffix}`}</code></td>
-				<td>
-					<div>background-color: inherit</div>
-				</td>
-				<td />
-			</tr>
 		</tbody>
 	</table>
 </section>
