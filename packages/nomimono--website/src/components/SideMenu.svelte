@@ -56,6 +56,10 @@
 		'border-color',
 		'border-radius',
 		'border-width',
+		'bottom',
+		'left',
+		'right',
+		'top',
 		// 'display',
 	] as const
 </script>

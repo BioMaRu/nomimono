@@ -5,16 +5,28 @@
 	let suffix = ''
 	let isClient = false
 
-	const CLASSES = [
-		{ atomic: '_bdw-', classes: ['border-width'] },
-		{ atomic: '_bdlw-', classes: ['border-left-width'] },
-		{ atomic: '_bdrw-', classes: ['border-right-width'] },
-		{ atomic: '_bdtw-', classes: ['border-top-width'] },
-		{ atomic: '_bdbtw-', classes: ['border-bottom-width'] },
-		{ atomic: '_bdvw-', classes: ['border-top-width', 'border-bottom-width'] },
-		{ atomic: '_bdhw-', classes: ['border-left-width', 'border-right-width'] },
+	const CLASSES = [{ atomic: '_bt-', classes: ['bottom'] }]
+	const PROPERTIES = [
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		13,
+		'50pct',
+		'100pct',
+		'at',
+		'ihr',
+		'us',
 	]
-	const PROPERTIES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 'at', 'ihr', 'us']
 	const CUSTOM_PROPERTY = 'spc'
 
 	onMount(() => {
@@ -22,12 +34,13 @@
 	})
 </script>
 
-<h1 class="_fs-8">Border width</h1>
+<h1 class="_fs-8">Bottom</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The border-width shorthand CSS property sets the width of an element's border.
+	The bottom CSS property participates in setting the vertical position of a positioned element.
+	It has no effect on non-positioned elements.
 </p>
 
 <section class="nm-table-container is-scroll-padding u-scrollbar _mgt-8" style="max-height: 400px;">
