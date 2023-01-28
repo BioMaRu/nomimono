@@ -3,13 +3,13 @@
 		--bgcl-opacity: 1;
 		background-color: #{$value} !important;
 	}
-};
+}
 
 @each $key, $value in $opacity {
 	.#{$atom-prefix}bgcl-opacity-#{$key} {
 		--bgcl-opacity: #{$value};
 	}
-};
+}
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
@@ -18,9 +18,9 @@
 				--bgcl-opacity: 1;
 				background-color: #{$value} !important;
 			}
-		};
-	};
-};
+		}
+	}
+}
 
 @each $key, $value in $background-colors {
 	.#{$atom-prefix}bgcl-#{$key}\:hover {
@@ -29,4 +29,4 @@
 			background-color: #{$value} !important;
 		}
 	}
-};
+} ;

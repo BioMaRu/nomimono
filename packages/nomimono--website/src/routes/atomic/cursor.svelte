@@ -4,14 +4,12 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: '_dp-b', classes: ['display: block'] },
-		{ atomic: '_dp-f', classes: ['display: flex'] },
-		{ atomic: '_dp-g', classes: ['display: grid'] },
-		{ atomic: '_dp-il', classes: ['display: inline'] },
-		{ atomic: '_dp-ilb', classes: ['display: inline-block'] },
-		{ atomic: '_dp-ilf', classes: ['display: inline-flex'] },
-		{ atomic: '_dp-ilg', classes: ['display: inline-grid'] },
-		{ atomic: '_dp-n', classes: ['display: none'] },
+		{ atomic: '_cs-pt', classes: ['cursor: pointer'] },
+		{ atomic: '_cs-h', classes: ['cursor: help'] },
+		{ atomic: '_cs-nal', classes: ['cursor: not-allowed'] },
+		{ atomic: '_cs-m', classes: ['cursor: move'] },
+		{ atomic: '_cs-w', classes: ['cursor: wait'] },
+		{ atomic: '_cs-at', classes: ['cursor: auto'] },
 	]
 </script>
 

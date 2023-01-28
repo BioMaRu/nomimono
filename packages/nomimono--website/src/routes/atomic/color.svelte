@@ -2,6 +2,12 @@
 	import ModifierSelector from '$components/ModifierSelector.svelte'
 	import { asValue } from '../../helpers'
 
+	import { onMount } from 'svelte'
+	let isClient = false
+	onMount(() => {
+		isClient = true
+	})
+
 	let suffix = ''
 
 	const COLORS = [
@@ -63,10 +69,10 @@
 						{#if !NOT_COLOR.includes(color)}
 							<div>{`color: hsl(var(--hsl-${color}))`}</div>
 						{:else}
-							<div>{`color: ${asValue(color, 'hsl')}`}</div>
+							<div>{`color: isClient && ${asValue(color, 'hsl')}`}</div>
 						{/if}
 						<div class="_mgt-3 _cl-opacity-60 _cl-content">
-							{#if !NOT_COLOR.includes(color)}
+							{#if isClient && !NOT_COLOR.includes(color)}
 								hsl <span>{asValue(color, 'hsl')}</span>
 							{/if}
 						</div>

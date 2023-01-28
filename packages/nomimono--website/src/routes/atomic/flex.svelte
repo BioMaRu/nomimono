@@ -4,24 +4,19 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: '_dp-b', classes: ['display: block'] },
-		{ atomic: '_dp-f', classes: ['display: flex'] },
-		{ atomic: '_dp-g', classes: ['display: grid'] },
-		{ atomic: '_dp-il', classes: ['display: inline'] },
-		{ atomic: '_dp-ilb', classes: ['display: inline-block'] },
-		{ atomic: '_dp-ilf', classes: ['display: inline-flex'] },
-		{ atomic: '_dp-ilg', classes: ['display: inline-grid'] },
-		{ atomic: '_dp-n', classes: ['display: none'] },
+		{ atomic: 'f-1', classes: ['flex: 1'] },
+		{ atomic: 'f-n', classes: ['flex: none'] },
+		{ atomic: 'f-at', classes: ['flex: auto'] },
 	]
 </script>
 
-<h1 class="_fs-8">Cursor</h1>
+<h1 class="_fs-8">Flex</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an
-	element.
+	The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space
+	available in its flex container.
 </p>
 
 <section class="nm-table-container _mgt-8">

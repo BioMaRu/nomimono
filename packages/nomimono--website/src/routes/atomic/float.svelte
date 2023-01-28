@@ -4,24 +4,23 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: '_dp-b', classes: ['display: block'] },
-		{ atomic: '_dp-f', classes: ['display: flex'] },
-		{ atomic: '_dp-g', classes: ['display: grid'] },
-		{ atomic: '_dp-il', classes: ['display: inline'] },
-		{ atomic: '_dp-ilb', classes: ['display: inline-block'] },
-		{ atomic: '_dp-ilf', classes: ['display: inline-flex'] },
-		{ atomic: '_dp-ilg', classes: ['display: inline-grid'] },
-		{ atomic: '_dp-n', classes: ['display: none'] },
+		{ atomic: 'f-l', classes: ['float: left'] },
+		{ atomic: 'f-r', classes: ['float: right'] },
+		{ atomic: 'f-n', classes: ['float: none'] },
+		{ atomic: 'f-ilst', classes: ['float: inline-start'] },
+		{ atomic: 'f-ile', classes: ['float: inline-end'] },
+		{ atomic: 'f-us', classes: ['float: unset'] },
 	]
 </script>
 
-<h1 class="_fs-8">Cursor</h1>
+<h1 class="_fs-8">Float</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an
-	element.
+	The float CSS property places an element on the left or right side of its container, allowing
+	text and inline elements to wrap around it. The element is removed from the normal flow of the
+	page, though still remaining a part of the flow (in contrast to absolute positioning).
 </p>
 
 <section class="nm-table-container _mgt-8">

@@ -4,24 +4,20 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: '_dp-b', classes: ['display: block'] },
-		{ atomic: '_dp-f', classes: ['display: flex'] },
-		{ atomic: '_dp-g', classes: ['display: grid'] },
-		{ atomic: '_dp-il', classes: ['display: inline'] },
-		{ atomic: '_dp-ilb', classes: ['display: inline-block'] },
-		{ atomic: '_dp-ilf', classes: ['display: inline-flex'] },
-		{ atomic: '_dp-ilg', classes: ['display: inline-grid'] },
-		{ atomic: '_dp-n', classes: ['display: none'] },
+		{ atomic: 'fdrt-r', classes: ['flex-direction: row'] },
+		{ atomic: 'fdrt-cl', classes: ['flex-direction: column'] },
+		{ atomic: 'fdrt-rrv', classes: ['flex-direction: row-reverse'] },
+		{ atomic: 'fdrt-clrv', classes: ['flex-direction: column-reverse'] },
 	]
 </script>
 
-<h1 class="_fs-8">Cursor</h1>
+<h1 class="_fs-8">Flex direction</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an
-	element.
+	The flex-direction CSS property sets how flex items are placed in the flex container defining
+	the main axis and the direction (normal or reversed).
 </p>
 
 <section class="nm-table-container _mgt-8">

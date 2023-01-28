@@ -3,31 +3,24 @@
 	import ModifierSelector from '$components/ModifierSelector.svelte'
 	import { asValue, asProperty } from '../../helpers'
 	let suffix = ''
-
-	const CLASSES = [
-		{ atomic: '_bdw-', classes: ['border-width'] },
-		{ atomic: '_bdlw-', classes: ['border-left-width'] },
-		{ atomic: '_bdrw-', classes: ['border-right-width'] },
-		{ atomic: '_bdtw-', classes: ['border-top-width'] },
-		{ atomic: '_bdbtw-', classes: ['border-bottom-width'] },
-		{ atomic: '_bdvw-', classes: ['border-top-width', 'border-bottom-width'] },
-		{ atomic: '_bdhw-', classes: ['border-left-width', 'border-right-width'] },
-	]
-	const PROPERTIES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 'at', 'ihr', 'us']
-	const CUSTOM_PROPERTY = 'spc'
-
 	let isClient = false
+
+	const CLASSES = [{ atomic: '_ffml-', classes: ['font-family'] }]
+	const PROPERTIES = ['primary', 'secondary']
+	const CUSTOM_PROPERTY = 'ffml'
+
 	onMount(() => {
 		isClient = true
 	})
 </script>
 
-<h1 class="_fs-8">Border width</h1>
+<h1 class="_fs-8">Font family</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The border-width shorthand CSS property sets the width of an element's border.
+	The font-family CSS property specifies a prioritized list of one or more font family names
+	and/or generic family names for the selected element.
 </p>
 
 <section class="nm-table-container is-scroll-padding u-scrollbar _mgt-8" style="max-height: 400px;">
@@ -57,7 +50,7 @@
 						<code class="_cl-accent">{it}</code>
 					</td>
 					<td>{asProperty(it, CUSTOM_PROPERTY)}</td>
-					<td class="_tal-r">
+					<td class="_tal-l _wsp-nm">
 						{#if isClient}
 							<div>
 								{asValue(it, CUSTOM_PROPERTY)}

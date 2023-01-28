@@ -58,10 +58,17 @@
 		'border-width',
 		'bottom',
 		'color',
+		'cursor',
+		'display',
+		'fill',
+		'flex',
+		'flex-direction',
+		'flex-wrap',
+		'float',
+		'font-family',
 		'left',
 		'right',
 		'top',
-		// 'display',
 	] as const
 </script>
 
