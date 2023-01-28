@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="content">
-			<div style="max-width: 800px;">
+			<div class="_w-100pct" style="max-width: 800px;">
 				<slot />
 			</div>
 		</div>
@@ -72,6 +72,8 @@
 		}
 
 		.content {
+			display: flex;
+			justify-content: center;
 			padding: 32px 32px 128px 32px;
 		}
 	}
