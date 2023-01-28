@@ -66,9 +66,15 @@
 		'flex-wrap',
 		'float',
 		'font-family',
+		'font-size',
+		'font-weight',
+		'gap',
+		'grid-auto-flow',
+		'height',
 		'left',
 		'right',
 		'top',
+		'width',
 	] as const
 </script>
 

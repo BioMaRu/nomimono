@@ -16,6 +16,10 @@ export function asValue(k: string | number, property: string) {
 			return 'currentColor'
 		case 'tpr':
 			return 'transparent'
+		case '100vw':
+			return '100vw'
+		case '100vh':
+			return '100vh'
 		default:
 			return window
 				.getComputedStyle(document.documentElement)

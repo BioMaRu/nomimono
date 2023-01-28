@@ -209,7 +209,6 @@ $width_height: (
 	'at': auto,
 	'us': unset,
 	'ihr': inherit,
-	'80ch': 80ch,
 	'100vw': 100vw,
 	'100vh': 100vh,
 );
@@ -258,6 +257,7 @@ $gap: (
 	'12': var(--spc-12),
 	'13': var(--spc-13),
 	'us': unset,
+	'ihr': inherit,
 );
 
 /* Generate border-width class

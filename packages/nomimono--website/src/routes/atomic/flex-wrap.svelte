@@ -4,9 +4,9 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: 'fw-nw', classes: ['flex-wrap: nowrap'] },
-		{ atomic: 'fw-w', classes: ['flex-wrap: wrap'] },
-		{ atomic: 'fw-wrv', classes: ['flex-wrap: wrap-reverse'] },
+		{ atomic: '_fw-nw', classes: ['flex-wrap: nowrap'] },
+		{ atomic: '_fw-w', classes: ['flex-wrap: wrap'] },
+		{ atomic: '_fw-wrv', classes: ['flex-wrap: wrap-reverse'] },
 	]
 </script>
 

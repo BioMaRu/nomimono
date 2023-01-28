@@ -4,19 +4,21 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: '_f-1', classes: ['flex: 1'] },
-		{ atomic: '_f-n', classes: ['flex: none'] },
-		{ atomic: '_f-at', classes: ['flex: auto'] },
+		{ atomic: '_gatf-r', classes: ['grid-auto-flow: row'] },
+		{ atomic: '_gatf-cl', classes: ['grid-auto-flow: column'] },
+		{ atomic: '_gatf-d', classes: ['grid-auto-flow: dense'] },
+		{ atomic: '_gatf-rd', classes: ['grid-auto-flow: row dense'] },
+		{ atomic: '_gatf-cld', classes: ['grid-auto-flow: column dense'] },
 	]
 </script>
 
-<h1 class="_fs-8">Flex</h1>
+<h1 class="_fs-8">Grid auto flow</h1>
 
 <br />
 
 <p class="_cl-content _cl-opacity-70 _fs-3">
-	The flex CSS shorthand property sets how a flex item will grow or shrink to fit the space
-	available in its flex container.
+	The grid-auto-flow CSS property controls how the auto-placement algorithm works, specifying
+	exactly how auto-placed items get flowed into the grid.
 </p>
 
 <section class="nm-table-container _mgt-8">

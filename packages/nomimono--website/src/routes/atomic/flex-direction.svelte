@@ -4,10 +4,10 @@
 	let suffix = ''
 
 	const ITEMS = [
-		{ atomic: 'fdrt-r', classes: ['flex-direction: row'] },
-		{ atomic: 'fdrt-cl', classes: ['flex-direction: column'] },
-		{ atomic: 'fdrt-rrv', classes: ['flex-direction: row-reverse'] },
-		{ atomic: 'fdrt-clrv', classes: ['flex-direction: column-reverse'] },
+		{ atomic: '_fdrt-r', classes: ['flex-direction: row'] },
+		{ atomic: '_fdrt-cl', classes: ['flex-direction: column'] },
+		{ atomic: '_fdrt-rrv', classes: ['flex-direction: row-reverse'] },
+		{ atomic: '_fdrt-clrv', classes: ['flex-direction: column-reverse'] },
 	]
 </script>
 
