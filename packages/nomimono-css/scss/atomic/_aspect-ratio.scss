@@ -1,0 +1,35 @@
+.#{$atom-prefix}aprt-1\/1 {
+	aspect-ratio: 1 / 1 !important;
+}
+.#{$atom-prefix}aprt-3\/2 {
+	aspect-ratio: 3 / 2 !important;
+}
+.#{$atom-prefix}aprt-4\/3 {
+	aspect-ratio: 4 / 3 !important;
+}
+.#{$atom-prefix}aprt-16\/9 {
+	aspect-ratio: 16 / 9 !important;
+}
+.#{$atom-prefix}aprt-16\/10 {
+	aspect-ratio: 16 / 10 !important;
+}
+
+@each $breakpointName, $breakpointSize in $breakpoints {
+	@media (min-width: $breakpointSize) {
+		.#{$atom-prefix}aprt-1\/1:#{$breakpointName} {
+			aspect-ratio: 1 / 1 !important;
+		}
+		.#{$atom-prefix}aprt-3\/2:#{$breakpointName} {
+			aspect-ratio: 3 / 2 !important;
+		}
+		.#{$atom-prefix}aprt-4\/3:#{$breakpointName} {
+			aspect-ratio: 4 / 3 !important;
+		}
+		.#{$atom-prefix}aprt-16\/9:#{$breakpointName} {
+			aspect-ratio: 16 / 9 !important;
+		}
+		.#{$atom-prefix}aprt-16\/10:#{$breakpointName} {
+			aspect-ratio: 16 / 10 !important;
+		}
+	}
+} ;
