@@ -71,6 +71,7 @@
 		'gap',
 		'grid-auto-flow',
 		'height',
+		'isolation',
 		'left',
 		'right',
 		'top',
@@ -137,6 +138,7 @@
 			<a href={`/atomic/${it}`}>{`${it}`}</a>
 		</li>
 	{/each}
+	<li><div class="_tal-ct">...WIP...</div></li>
 </ul>
 
 <br />
