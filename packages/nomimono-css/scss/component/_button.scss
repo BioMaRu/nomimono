@@ -97,6 +97,11 @@
 			box-shadow: 0 0 0 0.175rem hsl(var(--hsl-accent) / 0.3);
 		}
 
+		&:hover,
+		&:focus {
+			background: hsl(var(--hsl-accent-active));
+		}
+
 		&.is-loading {
 			color: transparent;
 
@@ -115,6 +120,11 @@
 			box-shadow: 0 0 0 0.175rem hsl(var(--hsl-negative) / 0.3);
 		}
 
+		&:hover,
+		&:focus {
+			background: hsl(var(--hsl-negative) / 0.85);
+		}
+
 		&.is-loading {
 			color: transparent;
 
@@ -131,6 +141,11 @@
 
 		:not(.is-no-focus-ring):focus {
 			box-shadow: 0 0 0 0.175rem hsl(var(--hsl-positive) / 0.3);
+		}
+
+		&:hover,
+		&:focus {
+			background: hsl(var(--hsl-positive) / 0.85);
 		}
 
 		&.is-loading {
