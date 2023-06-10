@@ -45,7 +45,7 @@
 <br />
 <Story>
 	<div class="nm-dropdown">
-		<button class="nm-button">Open Dropdown</button>
+		<div class="nm-button">Open Dropdown</div>
 
 		<ul class="nm-menu is-card" tabindex="0">
 			<li>
@@ -60,7 +60,7 @@
 	<div slot="code">
 		{dedent`
 			<div class="nm-dropdown">
-				<button class="nm-button" tabindex="0">Open Dropdown</button>
+				<div class="nm-button" tabindex="0">Open Dropdown</div>
 
 				<ul tabindex="0" class="nm-menu is-card">
 					<li>
