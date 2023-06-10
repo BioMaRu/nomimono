@@ -38,7 +38,7 @@ export default {
 
 			'table-head-font-weight': { value: '500' },
 			'table-head-font-size': { value: '14px' },
-			'table-head-font-family': { value: `var(--font-family-secondary)`, control: 'text' },
+			'table-head-font-family': { value: `var(--ffml-secondary)`, control: 'text' },
 			'table-head-vertical-padding': { value: '12px' },
 
 			'table-data-vertical-padding': { value: '16px' },

@@ -30,7 +30,7 @@ export default {
 		actions: { argTypesRegex: '^on' },
 		cssprops: {
 			'select-button-font-weight': { value: '400' },
-			'select-button-font-family': { value: `var(--font-family-primary)`, control: 'text' },
+			'select-button-font-family': { value: `var(--ffml-primary)`, control: 'text' },
 
 			'select-button-small-height': { value: '28px' },
 			'select-button-small-font-size': { value: '12px' },

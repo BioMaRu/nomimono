@@ -1,6 +1,6 @@
 @import '../helper';
 
-[data-theme="light"] {
+[data-theme='light'] {
 	--lo-container-side-padding: 24px;
 	--lo-page-aside-content--aside-width: #{toRem(300)};
 
@@ -15,21 +15,19 @@
 
 	--form-element-border-radius: #{toEm(6)};
 	--form-element-label-font-size: #{toRem(14)};
-	--form-element-label-font-family: var(--font-family-secondary);
+	--form-element-label-font-family: var(--ffml-secondary);
 	--form-element-label-font-weight: 600;
 
 	--select-font-weight: 400;
-
 
 	/* message */
 	--message-font-size: #{toRem(15)};
 	--message-icon-font-size: #{toRem(22)};
 
-
 	/* button */
 	--button-border-radius: #{toEm(8)};
 	--button-font-weight: 600;
-	--button-font-family: var(--font-family-primary);
+	--button-font-family: var(--ffml-primary);
 
 	--button-small-height: #{toRem(28)};
 	--button-small-font-size: #{toRem(13)};
@@ -38,10 +36,9 @@
 	--button-large-height: #{toRem(48)};
 	--button-large-font-size: #{toRem(18)};
 
-
 	/* select-button */
 	--select-button-font-weight: 400;
-	--select-button-font-family: var(--font-family-primary);
+	--select-button-font-family: var(--ffml-primary);
 
 	--select-button-small-height: #{toRem(28)};
 	--select-button-small-font-size: #{toRem(12)};
@@ -50,18 +47,16 @@
 	--select-button-large-height: #{toRem(42)};
 	--select-button-large-font-size: #{toRem(18)};
 
-
 	/* tab */
 	--tab-font-weight: 500;
 	--tab-font-size: #{toRem(15)};
-	--tab-font-family: var(--font-family-secondary);
+	--tab-font-family: var(--ffml-secondary);
 	--tab-height: #{toRem(40)};
 	--tab-padding: 0 #{toRem(20)};
 	--tab-border-radius: #{toRem(8)};
 	--tab-border-width: #{toRem(1)};
 	--tab-content-border-radius: #{toRem(8)};
 	--tab-box-shadow: var(--ui-box-shadow-1);
-
 
 	/* table */
 	//--table-border-width: #{toRem(1)};
@@ -70,7 +65,7 @@
 	//
 	//--table-head-font-weight: 600;
 	//--table-head-font-size: #{toRem(15)};
-	//--table-head-font-family: var(--font-family-secondary);
+	//--table-head-font-family: var(--ffml-secondary);
 	//--table-head-vertical-padding: #{toRem(12)};
 	//
 	//--table-data-font-size: #{toRem(14)};

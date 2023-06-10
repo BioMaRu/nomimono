@@ -38,7 +38,7 @@ export default {
 		cssprops: {
 			'button-border-radius': { value: '4px' },
 			'button-font-weight': { value: '600' },
-			'button-font-family': { value: 'var(--font-family-primary)', control: 'text' },
+			'button-font-family': { value: 'var(--ffml-primary)', control: 'text' },
 
 			'button-small-height': { value: '28px' },
 			'button-small-font-size': { value: '13px' },

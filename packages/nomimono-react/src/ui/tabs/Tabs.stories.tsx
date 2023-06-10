@@ -29,7 +29,7 @@ export default {
 		cssprops: {
 			'tabs-font-weight': { value: '500' },
 			'tabs-font-size': { value: '15px' },
-			'tabs-font-family': { value: `var(--font-family-secondary)`, control: 'text' },
+			'tabs-font-family': { value: `var(--ffml-secondary)`, control: 'text' },
 			'tabs-height': { value: '40px' },
 			'tabs-padding': { value: '0 20px' },
 			'tabs-border-radius': { value: '8px' },

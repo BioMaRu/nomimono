@@ -33,7 +33,7 @@ export default {
 			'form-element-border-radius': { value: '6px' },
 			'form-element-label-font-size': { value: '14px' },
 			'form-element-label-font-family': {
-				value: 'var(--font-family-secondary)',
+				value: 'var(--ffml-secondary)',
 				control: 'text',
 			},
 			'form-element-label-font-weight': { value: '600' },
