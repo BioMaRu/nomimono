@@ -1,0 +1,48 @@
+@import '../../packages/nomimono-theme/light/main';
+@import '../../packages/nomimono-theme/dark/main';
+
+@import '../../../nomimono-css/scss/reset';
+@import '../../../nomimono-css/scss/atomic/main';
+@import '../../../nomimono-css/scss/layout/main';
+@import '../../../nomimono-css/scss/component/main';
+@import '../../../nomimono-css/scss/utility/main';
+
+.content {
+	section {
+		margin-top: var(--spc-10);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-top: 1rem;
+		padding-bottom: 0.75rem;
+		padding-left: 1em;
+		color: hsl(var(--hsl-content) / 80%);
+		font-size: var(--fs-3);
+	}
+
+	p {
+		margin-top: 1rem;
+		color: hsl(var(--hsl-content) / 80%);
+		font-size: var(--fs-3);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.5em;
+	}
+
+	code:not([class^='language']) {
+		color: hsl(var(--hsl-accent));
+	}
+
+	[commaid-line] code {
+		color: hsl(var(--hsl-white));
+	}
+}

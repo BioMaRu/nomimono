@@ -1,38 +1,48 @@
-# create-svelte
+# Welcome
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Sveltekit + Nomimono CSS
 
-## Creating a project
+### What's included
 
-If you're seeing this, you've probably already done this step. Congrats!
+- typescript
+- [sveltekit](https://kit.svelte.dev/)
+- [nomimono](https://nomimono.pages.dev/)
+- [zod](https://github.com/colinhacks/zod)
+- [sweetalert](https://sweetalert2.github.io/)
+- [svelte-toast](https://github.com/zerodevx/svelte-toast)
+- [dayjs](https://day.js.org/)
+- yarn 3
+- api proxy
+- runtime env
+- sass
+- eslint
+- prettier
+- stylelint
+- fontsource
+
+### For Vscode please install these extensions
+
+- eslint
+- stylelint
+- prettier
+- svelte for VS Code
+
+### Clone with digit
+
+Inside your project directory
 
 ```bash
-# create a new project in the current directory
-npm init svelte
-
-# create a new project in my-app
-npm init svelte my-app
+npx degit biomaru/svelte-nomimono
 ```
 
-## Developing
+To clone this repo files in to your project directory
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Development
 
 ```bash
-npm run dev
+yarn
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# then
+make dev
+
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

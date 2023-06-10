@@ -1,27 +1,22 @@
-import adapter from '@sveltejs/adapter-cloudflare'
-import preprocess from 'svelte-preprocess'
-import { isoImport } from 'vite-plugin-iso-import'
+import adapter from '@sveltejs/adapter-auto'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: vitePreprocess(),
 
 	kit: {
 		adapter: adapter(),
-
-		vite: {
-			plugins: [isoImport()],
-		},
-
-		// Override http methods in the Todo forms
-		methodOverride: {
-			allowed: ['PATCH', 'DELETE'],
-		},
-
 		alias: {
+			$style: 'src/style',
+			$services: 'src/services',
 			$components: 'src/components',
+			$types: 'src/@types',
+		},
+		version: {
+			pollInterval: 60 * 1000, // 1m
 		},
 	},
 }
