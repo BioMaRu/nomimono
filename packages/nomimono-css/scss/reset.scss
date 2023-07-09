@@ -19,11 +19,13 @@ html {
 
 html,
 body {
+	--cl-opacity: 1;
+
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	color: hsl(var(--hsl-content));
-	--cl-opacity: 1;
+	background-color: hsl(var(--hsl-base-100));
 }
 
 main {

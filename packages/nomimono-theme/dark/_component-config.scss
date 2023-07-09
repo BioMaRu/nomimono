@@ -1,11 +1,6 @@
-@import '../helper';
+@import "../helper";
 
-[data-theme='dark'] {
-	html,
-	body {
-		background-color: hsl(var(--hsl-base-100));
-	}
-
+[data-theme="dark"] {
 	--lo-container-side-padding: 24px;
 	--lo-page-aside-content--aside-width: #{toRem(300)};
 

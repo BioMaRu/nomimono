@@ -1,2 +1,6 @@
-@import '../../nomimono-css/scss/reset';
 @import '../../nomimono-theme/light/main';
+@import '../../nomimono-theme/dark/main';
+
+@import '../../nomimono-css/scss/reset';
+@import '../../nomimono-css/scss/atomic/main';
+@import '../../nomimono-css/scss/layout/main';

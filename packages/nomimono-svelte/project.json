@@ -15,9 +15,7 @@
 				"commands":[
                     "npm run build",
                     "rm -rf ./../../dist/packages/nomimono-svelte",
-                    "mkdir -p ./../../dist/packages/nomimono-svelte/dist",
-                    "cp -r dist ./../../dist/packages/nomimono-svelte",
-                    "cp -r package.json ./../../dist/packages/nomimono-svelte"
+                    "cp -a dist/. ./../../dist/packages/nomimono-svelte"
                 ],
                 "parallel": false
 			}

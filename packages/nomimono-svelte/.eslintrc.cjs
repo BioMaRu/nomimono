@@ -1,12 +1,11 @@
 module.exports = {
 	root: true,
-	extends: ['eslint:recommended', 'plugin:svelte/recommended','prettier'],
+	extends: ['eslint:recommended', 'plugin:svelte/recommended', 'prettier'],
 	plugins: ['simple-import-sort'],
 	overrides: [{ files: ['*.svelte'] }],
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 2020,
-        extraFileExtensions: ['.svelte'],
 	},
 	env: {
 		browser: true,
