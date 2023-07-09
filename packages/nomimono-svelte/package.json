@@ -5,14 +5,14 @@
 	"files": [
 		"dist"
 	],
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"publishConfig": {
 		"access": "public"
 	},
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"types": "./index.d.ts",
+			"svelte": "./index.js"
 		}
 	},
 	"scripts": {
