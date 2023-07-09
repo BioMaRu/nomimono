@@ -1,0 +1,52 @@
+{
+	"name": "@nomimono/nomimono-svelte",
+	"license": "MIT",
+	"files": [
+		"dist"
+	],
+	"version": "0.0.1",
+	"publishConfig": {
+		"access": "public"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "svelte-kit sync && svelte-package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"@sveltejs/kit": "^1.22.1",
+		"@sveltejs/package": "^2.1.0",
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-simple-import-sort": "^10.0.0",
+		"eslint-plugin-svelte": "^2.32.2",
+		"postcss": "^8.4.24",
+		"postcss-html": "^1.5.0",
+		"postcss-scss": "^4.0.6",
+		"prettier": "^3.0.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"sass": "^1.63.6",
+		"stylelint": "^15.10.1",
+		"stylelint-config-recommended-scss": "^12.0.0",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-config-standard-scss": "^10.0.0",
+		"stylelint-order": "^6.0.3",
+		"stylelint-prettier": "^4.0.0",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.5",
+		"tslib": "^2.6.0",
+		"typescript": "^5.1.6",
+		"vite": "^4.4.2"
+	},
+	"type": "module"
+}
