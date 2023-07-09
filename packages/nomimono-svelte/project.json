@@ -1,0 +1,43 @@
+{
+	"name": "nomimono-svelte",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"targets": {
+		"dev": {
+			"executor": "nx:run-script",
+			"options": {
+				"script": "dev"
+			}
+		},
+		"build": {
+			"executor": "nx:run-commands",
+			"options": {
+                "cwd": "packages/nomimono-svelte",
+				"commands":[
+                    "npm run build",
+                    "rm -rf ./../../dist/packages/nomimono-svelte",
+                    "mkdir -p ./../../dist/packages/nomimono-svelte/dist",
+                    "cp -r dist ./../../dist/packages/nomimono-svelte",
+                    "cp -r package.json ./../../dist/packages/nomimono-svelte"
+                ],
+                "parallel": false
+			}
+		},
+		"version": {
+			"executor": "@jscutlery/semver:version",
+			"options": {
+				"preset": "conventional"
+			}
+		},
+
+        "publish": {
+			"executor": "nx:run-commands",
+			"options": {
+                "cwd": "packages/nomimono-svelte",
+				"commands": [
+                    "cp -r package.json ./../../dist/packages/nomimono-svelte",
+                    "cd ./../../dist/packages/nomimono-svelte && npm publish"
+                ]
+			}
+		}
+	}
+}

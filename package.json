@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"private": true,
 	"devDependencies": {
+        "@nx/devkit": "^16.5.0",
 		"@jscutlery/semver": "^3.0.0",
 		"nx": "16.3.2"
 	},
