@@ -1,5 +1,37 @@
 <script lang="ts">
-	export let size: 'small' | 'medium' | 'large' = 'medium'
+	import type { HTMLButtonAttributes } from 'svelte/elements'
+
+	interface $$Props extends HTMLButtonAttributes {
+		size?: 'small' | 'medium' | 'large'
+		variant?:
+			| 'primary'
+			| 'secondary'
+			| 'tertiary'
+			| 'outline'
+			| 'ghost'
+			| 'accent'
+			| 'negative'
+			| 'positive'
+			| 'white'
+		state?: 'loading' | undefined
+		fluid?: boolean
+		compact?: boolean
+		pill?: boolean
+		square?: boolean
+	}
+
+	interface $$Slots {
+		/* If you want to type the default slot, change the property name below to "default" */
+		default: any
+	}
+
+	export let size: $$Props['size'] = 'medium'
+	export let variant: $$Props['variant'] = 'primary'
+	export let state: $$Props['state'] = undefined
+	export let fluid: $$Props['fluid'] = false
+	export let compact: $$Props['compact'] = false
+	export let pill: $$Props['pill'] = false
+	export let square: $$Props['square'] = false
 </script>
 
 <button
@@ -10,6 +42,22 @@
 	on:mouseenter
 	on:mouseleave
 	class:small={size === 'small'}
+	class:is-variant-primary={variant === 'primary'}
+	class:is-variant-secondary={variant === 'secondary'}
+	class:is-variant-tertiary={variant === 'tertiary'}
+	class:is-variant-outline={variant === 'outline'}
+	class:is-variant-ghost={variant === 'ghost'}
+	class:is-variant-accent={variant === 'accent'}
+	class:is-variant-negative={variant === 'negative'}
+	class:is-variant-positive={variant === 'positive'}
+	class:is-variant-white={variant === 'white'}
+	class:is-size-small={size === 'small'}
+	class:is-size-large={size === 'large'}
+	class:is-loading={state === 'loading'}
+	class:is-fluid={fluid}
+	class:is-compact={compact}
+	class:is-pill={pill}
+	class:is-square={square}
 >
 	<slot />
 </button>
@@ -17,13 +65,13 @@
 <style lang="scss">
 	button {
 		position: relative;
-		z-index: 0;
 		display: inline-flex;
+		gap: 0.75em;
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
 		min-height: var(--button-medium-height);
-		padding: 0 18px;
+		padding: 0 1.25em;
 		border: none;
 		border-radius: var(--button-border-radius);
 		background: hsl(var(--hsl-primary));
@@ -32,27 +80,12 @@
 		font-weight: var(--button-font-weight);
 		font-size: var(--button-medium-font-size);
 		font-family: var(--button-font-family);
-		line-height: 100%;
 		cursor: pointer;
 		user-select: none;
 		transition: all 0.16s ease-in-out;
 
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			z-index: -1;
-			pointer-events: none;
-			transition: all 0.16s ease-in-out;
-		}
-
-		&:hover,
-		&:focus {
-			background: hsl(var(--hsl-primary-active) / 100%);
-		}
-
-		&:not(.is-no-focus-ring):focus {
-			box-shadow: 0 0 0 0.175rem hsl(var(--hsl-primary) / 30%);
+		&:hover {
+			background: color-mix(in srgb, hsl(var(--hsl-primary)) 80%, white);
 		}
 
 		&.is-loading {
@@ -77,115 +110,57 @@
 
 		&.is-size-small {
 			min-height: var(--button-small-height);
-			padding: 0 16px;
+			padding: 0 1em;
 			font-size: var(--button-small-font-size);
 		}
 
 		&.is-size-medium {
 			min-height: var(--button-medium-height);
-			padding: 0 18px;
+			padding: 0 1.125em;
 			font-size: var(--button-medium-font-size);
 		}
 
 		&.is-size-large {
 			min-height: var(--button-large-height);
-			padding: 0 20px;
+			padding: 0 1.25em;
 			font-size: var(--button-large-font-size);
 		}
 
-		&.is-variant-accent {
-			background: hsl(var(--hsl-accent));
-			color: hsl(var(--hsl-accent-content));
-
-			&:hover,
-			&:focus {
-				background: hsl(var(--hsl-accent-active));
-			}
-
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-accent) / 30%);
-			}
-
-			&.is-loading {
-				color: transparent;
-
-				&::after {
-					border-top-color: hsl(var(--hsl-accent-content));
-					border-right-color: hsl(var(--hsl-accent-content));
-				}
-			}
-		}
-
-		&.is-variant-negative {
-			background: hsl(var(--hsl-negative));
-			color: hsl(var(--hsl-negative-content));
-
-			&:hover,
-			&:focus {
-				background: hsl(var(--hsl-negative) / 85%);
-			}
-
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-negative) / 30%);
-			}
-
-			&.is-loading {
-				color: transparent;
-
-				&::after {
-					border-top-color: hsl(var(--hsl-negative-content));
-					border-right-color: hsl(var(--hsl-negative-content));
-				}
-			}
-		}
-
-		&.is-variant-positive {
-			background: hsl(var(--hsl-positive));
-			color: hsl(var(--hsl-positive-content));
-
-			&:hover,
-			&:focus {
-				background: hsl(var(--hsl-positive) / 85%);
-			}
-
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-positive) / 30%);
-			}
-
-			&.is-loading {
-				color: transparent;
-
-				&::after {
-					border-top-color: hsl(var(--hsl-positive-content));
-					border-right-color: hsl(var(--hsl-positive-content));
-				}
-			}
-		}
-
 		&.is-variant-secondary {
-			border: 1px solid hsl(var(--hsl-content) / 15%);
+			border: 1px solid currentcolor;
 			background: transparent;
-			color: hsl(var(--hsl-content));
+			color: hsl(var(--hsl-primary));
 
 			&:hover {
-				border: 1px solid hsl(var(--hsl-content) / 20%);
-				background: hsl(var(--hsl-content) / 5%);
-
-				&::before {
-					background: var(--color-shade-100);
-				}
-			}
-
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-primary) / 30%);
+				background: hsl(var(--hsl-content) / 8%);
 			}
 
 			&.is-loading {
+				border: 1px solid hsl(var(--hsl-primary));
 				color: transparent;
 
 				&::after {
 					border-top-color: hsl(var(--hsl-primary));
 					border-right-color: hsl(var(--hsl-primary));
+				}
+			}
+		}
+
+		&.is-variant-outline {
+			border: 1px solid hsl(var(--hsl-content) / 15%);
+			background: transparent;
+			color: hsl(var(--hsl-content));
+
+			&:hover {
+				background: hsl(var(--hsl-content) / 5%);
+			}
+
+			&.is-loading {
+				color: transparent;
+
+				&::after {
+					border-top-color: hsl(var(--hsl-content) / 100%);
+					border-right-color: hsl(var(--hsl-content) / 100%);
 				}
 			}
 		}
@@ -197,10 +172,6 @@
 
 			&:hover {
 				background: hsl(var(--hsl-content) / 15%);
-			}
-
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-primary) / 30%);
 			}
 
 			&.is-loading {
@@ -222,16 +193,85 @@
 				background: hsl(var(--hsl-content) / 5%);
 			}
 
-			&:not(.is-no-focus-ring):focus {
-				box-shadow: 0 0 0 0.175rem hsl(var(--hsl-primary) / 30%);
-			}
-
 			&.is-loading {
 				color: transparent;
 
 				&::after {
 					border-top-color: hsl(var(--hsl-content) / 100%);
 					border-right-color: hsl(var(--hsl-content) / 100%);
+				}
+			}
+		}
+
+		&.is-variant-accent {
+			background: hsl(var(--hsl-accent));
+			color: hsl(var(--hsl-accent-content));
+
+			&:hover {
+				background: color-mix(in srgb, hsl(var(--hsl-accent)) 80%, white);
+			}
+
+			&.is-loading {
+				color: transparent;
+
+				&::after {
+					border-top-color: hsl(var(--hsl-accent-content));
+					border-right-color: hsl(var(--hsl-accent-content));
+				}
+			}
+		}
+
+		&.is-variant-negative {
+			background: hsl(var(--hsl-negative));
+			color: hsl(var(--hsl-negative-content));
+
+			&:hover {
+				background: color-mix(in srgb, hsl(var(--hsl-negative)) 80%, white);
+			}
+
+			&.is-loading {
+				color: transparent;
+
+				&::after {
+					border-top-color: hsl(var(--hsl-negative-content));
+					border-right-color: hsl(var(--hsl-negative-content));
+				}
+			}
+		}
+
+		&.is-variant-positive {
+			background: hsl(var(--hsl-positive));
+			color: hsl(var(--hsl-positive-content));
+
+			&:hover {
+				background: color-mix(in srgb, hsl(var(--hsl-positive)) 80%, white);
+			}
+
+			&.is-loading {
+				color: transparent;
+
+				&::after {
+					border-top-color: hsl(var(--hsl-positive-content));
+					border-right-color: hsl(var(--hsl-positive-content));
+				}
+			}
+		}
+
+		&.is-variant-white {
+			border: 1px solid hsl(var(--hsl-content) / 15%);
+			background: hsl(var(--hsl-white));
+			color: hsl(var(--hsl-black));
+
+			&:hover {
+				background: color-mix(in srgb, hsl(var(--hsl-white)) 90%, black);
+			}
+
+			&.is-loading {
+				color: transparent;
+
+				&::after {
+					border-top-color: hsl(var(--hsl-black));
+					border-right-color: hsl(var(--hsl-black));
 				}
 			}
 		}
@@ -246,28 +286,18 @@
 			width: 100%;
 		}
 
+		&.is-compact {
+			min-height: unset;
+			padding: 0.375em 0.625em;
+			border-radius: 0.25em;
+		}
+
 		&.is-pill {
 			border-radius: 999px;
 		}
 
-		&.is-icon-button {
-			padding: 0;
+		&.is-square {
 			aspect-ratio: 1 / 1;
-		}
-
-		&.is-icon-left,
-		&.is-icon-right {
-			display: flex;
-			gap: 8px;
-			align-items: center;
-		}
-
-		&.is-icon-left {
-			padding-left: 12px;
-		}
-
-		&.is-icon-right {
-			padding-right: 12px;
 		}
 	}
 

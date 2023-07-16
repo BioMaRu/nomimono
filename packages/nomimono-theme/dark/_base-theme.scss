@@ -1,16 +1,16 @@
-@import '../helper';
+@import "../helper";
 
 [data-theme="dark"] {
 	/*
 	 * Color
 	 *********************************************/
-	--hue-primary: 333;
-	--hsl-primary: var(--hue-primary) 80% 65%;
+	--hue-primary: 240;
+	--hsl-primary: var(--hue-primary) 85% 65%;
 	--hsl-primary-active: var(--hue-primary) 80% 58%;
 	--hsl-primary-content: var(--hue-primary) 0% 100%;
 
-	--hue-accent: 267;
-	--hsl-accent: var(--hue-accent) 93% 78%;
+	--hue-accent: 330;
+	--hsl-accent: var(--hue-accent) 88% 60%;
 	--hsl-accent-active: var(--hue-accent) 93% 74%;
 	--hsl-accent-content: var(--hue-accent) 93% 98%;
 
@@ -23,9 +23,9 @@
 	--hsl-content: 0 0% 75%;
 	--hsl-content-inv: 215 15% 12%;
 
-	--hsl-positive: 168 72% 42%;
+	--hsl-positive: 168 82% 35%;
 	--hsl-positive-content: 168 80% 95%;
-	--hsl-negative: 5 78% 63%;
+	--hsl-negative: 5 75% 58%;
 	--hsl-negative-content: 5 80% 97.5%;
 	--hsl-warning: 45 90% 48%;
 	--hsl-warning-content: 45 80% 97%;
@@ -38,8 +38,10 @@
 	/*
 	 * Typography
 	 *********************************************/
-	--ffml-primary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-	--ffml-secondary: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--ffml-primary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+		Roboto, "Helvetica Neue", sans-serif;
+	--ffml-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+		Roboto, "Helvetica Neue", sans-serif;
 
 	--fs-14: #{toRem(72)};
 	--fs-13: #{toRem(56)};
@@ -78,29 +80,25 @@
 	 * Box shadow
 	 *********************************************/
 	--bsd-hsl: 333deg 0% 50%;
-	--bsd-100:
-		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.05),
+	--bsd-100: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.05),
 		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.05),
 		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.05),
 		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.05);
 
-	--bsd-200:
-		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.075),
+	--bsd-200: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.075),
 		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.075),
 		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.075),
 		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.075),
 		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.075);
 
-	--bsd-300:
-		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.1),
+	--bsd-300: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.1),
 		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.1),
 		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.1),
 		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.1),
 		0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.1),
 		0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.1);
 
-	--bsd-400:
-		0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.15),
+	--bsd-400: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.15),
 		0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.15),
 		0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.15),
 		0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.15),
