@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { onDestroy, onMount, tick } from 'svelte'
+	import { cubicInOut } from 'svelte/easing'
 	import type { HTMLButtonAttributes } from 'svelte/elements'
-
+	import { tweened } from 'svelte/motion'
 	interface $$Props extends HTMLButtonAttributes {
 		size?: 'small' | 'medium' | 'large'
 		variant?:
@@ -18,10 +20,10 @@
 		compact?: boolean
 		pill?: boolean
 		square?: boolean
+		ripple?: boolean
 	}
 
 	interface $$Slots {
-		/* If you want to type the default slot, change the property name below to "default" */
 		default: any
 	}
 
@@ -32,9 +34,58 @@
 	export let compact: $$Props['compact'] = false
 	export let pill: $$Props['pill'] = false
 	export let square: $$Props['square'] = false
+	export let ripple: $$Props['ripple'] = false
+
+	let buttonEl: HTMLButtonElement
+	let rippleEl: HTMLDivElement
+	let rippleData = {
+		x: -1,
+		y: -1,
+		opacity: 1,
+	}
+
+	let rippleScale = tweened(1, {
+		duration: 500,
+		easing: cubicInOut,
+	})
+
+	async function doRipple(event: MouseEvent) {
+		if (!ripple) {
+			return
+		}
+
+		rippleScale.set(1, { duration: 0 })
+		rippleEl.style.transition = 'none'
+		rippleEl.style.transform = 'none'
+
+		rippleData.x = event.offsetX
+		rippleData.y = event.offsetY
+		rippleData.opacity = 1
+		rippleEl.style.transition = 'opacity 0.17s ease-in-out'
+
+		requestAnimationFrame(() => {
+			rippleScale.set(200).then(() => {
+				rippleData.opacity = 0
+				rippleScale.set(1)
+			})
+		})
+	}
+
+	onMount(() => {
+		if (ripple && buttonEl) {
+			buttonEl.addEventListener('mousedown', doRipple)
+		}
+	})
+
+	onDestroy(() => {
+		if (ripple && buttonEl) {
+			buttonEl.removeEventListener('mousedown', doRipple)
+		}
+	})
 </script>
 
 <button
+	bind:this={buttonEl}
 	{...$$restProps}
 	on:click
 	on:keydown
@@ -60,9 +111,29 @@
 	class:is-square={square}
 >
 	<slot />
+
+	{#if ripple}
+		<div
+			bind:this={rippleEl}
+			class="ripple"
+			style:transform={`scale(${$rippleScale})`}
+			style:left={`${rippleData.x}px`}
+			style:top={`${rippleData.y}px`}
+			style:opacity={`${rippleData.opacity}`}
+		/>
+	{/if}
 </button>
 
 <style lang="scss">
+	.ripple {
+		position: absolute;
+		width: 1px;
+		border-radius: 999px;
+		background-color: hsl(var(--hsl-white) / 20%);
+		pointer-events: none;
+		aspect-ratio: 1 / 1;
+	}
+
 	button {
 		position: relative;
 		display: inline-flex;

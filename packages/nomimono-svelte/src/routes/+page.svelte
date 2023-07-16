@@ -33,6 +33,10 @@
 	</div>
 
 	<div class="_dp-f _g-5 _pd-8">
+		<Button ripple>Ripple</Button>
+	</div>
+
+	<div class="_dp-f _g-5 _pd-8">
 		<Button disabled>Button</Button>
 		<Button disabled variant="secondary">Button</Button>
 		<Button disabled variant="tertiary">Button</Button>
@@ -66,7 +70,7 @@
 		<Button variant="secondary" size="large">Button</Button>
 	</div>
 	<div class="_dp-f _g-5 _pd-8 _alit-ct _fw-w">
-		<Button fluid>Button</Button>
+		<Button fluid ripple>Button</Button>
 	</div>
 
 	<div class="_dp-f _g-5 _pd-8 _alit-ct _fw-w">
