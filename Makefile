@@ -43,6 +43,9 @@ zpatch-nomimono-css:
 #==============================
 # {libs} nomimono-svelte
 #==============================
+dev-nomimono-svelte:
+	npx nx run nomimono-svelte:dev
+
 build-nomimono-svelte:
 	npx nx run nomimono-svelte:build
 

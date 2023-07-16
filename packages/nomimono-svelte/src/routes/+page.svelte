@@ -1,7 +1,7 @@
-<script>
-	import { Button } from '$lib'
-
+<script lang="ts">
 	import '../style.scss'
+
+	import { Button } from '$lib/index'
 
 	let theme = 'light'
 

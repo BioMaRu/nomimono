@@ -37,10 +37,6 @@
 		user-select: none;
 		transition: all 0.16s ease-in-out;
 
-		& > div {
-			z-index: 1;
-		}
-
 		&::before {
 			content: '';
 			position: absolute;
