@@ -14,12 +14,9 @@
 	export let href: $$Props['href']
 	export let variant: $$Props['variant'] = undefined
 	export let external: $$Props['external'] = false
-
-	let componentEl: HTMLAnchorElement
 </script>
 
 <a
-	bind:this={componentEl}
 	{href}
 	target={external ? '_blank' : undefined}
 	rel={external ? 'noreferrer noopener' : undefined}
