@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { onDestroy, onMount, tick } from 'svelte'
+	import { onDestroy, onMount } from 'svelte'
 	import { cubicInOut } from 'svelte/easing'
 	import type { HTMLButtonAttributes } from 'svelte/elements'
 	import { tweened } from 'svelte/motion'
+
 	interface $$Props extends HTMLButtonAttributes {
 		size?: 'small' | 'medium' | 'large'
 		variant?:
@@ -92,7 +93,6 @@
 	on:keyup
 	on:mouseenter
 	on:mouseleave
-	class:small={size === 'small'}
 	class:is-variant-primary={variant === 'primary'}
 	class:is-variant-secondary={variant === 'secondary'}
 	class:is-variant-tertiary={variant === 'tertiary'}
