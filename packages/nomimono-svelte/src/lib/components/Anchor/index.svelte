@@ -34,7 +34,7 @@
 		cursor: pointer;
 
 		&:hover {
-			color: hsl(var(--hsl-primary-active));
+			color: color-mix(in srgb, hsl(var(--hsl-primary-active)) 80%, white);
 			text-decoration: underline;
 		}
 

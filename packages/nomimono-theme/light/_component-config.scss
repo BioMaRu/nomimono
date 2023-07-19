@@ -9,9 +9,9 @@
 	--form-element-large-font-size: #{toRem(16)};
 
 	/* form elements height */
-	--form-element-small-height: #{toEm(28)};
-	--form-element-medium-height: #{toEm(40)};
-	--form-element-large-height: #{toEm(48)};
+	--form-element-small-height: #{toRem(28)};
+	--form-element-medium-height: #{toRem(40)};
+	--form-element-large-height: #{toRem(48)};
 
 	--form-element-border-radius: #{toEm(6)};
 	--form-element-label-font-size: #{toRem(14)};
@@ -25,7 +25,7 @@
 	--message-icon-font-size: #{toRem(22)};
 
 	/* button */
-	--button-border-radius: #{toEm(8)};
+	--button-border-radius: #{toEm(6)};
 	--button-font-weight: 600;
 	--button-font-family: var(--ffml-primary);
 

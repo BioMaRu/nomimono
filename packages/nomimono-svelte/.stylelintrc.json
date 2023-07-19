@@ -9,6 +9,7 @@
 		}
 	],
 	"rules": {
+		"selector-pseudo-class-no-unknown": null,
 		"at-rule-empty-line-before": null,
 		"function-name-case": null,
 		"scss/at-function-pattern": null,
