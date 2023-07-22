@@ -2,7 +2,9 @@
 	import { afterUpdate } from 'svelte'
 	import type { HTMLBaseAttributes } from 'svelte/elements'
 	interface $$Props extends HTMLBaseAttributes {
-		label: string | undefined
+		label?: string | undefined
+		description?: string | undefined
+		info?: string | undefined
 		state?: 'negative' | 'positive' | undefined
 		required?: boolean
 	}
@@ -12,6 +14,8 @@
 	}
 
 	export let label: $$Props['label'] = undefined
+	export let description: $$Props['description'] = undefined
+	export let info: $$Props['info'] = undefined
 	export let state: $$Props['state'] = undefined
 	export let required: $$Props['required'] = false
 
@@ -45,7 +49,15 @@
 		<label for={inputId}>{label}</label>
 	{/if}
 
+	{#if description}
+		<div class="description">{description}</div>
+	{/if}
+
 	<slot><!-- optional fallback --></slot>
+
+	{#if info}
+		<div class="info">{info}</div>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -58,9 +70,22 @@
 			display: flex;
 			gap: 0.25rem;
 			align-items: baseline;
+			margin-bottom: 0.125rem;
 			font-weight: var(--form-element-label-font-weight);
 			font-size: var(--form-element-label-font-size);
 			font-family: var(--form-element-label-font-family);
+		}
+
+		.description {
+			margin-bottom: 0.25rem;
+			color: hsl(var(--hsl-content) / 70%);
+			font-size: 0.875rem;
+		}
+
+		.info {
+			margin-top: 0.125rem;
+			color: hsl(var(--hsl-content) / 70%);
+			font-size: 0.875rem;
 		}
 
 		// label {
@@ -108,8 +133,10 @@
 				border-color: hsl(var(--hsl-negative));
 				box-shadow: 0 0 0 0.175em hsl(var(--hsl-negative) / 30%);
 			}
+		}
 
-			:global(.info) {
+		&.is-variant-negative {
+			.info {
 				color: hsl(var(--hsl-negative));
 			}
 		}

@@ -1,15 +1,22 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements'
+	import { current_component } from 'svelte/internal'
+
+	import { forwardEventsBuilder } from '$lib/common/helpers'
 
 	type $$Props = HTMLInputAttributes
 
 	interface $$Slots {
 		default: any
 	}
+
+	const forwardEvents = forwardEventsBuilder(current_component)
+
+	export let value: string | null = null
 </script>
 
 <div class="input">
-	<input {...$$restProps} />
+	<input bind:value {...$$restProps} use:forwardEvents />
 </div>
 
 <style lang="scss">
@@ -30,7 +37,7 @@
 			padding: 0 1em;
 			border: 1px solid hsl(var(--hsl-content) / 15%);
 			border-radius: inherit;
-			background-color: rgb(255 255 255 / 3%);
+			background-color: hsl(var(--hsl-black) / 5%);
 			color: hsl(var(--hsl-content));
 			outline: none;
 			transition: all 0.16s ease-in-out;

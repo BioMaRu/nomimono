@@ -2,7 +2,10 @@
 	import { onDestroy, onMount } from 'svelte'
 	import { cubicInOut } from 'svelte/easing'
 	import type { HTMLButtonAttributes } from 'svelte/elements'
+	import { current_component } from 'svelte/internal'
 	import { tweened } from 'svelte/motion'
+
+	import { forwardEventsBuilder } from '$lib/common/helpers'
 
 	interface $$Props extends HTMLButtonAttributes {
 		size?: 'small' | 'medium' | 'large'
@@ -36,6 +39,8 @@
 	export let pill: $$Props['pill'] = false
 	export let square: $$Props['square'] = false
 	export let ripple: $$Props['ripple'] = false
+
+	const forwardEvents = forwardEventsBuilder(current_component)
 
 	let buttonEl: HTMLButtonElement
 	let rippleEl: HTMLDivElement
@@ -86,13 +91,9 @@
 </script>
 
 <button
+	use:forwardEvents
 	bind:this={buttonEl}
 	{...$$restProps}
-	on:click
-	on:keydown
-	on:keyup
-	on:mouseenter
-	on:mouseleave
 	class:is-variant-primary={variant === 'primary'}
 	class:is-variant-secondary={variant === 'secondary'}
 	class:is-variant-tertiary={variant === 'tertiary'}
@@ -114,6 +115,7 @@
 
 	{#if ripple}
 		<div
+			use:forwardEvents
 			bind:this={rippleEl}
 			class="ripple"
 			style:transform={`scale(${$rippleScale})`}
