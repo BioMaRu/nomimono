@@ -6,6 +6,10 @@
 
 	type $$Props = HTMLInputAttributes
 
+	interface $$Slots {
+		default: any
+	}
+
 	const forwardEvents = forwardEventsBuilder(current_component)
 
 	export let value: string | null = null

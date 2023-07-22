@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte'
+	import { afterUpdate, onMount } from 'svelte'
 	import type { HTMLBaseAttributes } from 'svelte/elements'
+
 	interface $$Props extends HTMLBaseAttributes {
 		label?: string | undefined
 		description?: string | undefined
@@ -8,6 +9,10 @@
 		state?: 'negative' | 'positive' | undefined
 		size?: 'small' | 'medium' | 'large' | undefined
 		required?: boolean
+	}
+
+	interface $$Slots {
+		default: any
 	}
 
 	export let label: $$Props['label'] = undefined
@@ -24,6 +29,7 @@
 
 	afterUpdate(() => {
 		const inputEl = fieldEl?.querySelector<HTMLInputElement>('input')
+
 		if (inputEl) {
 			inputId = inputEl?.id
 		}
@@ -58,7 +64,7 @@
 		<div class="description">{description}</div>
 	{/if}
 
-	<slot><!-- optional fallback --></slot>
+	<slot />
 
 	{#if info}
 		<div class="info">{info}</div>
@@ -88,6 +94,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
+
+		:global(.input),
+		:global(.input input) {
+			height: var(--form-element-medium-height);
+			font-size: var(--form-element-medium-font-size);
+		}
 
 		label {
 			display: flex;
