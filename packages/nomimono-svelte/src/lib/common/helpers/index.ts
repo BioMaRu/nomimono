@@ -1,3 +1,4 @@
+// thank to original code from https://github.com/hperrin/svelte-material-ui/blob/273ded17c978ece3dd87f32a58dd9839e5c61325/components/forwardEvents.js
 import { bubble, listen } from 'svelte/internal'
 
 export function forwardEventsBuilder(component: unknown, additionalEvents = []) {

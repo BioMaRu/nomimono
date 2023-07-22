@@ -46,4 +46,22 @@
 			on:blur={() => console.log('blur')}
 		/>
 	</Field>
+
+	<Field label="Small" size="small">
+		<Input value="I am small" />
+	</Field>
+
+	<Field
+		label="Large"
+		size="large"
+		description="Description"
+		info="This is info in negative field state"
+		state="positive"
+	>
+		<Input value="I am large" />
+	</Field>
+
+	<Field label="Left icon">
+		<Input value="I am small" />
+	</Field>
 </div>

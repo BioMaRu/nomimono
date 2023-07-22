@@ -27,10 +27,6 @@
 		ripple?: boolean
 	}
 
-	interface $$Slots {
-		default: any
-	}
-
 	export let size: $$Props['size'] = 'medium'
 	export let variant: $$Props['variant'] = 'primary'
 	export let state: $$Props['state'] = undefined
