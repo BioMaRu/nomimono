@@ -1,15 +1,27 @@
 @each $key, $value in $gap {
-	.#{$atom-prefix}g-#{$key} { gap: #{$value} !important; }
-	.#{$atom-prefix}rg-#{$key} { row-gap: #{$value} !important; }
-	.#{$atom-prefix}clg-#{$key} { column-gap: #{$value} !important; }
-};
+	.#{$atom-prefix}g-#{$key} {
+		gap: #{$value} !important;
+	}
+	.#{$atom-prefix}rg-#{$key} {
+		row-gap: #{$value} !important;
+	}
+	.#{$atom-prefix}clg-#{$key} {
+		column-gap: #{$value} !important;
+	}
+}
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $gap {
-			.#{$atom-prefix}g-#{$key} { gap: #{$value} !important; }
-			.#{$atom-prefix}rg-#{$key} { row-gap: #{$value} !important; }
-			.#{$atom-prefix}clg-#{$key} { column-gap: #{$value} !important; }
-		};
-	};
-};
+			.#{$atom-prefix}g-#{$key}\:#{$breakpointName} {
+				gap: #{$value} !important;
+			}
+			.#{$atom-prefix}rg-#{$key}\:#{$breakpointName} {
+				row-gap: #{$value} !important;
+			}
+			.#{$atom-prefix}clg-#{$key}\:#{$breakpointName} {
+				column-gap: #{$value} !important;
+			}
+		}
+	}
+}
