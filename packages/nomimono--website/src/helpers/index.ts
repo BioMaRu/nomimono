@@ -1,4 +1,6 @@
 export function asValue(k: string | number, property: string) {
+	console.log('window', window)
+
 	switch (k) {
 		case '50pct':
 			return '50%'
@@ -21,9 +23,13 @@ export function asValue(k: string | number, property: string) {
 		case '100vh':
 			return '100vh'
 		default:
+			if (!window) {
+				return '-'
+			}
+
 			return window
-				.getComputedStyle(document.documentElement)
-				.getPropertyValue(`--${property}-${k}`)
+				?.getComputedStyle(document.documentElement)
+				?.getPropertyValue(`--${property}-${k}`)
 	}
 }
 

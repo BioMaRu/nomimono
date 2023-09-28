@@ -1,5 +1,6 @@
 <script>
 	import dedent from 'ts-dedent'
+
 	import Story from '../../../components/Story.svelte'
 </script>
 
@@ -37,6 +38,7 @@
 
 <h2 class="_fs-7 _mgt-10">Variant and styles</h2>
 <br />
+
 <Story>
 	<div class="_dp-f _alit-fst _g-6">
 		<ul class="nm-menu is-card">

@@ -32,7 +32,7 @@
 			<ThemeDropdown />
 		</div>
 
-		<div class="content">
+		<div class="content-component">
 			<div class="_w-100pct" style="max-width: 800px;">
 				<slot />
 			</div>
@@ -72,7 +72,7 @@
 			justify-content: end;
 		}
 
-		.content {
+		.content-component {
 			display: flex;
 			justify-content: center;
 			padding: 32px 32px 128px;

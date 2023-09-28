@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ModifierSelector from '$components/ModifierSelector.svelte'
+
 	import { asValue } from '../../../helpers'
 
 	let suffix = ''
@@ -87,7 +88,8 @@
 </section>
 
 <h6 class="_mgt-7 _mgbt-5">Modifier</h6>
-<ModifierSelector isIncludeHover on:change={v => (suffix = v.detail.value)} />
+
+<ModifierSelector isIncludeHover on:change={(v) => (suffix = v.detail.value)} />
 
 <hr class="_mgt-9" />
 
