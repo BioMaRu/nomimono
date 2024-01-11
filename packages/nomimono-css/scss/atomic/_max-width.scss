@@ -1,11 +1,15 @@
 @each $key, $value in $width_height {
-	.#{$atom-prefix}mxw-#{$key} { max-width: #{$value} !important; }
-};
+	.#{$atom-prefix}mxw-#{$key} {
+		max-width: #{$value} !important;
+	}
+}
 
 @each $breakpointName, $breakpointSize in $breakpoints {
 	@media (min-width: $breakpointSize) {
 		@each $key, $value in $width_height {
-			.#{$atom-prefix}mxw-#{$key}\:#{$breakpointName} { max-width: #{$value} !important; }
-		};
-	};
-};
+			.#{$atom-prefix}mxw-#{$key}\:#{$breakpointName} {
+				max-width: #{$value} !important;
+			}
+		}
+	}
+}
