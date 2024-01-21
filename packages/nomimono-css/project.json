@@ -5,7 +5,7 @@
 		"build": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "npx gulp --gulpfile packages/nomimono-css/Gulpfile.js && cp -r packages/nomimono-css/scss dist/packages/nomimono-css/scss"
+				"command": "npx gulp --gulpfile packages/nomimono-css/Gulpfile.js && cp -r packages/nomimono-css/scss dist/packages/nomimono-css/scss/"
 			}
 		},
 		"prepare": {
