@@ -1,31 +1,31 @@
-@import 'helper';
+@use 'helper';
 
 // Buttons
-@import 'button';
-@import 'select-button';
+@use 'button';
+@use 'select-button';
 
 // Display Data
-@import 'message';
-@import 'panel';
-@import 'table';
-@import 'card';
-@import 'badge';
+@use 'message';
+@use 'panel';
+@use 'table';
+@use 'card';
+@use 'badge';
 
 // interruption
-@import 'modal';
+@use 'modal';
 
 // Inputs
-@import 'field';
-@import 'input';
-@import 'textarea';
-@import 'select';
-@import 'radio';
-@import 'checkbox';
-@import 'switch';
+@use 'field';
+@use 'input';
+@use 'textarea';
+@use 'select';
+@use 'radio';
+@use 'checkbox';
+@use 'switch';
 
 // Navigation
-@import 'dropdown';
-@import 'menu';
-@import 'tabs';
-@import 'link';
-@import 'breadcrumb';
+@use 'dropdown';
+@use 'menu';
+@use 'tabs';
+@use 'link';
+@use 'breadcrumb';

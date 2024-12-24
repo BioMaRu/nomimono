@@ -1,4 +1,7 @@
-.#{$prefix}menu {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}menu {
 	font-weight: 500;
 	display: inline-flex;
 	flex-direction: column;
@@ -9,7 +12,7 @@
 	}
 
 	&.is-round-border {
-		border-radius: var(--menu-border-radius, toEm(12));
+		border-radius: var(--menu-border-radius, h.toEm(12));
 
 		> *:first-child {
 			border-top-left-radius: inherit;
@@ -23,7 +26,7 @@
 
 		&.is-variant-inset {
 			> *:not(.group-label) {
-				border-radius: toEm(8);
+				border-radius: h.toEm(8);
 			}
 		}
 	}
@@ -31,13 +34,13 @@
 	&.is-compact {
 		> *:not(.group-label) > * {
 			font-size: var(--menu-item-font-size, var(--fs-3));
-			min-height: var(--menu-item-min-height, #{toEm(40)});
-			padding: 0 toRem(16);
+			min-height: var(--menu-item-min-height, #{h.toEm(40)});
+			padding: 0 h.toRem(16);
 		}
 
 		.group-label {
 			font-size: var(--fs-2);
-			padding: 0 toRem(16);
+			padding: 0 h.toRem(16);
 		}
 	}
 
@@ -47,12 +50,12 @@
 
 	.group-label {
 		font-size: var(--fs-3);
-		margin-bottom: toEm(8);
-		padding: 0 toRem(24);
+		margin-bottom: h.toEm(8);
+		padding: 0 h.toRem(24);
 		color: hsl(var(--hsl-content) / 0.5);
 
 		&:not(:first-child) {
-			margin-top: toEm(24);
+			margin-top: h.toEm(24);
 		}
 	}
 
@@ -103,8 +106,8 @@
 			font-size: var(--menu-item-font-size, var(--fs-4));
 			display: flex;
 			align-items: center;
-			min-height: var(--menu-item-min-height, #{toEm(52)});
-			padding: 0 toEm(24);
+			min-height: var(--menu-item-min-height, #{h.toEm(52)});
+			padding: 0 h.toEm(24);
 			cursor: pointer;
 			white-space: nowrap;
 		}

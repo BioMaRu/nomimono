@@ -1,11 +1,18 @@
-@each $key, $value in $top_right_bottom_left {
-	.#{$atom-prefix}r-#{$key} { right: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$top_right_bottom_left {
+	.#{c.$atom-prefix}r-#{$key} {
+		right: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $top_right_bottom_left {
-			.#{$atom-prefix}r-#{$key}\:#{$breakpointName} { right: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$top_right_bottom_left {
+			.#{c.$atom-prefix}r-#{$key}\:#{$breakpointName} {
+				right: #{$value} !important;
+			}
+		}
+	}
+}

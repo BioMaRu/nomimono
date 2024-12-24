@@ -1,34 +1,37 @@
-.#{$atom-prefix}lst-n {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}lst-n {
 	list-style: none !important;
 }
-.#{$atom-prefix}lst-d {
+.#{c.$atom-prefix}lst-d {
 	list-style: disc !important;
 }
-.#{$atom-prefix}lst-dcm {
+.#{c.$atom-prefix}lst-dcm {
 	list-style: decimal !important;
 }
-.#{$atom-prefix}lst-lwap {
+.#{c.$atom-prefix}lst-lwap {
 	list-style: lower-alpha !important;
 }
-.#{$atom-prefix}lst-apap {
+.#{c.$atom-prefix}lst-apap {
 	list-style: upper-alpha !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}lst-n\:#{$breakpointName} {
+		.#{c.$atom-prefix}lst-n\:#{$breakpointName} {
 			list-style: none !important;
 		}
-		.#{$atom-prefix}lst-d\:#{$breakpointName} {
+		.#{c.$atom-prefix}lst-d\:#{$breakpointName} {
 			list-style: disc !important;
 		}
-		.#{$atom-prefix}lst-dcm\:#{$breakpointName} {
+		.#{c.$atom-prefix}lst-dcm\:#{$breakpointName} {
 			list-style: decimal !important;
 		}
-		.#{$atom-prefix}lst-lwap\:#{$breakpointName} {
+		.#{c.$atom-prefix}lst-lwap\:#{$breakpointName} {
 			list-style: lower-alpha !important;
 		}
-		.#{$atom-prefix}lst-apap\:#{$breakpointName} {
+		.#{c.$atom-prefix}lst-apap\:#{$breakpointName} {
 			list-style: upper-alpha !important;
 		}
 	}

@@ -1,9 +1,20 @@
-.#{$atom-prefix}f-crcl   { fill: currentColor !important; }
-.#{$atom-prefix}st-crcl   { stroke: currentColor !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}f-crcl {
+	fill: currentColor !important;
+}
+.#{c.$atom-prefix}st-crcl {
+	stroke: currentColor !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}f-crcl\:#{$breakpointName}   { fill: currentColor !important; }
-		.#{$atom-prefix}st-crcl\:#{$breakpointName}   { stroke: currentColor !important; }
-	};
-};
+		.#{c.$atom-prefix}f-crcl\:#{$breakpointName} {
+			fill: currentColor !important;
+		}
+		.#{c.$atom-prefix}st-crcl\:#{$breakpointName} {
+			stroke: currentColor !important;
+		}
+	}
+}

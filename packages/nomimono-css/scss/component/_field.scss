@@ -1,31 +1,33 @@
+@use 'config' as c;
+@use 'helper' as h;
+
 $SIZES: 'small', 'medium', 'large';
 
-.#{$prefix}field {
+.#{c.$prefix}field {
 	@extend %base-field;
 
 	// size
 	@each $s in $SIZES {
-
 		&.is-size-#{$s} {
 			font-size: var(--form-element-#{$s}-font-size);
 
-			.#{$prefix}input,
-			.#{$prefix}select {
+			.#{c.$prefix}input,
+			.#{c.$prefix}select {
 				height: var(--form-element-#{$s}-height);
 			}
 
-			.#{$prefix}input,
-			.#{$prefix}select,
-			.#{$prefix}textarea {
+			.#{c.$prefix}input,
+			.#{c.$prefix}select,
+			.#{c.$prefix}textarea {
 				font-size: var(--form-element-#{$s}-font-size);
 			}
 		}
 	}
 
 	&.is-variant-negative {
-		.#{$prefix}input input,
-		.#{$prefix}select select,
-		.#{$prefix}textarea textarea {
+		.#{c.$prefix}input input,
+		.#{c.$prefix}select select,
+		.#{c.$prefix}textarea textarea {
 			color: hsl(var(--hsl-negative));
 			border-color: hsl(var(--hsl-negative));
 
@@ -34,7 +36,7 @@ $SIZES: 'small', 'medium', 'large';
 			}
 
 			&:focus {
-				box-shadow: 0 0 0 .175em hsl(var(--hsl-negative) / 0.3);
+				box-shadow: 0 0 0 0.175em hsl(var(--hsl-negative) / 0.3);
 			}
 		}
 
@@ -44,9 +46,9 @@ $SIZES: 'small', 'medium', 'large';
 	}
 
 	&.is-variant-positive {
-		.#{$prefix}input input,
-		.#{$prefix}select select,
-		.#{$prefix}textarea textarea {
+		.#{c.$prefix}input input,
+		.#{c.$prefix}select select,
+		.#{c.$prefix}textarea textarea {
 			color: hsl(var(--hsl-positive));
 			border-color: hsl(var(--hsl-positive));
 
@@ -55,7 +57,7 @@ $SIZES: 'small', 'medium', 'large';
 			}
 
 			&:focus {
-				box-shadow: 0 0 0 .175em hsl(var(--hsl-positive) / 0.3);
+				box-shadow: 0 0 0 0.175em hsl(var(--hsl-positive) / 0.3);
 			}
 		}
 

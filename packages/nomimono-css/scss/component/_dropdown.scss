@@ -1,7 +1,10 @@
-.#{$prefix}dropdown {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}dropdown {
 	position: relative;
 	display: inline-block;
-	--gap: #{toEm(4)};
+	--gap: #{h.toEm(4)};
 
 	&:not(.is-hover-open) {
 		&:focus-within {

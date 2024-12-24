@@ -1,9 +1,20 @@
-.#{$atom-prefix}ovfw-nm  { overflow-wrap: normal !important; }
-.#{$atom-prefix}ovfw-bw  { overflow-wrap: break-word !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}ovfw-nm {
+	overflow-wrap: normal !important;
+}
+.#{c.$atom-prefix}ovfw-bw {
+	overflow-wrap: break-word !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ovfw-nm\:#{$breakpointName}  { overflow-wrap: visible !important; }
-		.#{$atom-prefix}ovfw-bw\:#{$breakpointName}  { overflow-wrap: break-word !important; }
-	};
-};
+		.#{c.$atom-prefix}ovfw-nm\:#{$breakpointName} {
+			overflow-wrap: visible !important;
+		}
+		.#{c.$atom-prefix}ovfw-bw\:#{$breakpointName} {
+			overflow-wrap: break-word !important;
+		}
+	}
+}

@@ -1,4 +1,7 @@
-.#{$prefix}button {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}button {
 	font-family: var(--button-font-family);
 	font-size: var(--button-medium-font-size);
 	font-weight: var(--button-font-weight);
@@ -13,7 +16,7 @@
 	justify-content: center;
 	min-height: var(--button-medium-height);
 
-	padding: 0 toRem(18);
+	padding: 0 h.toRem(18);
 	cursor: pointer;
 
 	user-select: none;
@@ -74,19 +77,19 @@
 	&.is-size-small {
 		font-size: var(--button-small-font-size);
 		min-height: var(--button-small-height);
-		padding: 0 toRem(16);
+		padding: 0 h.toRem(16);
 	}
 
 	&.is-size-medium {
 		font-size: var(--button-medium-font-size);
 		min-height: var(--button-medium-height);
-		padding: 0 toRem(18);
+		padding: 0 h.toRem(18);
 	}
 
 	&.is-size-large {
 		font-size: var(--button-large-font-size);
 		min-height: var(--button-large-height);
-		padding: 0 toRem(20);
+		padding: 0 h.toRem(20);
 	}
 
 	&.is-variant-accent {
@@ -160,11 +163,11 @@
 
 	&.is-variant-secondary {
 		color: hsl(var(--hsl-content));
-		border: toRem(1) solid hsl(var(--hsl-content) / 0.15);
+		border: h.toRem(1) solid hsl(var(--hsl-content) / 0.15);
 		background: transparent;
 
 		&:hover {
-			border: toRem(1) solid hsl(var(--hsl-content) / 0.2);
+			border: h.toRem(1) solid hsl(var(--hsl-content) / 0.2);
 			background: hsl(var(--hsl-content) / 0.05);
 
 			&:before {
@@ -255,15 +258,15 @@
 	&.is-icon-right {
 		display: flex;
 		align-items: center;
-		gap: toEm(8);
+		gap: h.toEm(8);
 	}
 
 	&.is-icon-left {
-		padding-left: toEm(12);
+		padding-left: h.toEm(12);
 	}
 
 	&.is-icon-right {
-		padding-right: toEm(12);
+		padding-right: h.toEm(12);
 	}
 }
 

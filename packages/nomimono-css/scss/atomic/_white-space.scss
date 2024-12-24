@@ -1,15 +1,38 @@
-.#{$atom-prefix}wsp-nm { white-space: normal !important; }
-.#{$atom-prefix}wsp-nw { white-space: nowrap !important; }
-.#{$atom-prefix}wsp-p  { white-space: pre !important; }
-.#{$atom-prefix}wsp-pl { white-space: pre-line !important; }
-.#{$atom-prefix}wsp-pw { white-space: pre-wrap !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}wsp-nm {
+	white-space: normal !important;
+}
+.#{c.$atom-prefix}wsp-nw {
+	white-space: nowrap !important;
+}
+.#{c.$atom-prefix}wsp-p {
+	white-space: pre !important;
+}
+.#{c.$atom-prefix}wsp-pl {
+	white-space: pre-line !important;
+}
+.#{c.$atom-prefix}wsp-pw {
+	white-space: pre-wrap !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}wsp-nm\:#{$breakpointName} { white-space: normal !important; }
-		.#{$atom-prefix}wsp-nw\:#{$breakpointName} { white-space: nowrap !important; }
-		.#{$atom-prefix}wsp-p\:#{$breakpointName}  { white-space: pre !important; }
-		.#{$atom-prefix}wsp-pl\:#{$breakpointName} { white-space: pre-line !important; }
-		.#{$atom-prefix}wsp-pw\:#{$breakpointName} { white-space: pre-wrap !important; }
-	};
-};
+		.#{c.$atom-prefix}wsp-nm\:#{$breakpointName} {
+			white-space: normal !important;
+		}
+		.#{c.$atom-prefix}wsp-nw\:#{$breakpointName} {
+			white-space: nowrap !important;
+		}
+		.#{c.$atom-prefix}wsp-p\:#{$breakpointName} {
+			white-space: pre !important;
+		}
+		.#{c.$atom-prefix}wsp-pl\:#{$breakpointName} {
+			white-space: pre-line !important;
+		}
+		.#{c.$atom-prefix}wsp-pw\:#{$breakpointName} {
+			white-space: pre-wrap !important;
+		}
+	}
+}

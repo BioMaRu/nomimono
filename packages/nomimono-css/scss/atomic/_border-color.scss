@@ -1,78 +1,81 @@
-@each $key, $value in $border-colors {
-	.#{$atom-prefix}bdcl-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$border-colors {
+	.#{c.$atom-prefix}bdcl-#{$key} {
 		--bdcl-opacity: 1;
 		border-color: #{$value} !important;
 	}
-	.#{$atom-prefix}bdtcl-#{$key} {
+	.#{c.$atom-prefix}bdtcl-#{$key} {
 		--bdcl-opacity: 1;
 		border-top-color: #{$value} !important;
 	}
-	.#{$atom-prefix}bdbtcl-#{$key} {
+	.#{c.$atom-prefix}bdbtcl-#{$key} {
 		--bdcl-opacity: 1;
 		border-bottom-color: #{$value} !important;
 	}
-	.#{$atom-prefix}bdlcl-#{$key} {
+	.#{c.$atom-prefix}bdlcl-#{$key} {
 		--bdcl-opacity: 1;
 		border-left-color: #{$value} !important;
 	}
-	.#{$atom-prefix}bdrcl-#{$key} {
+	.#{c.$atom-prefix}bdrcl-#{$key} {
 		--bdcl-opacity: 1;
 		border-right-color: #{$value} !important;
 	}
 }
 
-@each $key, $value in $opacity {
-	.#{$atom-prefix}bdcl-opacity-#{$key} {
+@each $key, $value in c.$opacity {
+	.#{c.$atom-prefix}bdcl-opacity-#{$key} {
 		--bdcl-opacity: #{$value};
 	}
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $colors {
-			.#{$atom-prefix}bdcl-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$colors {
+			.#{c.$atom-prefix}bdcl-#{$key}\:#{$breakpointName} {
 				border-color: #{$value} !important;
 			}
-			.#{$atom-prefix}bdtcl-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdtcl-#{$key}\:#{$breakpointName} {
 				border-top-color: #{$value} !important;
 			}
-			.#{$atom-prefix}bdbtcl-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdbtcl-#{$key}\:#{$breakpointName} {
 				border-bottom-color: #{$value} !important;
 			}
-			.#{$atom-prefix}bdlcl-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdlcl-#{$key}\:#{$breakpointName} {
 				border-left-color: #{$value} !important;
 			}
-			.#{$atom-prefix}bdrcl-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdrcl-#{$key}\:#{$breakpointName} {
 				border-right-color: #{$value} !important;
 			}
 		}
 	}
 }
 
-@each $key, $value in $colors {
-	.#{$atom-prefix}bdcl-#{$key}\:hover {
+@each $key, $value in c.$colors {
+	.#{c.$atom-prefix}bdcl-#{$key}\:hover {
 		&:hover {
 			border-color: #{$value} !important;
 		}
 	}
-	.#{$atom-prefix}bdtcl-#{$key}\:hover {
+	.#{c.$atom-prefix}bdtcl-#{$key}\:hover {
 		&:hover {
 			border-top-color: #{$value} !important;
 		}
 	}
-	.#{$atom-prefix}bdbtcl-#{$key}\:hover {
+	.#{c.$atom-prefix}bdbtcl-#{$key}\:hover {
 		&:hover {
 			border-bottom-color: #{$value} !important;
 		}
 	}
-	.#{$atom-prefix}bdlcl-#{$key}\:hover {
+	.#{c.$atom-prefix}bdlcl-#{$key}\:hover {
 		&:hover {
 			border-left-color: #{$value} !important;
 		}
 	}
-	.#{$atom-prefix}bdrcl-#{$key}\:hover {
+	.#{c.$atom-prefix}bdrcl-#{$key}\:hover {
 		&:hover {
 			border-right-color: #{$value} !important;
 		}
 	}
-} ;
+}

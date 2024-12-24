@@ -1,13 +1,32 @@
-.#{$atom-prefix}tdcrt-udl { text-decoration: underline !important; }
-.#{$atom-prefix}tdcrt-ovl { text-decoration: overline !important; }
-.#{$atom-prefix}tdcrt-lt  { text-decoration: line-through !important; }
-.#{$atom-prefix}tdcrt-n   { text-decoration: none !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}tdcrt-udl {
+	text-decoration: underline !important;
+}
+.#{c.$atom-prefix}tdcrt-ovl {
+	text-decoration: overline !important;
+}
+.#{c.$atom-prefix}tdcrt-lt {
+	text-decoration: line-through !important;
+}
+.#{c.$atom-prefix}tdcrt-n {
+	text-decoration: none !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}tdcrt-udl\:#{$breakpointName} { text-decoration: underline !important; }
-		.#{$atom-prefix}tdcrt-ovl\:#{$breakpointName} { text-decoration: overline !important; }
-		.#{$atom-prefix}tdcrt-lt\:#{$breakpointName}  { text-decoration: line-through !important; }
-		.#{$atom-prefix}tdcrt-n\:#{$breakpointName}   { text-decoration: none !important; }
-	};
-};
+		.#{c.$atom-prefix}tdcrt-udl\:#{$breakpointName} {
+			text-decoration: underline !important;
+		}
+		.#{c.$atom-prefix}tdcrt-ovl\:#{$breakpointName} {
+			text-decoration: overline !important;
+		}
+		.#{c.$atom-prefix}tdcrt-lt\:#{$breakpointName} {
+			text-decoration: line-through !important;
+		}
+		.#{c.$atom-prefix}tdcrt-n\:#{$breakpointName} {
+			text-decoration: none !important;
+		}
+	}
+}

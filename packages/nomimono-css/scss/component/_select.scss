@@ -1,4 +1,7 @@
-.#{$prefix}select {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}select {
 	font-size: var(--form-element-medium-font-size);
 	font-weight: var(--select-font-weight);
 	position: relative;
@@ -6,13 +9,13 @@
 	flex-direction: column;
 	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);
-	gap: toEm(6);
+	gap: h.toEm(6);
 
 	select {
 		@extend %base-input;
 
-		padding-right: toEm(32);
-		padding-left: toEm(12);
+		padding-right: h.toEm(32);
+		padding-left: h.toEm(12);
 		cursor: pointer;
 	}
 
@@ -25,10 +28,10 @@
 		position: absolute;
 		top: 50%;
 		right: 0.5em;
-		width: toEm(8);
-		height: toEm(8);
+		width: h.toEm(8);
+		height: h.toEm(8);
 		content: '';
-		transform: rotate(-45deg) translate(0, calc(-50% - #{toEm(4)}));
+		transform: rotate(-45deg) translate(0, calc(-50% - #{h.toEm(4)}));
 		pointer-events: none;
 		border-bottom: 2px solid hsl(var(--hsl-content) / 0.7);
 		border-left: 2px solid hsl(var(--hsl-content) / 0.7);

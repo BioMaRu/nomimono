@@ -1,5 +1,5 @@
-@import 'helper';
+@use 'helper';
 
-@import './alignment';
-@import './scrollbar';
-@import './svg-icon';
+@use './alignment';
+@use './scrollbar';
+@use './svg-icon';

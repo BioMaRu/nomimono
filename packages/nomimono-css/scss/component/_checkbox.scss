@@ -1,7 +1,10 @@
-.#{$prefix}checkbox {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}checkbox {
 	display: flex;
 	align-items: center;
-	gap: toEm(8);
+	gap: h.toEm(8);
 
 	&.is-indeterminate input,
 	input:indeterminate {
@@ -9,9 +12,23 @@
 		animation: checkbox-int-animate 0.16s ease;
 		border-color: hsl(var(--hsl-primary) / 1);
 		background-color: hsl(var(--hsl-white));
-		background-image: linear-gradient(90deg, transparent 80%, hsl(var(--hsl-primary)) 80%),
-		linear-gradient(-90deg, transparent 80%, hsl(var(--hsl-primary)) 80%),
-		linear-gradient(0deg, hsl(var(--hsl-primary)) 38%, transparent 38%, transparent 62%, hsl(var(--hsl-primary)) 62%);
+		background-image: linear-gradient(
+				90deg,
+				transparent 80%,
+				hsl(var(--hsl-primary)) 80%
+			),
+			linear-gradient(
+				-90deg,
+				transparent 80%,
+				hsl(var(--hsl-primary)) 80%
+			),
+			linear-gradient(
+				0deg,
+				hsl(var(--hsl-primary)) 38%,
+				transparent 38%,
+				transparent 62%,
+				hsl(var(--hsl-primary)) 62%
+			);
 
 		&[disabled] {
 			opacity: 0.7;
@@ -21,13 +38,13 @@
 
 	input {
 		flex-shrink: 0;
-		width: toEm(22);
-		height: toEm(22);
+		width: h.toEm(22);
+		height: h.toEm(22);
 		cursor: pointer;
-		border-width: toEm(2);
+		border-width: h.toEm(2);
 		border-style: solid;
 		border-color: hsl(var(--hsl-content) / 0.3);
-		border-radius: toRem(6);
+		border-radius: h.toRem(6);
 		background: transparent;
 		-webkit-appearance: none;
 		appearance: none;
@@ -35,17 +52,33 @@
 		&:checked {
 			animation: checkbox-animate 0.16s ease;
 			border-color: hsl(var(--hsl-primary) / 1);
-			background-image: linear-gradient(-45deg, transparent 68%, hsl(var(--hsl-primary)) 68%),
-			linear-gradient(45deg, transparent 78%, hsl(var(--hsl-primary)) 78%),
-			linear-gradient(-45deg, hsl(var(--hsl-primary)) 40%, transparent 40%),
-			linear-gradient(45deg,
+			background-image: linear-gradient(
+					-45deg,
+					transparent 68%,
+					hsl(var(--hsl-primary)) 68%
+				),
+				linear-gradient(
+					45deg,
+					transparent 78%,
+					hsl(var(--hsl-primary)) 78%
+				),
+				linear-gradient(
+					-45deg,
+					hsl(var(--hsl-primary)) 40%,
+					transparent 40%
+				),
+				linear-gradient(
+					45deg,
 					hsl(var(--hsl-primary)) 28%,
 					hsl(var(--hsl-white)) 28%,
 					hsl(var(--hsl-white)) 40%,
 					transparent 40%
-			),
-			linear-gradient(-45deg, hsl(var(--hsl-white)) 52%,
-					hsl(var(--hsl-primary)) 52%);
+				),
+				linear-gradient(
+					-45deg,
+					hsl(var(--hsl-white)) 52%,
+					hsl(var(--hsl-primary)) 52%
+				);
 
 			&[disabled] {
 				opacity: 0.7;
@@ -65,12 +98,11 @@
 	}
 
 	label {
-		font-size: toRem(15);
+		font-size: h.toRem(15);
 		font-weight: 500;
 		cursor: pointer;
 		user-select: none;
 	}
-
 
 	@keyframes checkbox-animate {
 		0% {

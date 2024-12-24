@@ -1,39 +1,42 @@
-@each $key, $value in $border-radius {
-	.#{$atom-prefix}bdrd-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$border-radius {
+	.#{c.$atom-prefix}bdrd-#{$key} {
 		border-radius: #{$value} !important;
 	}
-	.#{$atom-prefix}bdtlrd-#{$key} {
+	.#{c.$atom-prefix}bdtlrd-#{$key} {
 		border-top-left-radius: #{$value} !important;
 	}
-	.#{$atom-prefix}bdtrrd-#{$key} {
+	.#{c.$atom-prefix}bdtrrd-#{$key} {
 		border-top-right-radius: #{$value} !important;
 	}
-	.#{$atom-prefix}bdbtlrd-#{$key} {
+	.#{c.$atom-prefix}bdbtlrd-#{$key} {
 		border-bottom-left-radius: #{$value} !important;
 	}
-	.#{$atom-prefix}bdbtrrd-#{$key} {
+	.#{c.$atom-prefix}bdbtrrd-#{$key} {
 		border-bottom-right-radius: #{$value} !important;
 	}
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $border-radius {
-			.#{$atom-prefix}bdrd-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$border-radius {
+			.#{c.$atom-prefix}bdrd-#{$key}\:#{$breakpointName} {
 				border-radius: #{$value} !important;
 			}
-			.#{$atom-prefix}bdtlrd-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdtlrd-#{$key}\:#{$breakpointName} {
 				border-top-left-radius: #{$value} !important;
 			}
-			.#{$atom-prefix}bdtrrd-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdtrrd-#{$key}\:#{$breakpointName} {
 				border-top-right-radius: #{$value} !important;
 			}
-			.#{$atom-prefix}bdbtlrd-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdbtlrd-#{$key}\:#{$breakpointName} {
 				border-bottom-left-radius: #{$value} !important;
 			}
-			.#{$atom-prefix}bdbtrrd-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}bdbtrrd-#{$key}\:#{$breakpointName} {
 				border-bottom-right-radius: #{$value} !important;
 			}
 		}
 	}
-} ;
+}

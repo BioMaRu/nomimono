@@ -1,77 +1,77 @@
-@import "../helper";
+@use "../helper" as h;
 
 [data-theme="dark"] {
 	--lo-container-side-padding: 24px;
 
-	--lo-page-aside-content--aside-width: #{toRem(300)};
+	--lo-page-aside-content--aside-width: #{h.toRem(300)};
 
 	/* form elements */
-	--form-element-small-font-size: #{toRem(12)};
-	--form-element-medium-font-size: #{toRem(14)};
-	--form-element-large-font-size: #{toRem(16)};
-	--form-element-small-height: #{toEm(28)};
-	--form-element-medium-height: #{toEm(40)};
-	--form-element-large-height: #{toEm(48)};
+	--form-element-small-font-size: #{h.toRem(12)};
+	--form-element-medium-font-size: #{h.toRem(14)};
+	--form-element-large-font-size: #{h.toRem(16)};
+	--form-element-small-height: #{h.toEm(28)};
+	--form-element-medium-height: #{h.toEm(40)};
+	--form-element-large-height: #{h.toEm(48)};
 
-	--form-element-border-radius: #{toEm(6)};
-	--form-element-label-font-size: #{toRem(14)};
+	--form-element-border-radius: #{h.toEm(6)};
+	--form-element-label-font-size: #{h.toRem(14)};
 	--form-element-label-font-family: var(--ffml-secondary);
 	--form-element-label-font-weight: 600;
 
 	--select-font-weight: 400;
 
 	/* message */
-	--message-font-size: #{toRem(15)};
-	--message-icon-font-size: #{toRem(22)};
+	--message-font-size: #{h.toRem(15)};
+	--message-icon-font-size: #{h.toRem(22)};
 
 	/* button */
-	--button-border-radius: #{toEm(8)};
+	--button-border-radius: #{h.toEm(8)};
 	--button-font-weight: 600;
 	--button-font-family: var(--ffml-primary);
 
-	--button-small-height: #{toRem(28)};
-	--button-small-font-size: #{toRem(13)};
-	--button-medium-height: #{toRem(40)};
-	--button-medium-font-size: #{toRem(15)};
-	--button-large-height: #{toRem(48)};
-	--button-large-font-size: #{toRem(18)};
+	--button-small-height: #{h.toRem(28)};
+	--button-small-font-size: #{h.toRem(13)};
+	--button-medium-height: #{h.toRem(40)};
+	--button-medium-font-size: #{h.toRem(15)};
+	--button-large-height: #{h.toRem(48)};
+	--button-large-font-size: #{h.toRem(18)};
 
 	/* select-button */
 	--select-button-font-weight: 400;
 	--select-button-font-family: var(--ffml-primary);
 
-	--select-button-small-height: #{toRem(28)};
-	--select-button-small-font-size: #{toRem(12)};
-	--select-button-medium-height: #{toRem(32)};
-	--select-button-medium-font-size: #{toRem(14)};
-	--select-button-large-height: #{toRem(42)};
-	--select-button-large-font-size: #{toRem(18)};
+	--select-button-small-height: #{h.toRem(28)};
+	--select-button-small-font-size: #{h.toRem(12)};
+	--select-button-medium-height: #{h.toRem(32)};
+	--select-button-medium-font-size: #{h.toRem(14)};
+	--select-button-large-height: #{h.toRem(42)};
+	--select-button-large-font-size: #{h.toRem(18)};
 
 	/* tab */
 	--tab-font-weight: 500;
-	--tab-font-size: #{toRem(15)};
+	--tab-font-size: #{h.toRem(15)};
 	--tab-font-family: var(--ffml-secondary);
-	--tab-height: #{toRem(40)};
-	--tab-padding: 0 #{toRem(20)};
-	--tab-border-radius: #{toRem(8)};
-	--tab-border-width: #{toRem(1)};
-	--tab-content-border-radius: #{toRem(8)};
+	--tab-height: #{h.toRem(40)};
+	--tab-padding: 0 #{h.toRem(20)};
+	--tab-border-radius: #{h.toRem(8)};
+	--tab-border-width: #{h.toRem(1)};
+	--tab-content-border-radius: #{h.toRem(8)};
 	--tab-box-shadow: var(--ui-box-shadow-1);
 
 	/* table */
-	//--table-border-width: #{toRem(1)};
-	//--table-border-radius: #{toRem(8)};
+	//--table-border-width: #{h.toRem(1)};
+	//--table-border-radius: #{h.toRem(8)};
 	//--table-border-color: hsl(var(--hsl-content) / 0.1);
 	//
 	//--table-head-font-weight: 600;
-	//--table-head-font-size: #{toRem(15)};
+	//--table-head-font-size: #{h.toRem(15)};
 	//--table-head-font-family: var(--ffml-secondary);
-	//--table-head-vertical-padding: #{toRem(12)};
+	//--table-head-vertical-padding: #{h.toRem(12)};
 	//
-	//--table-data-font-size: #{toRem(14)};
-	//--table-data-vertical-padding: #{toRem(16)};
+	//--table-data-font-size: #{h.toRem(14)};
+	//--table-data-vertical-padding: #{h.toRem(16)};
 	//--table-data-border-color: hsl(var(--hsl-content) / 0.15);
 	//
-	//--table-gutter: #{toRem(24)};
-	//--table-side-padding: #{toRem(24)};
+	//--table-gutter: #{h.toRem(24)};
+	//--table-side-padding: #{h.toRem(24)};
 }

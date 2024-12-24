@@ -1,21 +1,54 @@
-.#{$atom-prefix}bsd-n { box-shadow: none !important; }
-.#{$atom-prefix}bsd-100 { box-shadow: var(--bsd-100) !important; }
-.#{$atom-prefix}bsd-200 { box-shadow: var(--bsd-200) !important; }
-.#{$atom-prefix}bsd-300 { box-shadow: var(--bsd-300) !important; }
-.#{$atom-prefix}bsd-400 { box-shadow: var(--bsd-400) !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}bsd-n {
+	box-shadow: none !important;
+}
+.#{c.$atom-prefix}bsd-100 {
+	box-shadow: var(--bsd-100) !important;
+}
+.#{c.$atom-prefix}bsd-200 {
+	box-shadow: var(--bsd-200) !important;
+}
+.#{c.$atom-prefix}bsd-300 {
+	box-shadow: var(--bsd-300) !important;
+}
+.#{c.$atom-prefix}bsd-400 {
+	box-shadow: var(--bsd-400) !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}bsd-n\:#{$breakpointName} { box-shadow: none !important; }
-		.#{$atom-prefix}bsd-100\:#{$breakpointName} { box-shadow: var(--bsd-100) !important; }
-		.#{$atom-prefix}bsd-200\:#{$breakpointName} { box-shadow: var(--bsd-200) !important; }
-		.#{$atom-prefix}bsd-300\:#{$breakpointName} { box-shadow: var(--bsd-300) !important; }
-		.#{$atom-prefix}bsd-400\:#{$breakpointName} { box-shadow: var(--bsd-400) !important; }
-	};
-};
+		.#{c.$atom-prefix}bsd-n\:#{$breakpointName} {
+			box-shadow: none !important;
+		}
+		.#{c.$atom-prefix}bsd-100\:#{$breakpointName} {
+			box-shadow: var(--bsd-100) !important;
+		}
+		.#{c.$atom-prefix}bsd-200\:#{$breakpointName} {
+			box-shadow: var(--bsd-200) !important;
+		}
+		.#{c.$atom-prefix}bsd-300\:#{$breakpointName} {
+			box-shadow: var(--bsd-300) !important;
+		}
+		.#{c.$atom-prefix}bsd-400\:#{$breakpointName} {
+			box-shadow: var(--bsd-400) !important;
+		}
+	}
+}
 
-.#{$atom-prefix}bsd-n\:hover:hover { box-shadow: none !important; }
-.#{$atom-prefix}bsd-100\:hover:hover { box-shadow: var(--bsd-100) !important; }
-.#{$atom-prefix}bsd-200\:hover:hover { box-shadow: var(--bsd-200) !important; }
-.#{$atom-prefix}bsd-300\:hover:hover { box-shadow: var(--bsd-300) !important; }
-.#{$atom-prefix}bsd-400\:hover:hover { box-shadow: var(--bsd-400) !important; }
+.#{c.$atom-prefix}bsd-n\:hover:hover {
+	box-shadow: none !important;
+}
+.#{c.$atom-prefix}bsd-100\:hover:hover {
+	box-shadow: var(--bsd-100) !important;
+}
+.#{c.$atom-prefix}bsd-200\:hover:hover {
+	box-shadow: var(--bsd-200) !important;
+}
+.#{c.$atom-prefix}bsd-300\:hover:hover {
+	box-shadow: var(--bsd-300) !important;
+}
+.#{c.$atom-prefix}bsd-400\:hover:hover {
+	box-shadow: var(--bsd-400) !important;
+}

@@ -1,13 +1,16 @@
-@each $key, $value in $width_height {
-	.#{$atom-prefix}mnh-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$width_height {
+	.#{c.$atom-prefix}mnh-#{$key} {
 		min-height: #{$value} !important;
 	}
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $width_height {
-			.#{$atom-prefix}mnh-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$width_height {
+			.#{c.$atom-prefix}mnh-#{$key}\:#{$breakpointName} {
 				min-height: #{$value} !important;
 			}
 		}

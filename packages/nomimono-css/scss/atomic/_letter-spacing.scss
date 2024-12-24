@@ -1,20 +1,53 @@
-.#{$atom-prefix}ltspc-0  { letter-spacing: 0 !important; }
-.#{$atom-prefix}ltspc-1  { letter-spacing: 0.0625em !important; }
-.#{$atom-prefix}ltspc-2  { letter-spacing: 0.125em !important; }
-.#{$atom-prefix}ltspc-3  { letter-spacing: 0.1875em !important; }
-.#{$atom-prefix}ltspc-4  { letter-spacing: 0.25em !important; }
-.#{$atom-prefix}ltspc-5 { letter-spacing:  0.5em !important; }
-.#{$atom-prefix}ltspc-6 { letter-spacing:  0.75em !important; }
-.#{$atom-prefix}ltspc-7 { letter-spacing:  1em !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}ltspc-0 {
+	letter-spacing: 0 !important;
+}
+.#{c.$atom-prefix}ltspc-1 {
+	letter-spacing: 0.0625em !important;
+}
+.#{c.$atom-prefix}ltspc-2 {
+	letter-spacing: 0.125em !important;
+}
+.#{c.$atom-prefix}ltspc-3 {
+	letter-spacing: 0.1875em !important;
+}
+.#{c.$atom-prefix}ltspc-4 {
+	letter-spacing: 0.25em !important;
+}
+.#{c.$atom-prefix}ltspc-5 {
+	letter-spacing: 0.5em !important;
+}
+.#{c.$atom-prefix}ltspc-6 {
+	letter-spacing: 0.75em !important;
+}
+.#{c.$atom-prefix}ltspc-7 {
+	letter-spacing: 1em !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ltspc-1\:#{$breakpointName}  { letter-spacing: 0 !important; }
-		.#{$atom-prefix}ltspc-2\:#{$breakpointName}  { letter-spacing: 0.0625em !important; }
-		.#{$atom-prefix}ltspc-3\:#{$breakpointName}  { letter-spacing: 0.125em !important; }
-		.#{$atom-prefix}ltspc-4\:#{$breakpointName}  { letter-spacing: 0.1875em !important; }
-		.#{$atom-prefix}ltspc-5\:#{$breakpointName} { letter-spacing: 0.25em !important; }
-		.#{$atom-prefix}ltspc-6\:#{$breakpointName} { letter-spacing: 0.5em !important; }
-		.#{$atom-prefix}ltspc-7\:#{$breakpointName} { letter-spacing: 0.75em !important; }
-	};
-};
+		.#{c.$atom-prefix}ltspc-1\:#{$breakpointName} {
+			letter-spacing: 0 !important;
+		}
+		.#{c.$atom-prefix}ltspc-2\:#{$breakpointName} {
+			letter-spacing: 0.0625em !important;
+		}
+		.#{c.$atom-prefix}ltspc-3\:#{$breakpointName} {
+			letter-spacing: 0.125em !important;
+		}
+		.#{c.$atom-prefix}ltspc-4\:#{$breakpointName} {
+			letter-spacing: 0.1875em !important;
+		}
+		.#{c.$atom-prefix}ltspc-5\:#{$breakpointName} {
+			letter-spacing: 0.25em !important;
+		}
+		.#{c.$atom-prefix}ltspc-6\:#{$breakpointName} {
+			letter-spacing: 0.5em !important;
+		}
+		.#{c.$atom-prefix}ltspc-7\:#{$breakpointName} {
+			letter-spacing: 0.75em !important;
+		}
+	}
+}

@@ -1,19 +1,26 @@
-@each $key, $value in $colors {
-	.#{$atom-prefix}tdcrtcl-#{$key} { text-decoration-color: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$colors {
+	.#{c.$atom-prefix}tdcrtcl-#{$key} {
+		text-decoration-color: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $colors {
-			.#{$atom-prefix}tdcrtcl-#{$key}\:#{$breakpointName} { text-decoration-color: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$colors {
+			.#{c.$atom-prefix}tdcrtcl-#{$key}\:#{$breakpointName} {
+				text-decoration-color: #{$value} !important;
+			}
+		}
+	}
+}
 
-@each $key, $value in $colors {
-	.#{$atom-prefix}tdcrtcl-#{$key}\:hover {
+@each $key, $value in c.$colors {
+	.#{c.$atom-prefix}tdcrtcl-#{$key}\:hover {
 		&:hover {
 			text-decoration-color: #{$value} !important;
 		}
 	}
-};
+}

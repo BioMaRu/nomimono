@@ -1,41 +1,44 @@
-.#{$atom-prefix}f-l {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}f-l {
 	float: left !important;
 }
-.#{$atom-prefix}f-r {
+.#{c.$atom-prefix}f-r {
 	float: right !important;
 }
-.#{$atom-prefix}f-n {
+.#{c.$atom-prefix}f-n {
 	float: none !important;
 }
-.#{$atom-prefix}f-ilst {
+.#{c.$atom-prefix}f-ilst {
 	float: inline-start !important;
 }
-.#{$atom-prefix}f-ile {
+.#{c.$atom-prefix}f-ile {
 	float: inline-end !important;
 }
-.#{$atom-prefix}f-us {
+.#{c.$atom-prefix}f-us {
 	float: unset !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}f-l\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-l\:#{$breakpointName} {
 			float: left !important;
 		}
-		.#{$atom-prefix}f-r\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-r\:#{$breakpointName} {
 			float: right !important;
 		}
-		.#{$atom-prefix}f-n\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-n\:#{$breakpointName} {
 			float: none !important;
 		}
-		.#{$atom-prefix}f-ilst\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-ilst\:#{$breakpointName} {
 			float: inline-start !important;
 		}
-		.#{$atom-prefix}f-ile\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-ile\:#{$breakpointName} {
 			float: inline-end !important;
 		}
-		.#{$atom-prefix}f-us\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-us\:#{$breakpointName} {
 			float: unset !important;
 		}
 	}
-} ;
+}

@@ -1,9 +1,20 @@
-.#{$atom-prefix}lstpst-is { list-style-position: inside !important }
-.#{$atom-prefix}lstpst-os { list-style-position: outside !important }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}lstpst-is {
+	list-style-position: inside !important;
+}
+.#{c.$atom-prefix}lstpst-os {
+	list-style-position: outside !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}lstpst-is\:#{$breakpointName} { list-style-position: inside !important }
-		.#{$atom-prefix}lstpst-os\:#{$breakpointName} { list-style-position: outside !important }
-	};
-};
+		.#{c.$atom-prefix}lstpst-is\:#{$breakpointName} {
+			list-style-position: inside !important;
+		}
+		.#{c.$atom-prefix}lstpst-os\:#{$breakpointName} {
+			list-style-position: outside !important;
+		}
+	}
+}

@@ -1,53 +1,56 @@
-.#{$atom-prefix}alit-nm {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}alit-nm {
 	align-items: normal !important;
 }
-.#{$atom-prefix}alit-str {
+.#{c.$atom-prefix}alit-str {
 	align-items: stretch !important;
 }
-.#{$atom-prefix}alit-ct {
+.#{c.$atom-prefix}alit-ct {
 	align-items: center !important;
 }
-.#{$atom-prefix}alit-st {
+.#{c.$atom-prefix}alit-st {
 	align-items: start !important;
 }
-.#{$atom-prefix}alit-e {
+.#{c.$atom-prefix}alit-e {
 	align-items: end !important;
 }
-.#{$atom-prefix}alit-fst {
+.#{c.$atom-prefix}alit-fst {
 	align-items: flex-start !important;
 }
-.#{$atom-prefix}alit-fe {
+.#{c.$atom-prefix}alit-fe {
 	align-items: flex-end !important;
 }
-.#{$atom-prefix}alit-bl {
+.#{c.$atom-prefix}alit-bl {
 	align-items: baseline !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}alit-nm\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-nm\:#{$breakpointName} {
 			align-items: normal !important;
 		}
-		.#{$atom-prefix}alit-str\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-str\:#{$breakpointName} {
 			align-items: stretch !important;
 		}
-		.#{$atom-prefix}alit-ct\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-ct\:#{$breakpointName} {
 			align-items: center !important;
 		}
-		.#{$atom-prefix}alit-st\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-st\:#{$breakpointName} {
 			align-items: start !important;
 		}
-		.#{$atom-prefix}alit-e\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-e\:#{$breakpointName} {
 			align-items: end !important;
 		}
-		.#{$atom-prefix}alit-fst\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-fst\:#{$breakpointName} {
 			align-items: flex-start !important;
 		}
-		.#{$atom-prefix}alit-fe\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-fe\:#{$breakpointName} {
 			align-items: flex-end !important;
 		}
-		.#{$atom-prefix}alit-bl\:#{$breakpointName} {
+		.#{c.$atom-prefix}alit-bl\:#{$breakpointName} {
 			align-items: baseline !important;
 		}
 	}
-} ;
+}

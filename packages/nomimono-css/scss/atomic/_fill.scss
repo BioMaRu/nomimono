@@ -1,11 +1,14 @@
-.#{$atom-prefix}f-crcl {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}f-crcl {
 	fill: currentColor !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}f-crcl\:#{$breakpointName} {
+		.#{c.$atom-prefix}f-crcl\:#{$breakpointName} {
 			fill: currentColor !important;
 		}
 	}
-} ;
+}

@@ -1,22 +1,25 @@
-.#{$prefix}select-button {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}select-button {
 	font-family: var(--select-button-font-family);
 	font-size: var(--select-button-medium-font-size);
 	font-weight: var(--select-button-font-weight);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: toRem(32);
-	padding: 0 toRem(12);
+	min-height: h.toRem(32);
+	padding: 0 h.toRem(12);
 	cursor: pointer;
 	transition: all 0.16s ease-in-out;
 	color: var(--color-text-100);
-	border: toRem(1) solid var(--ui-border-color-1);
+	border: h.toRem(1) solid var(--ui-border-color-1);
 	border-radius: 999px;
 	background-color: transparent;
 
 	&:hover,
 	&:focus {
-		border: toRem(1) solid var(--ui-border-color-1\:hover);
+		border: h.toRem(1) solid var(--ui-border-color-1\:hover);
 		background: transparent;
 	}
 
@@ -29,19 +32,19 @@
 	&.is-size-small {
 		font-size: var(--select-button-small-font-size);
 		min-height: var(--select-button-small-height);
-		padding: 0 toRem(12);
+		padding: 0 h.toRem(12);
 	}
 
 	&.is-size-medium {
 		font-size: var(--select-button-medium-font-size);
 		min-height: var(--select-button-medium-height);
-		padding: 0 toRem(14);
+		padding: 0 h.toRem(14);
 	}
 
 	&.is-size-large {
 		font-size: var(--select-button-large-font-size);
 		min-height: var(--select-button-large-height);
-		padding: 0 toRem(18);
+		padding: 0 h.toRem(18);
 	}
 
 	&[disabled] {

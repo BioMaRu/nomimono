@@ -1,35 +1,38 @@
-.#{$atom-prefix}asprt-1\/1 {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}asprt-1\/1 {
 	aspect-ratio: 1 / 1 !important;
 }
-.#{$atom-prefix}asprt-3\/2 {
+.#{c.$atom-prefix}asprt-3\/2 {
 	aspect-ratio: 3 / 2 !important;
 }
-.#{$atom-prefix}asprt-4\/3 {
+.#{c.$atom-prefix}asprt-4\/3 {
 	aspect-ratio: 4 / 3 !important;
 }
-.#{$atom-prefix}asprt-16\/9 {
+.#{c.$atom-prefix}asprt-16\/9 {
 	aspect-ratio: 16 / 9 !important;
 }
-.#{$atom-prefix}asprt-16\/10 {
+.#{c.$atom-prefix}asprt-16\/10 {
 	aspect-ratio: 16 / 10 !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}asprt-1\/1:#{$breakpointName} {
+		.#{c.$atom-prefix}asprt-1\/1:#{$breakpointName} {
 			aspect-ratio: 1 / 1 !important;
 		}
-		.#{$atom-prefix}asprt-3\/2:#{$breakpointName} {
+		.#{c.$atom-prefix}asprt-3\/2:#{$breakpointName} {
 			aspect-ratio: 3 / 2 !important;
 		}
-		.#{$atom-prefix}asprt-4\/3:#{$breakpointName} {
+		.#{c.$atom-prefix}asprt-4\/3:#{$breakpointName} {
 			aspect-ratio: 4 / 3 !important;
 		}
-		.#{$atom-prefix}asprt-16\/9:#{$breakpointName} {
+		.#{c.$atom-prefix}asprt-16\/9:#{$breakpointName} {
 			aspect-ratio: 16 / 9 !important;
 		}
-		.#{$atom-prefix}asprt-16\/10:#{$breakpointName} {
+		.#{c.$atom-prefix}asprt-16\/10:#{$breakpointName} {
 			aspect-ratio: 16 / 10 !important;
 		}
 	}
-} ;
+}

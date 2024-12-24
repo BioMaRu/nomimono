@@ -1,11 +1,26 @@
-.#{$atom-prefix}fw-nw { flex-wrap: nowrap; }
-.#{$atom-prefix}fw-w { flex-wrap: wrap; }
-.#{$atom-prefix}fw-wrv { flex-wrap: wrap-reverse; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}fw-nw {
+	flex-wrap: nowrap;
+}
+.#{c.$atom-prefix}fw-w {
+	flex-wrap: wrap;
+}
+.#{c.$atom-prefix}fw-wrv {
+	flex-wrap: wrap-reverse;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}fw-nw\:#{$breakpointName} { flex-wrap: nowrap !important; }
-		.#{$atom-prefix}fw-w\:#{$breakpointName} { flex-wrap: wrap !important; }
-		.#{$atom-prefix}fw-wrv\:#{$breakpointName} { flex-wrap: wrap-reverse !important; }
-	};
-};
+		.#{c.$atom-prefix}fw-nw\:#{$breakpointName} {
+			flex-wrap: nowrap !important;
+		}
+		.#{c.$atom-prefix}fw-w\:#{$breakpointName} {
+			flex-wrap: wrap !important;
+		}
+		.#{c.$atom-prefix}fw-wrv\:#{$breakpointName} {
+			flex-wrap: wrap-reverse !important;
+		}
+	}
+}

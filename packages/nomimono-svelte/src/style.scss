@@ -1,6 +1,6 @@
-@import '../../nomimono-theme/light/main';
-@import '../../nomimono-theme/dark/main';
+@use '../../nomimono-theme/light/main';
+@use '../../nomimono-theme/dark/main';
 
-@import '../../nomimono-css/scss/reset';
-@import '../../nomimono-css/scss/atomic/main';
-@import '../../nomimono-css/scss/layout/main';
+@use '../../nomimono-css/scss/reset';
+@use '../../nomimono-css/scss/atomic/main';
+@use '../../nomimono-css/scss/layout/main';

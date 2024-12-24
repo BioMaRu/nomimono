@@ -1,6 +1,9 @@
-.#{$prefix}panel {
-	padding: toEm(16);
-	border-radius: toEm(4);
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}panel {
+	padding: h.toEm(16);
+	border-radius: h.toEm(4);
 	background: hsl(var(--hsl-base-100));
 
 	&.is-level-100 {

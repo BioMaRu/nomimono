@@ -1,17 +1,20 @@
-.#{$atom-prefix}bgs-cv {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}bgs-cv {
 	background-size: cover !important;
 }
-.#{$atom-prefix}bgs-ct {
+.#{c.$atom-prefix}bgs-ct {
 	background-size: contain !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}bgs-cv\:#{$breakpointName} {
+		.#{c.$atom-prefix}bgs-cv\:#{$breakpointName} {
 			background-size: cover !important;
 		}
-		.#{$atom-prefix}bgs-ct\:#{$breakpointName} {
+		.#{c.$atom-prefix}bgs-ct\:#{$breakpointName} {
 			background-size: contain !important;
 		}
 	}
-} ;
+}

@@ -1,12 +1,15 @@
-.#{$prefix}message {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}message {
 	font-size: var(--message-font-size);
 	font-weight: 400;
 	position: relative;
 	display: flex;
-	padding: toRem(16) toRem(24);
+	padding: h.toRem(16) h.toRem(24);
 	color: hsl(var(--hsl-primary));
-	border: toRem(1) solid hsl(var(--hsl-primary) / 0.2);
-	border-radius: toRem(8);
+	border: h.toRem(1) solid hsl(var(--hsl-primary) / 0.2);
+	border-radius: h.toRem(8);
 	background: hsl(var(--hsl-primary) / 0.05);
 
 	> p {
@@ -21,13 +24,13 @@
 
 	.close {
 		position: absolute;
-		top: toRem(8);
-		right: toRem(8);
+		top: h.toRem(8);
+		right: h.toRem(8);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: toRem(24);
-		height: toRem(24);
+		width: h.toRem(24);
+		height: h.toRem(24);
 		cursor: pointer;
 		transition: opacity 0.16s ease-in-out;
 		opacity: 0.7;
@@ -37,11 +40,12 @@
 			opacity: 1;
 		}
 
-		&:before, &:after {
+		&:before,
+		&:after {
 			position: absolute;
-			left: toRem(11);
-			width: toRem(2);
-			height: toRem(16);
+			left: h.toRem(11);
+			width: h.toRem(2);
+			height: h.toRem(16);
 			content: ' ';
 			background-color: currentColor;
 		}
@@ -56,36 +60,36 @@
 	}
 
 	&.is-show-close {
-		padding-right: toRem(44);
+		padding-right: h.toRem(44);
 	}
 
 	&.is-show-icon {
 		> p {
-			padding-left: toRem(16);
+			padding-left: h.toRem(16);
 		}
 	}
 
 	&.is-variant-positive {
 		color: hsl(var(--hsl-positive));
-		border: toRem(1) solid hsl(var(--hsl-positive) / 0.3);
+		border: h.toRem(1) solid hsl(var(--hsl-positive) / 0.3);
 		background: hsl(var(--hsl-positive) / 0.05);
 	}
 
 	&.is-variant-negative {
 		color: hsl(var(--hsl-negative));
-		border: toRem(1) solid hsl(var(--hsl-negative) / 0.3);
+		border: h.toRem(1) solid hsl(var(--hsl-negative) / 0.3);
 		background: hsl(var(--hsl-negative) / 0.05);
 	}
 
 	&.is-variant-warning {
 		color: hsl(var(--hsl-warning));
-		border: toRem(1) solid hsl(var(--hsl-warning) / 0.3);
+		border: h.toRem(1) solid hsl(var(--hsl-warning) / 0.3);
 		background: hsl(var(--hsl-warning) / 0.05);
 	}
 
 	&.is-variant-info {
 		color: hsl(var(--hsl-info));
-		border: toRem(1) solid hsl(var(--hsl-info) / 0.3);
+		border: h.toRem(1) solid hsl(var(--hsl-info) / 0.3);
 		background: hsl(var(--hsl-info) / 0.05);
 	}
 }

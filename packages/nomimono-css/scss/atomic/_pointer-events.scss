@@ -1,9 +1,20 @@
-.#{$atom-prefix}ptev-at { pointer-events: auto !important; }
-.#{$atom-prefix}ptev-n { pointer-events: none !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}ptev-at {
+	pointer-events: auto !important;
+}
+.#{c.$atom-prefix}ptev-n {
+	pointer-events: none !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ptev-at\:#{$breakpointName} { pointer-events: auto !important; }
-		.#{$atom-prefix}ptev-n\:#{$breakpointName} { pointer-events: none !important; }
-	};
-};
+		.#{c.$atom-prefix}ptev-at\:#{$breakpointName} {
+			pointer-events: auto !important;
+		}
+		.#{c.$atom-prefix}ptev-n\:#{$breakpointName} {
+			pointer-events: none !important;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-@import '../helper';
+@use "../helper" as h;
 
 [data-theme="light"] {
 	--hue-primary: 333;
@@ -36,69 +36,71 @@
 	* Typography
 	*********************************************/
 
-	--ffml-primary: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-	--ffml-secondary: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+	--ffml-primary: "Inter", -apple-system, system-ui, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+	--ffml-secondary: "Inter", -apple-system, system-ui, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
-	--fs-14: #{toRem(72)};
-	--fs-13: #{toRem(56)};
-	--fs-12: #{toRem(48)};
-	--fs-11: #{toRem(40)};
-	--fs-10: #{toRem(36)};
-	--fs-9: #{toRem(32)};
-	--fs-8: #{toRem(28)};
-	--fs-7: #{toRem(24)};
-	--fs-6: #{toRem(20)};
-	--fs-5: #{toRem(18)};
-	--fs-4: #{toRem(16)};
-	--fs-3: #{toRem(15)};
-	--fs-2: #{toRem(14)};
-	--fs-1: #{toRem(12)};
+	--fs-14: #{h.toRem(72)};
+	--fs-13: #{h.toRem(56)};
+	--fs-12: #{h.toRem(48)};
+	--fs-11: #{h.toRem(40)};
+	--fs-10: #{h.toRem(36)};
+	--fs-9: #{h.toRem(32)};
+	--fs-8: #{h.toRem(28)};
+	--fs-7: #{h.toRem(24)};
+	--fs-6: #{h.toRem(20)};
+	--fs-5: #{h.toRem(18)};
+	--fs-4: #{h.toRem(16)};
+	--fs-3: #{h.toRem(15)};
+	--fs-2: #{h.toRem(14)};
+	--fs-1: #{h.toRem(12)};
 
 	/*
 	* Spacing
 	*********************************************/
-	--spc-0: #{toRem(0)};
-	--spc-1: #{toRem(1)};
-	--spc-2: #{toRem(2)};
-	--spc-3: #{toRem(4)};
-	--spc-4: #{toRem(8)};
-	--spc-5: #{toRem(12)};
-	--spc-6: #{toRem(16)};
-	--spc-7: #{toRem(24)};
-	--spc-8: #{toRem(32)};
-	--spc-9: #{toRem(40)};
-	--spc-10: #{toRem(48)};
-	--spc-11: #{toRem(64)};
-	--spc-12: #{toRem(96)};
-	--spc-13: #{toRem(128)};
+	--spc-0: #{h.toRem(0)};
+	--spc-1: #{h.toRem(1)};
+	--spc-2: #{h.toRem(2)};
+	--spc-3: #{h.toRem(4)};
+	--spc-4: #{h.toRem(8)};
+	--spc-5: #{h.toRem(12)};
+	--spc-6: #{h.toRem(16)};
+	--spc-7: #{h.toRem(24)};
+	--spc-8: #{h.toRem(32)};
+	--spc-9: #{h.toRem(40)};
+	--spc-10: #{h.toRem(48)};
+	--spc-11: #{h.toRem(64)};
+	--spc-12: #{h.toRem(96)};
+	--spc-13: #{h.toRem(128)};
 
 	/*
 	 * Box shadow
 	 *********************************************/
 	--bsd-hsl: 333deg 0% 50%;
-	--bsd-100: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.05),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.05),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.05),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.05);
+	--bsd-100: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.05);
 
-	--bsd-200: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.075),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.075),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.075),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.075),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.075);
+	--bsd-200: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.075);
 
-	--bsd-300: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.1),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.1),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.1),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.1),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.1),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.1);
+	--bsd-300: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(32)} #{h.toRem(32)} hsl(var(--bsd-hsl) / 0.1);
 
-	--bsd-400: 0 #{toRem(1)} #{toRem(1)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(2)} #{toRem(2)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(4)} #{toRem(4)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(8)} #{toRem(8)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(16)} #{toRem(16)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(32)} #{toRem(32)} hsl(var(--bsd-hsl) / 0.15),
-	0 #{toRem(64)} #{toRem(64)} hsl(var(--bsd-hsl) / 0.15);
+	--bsd-400: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(32)} #{h.toRem(32)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(64)} #{h.toRem(64)} hsl(var(--bsd-hsl) / 0.15);
 }

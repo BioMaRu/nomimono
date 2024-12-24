@@ -1,13 +1,32 @@
-.#{$atom-prefix}mbm-nm  { mix-blend-mode: normal !important; }
-.#{$atom-prefix}mbm-mtp { mix-blend-mode: multiply !important; }
-.#{$atom-prefix}mbm-sc  { mix-blend-mode: screen !important; }
-.#{$atom-prefix}mbm-ovl { mix-blend-mode: overlay !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}mbm-nm {
+	mix-blend-mode: normal !important;
+}
+.#{c.$atom-prefix}mbm-mtp {
+	mix-blend-mode: multiply !important;
+}
+.#{c.$atom-prefix}mbm-sc {
+	mix-blend-mode: screen !important;
+}
+.#{c.$atom-prefix}mbm-ovl {
+	mix-blend-mode: overlay !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}mbm-nm\:#{$breakpointName}  { mix-blend-mode: normal !important; }
-		.#{$atom-prefix}mbm-mtp\:#{$breakpointName} { mix-blend-mode: multiply !important; }
-		.#{$atom-prefix}mbm-sc\:#{$breakpointName}  { mix-blend-mode: screen !important; }
-		.#{$atom-prefix}mbm-ovl\:#{$breakpointName} { mix-blend-mode: overlay !important; }
-	};
-};
+		.#{c.$atom-prefix}mbm-nm\:#{$breakpointName} {
+			mix-blend-mode: normal !important;
+		}
+		.#{c.$atom-prefix}mbm-mtp\:#{$breakpointName} {
+			mix-blend-mode: multiply !important;
+		}
+		.#{c.$atom-prefix}mbm-sc\:#{$breakpointName} {
+			mix-blend-mode: screen !important;
+		}
+		.#{c.$atom-prefix}mbm-ovl\:#{$breakpointName} {
+			mix-blend-mode: overlay !important;
+		}
+	}
+}

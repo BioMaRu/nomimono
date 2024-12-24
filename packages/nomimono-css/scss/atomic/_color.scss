@@ -1,31 +1,34 @@
-@each $key, $value in $colors {
-	.#{$atom-prefix}cl-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$colors {
+	.#{c.$atom-prefix}cl-#{$key} {
 		--cl-opacity: 1;
 		color: #{$value} !important;
 	}
-};
+}
 
-@each $key, $value in $opacity {
-	.#{$atom-prefix}cl-opacity-#{$key} {
+@each $key, $value in c.$opacity {
+	.#{c.$atom-prefix}cl-opacity-#{$key} {
 		--cl-opacity: #{$value};
 	}
-};
+}
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $colors {
-			.#{$atom-prefix}cl-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$colors {
+			.#{c.$atom-prefix}cl-#{$key}\:#{$breakpointName} {
 				--cl-opacity: 1;
 				color: #{$value} !important;
 			}
-		};
-	};
-};
+		}
+	}
+}
 
-@each $key, $value in $colors {
-	.#{$atom-prefix}cl-#{$key}\:hover {
+@each $key, $value in c.$colors {
+	.#{c.$atom-prefix}cl-#{$key}\:hover {
 		&:hover {
 			color: #{$value} !important;
 		}
 	}
-};
+}

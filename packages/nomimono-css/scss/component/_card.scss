@@ -1,7 +1,10 @@
-.#{$prefix}card {
-	padding: toEm(16) toEm(24);
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}card {
+	padding: h.toEm(16) h.toEm(24);
 	border: 1px solid hsl(var(--hsl-content) / 0.1);
-	border-radius: toEm(8);
+	border-radius: h.toEm(8);
 	background-color: hsl(var(--hsl-base-100));
 
 	&.is-raised-100 {

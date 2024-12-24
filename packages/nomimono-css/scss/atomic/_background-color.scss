@@ -1,20 +1,23 @@
-@each $key, $value in $background-colors {
-	.#{$atom-prefix}bgcl-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$background-colors {
+	.#{c.$atom-prefix}bgcl-#{$key} {
 		--bgcl-opacity: 1;
 		background-color: #{$value} !important;
 	}
 }
 
-@each $key, $value in $opacity {
-	.#{$atom-prefix}bgcl-opacity-#{$key} {
+@each $key, $value in c.$opacity {
+	.#{c.$atom-prefix}bgcl-opacity-#{$key} {
 		--bgcl-opacity: #{$value};
 	}
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $background-colors {
-			.#{$atom-prefix}bgcl-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$background-colors {
+			.#{c.$atom-prefix}bgcl-#{$key}\:#{$breakpointName} {
 				--bgcl-opacity: 1;
 				background-color: #{$value} !important;
 			}
@@ -22,11 +25,11 @@
 	}
 }
 
-@each $key, $value in $background-colors {
-	.#{$atom-prefix}bgcl-#{$key}\:hover {
+@each $key, $value in c.$background-colors {
+	.#{c.$atom-prefix}bgcl-#{$key}\:hover {
 		&:hover {
 			--bgcl-opacity: 1;
 			background-color: #{$value} !important;
 		}
 	}
-} ;
+}

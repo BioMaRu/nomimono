@@ -1,13 +1,32 @@
-.#{$atom-prefix}ojf-cv { object-fit: cover !important; }
-.#{$atom-prefix}ojf-ct { object-fit: contain !important; }
-.#{$atom-prefix}ojf-f  { object-fit: fill !important; }
-.#{$atom-prefix}ojf-n  { object-fit: none !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}ojf-cv {
+	object-fit: cover !important;
+}
+.#{c.$atom-prefix}ojf-ct {
+	object-fit: contain !important;
+}
+.#{c.$atom-prefix}ojf-f {
+	object-fit: fill !important;
+}
+.#{c.$atom-prefix}ojf-n {
+	object-fit: none !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ojf-cv\:#{$breakpointName} { object-fit: cover !important; }
-		.#{$atom-prefix}ojf-ct\:#{$breakpointName} { object-fit: contain !important; }
-		.#{$atom-prefix}ojf-f\:#{$breakpointName}  { object-fit: fill !important; }
-		.#{$atom-prefix}ojf-n\:#{$breakpointName}  { object-fit: none !important; }
-	};
-};
+		.#{c.$atom-prefix}ojf-cv\:#{$breakpointName} {
+			object-fit: cover !important;
+		}
+		.#{c.$atom-prefix}ojf-ct\:#{$breakpointName} {
+			object-fit: contain !important;
+		}
+		.#{c.$atom-prefix}ojf-f\:#{$breakpointName} {
+			object-fit: fill !important;
+		}
+		.#{c.$atom-prefix}ojf-n\:#{$breakpointName} {
+			object-fit: none !important;
+		}
+	}
+}

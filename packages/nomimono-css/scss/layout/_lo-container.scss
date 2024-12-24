@@ -1,16 +1,21 @@
+@use 'config' as c;
+@use 'helper' as h;
+
 .lo-container {
 	display: grid;
 	width: 100%;
-	grid-template-columns: var(--lo-container-side-padding) minmax(0px, auto) var(--lo-container-side-padding);
+	grid-template-columns: var(--lo-container-side-padding) minmax(0px, auto) var(
+			--lo-container-side-padding
+		);
 	grid-template-rows: auto;
 
-	@each $breakpointName, $breakpointSize in $breakpoints {
+	@each $breakpointName, $breakpointSize in c.$breakpoints {
 		@media (min-width: $breakpointSize) {
 			grid-template-columns: 1fr $breakpointSize - 40px 1fr;
 		}
-	};
+	}
 
-	>* {
+	> * {
 		grid-column: 2 / 3;
 	}
 }

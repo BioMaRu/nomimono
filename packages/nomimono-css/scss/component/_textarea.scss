@@ -1,16 +1,19 @@
-.#{$prefix}textarea {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}textarea {
 	font-size: var(--form-element-medium-font-size);
 	font-weight: 400;
 	position: relative;
 	display: block;
 	flex-direction: column;
 	border-radius: var(--form-element-border-radius);
-	gap: toEm(6);
+	gap: h.toEm(6);
 
 	textarea {
 		@extend %base-input;
 
-		padding: toEm(12) toEm(12);
+		padding: h.toEm(12) h.toEm(12);
 	}
 
 	textarea[readonly] {

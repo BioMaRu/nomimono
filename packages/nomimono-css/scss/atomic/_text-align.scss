@@ -1,13 +1,32 @@
-.#{$atom-prefix}tal-l   { text-align: left !important; }
-.#{$atom-prefix}tal-r   { text-align: right !important; }
-.#{$atom-prefix}tal-ct  { text-align: center !important; }
-.#{$atom-prefix}tal-jtf { text-align: justify !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}tal-l {
+	text-align: left !important;
+}
+.#{c.$atom-prefix}tal-r {
+	text-align: right !important;
+}
+.#{c.$atom-prefix}tal-ct {
+	text-align: center !important;
+}
+.#{c.$atom-prefix}tal-jtf {
+	text-align: justify !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}tal-l\:#{$breakpointName}   { text-align: left !important; }
-		.#{$atom-prefix}tal-r\:#{$breakpointName}   { text-align: right !important; }
-		.#{$atom-prefix}tal-ct\:#{$breakpointName}  { text-align: center !important; }
-		.#{$atom-prefix}tal-jtf\:#{$breakpointName} { text-align: justify !important; }
-	};
-};
+		.#{c.$atom-prefix}tal-l\:#{$breakpointName} {
+			text-align: left !important;
+		}
+		.#{c.$atom-prefix}tal-r\:#{$breakpointName} {
+			text-align: right !important;
+		}
+		.#{c.$atom-prefix}tal-ct\:#{$breakpointName} {
+			text-align: center !important;
+		}
+		.#{c.$atom-prefix}tal-jtf\:#{$breakpointName} {
+			text-align: justify !important;
+		}
+	}
+}

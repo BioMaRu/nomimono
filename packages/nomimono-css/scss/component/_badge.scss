@@ -1,14 +1,17 @@
-.#{$prefix}badge {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}badge {
 	font-family: var(--ffml-secondary);
 	font-size: var(--fs-2);
 	font-weight: 600;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: toEm(28);
-	padding: toEm(12);
+	height: h.toEm(28);
+	padding: h.toEm(12);
 	color: hsl(var(--hsl-primary));
-	border-radius: toRem(6);
+	border-radius: h.toRem(6);
 	background: hsl(var(--hsl-primary) / 0.075);
 
 	&.is-variant-accent {

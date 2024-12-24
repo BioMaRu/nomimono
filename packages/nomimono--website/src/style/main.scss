@@ -1,11 +1,11 @@
-@import '../../packages/nomimono-theme/light/main';
-@import '../../packages/nomimono-theme/dark/main';
+@use '../../packages/nomimono-theme/light/main' as *;
+@use '../../packages/nomimono-theme/dark/main' as *;
 
-@import '../../../nomimono-css/scss/reset';
-@import '../../../nomimono-css/scss/atomic/main';
-@import '../../../nomimono-css/scss/layout/main';
-@import '../../../nomimono-css/scss/component/main';
-@import '../../../nomimono-css/scss/utility/main';
+@use '../../../nomimono-css/scss/reset' as *;
+@use '../../../nomimono-css/scss/atomic/main' as *;
+@use '../../../nomimono-css/scss/layout/main' as *;
+@use '../../../nomimono-css/scss/component/main' as *;
+@use '../../../nomimono-css/scss/utility/main' as *;
 
 .content {
 	section {

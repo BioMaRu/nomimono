@@ -1,4 +1,7 @@
-.#{$prefix}input {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}input {
 	font-size: var(--form-element-medium-font-size);
 	font-weight: 400;
 	position: relative;
@@ -6,12 +9,12 @@
 	flex-direction: column;
 	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);
-	gap: toEm(6);
+	gap: h.toEm(6);
 
 	input {
 		@extend %base-input;
 
-		padding: 0 toEm(12);
+		padding: 0 h.toEm(12);
 	}
 
 	input[readonly] {

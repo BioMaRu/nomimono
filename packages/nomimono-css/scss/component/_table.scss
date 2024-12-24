@@ -1,8 +1,11 @@
-.#{$prefix}table-container {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}table-container {
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border-radius: var(--table-border-radius, toRem(4));
+	border-radius: var(--table-border-radius, h.toRem(4));
 
 	&.is-scroll-padding {
 		padding-right: #{toRem(16)};
@@ -19,12 +22,12 @@
 		bottom: 1px;
 		display: block;
 		content: ' ';
-		border-bottom: var(--table-border-width, toRem(1)) solid
+		border-bottom: var(--table-border-width, h.toRem(1)) solid
 			var(--table-border-color, hsl(var(--hsl-line) / 0.8));
 	}
 }
 
-.#{$prefix}table {
+.#{c.$prefix}table {
 	overflow-x: auto;
 	overflow-y: visible;
 
@@ -36,12 +39,12 @@
 	word-break: normal;
 
 	thead {
-		font-size: var(--table-head-font-size, toRem(15));
+		font-size: var(--table-head-font-size, h.toRem(15));
 		overflow: hidden;
 	}
 
 	tbody {
-		font-size: var(--table-data-font-size, toRem(14));
+		font-size: var(--table-data-font-size, h.toRem(14));
 	}
 
 	th,
@@ -50,15 +53,15 @@
 		vertical-align: middle;
 
 		&:first-child {
-			padding-left: var(--table-side-padding, toEm(24));
+			padding-left: var(--table-side-padding, h.toEm(24));
 		}
 
 		&:not(:first-child) {
-			padding-left: var(--table-gutter, toEm(24));
+			padding-left: var(--table-gutter, h.toEm(24));
 		}
 
 		&:last-child {
-			padding-right: var(--table-side-padding, toEm(24));
+			padding-right: var(--table-side-padding, h.toEm(24));
 		}
 
 		&.is-align-left {
@@ -75,7 +78,7 @@
 	}
 
 	td {
-		padding: var(--table-data-vertical-padding, toRem(16)) 0;
+		padding: var(--table-data-vertical-padding, h.toRem(16)) 0;
 		white-space: nowrap;
 
 		p {
@@ -96,7 +99,7 @@
 		border-collapse: separate;
 		white-space: nowrap;
 		color: hsl(var(--hsl-content) / 1);
-		border-bottom: toRem(1) solid
+		border-bottom: h.toRem(1) solid
 			var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
 		background: var(--table-head-background, hsl(var(--hsl-base-200)));
 
@@ -111,15 +114,15 @@
 
 	tr:not(:last-child) {
 		td {
-			border-bottom: toRem(1) solid
+			border-bottom: h.toRem(1) solid
 				var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
 		}
 	}
 
 	&.is-variant-compact {
 		tr td {
-			padding-top: toRem(10);
-			padding-bottom: toRem(10);
+			padding-top: h.toRem(10);
+			padding-bottom: h.toRem(10);
 		}
 	}
 

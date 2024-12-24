@@ -1,35 +1,38 @@
-.#{$atom-prefix}gatf-r {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}gatf-r {
 	grid-auto-flow: row !important;
 }
-.#{$atom-prefix}gatf-cl {
+.#{c.$atom-prefix}gatf-cl {
 	grid-auto-flow: column !important;
 }
-.#{$atom-prefix}gatf-d {
+.#{c.$atom-prefix}gatf-d {
 	grid-auto-flow: dense !important;
 }
-.#{$atom-prefix}gatf-rd {
+.#{c.$atom-prefix}gatf-rd {
 	grid-auto-flow: row dense !important;
 }
-.#{$atom-prefix}gatf-cld {
+.#{c.$atom-prefix}gatf-cld {
 	grid-auto-flow: column dense !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}gatf-r\:#{$breakpointName} {
+		.#{c.$atom-prefix}gatf-r\:#{$breakpointName} {
 			grid-auto-flow: row !important;
 		}
-		.#{$atom-prefix}gatf-cl\:#{$breakpointName} {
+		.#{c.$atom-prefix}gatf-cl\:#{$breakpointName} {
 			grid-auto-flow: column !important;
 		}
-		.#{$atom-prefix}gatf-d\:#{$breakpointName} {
+		.#{c.$atom-prefix}gatf-d\:#{$breakpointName} {
 			grid-auto-flow: dense !important;
 		}
-		.#{$atom-prefix}gatf-rd\:#{$breakpointName} {
+		.#{c.$atom-prefix}gatf-rd\:#{$breakpointName} {
 			grid-auto-flow: row dense !important;
 		}
-		.#{$atom-prefix}gatf-cld\:#{$breakpointName} {
+		.#{c.$atom-prefix}gatf-cld\:#{$breakpointName} {
 			grid-auto-flow: column dense !important;
 		}
 	}
-} ;
+}

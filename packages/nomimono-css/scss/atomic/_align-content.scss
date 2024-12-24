@@ -1,71 +1,74 @@
-.#{$atom-prefix}alct-ct {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}alct-ct {
 	align-content: center !important;
 }
-.#{$atom-prefix}alct-st {
+.#{c.$atom-prefix}alct-st {
 	align-content: start !important;
 }
-.#{$atom-prefix}alct-e {
+.#{c.$atom-prefix}alct-e {
 	align-content: end !important;
 }
-.#{$atom-prefix}alct-fst {
+.#{c.$atom-prefix}alct-fst {
 	align-content: flex-start !important;
 }
-.#{$atom-prefix}alct-fe {
+.#{c.$atom-prefix}alct-fe {
 	align-content: flex-end !important;
 }
-.#{$atom-prefix}alct-nm {
+.#{c.$atom-prefix}alct-nm {
 	align-content: normal !important;
 }
-.#{$atom-prefix}alct-bl {
+.#{c.$atom-prefix}alct-bl {
 	align-content: baseline !important;
 }
-.#{$atom-prefix}alct-spbtw {
+.#{c.$atom-prefix}alct-spbtw {
 	align-content: space-between !important;
 }
-.#{$atom-prefix}alct-spar {
+.#{c.$atom-prefix}alct-spar {
 	align-content: space-around !important;
 }
-.#{$atom-prefix}alct-spevl {
+.#{c.$atom-prefix}alct-spevl {
 	align-content: space-evenly !important;
 }
-.#{$atom-prefix}alct-str {
+.#{c.$atom-prefix}alct-str {
 	align-content: stretch !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}alct-st\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-st\:#{$breakpointName} {
 			align-content: start !important;
 		}
-		.#{$atom-prefix}alct-e\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-e\:#{$breakpointName} {
 			align-content: end !important;
 		}
-		.#{$atom-prefix}alct-ct\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-ct\:#{$breakpointName} {
 			align-content: center !important;
 		}
-		.#{$atom-prefix}alct-fst\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-fst\:#{$breakpointName} {
 			align-content: flex-start !important;
 		}
-		.#{$atom-prefix}alct-fe\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-fe\:#{$breakpointName} {
 			align-content: flex-end !important;
 		}
-		.#{$atom-prefix}alct-nm\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-nm\:#{$breakpointName} {
 			align-content: normal !important;
 		}
-		.#{$atom-prefix}alct-bl\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-bl\:#{$breakpointName} {
 			align-content: baseline !important;
 		}
-		.#{$atom-prefix}alct-spbtw\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-spbtw\:#{$breakpointName} {
 			align-content: space-between !important;
 		}
-		.#{$atom-prefix}alct-spar\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-spar\:#{$breakpointName} {
 			align-content: space-around !important;
 		}
-		.#{$atom-prefix}alct-spevl\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-spevl\:#{$breakpointName} {
 			align-content: space-evenly !important;
 		}
-		.#{$atom-prefix}alct-str\:#{$breakpointName} {
+		.#{c.$atom-prefix}alct-str\:#{$breakpointName} {
 			align-content: stretch !important;
 		}
 	}
-} ;
+}

@@ -1,15 +1,38 @@
-.#{$atom-prefix}pst-stt { position: static !important; }
-.#{$atom-prefix}pst-rlt { position: relative !important; }
-.#{$atom-prefix}pst-asl { position: absolute !important; }
-.#{$atom-prefix}pst-f   { position: fixed !important; }
-.#{$atom-prefix}pst-stk { position: sticky !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}pst-stt {
+	position: static !important;
+}
+.#{c.$atom-prefix}pst-rlt {
+	position: relative !important;
+}
+.#{c.$atom-prefix}pst-asl {
+	position: absolute !important;
+}
+.#{c.$atom-prefix}pst-f {
+	position: fixed !important;
+}
+.#{c.$atom-prefix}pst-stk {
+	position: sticky !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}pst-stt\:#{$breakpointName} { position: static !important; }
-		.#{$atom-prefix}pst-rlt\:#{$breakpointName} { position: relative !important; }
-		.#{$atom-prefix}pst-asl\:#{$breakpointName} { position: absolute !important; }
-		.#{$atom-prefix}pst-f\:#{$breakpointName}   { position: fixed !important; }
-		.#{$atom-prefix}pst-stk\:#{$breakpointName} { position: sticky !important; }
-	};
-};
+		.#{c.$atom-prefix}pst-stt\:#{$breakpointName} {
+			position: static !important;
+		}
+		.#{c.$atom-prefix}pst-rlt\:#{$breakpointName} {
+			position: relative !important;
+		}
+		.#{c.$atom-prefix}pst-asl\:#{$breakpointName} {
+			position: absolute !important;
+		}
+		.#{c.$atom-prefix}pst-f\:#{$breakpointName} {
+			position: fixed !important;
+		}
+		.#{c.$atom-prefix}pst-stk\:#{$breakpointName} {
+			position: sticky !important;
+		}
+	}
+}

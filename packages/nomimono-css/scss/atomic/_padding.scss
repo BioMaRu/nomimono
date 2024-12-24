@@ -1,23 +1,58 @@
-@each $key, $value in $margin_padding {
-	.#{$atom-prefix}pd-#{$key} { padding: #{$value} !important; }
-	.#{$atom-prefix}pdl-#{$key} { padding-left: #{$value} !important; }
-	.#{$atom-prefix}pdr-#{$key} { padding-right: #{$value} !important; }
-	.#{$atom-prefix}pdt-#{$key} { padding-top: #{$value} !important; }
-	.#{$atom-prefix}pdbt-#{$key} { padding-bottom: #{$value} !important; }
-	.#{$atom-prefix}pdv-#{$key} { padding-top: #{$value} !important; padding-bottom: #{$value} !important; }
-	.#{$atom-prefix}pdh-#{$key} { padding-left: #{$value} !important; padding-right: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$margin_padding {
+	.#{c.$atom-prefix}pd-#{$key} {
+		padding: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdl-#{$key} {
+		padding-left: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdr-#{$key} {
+		padding-right: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdt-#{$key} {
+		padding-top: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdbt-#{$key} {
+		padding-bottom: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdv-#{$key} {
+		padding-top: #{$value} !important;
+		padding-bottom: #{$value} !important;
+	}
+	.#{c.$atom-prefix}pdh-#{$key} {
+		padding-left: #{$value} !important;
+		padding-right: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $margin_padding {
-			.#{$atom-prefix}pd-#{$key}\:#{$breakpointName}   { padding: #{$value} !important; }
-			.#{$atom-prefix}pdl-#{$key}\:#{$breakpointName}  { padding-left: #{$value} !important; }
-			.#{$atom-prefix}pdr-#{$key}\:#{$breakpointName}  { padding-right: #{$value} !important; }
-			.#{$atom-prefix}pdt-#{$key}\:#{$breakpointName}  { padding-top: #{$value} !important; }
-			.#{$atom-prefix}pdbt-#{$key}\:#{$breakpointName} { padding-bottom: #{$value} !important; }
-			.#{$atom-prefix}pdv-#{$key}\:#{$breakpointName}  { padding-top: #{$value} !important; padding-bottom: #{$value} !important; }
-			.#{$atom-prefix}pdh-#{$key}\:#{$breakpointName}  { padding-left: #{$value} !important; padding-right: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$margin_padding {
+			.#{c.$atom-prefix}pd-#{$key}\:#{$breakpointName} {
+				padding: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdl-#{$key}\:#{$breakpointName} {
+				padding-left: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdr-#{$key}\:#{$breakpointName} {
+				padding-right: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdt-#{$key}\:#{$breakpointName} {
+				padding-top: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdbt-#{$key}\:#{$breakpointName} {
+				padding-bottom: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdv-#{$key}\:#{$breakpointName} {
+				padding-top: #{$value} !important;
+				padding-bottom: #{$value} !important;
+			}
+			.#{c.$atom-prefix}pdh-#{$key}\:#{$breakpointName} {
+				padding-left: #{$value} !important;
+				padding-right: #{$value} !important;
+			}
+		}
+	}
+}

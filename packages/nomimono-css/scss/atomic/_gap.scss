@@ -1,25 +1,28 @@
-@each $key, $value in $gap {
-	.#{$atom-prefix}g-#{$key} {
+@use 'config' as c;
+@use 'helper' as h;
+
+@each $key, $value in c.$gap {
+	.#{c.$atom-prefix}g-#{$key} {
 		gap: #{$value} !important;
 	}
-	.#{$atom-prefix}rg-#{$key} {
+	.#{c.$atom-prefix}rg-#{$key} {
 		row-gap: #{$value} !important;
 	}
-	.#{$atom-prefix}clg-#{$key} {
+	.#{c.$atom-prefix}clg-#{$key} {
 		column-gap: #{$value} !important;
 	}
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $gap {
-			.#{$atom-prefix}g-#{$key}\:#{$breakpointName} {
+		@each $key, $value in c.$gap {
+			.#{c.$atom-prefix}g-#{$key}\:#{$breakpointName} {
 				gap: #{$value} !important;
 			}
-			.#{$atom-prefix}rg-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}rg-#{$key}\:#{$breakpointName} {
 				row-gap: #{$value} !important;
 			}
-			.#{$atom-prefix}clg-#{$key}\:#{$breakpointName} {
+			.#{c.$atom-prefix}clg-#{$key}\:#{$breakpointName} {
 				column-gap: #{$value} !important;
 			}
 		}

@@ -1,27 +1,7 @@
-@import '../helper/all';
-@import 'config';
+@use 'config' as c;
+@use 'helper' as h;
 
-.#{$prefix}switch {
-	@keyframes checkbox-animate {
-		0% {
-			transform: scale(0.85);
-		}
-
-		100% {
-			transform: scale(1);
-		}
-	}
-
-	@keyframes checkbox-int-animate {
-		0% {
-			transform: scale(0.85);
-		}
-
-		100% {
-			transform: scale(1);
-		}
-	}
-
+.#{c.$prefix}switch {
 	display: inline-flex;
 
 	input[type='checkbox'],
@@ -34,8 +14,8 @@
 		--base-opacity: 1;
 
 		flex-shrink: 0;
-		width: toRem(48);
-		height: toRem(24);
+		width: h.toRem(48);
+		height: h.toRem(24);
 		border-radius: 999px;
 		background-color: hsl(var(--handle-color) / var(--handle-opacity));
 		box-shadow: var(--handleoffsetcalculator) 0 0 2px
@@ -64,8 +44,28 @@
 
 	label {
 		font-weight: 500;
-		font-size: toRem(15);
+		font-size: h.toRem(15);
 		cursor: pointer;
 		user-select: none;
+	}
+
+	@keyframes checkbox-animate {
+		0% {
+			transform: scale(0.85);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes checkbox-int-animate {
+		0% {
+			transform: scale(0.85);
+		}
+
+		100% {
+			transform: scale(1);
+		}
 	}
 }

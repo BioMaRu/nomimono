@@ -1,15 +1,18 @@
-.#{$prefix}radio {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}radio {
 	display: flex;
 	align-items: center;
-	gap: toEm(8);
+	gap: h.toEm(8);
 
 	input {
 		flex-shrink: 0;
-		width: toEm(22);
-		height: toEm(22);
+		width: h.toEm(22);
+		height: h.toEm(22);
 		cursor: pointer;
 		transition: all 0.16s ease-in-out;
-		border-width: toEm(2);
+		border-width: h.toEm(2);
 		border-style: solid;
 		border-color: hsl(var(--hsl-content) / 0.3);
 		border-radius: 100%;
@@ -22,7 +25,8 @@
 			border-style: solid;
 			border-color: hsl(var(--hsl-primary));
 			background: hsl(var(--hsl-primary));
-			box-shadow: 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset, 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset;
+			box-shadow: 0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset,
+				0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset;
 
 			&[disabled] {
 				opacity: 0.7;
@@ -43,17 +47,19 @@
 	}
 
 	label {
-		font-size: toRem(15);
+		font-size: h.toRem(15);
 		font-weight: 500;
 		cursor: pointer;
 	}
 
 	@keyframes radio-animate {
 		0% {
-			box-shadow: 0 0 0 0 hsl(var(--hsl-base-100)) inset, 0 0 0 0 hsl(var(--hsl-base-100)) inset;
+			box-shadow: 0 0 0 0 hsl(var(--hsl-base-100)) inset,
+				0 0 0 0 hsl(var(--hsl-base-100)) inset;
 		}
 		100% {
-			box-shadow: 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset, 0 0 0 toEm(4) hsl(var(--hsl-base-100)) inset;
+			box-shadow: 0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset,
+				0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset;
 		}
 	}
 }

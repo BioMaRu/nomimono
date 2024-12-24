@@ -1,9 +1,20 @@
-.#{$atom-prefix}tovf-c   { text-overflow: clip !important; }
-.#{$atom-prefix}tovf-els { text-overflow: ellipsis !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}tovf-c {
+	text-overflow: clip !important;
+}
+.#{c.$atom-prefix}tovf-els {
+	text-overflow: ellipsis !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}tovf-c\:#{$breakpointName}   { text-overflow: clip !important; }
-		.#{$atom-prefix}tovf-els\:#{$breakpointName} { text-overflow: ellipsis !important; }
-	};
-};
+		.#{c.$atom-prefix}tovf-c\:#{$breakpointName} {
+			text-overflow: clip !important;
+		}
+		.#{c.$atom-prefix}tovf-els\:#{$breakpointName} {
+			text-overflow: ellipsis !important;
+		}
+	}
+}

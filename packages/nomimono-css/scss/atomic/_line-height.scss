@@ -1,11 +1,18 @@
-@each $key, $value in $line-heights {
-	.#{$atom-prefix}lh-#{$key} { line-height: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$line-heights {
+	.#{c.$atom-prefix}lh-#{$key} {
+		line-height: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $line-heights {
-			.#{$atom-prefix}lh-#{$key}\:#{$breakpointName} { line-height: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$line-heights {
+			.#{c.$atom-prefix}lh-#{$key}\:#{$breakpointName} {
+				line-height: #{$value} !important;
+			}
+		}
+	}
+}

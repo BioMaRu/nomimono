@@ -1,59 +1,62 @@
-.#{$atom-prefix}als-nm {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}als-nm {
 	align-self: normal !important;
 }
-.#{$atom-prefix}als-at {
+.#{c.$atom-prefix}als-at {
 	align-self: auto !important;
 }
-.#{$atom-prefix}als-ct {
+.#{c.$atom-prefix}als-ct {
 	align-self: center !important;
 }
-.#{$atom-prefix}als-st {
+.#{c.$atom-prefix}als-st {
 	align-self: start !important;
 }
-.#{$atom-prefix}als-e {
+.#{c.$atom-prefix}als-e {
 	align-self: end !important;
 }
-.#{$atom-prefix}als-fst {
+.#{c.$atom-prefix}als-fst {
 	align-self: flex-start !important;
 }
-.#{$atom-prefix}als-fe {
+.#{c.$atom-prefix}als-fe {
 	align-self: flex-end !important;
 }
-.#{$atom-prefix}als-str {
+.#{c.$atom-prefix}als-str {
 	align-self: stretch !important;
 }
-.#{$atom-prefix}als-bl {
+.#{c.$atom-prefix}als-bl {
 	align-self: baseline !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}als-nm\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-nm\:#{$breakpointName} {
 			align-self: normal !important;
 		}
-		.#{$atom-prefix}als-at\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-at\:#{$breakpointName} {
 			align-self: auto !important;
 		}
-		.#{$atom-prefix}als-ct\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-ct\:#{$breakpointName} {
 			align-self: center !important;
 		}
-		.#{$atom-prefix}als-st\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-st\:#{$breakpointName} {
 			align-self: start !important;
 		}
-		.#{$atom-prefix}als-e\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-e\:#{$breakpointName} {
 			align-self: end !important;
 		}
-		.#{$atom-prefix}als-fst\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-fst\:#{$breakpointName} {
 			align-self: flex-start !important;
 		}
-		.#{$atom-prefix}als-fe\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-fe\:#{$breakpointName} {
 			align-self: flex-end !important;
 		}
-		.#{$atom-prefix}als-str\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-str\:#{$breakpointName} {
 			align-self: stretch !important;
 		}
-		.#{$atom-prefix}als-bl\:#{$breakpointName} {
+		.#{c.$atom-prefix}als-bl\:#{$breakpointName} {
 			align-self: baseline !important;
 		}
 	}
-} ;
+}

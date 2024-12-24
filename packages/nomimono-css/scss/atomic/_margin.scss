@@ -1,23 +1,58 @@
-@each $key, $value in $margin_padding {
-	.#{$atom-prefix}mg-#{$key}   { margin: #{$value} !important; }
-	.#{$atom-prefix}mgl-#{$key}  { margin-left: #{$value} !important; }
-	.#{$atom-prefix}mgr-#{$key}  { margin-right: #{$value} !important; }
-	.#{$atom-prefix}mgt-#{$key}  { margin-top: #{$value} !important; }
-	.#{$atom-prefix}mgbt-#{$key} { margin-bottom: #{$value} !important; }
-	.#{$atom-prefix}mgv-#{$key}  { margin-top: #{$value} !important; margin-bottom: #{$value} !important; }
-	.#{$atom-prefix}mgh-#{$key}  { margin-left: #{$value} !important; margin-right: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$margin_padding {
+	.#{c.$atom-prefix}mg-#{$key} {
+		margin: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgl-#{$key} {
+		margin-left: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgr-#{$key} {
+		margin-right: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgt-#{$key} {
+		margin-top: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgbt-#{$key} {
+		margin-bottom: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgv-#{$key} {
+		margin-top: #{$value} !important;
+		margin-bottom: #{$value} !important;
+	}
+	.#{c.$atom-prefix}mgh-#{$key} {
+		margin-left: #{$value} !important;
+		margin-right: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $margin_padding {
-			.#{$atom-prefix}mg-#{$key}\:#{$breakpointName}   { margin: #{$value} !important; }
-			.#{$atom-prefix}mgl-#{$key}\:#{$breakpointName}  { margin-left: #{$value} !important; }
-			.#{$atom-prefix}mgr-#{$key}\:#{$breakpointName}  { margin-right: #{$value} !important; }
-			.#{$atom-prefix}mgt-#{$key}\:#{$breakpointName}  { margin-top: #{$value} !important; }
-			.#{$atom-prefix}mgbt-#{$key}\:#{$breakpointName} { margin-bottom: #{$value} !important; }
-			.#{$atom-prefix}mgv-#{$key}\:#{$breakpointName}  { margin-top: #{$value} !important; margin-bottom: #{$value} !important; }
-			.#{$atom-prefix}mgh-#{$key}\:#{$breakpointName}  { margin-left: #{$value} !important; margin-right: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$margin_padding {
+			.#{c.$atom-prefix}mg-#{$key}\:#{$breakpointName} {
+				margin: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgl-#{$key}\:#{$breakpointName} {
+				margin-left: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgr-#{$key}\:#{$breakpointName} {
+				margin-right: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgt-#{$key}\:#{$breakpointName} {
+				margin-top: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgbt-#{$key}\:#{$breakpointName} {
+				margin-bottom: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgv-#{$key}\:#{$breakpointName} {
+				margin-top: #{$value} !important;
+				margin-bottom: #{$value} !important;
+			}
+			.#{c.$atom-prefix}mgh-#{$key}\:#{$breakpointName} {
+				margin-left: #{$value} !important;
+				margin-right: #{$value} !important;
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 @function toRem($value) {
 	$r: math.div($value, 16) + rem;
@@ -53,8 +53,9 @@
 		border-color: hsl(var(--hsl-content) / 0.25);
 	}
 
-	&:focus, :active {
+	&:focus,
+	:active {
 		border-color: hsl(var(--hsl-primary));
-		box-shadow: 0 0 0 .175rem hsl(var(--hsl-primary) / 0.3);
+		box-shadow: 0 0 0 0.175rem hsl(var(--hsl-primary) / 0.3);
 	}
 }

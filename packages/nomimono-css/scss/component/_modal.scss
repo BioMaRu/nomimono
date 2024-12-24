@@ -1,18 +1,21 @@
-input[type="checkbox"].#{$prefix}modal-state {
+@use 'config' as c;
+@use 'helper' as h;
+
+input[type='checkbox'].#{c.$prefix}modal-state {
 	display: none;
 
-	&:checked + .#{$prefix}modal {
+	&:checked + .#{c.$prefix}modal {
 		visibility: visible;
 		pointer-events: all;
 		opacity: 1;
 
-		.#{$prefix}modal-panel {
+		.#{c.$prefix}modal-panel {
 			transform: translate3d(0, 0, 0);
 		}
 	}
 }
 
-.#{$prefix}modal {
+.#{c.$prefix}modal {
 	position: fixed;
 	z-index: var(--modal-z-index, 9999);
 	top: 0;
@@ -40,7 +43,7 @@ input[type="checkbox"].#{$prefix}modal-state {
 		content: '';
 	}
 
-	.#{$prefix}modal-panel {
+	.#{c.$prefix}modal-panel {
 		position: relative;
 		width: 100%;
 		max-width: var(--modal-panel-width, 32rem);
@@ -48,12 +51,15 @@ input[type="checkbox"].#{$prefix}modal-state {
 		transition: all 0.16s ease-in-out;
 		transform: translate3d(0, -12px, 0);
 		border-radius: var(--modal-panel-border-radius, 0.75rem);
-		background: var(--modal-panel-background, hsl(var(--hsl-base-100) / var(--bgcl-opacity)));
+		background: var(
+			--modal-panel-background,
+			hsl(var(--hsl-base-100) / var(--bgcl-opacity))
+		);
 		box-shadow: var(--box-shadow-200);
 		--bgcl-opacity: 1;
 	}
 
-	.#{$prefix}modal-close {
+	.#{c.$prefix}modal-close {
 		font-weight: 600;
 		position: absolute;
 		top: 0.5rem;
@@ -65,7 +71,7 @@ input[type="checkbox"].#{$prefix}modal-state {
 		height: 2.5rem;
 		cursor: pointer;
 		color: hsl(var(--hsl-content) / 0.7);
-		border-radius: toRem(8);
+		border-radius: h.toRem(8);
 		background: hsl(var(--hsl-base-300) / 0.5);
 
 		&:hover {
@@ -78,7 +84,7 @@ input[type="checkbox"].#{$prefix}modal-state {
 		pointer-events: all;
 		opacity: 1;
 
-		.#{$prefix}modal-panel {
+		.#{c.$prefix}modal-panel {
 			transform: translate3d(0, 0, 0);
 		}
 	}

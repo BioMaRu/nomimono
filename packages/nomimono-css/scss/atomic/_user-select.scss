@@ -1,9 +1,20 @@
-.#{$atom-prefix}ussl-n { user-select: none !important; }
-.#{$atom-prefix}ussl-t { user-select: text !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}ussl-n {
+	user-select: none !important;
+}
+.#{c.$atom-prefix}ussl-t {
+	user-select: text !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}ussl-n\:#{$breakpointName} { user-select: none !important; }
-		.#{$atom-prefix}ussl-t\:#{$breakpointName} { user-select: text !important; }
-	};
-};
+		.#{c.$atom-prefix}ussl-n\:#{$breakpointName} {
+			user-select: none !important;
+		}
+		.#{c.$atom-prefix}ussl-t\:#{$breakpointName} {
+			user-select: text !important;
+		}
+	}
+}

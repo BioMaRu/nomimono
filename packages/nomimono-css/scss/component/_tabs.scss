@@ -1,4 +1,7 @@
-.#{$prefix}tabs {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}tabs {
 	position: relative;
 	display: inline-flex;
 
@@ -26,13 +29,13 @@
 	}
 
 	&.is-variant-button {
-		border-radius: toEm(8);
+		border-radius: h.toEm(8);
 		background-color: hsl(var(--hsl-content-inv) / 0.3);
 
 		.tab-button {
 			margin: 0;
 			padding: var(--tab-padding);
-			border-radius: toEm(8);
+			border-radius: h.toEm(8);
 
 			&.is-active {
 				color: hsl(var(--hsl-primary-content));
@@ -42,7 +45,7 @@
 	}
 
 	&.is-variant-bordered {
-		border-radius: toEm(8);
+		border-radius: h.toEm(8);
 
 		.tab-button {
 			margin: 0;
@@ -53,7 +56,8 @@
 			border-right: var(--tab-border-width) solid transparent;
 			border-bottom: 1px solid hsl(var(--hsl-line));
 			border-left: var(--tab-border-width) solid transparent;
-			border-radius: var(--tab-border-radius) var(--tab-border-radius) toEm(0) toEm(0);
+			border-radius: var(--tab-border-radius) var(--tab-border-radius)
+				toEm(0) h.toEm(0);
 
 			&.is-active {
 				border-top: var(--tab-border-width) solid hsl(var(--hsl-line));

@@ -1,11 +1,18 @@
-@each $key, $value in $font-sizes {
-	.#{$atom-prefix}fs-#{$key} { font-size: #{$value} !important; }
-};
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $key, $value in c.$font-sizes {
+	.#{c.$atom-prefix}fs-#{$key} {
+		font-size: #{$value} !important;
+	}
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		@each $key, $value in $font-sizes {
-			.#{$atom-prefix}fs-#{$key}\:#{$breakpointName} { font-size: #{$value} !important; }
-		};
-	};
-};
+		@each $key, $value in c.$font-sizes {
+			.#{c.$atom-prefix}fs-#{$key}\:#{$breakpointName} {
+				font-size: #{$value} !important;
+			}
+		}
+	}
+}

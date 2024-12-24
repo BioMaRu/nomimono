@@ -1,17 +1,44 @@
-.#{$atom-prefix}jtfs-st  { justify-self: start !important; }
-.#{$atom-prefix}jtfs-e   { justify-self: end !important; }
-.#{$atom-prefix}jtfs-fst { justify-self: flex-start !important; }
-.#{$atom-prefix}jtfs-fe  { justify-self: flex-end !important; }
-.#{$atom-prefix}jtfs-ct  { justify-self: center !important; }
-.#{$atom-prefix}jtfs-str { justify-self: stretch !important; }
+@use 'config' as c;
+@use 'helper' as h;
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+.#{c.$atom-prefix}jtfs-st {
+	justify-self: start !important;
+}
+.#{c.$atom-prefix}jtfs-e {
+	justify-self: end !important;
+}
+.#{c.$atom-prefix}jtfs-fst {
+	justify-self: flex-start !important;
+}
+.#{c.$atom-prefix}jtfs-fe {
+	justify-self: flex-end !important;
+}
+.#{c.$atom-prefix}jtfs-ct {
+	justify-self: center !important;
+}
+.#{c.$atom-prefix}jtfs-str {
+	justify-self: stretch !important;
+}
+
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}jtfs-st\:#{$breakpointName}  { justify-self: start !important; }
-		.#{$atom-prefix}jtfs-e\:#{$breakpointName}   { justify-self: end !important; }
-		.#{$atom-prefix}jtfs-fst\:#{$breakpointName} { justify-self: flex-start !important; }
-		.#{$atom-prefix}jtfs-fe\:#{$breakpointName}  { justify-self: flex-end !important; }
-		.#{$atom-prefix}jtfs-ct\:#{$breakpointName}  { justify-self: center !important; }
-		.#{$atom-prefix}jtfs-str\:#{$breakpointName} { justify-self: stretch !important; }
-	};
-};
+		.#{c.$atom-prefix}jtfs-st\:#{$breakpointName} {
+			justify-self: start !important;
+		}
+		.#{c.$atom-prefix}jtfs-e\:#{$breakpointName} {
+			justify-self: end !important;
+		}
+		.#{c.$atom-prefix}jtfs-fst\:#{$breakpointName} {
+			justify-self: flex-start !important;
+		}
+		.#{c.$atom-prefix}jtfs-fe\:#{$breakpointName} {
+			justify-self: flex-end !important;
+		}
+		.#{c.$atom-prefix}jtfs-ct\:#{$breakpointName} {
+			justify-self: center !important;
+		}
+		.#{c.$atom-prefix}jtfs-str\:#{$breakpointName} {
+			justify-self: stretch !important;
+		}
+	}
+}

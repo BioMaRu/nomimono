@@ -1,23 +1,26 @@
-.#{$atom-prefix}islt-at {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$atom-prefix}islt-at {
 	isolation: auto !important;
 }
-.#{$atom-prefix}islt-isl {
+.#{c.$atom-prefix}islt-isl {
 	isolation: isolate !important;
 }
-.#{$atom-prefix}islt-us {
+.#{c.$atom-prefix}islt-us {
 	isolation: unset !important;
 }
 
-@each $breakpointName, $breakpointSize in $breakpoints {
+@each $breakpointName, $breakpointSize in c.$breakpoints {
 	@media (min-width: $breakpointSize) {
-		.#{$atom-prefix}islt-at\:#{$breakpointName} {
+		.#{c.$atom-prefix}islt-at\:#{$breakpointName} {
 			isolation: auto !important;
 		}
-		.#{$atom-prefix}islt-isl\:#{$breakpointName} {
+		.#{c.$atom-prefix}islt-isl\:#{$breakpointName} {
 			isolation: isolate !important;
 		}
-		.#{$atom-prefix}islt-us\:#{$breakpointName} {
+		.#{c.$atom-prefix}islt-us\:#{$breakpointName} {
 			isolation: unset !important;
 		}
 	}
-} ;
+}

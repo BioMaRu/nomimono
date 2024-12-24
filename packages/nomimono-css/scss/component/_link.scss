@@ -1,4 +1,7 @@
-.#{$prefix}link {
+@use 'config' as c;
+@use 'helper' as h;
+
+.#{c.$prefix}link {
 	cursor: pointer;
 	text-decoration: none;
 	color: hsl(var(--hsl-primary));
