@@ -4,7 +4,7 @@
 .#{c.$prefix}dropdown {
 	position: relative;
 	display: inline-block;
-	--gap: #{h.toEm(4)};
+	--gap: #{h.toEm(4px)};
 
 	&:not(.is-hover-open) {
 		&:focus-within {

@@ -2,9 +2,9 @@
 @use 'helper' as h;
 
 .#{c.$prefix}card {
-	padding: h.toEm(16) h.toEm(24);
+	padding: h.toEm(16px) h.toEm(24px);
 	border: 1px solid hsl(var(--hsl-content) / 0.1);
-	border-radius: h.toEm(8);
+	border-radius: h.toEm(8px);
 	background-color: hsl(var(--hsl-base-100));
 
 	&.is-raised-100 {

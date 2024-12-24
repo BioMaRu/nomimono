@@ -310,6 +310,23 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@nomimono/nomimono-css@^0.4.16":
+  version "0.4.26"
+  resolved "https://registry.yarnpkg.com/@nomimono/nomimono-css/-/nomimono-css-0.4.26.tgz#b6a4d20535279bcfb406375847ef94ee667a825e"
+  integrity sha512-UXdl1jTdXssvvWPkqd1dprP+UFK7tP2RtXjcC0ctxB6eDNHm4ZmIngInYIE3qiChrwAL0vpYgwPwz56CWNLgSQ==
+
+"@nomimono/nomimono-theme@^0.4.3":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@nomimono/nomimono-theme/-/nomimono-theme-0.4.4.tgz#4326711a440766c9458f37fdc0a3342c1c51cce2"
+  integrity sha512-SoQNWcmSGJyC5BSKtTfJs1X50+MyQ3xmdiPTOaGNnFswZmdMW1S1jIFzlZbJJMfn35U/uRgXu78oAZMHz4zxZA==
+  dependencies:
+    gulp "^4.0.2"
+    gulp-autoprefixer "^8.0.0"
+    gulp-rename "^2.0.0"
+    gulp-sass "^5.1.0"
+    gulp-sync "^0.1.4"
+    sass "1.63.3"
+
 "@nrwl/devkit@16.10.0":
   version "16.10.0"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-16.10.0.tgz#ac8c5b4db00f12c4b817c937be2f7c4eb8f2593c"
@@ -5058,7 +5075,7 @@ sass@1.63.3:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-sass@1.83.0, sass@^1.63.3, sass@^1.83.0:
+sass@1.83.0, sass@^1.83.0:
   version "1.83.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.83.0.tgz#e36842c0b88a94ed336fd16249b878a0541d536f"
   integrity sha512-qsSxlayzoOjdvXMVLkzF84DJFc2HZEL/rFyGIKbbilYtAvlCxyuzUeff9LawTn4btVnLKg75Z8MMr1lxU1lfGw==

@@ -6,10 +6,10 @@
 	font-weight: 400;
 	position: relative;
 	display: flex;
-	padding: h.toRem(16) h.toRem(24);
+	padding: h.toRem(16px) h.toRem(24px);
 	color: hsl(var(--hsl-primary));
-	border: h.toRem(1) solid hsl(var(--hsl-primary) / 0.2);
-	border-radius: h.toRem(8);
+	border: h.toRem(1px) solid hsl(var(--hsl-primary) / 0.2);
+	border-radius: h.toRem(8px);
 	background: hsl(var(--hsl-primary) / 0.05);
 
 	> p {
@@ -24,13 +24,13 @@
 
 	.close {
 		position: absolute;
-		top: h.toRem(8);
-		right: h.toRem(8);
+		top: h.toRem(8px);
+		right: h.toRem(8px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: h.toRem(24);
-		height: h.toRem(24);
+		width: h.toRem(24px);
+		height: h.toRem(24px);
 		cursor: pointer;
 		transition: opacity 0.16s ease-in-out;
 		opacity: 0.7;
@@ -43,9 +43,9 @@
 		&:before,
 		&:after {
 			position: absolute;
-			left: h.toRem(11);
-			width: h.toRem(2);
-			height: h.toRem(16);
+			left: h.toRem(11px);
+			width: h.toRem(2px);
+			height: h.toRem(16px);
 			content: ' ';
 			background-color: currentColor;
 		}
@@ -60,36 +60,36 @@
 	}
 
 	&.is-show-close {
-		padding-right: h.toRem(44);
+		padding-right: h.toRem(44px);
 	}
 
 	&.is-show-icon {
 		> p {
-			padding-left: h.toRem(16);
+			padding-left: h.toRem(16px);
 		}
 	}
 
 	&.is-variant-positive {
 		color: hsl(var(--hsl-positive));
-		border: h.toRem(1) solid hsl(var(--hsl-positive) / 0.3);
+		border: h.toRem(1px) solid hsl(var(--hsl-positive) / 0.3);
 		background: hsl(var(--hsl-positive) / 0.05);
 	}
 
 	&.is-variant-negative {
 		color: hsl(var(--hsl-negative));
-		border: h.toRem(1) solid hsl(var(--hsl-negative) / 0.3);
+		border: h.toRem(1px) solid hsl(var(--hsl-negative) / 0.3);
 		background: hsl(var(--hsl-negative) / 0.05);
 	}
 
 	&.is-variant-warning {
 		color: hsl(var(--hsl-warning));
-		border: h.toRem(1) solid hsl(var(--hsl-warning) / 0.3);
+		border: h.toRem(1px) solid hsl(var(--hsl-warning) / 0.3);
 		background: hsl(var(--hsl-warning) / 0.05);
 	}
 
 	&.is-variant-info {
 		color: hsl(var(--hsl-info));
-		border: h.toRem(1) solid hsl(var(--hsl-info) / 0.3);
+		border: h.toRem(1px) solid hsl(var(--hsl-info) / 0.3);
 		background: hsl(var(--hsl-info) / 0.05);
 	}
 }

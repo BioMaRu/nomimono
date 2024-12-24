@@ -71,7 +71,7 @@ input[type='checkbox'].#{c.$prefix}modal-state {
 		height: 2.5rem;
 		cursor: pointer;
 		color: hsl(var(--hsl-content) / 0.7);
-		border-radius: h.toRem(8);
+		border-radius: h.toRem(8px);
 		background: hsl(var(--hsl-base-300) / 0.5);
 
 		&:hover {

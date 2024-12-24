@@ -29,13 +29,13 @@
 	}
 
 	&.is-variant-button {
-		border-radius: h.toEm(8);
+		border-radius: h.toEm(8px);
 		background-color: hsl(var(--hsl-content-inv) / 0.3);
 
 		.tab-button {
 			margin: 0;
 			padding: var(--tab-padding);
-			border-radius: h.toEm(8);
+			border-radius: h.toEm(8px);
 
 			&.is-active {
 				color: hsl(var(--hsl-primary-content));
@@ -45,7 +45,7 @@
 	}
 
 	&.is-variant-bordered {
-		border-radius: h.toEm(8);
+		border-radius: h.toEm(8px);
 
 		.tab-button {
 			margin: 0;
@@ -57,7 +57,7 @@
 			border-bottom: 1px solid hsl(var(--hsl-line));
 			border-left: var(--tab-border-width) solid transparent;
 			border-radius: var(--tab-border-radius) var(--tab-border-radius)
-				toEm(0) h.toEm(0);
+				toEm(0px) h.toEm(0px);
 
 			&.is-active {
 				border-top: var(--tab-border-width) solid hsl(var(--hsl-line));

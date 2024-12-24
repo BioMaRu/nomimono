@@ -9,13 +9,13 @@
 	flex-direction: column;
 	height: var(--form-element-medium-height);
 	border-radius: var(--form-element-border-radius);
-	gap: h.toEm(6);
+	gap: h.toEm(6px);
 
 	select {
 		@extend %base-input;
 
-		padding-right: h.toEm(32);
-		padding-left: h.toEm(12);
+		padding-right: h.toEm(32px);
+		padding-left: h.toEm(12px);
 		cursor: pointer;
 	}
 
@@ -28,10 +28,10 @@
 		position: absolute;
 		top: 50%;
 		right: 0.5em;
-		width: h.toEm(8);
-		height: h.toEm(8);
+		width: h.toEm(8px);
+		height: h.toEm(8px);
 		content: '';
-		transform: rotate(-45deg) translate(0, calc(-50% - #{h.toEm(4)}));
+		transform: rotate(-45deg) translate(0, calc(-50% - #{h.toEm(4px)}));
 		pointer-events: none;
 		border-bottom: 2px solid hsl(var(--hsl-content) / 0.7);
 		border-left: 2px solid hsl(var(--hsl-content) / 0.7);

@@ -44,7 +44,7 @@
 		"@nomimono/nomimono-theme": "^0.4.3",
 		"@zerodevx/svelte-toast": "^0.9.3",
 		"dayjs": "^1.11.8",
-		"sass": "^1.63.3",
+		"sass": "^1.83.0",
 		"sweetalert2": "^11.7.12",
 		"zod": "^3.21.4",
 		"prismjs": "^1.29.0",

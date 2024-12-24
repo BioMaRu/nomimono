@@ -6,7 +6,7 @@ build-nomimono-theme:
 
 patch-nomimono-theme:
 	npx nx run nomimono-theme:version \
-		--releaseAs=patch \
+		--releaseAs=minor \
 		--push=true \
 		--skipRootChangelog=true \
 		--skipProjectChangelog=true \
@@ -25,7 +25,7 @@ build-nomimono-css:
 
 patch-nomimono-css:
 	npx nx run nomimono-css:version \
-		--releaseAs=patch \
+		--releaseAs=minor \
 		--push=true \
 		--skipRootChangelog=true \
 		--skipProjectChangelog=true \

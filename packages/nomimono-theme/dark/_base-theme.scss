@@ -43,66 +43,66 @@
 	--ffml-secondary: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
 		Roboto, "Helvetica Neue", sans-serif;
 
-	--fs-14: #{h.toRem(72)};
-	--fs-13: #{h.toRem(56)};
-	--fs-12: #{h.toRem(48)};
-	--fs-11: #{h.toRem(40)};
-	--fs-10: #{h.toRem(36)};
-	--fs-9: #{h.toRem(32)};
-	--fs-8: #{h.toRem(28)};
-	--fs-7: #{h.toRem(24)};
-	--fs-6: #{h.toRem(20)};
-	--fs-5: #{h.toRem(18)};
-	--fs-4: #{h.toRem(16)};
-	--fs-3: #{h.toRem(15)};
-	--fs-2: #{h.toRem(14)};
-	--fs-1: #{h.toRem(12)};
+	--fs-14: #{h.toRem(72px)};
+	--fs-13: #{h.toRem(56px)};
+	--fs-12: #{h.toRem(48px)};
+	--fs-11: #{h.toRem(40px)};
+	--fs-10: #{h.toRem(36px)};
+	--fs-9: #{h.toRem(32px)};
+	--fs-8: #{h.toRem(28px)};
+	--fs-7: #{h.toRem(24px)};
+	--fs-6: #{h.toRem(20px)};
+	--fs-5: #{h.toRem(18px)};
+	--fs-4: #{h.toRem(16px)};
+	--fs-3: #{h.toRem(15px)};
+	--fs-2: #{h.toRem(14px)};
+	--fs-1: #{h.toRem(12px)};
 
 	/*
 	 * Spacing
 	 *********************************************/
-	--spc-0: #{h.toRem(0)};
-	--spc-1: #{h.toRem(1)};
-	--spc-2: #{h.toRem(2)};
-	--spc-3: #{h.toRem(4)};
-	--spc-4: #{h.toRem(8)};
-	--spc-5: #{h.toRem(12)};
-	--spc-6: #{h.toRem(16)};
-	--spc-7: #{h.toRem(24)};
-	--spc-8: #{h.toRem(32)};
-	--spc-9: #{h.toRem(40)};
-	--spc-10: #{h.toRem(48)};
-	--spc-11: #{h.toRem(64)};
-	--spc-12: #{h.toRem(96)};
-	--spc-13: #{h.toRem(128)};
+	--spc-0: #{h.toRem(0px)};
+	--spc-1: #{h.toRem(1px)};
+	--spc-2: #{h.toRem(2px)};
+	--spc-3: #{h.toRem(4px)};
+	--spc-4: #{h.toRem(8px)};
+	--spc-5: #{h.toRem(12px)};
+	--spc-6: #{h.toRem(16px)};
+	--spc-7: #{h.toRem(24px)};
+	--spc-8: #{h.toRem(32px)};
+	--spc-9: #{h.toRem(40px)};
+	--spc-10: #{h.toRem(48px)};
+	--spc-11: #{h.toRem(64px)};
+	--spc-12: #{h.toRem(96px)};
+	--spc-13: #{h.toRem(128px)};
 
 	/*
 	 * Box shadow
 	 *********************************************/
 	--bsd-hsl: 333deg 0% 50%;
-	--bsd-100: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.05),
-		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.05),
-		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.05),
-		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.05);
+	--bsd-100: 0 #{h.toRem(1px)} #{h.toRem(1px)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(2px)} #{h.toRem(2px)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(4px)} #{h.toRem(4px)} hsl(var(--bsd-hsl) / 0.05),
+		0 #{h.toRem(8px)} #{h.toRem(8px)} hsl(var(--bsd-hsl) / 0.05);
 
-	--bsd-200: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.075),
-		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.075),
-		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.075),
-		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.075),
-		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.075);
+	--bsd-200: 0 #{h.toRem(1px)} #{h.toRem(1px)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(2px)} #{h.toRem(2px)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(4px)} #{h.toRem(4px)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(8px)} #{h.toRem(8px)} hsl(var(--bsd-hsl) / 0.075),
+		0 #{h.toRem(16px)} #{h.toRem(16px)} hsl(var(--bsd-hsl) / 0.075);
 
-	--bsd-300: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.1),
-		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.1),
-		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.1),
-		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.1),
-		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.1),
-		0 #{h.toRem(32)} #{h.toRem(32)} hsl(var(--bsd-hsl) / 0.1);
+	--bsd-300: 0 #{h.toRem(1px)} #{h.toRem(1px)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(2px)} #{h.toRem(2px)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(4px)} #{h.toRem(4px)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(8px)} #{h.toRem(8px)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(16px)} #{h.toRem(16px)} hsl(var(--bsd-hsl) / 0.1),
+		0 #{h.toRem(32px)} #{h.toRem(32px)} hsl(var(--bsd-hsl) / 0.1);
 
-	--bsd-400: 0 #{h.toRem(1)} #{h.toRem(1)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(2)} #{h.toRem(2)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(4)} #{h.toRem(4)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(8)} #{h.toRem(8)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(16)} #{h.toRem(16)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(32)} #{h.toRem(32)} hsl(var(--bsd-hsl) / 0.15),
-		0 #{h.toRem(64)} #{h.toRem(64)} hsl(var(--bsd-hsl) / 0.15);
+	--bsd-400: 0 #{h.toRem(1px)} #{h.toRem(1px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(2px)} #{h.toRem(2px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(4px)} #{h.toRem(4px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(8px)} #{h.toRem(8px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(16px)} #{h.toRem(16px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(32px)} #{h.toRem(32px)} hsl(var(--bsd-hsl) / 0.15),
+		0 #{h.toRem(64px)} #{h.toRem(64px)} hsl(var(--bsd-hsl) / 0.15);
 }

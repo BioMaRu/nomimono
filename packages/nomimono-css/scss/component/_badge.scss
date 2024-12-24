@@ -8,10 +8,10 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: h.toEm(28);
-	padding: h.toEm(12);
+	height: h.toEm(28px);
+	padding: h.toEm(12px);
 	color: hsl(var(--hsl-primary));
-	border-radius: h.toRem(6);
+	border-radius: h.toRem(6px);
 	background: hsl(var(--hsl-primary) / 0.075);
 
 	&.is-variant-accent {

@@ -4,7 +4,7 @@
 .#{c.$prefix}checkbox {
 	display: flex;
 	align-items: center;
-	gap: h.toEm(8);
+	gap: h.toEm(8px);
 
 	&.is-indeterminate input,
 	input:indeterminate {
@@ -38,13 +38,13 @@
 
 	input {
 		flex-shrink: 0;
-		width: h.toEm(22);
-		height: h.toEm(22);
+		width: h.toEm(22px);
+		height: h.toEm(22px);
 		cursor: pointer;
-		border-width: h.toEm(2);
+		border-width: h.toEm(2px);
 		border-style: solid;
 		border-color: hsl(var(--hsl-content) / 0.3);
-		border-radius: h.toRem(6);
+		border-radius: h.toRem(6px);
 		background: transparent;
 		-webkit-appearance: none;
 		appearance: none;
@@ -98,7 +98,7 @@
 	}
 
 	label {
-		font-size: h.toRem(15);
+		font-size: h.toRem(15px);
 		font-weight: 500;
 		cursor: pointer;
 		user-select: none;

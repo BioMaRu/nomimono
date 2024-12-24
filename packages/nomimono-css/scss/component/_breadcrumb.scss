@@ -19,13 +19,13 @@
 				position: absolute;
 				top: 50%;
 				left: 24px;
-				width: h.toRem(8);
-				height: h.toRem(8);
+				width: h.toRem(8px);
+				height: h.toRem(8px);
 				border-bottom: 1px solid hsl(var(--hsl-content) / 0.3);
 				border-left: 1px solid hsl(var(--hsl-content) / 0.3);
 				pointer-events: none;
 				transform: rotate(-135deg)
-					translate(100%, calc(-0% - #{h.toRem(4)}));
+					translate(100%, calc(-0% - #{h.toRem(4px)}));
 			}
 		}
 	}

@@ -4,15 +4,15 @@
 .#{c.$prefix}radio {
 	display: flex;
 	align-items: center;
-	gap: h.toEm(8);
+	gap: h.toEm(8px);
 
 	input {
 		flex-shrink: 0;
-		width: h.toEm(22);
-		height: h.toEm(22);
+		width: h.toEm(22px);
+		height: h.toEm(22px);
 		cursor: pointer;
 		transition: all 0.16s ease-in-out;
-		border-width: h.toEm(2);
+		border-width: h.toEm(2px);
 		border-style: solid;
 		border-color: hsl(var(--hsl-content) / 0.3);
 		border-radius: 100%;
@@ -25,8 +25,8 @@
 			border-style: solid;
 			border-color: hsl(var(--hsl-primary));
 			background: hsl(var(--hsl-primary));
-			box-shadow: 0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset,
-				0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset;
+			box-shadow: 0 0 0 h.toEm(4px) hsl(var(--hsl-base-100)) inset,
+				0 0 0 h.toEm(4px) hsl(var(--hsl-base-100)) inset;
 
 			&[disabled] {
 				opacity: 0.7;
@@ -47,7 +47,7 @@
 	}
 
 	label {
-		font-size: h.toRem(15);
+		font-size: h.toRem(15px);
 		font-weight: 500;
 		cursor: pointer;
 	}
@@ -58,8 +58,8 @@
 				0 0 0 0 hsl(var(--hsl-base-100)) inset;
 		}
 		100% {
-			box-shadow: 0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset,
-				0 0 0 h.toEm(4) hsl(var(--hsl-base-100)) inset;
+			box-shadow: 0 0 0 h.toEm(4px) hsl(var(--hsl-base-100)) inset,
+				0 0 0 h.toEm(4px) hsl(var(--hsl-base-100)) inset;
 		}
 	}
 }

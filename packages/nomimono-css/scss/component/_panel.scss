@@ -2,8 +2,8 @@
 @use 'helper' as h;
 
 .#{c.$prefix}panel {
-	padding: h.toEm(16);
-	border-radius: h.toEm(4);
+	padding: h.toEm(16px);
+	border-radius: h.toEm(4px);
 	background: hsl(var(--hsl-base-100));
 
 	&.is-level-100 {

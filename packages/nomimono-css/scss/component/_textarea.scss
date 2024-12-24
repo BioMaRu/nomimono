@@ -8,12 +8,12 @@
 	display: block;
 	flex-direction: column;
 	border-radius: var(--form-element-border-radius);
-	gap: h.toEm(6);
+	gap: h.toEm(6px);
 
 	textarea {
 		@extend %base-input;
 
-		padding: h.toEm(12) h.toEm(12);
+		padding: h.toEm(12px) h.toEm(12px);
 	}
 
 	textarea[readonly] {

@@ -5,13 +5,13 @@
 	position: relative;
 	overflow-x: auto;
 	overflow-y: visible;
-	border-radius: var(--table-border-radius, h.toRem(4));
+	border-radius: var(--table-border-radius, h.toRem(4px));
 
 	&.is-scroll-padding {
-		padding-right: #{toRem(16)};
+		padding-right: #{h.toRem(16px)};
 
 		&:after {
-			padding-right: #{toRem(16)};
+			padding-right: #{h.toRem(16px)};
 		}
 	}
 
@@ -22,7 +22,7 @@
 		bottom: 1px;
 		display: block;
 		content: ' ';
-		border-bottom: var(--table-border-width, h.toRem(1)) solid
+		border-bottom: var(--table-border-width, h.toRem(1px)) solid
 			var(--table-border-color, hsl(var(--hsl-line) / 0.8));
 	}
 }
@@ -39,12 +39,12 @@
 	word-break: normal;
 
 	thead {
-		font-size: var(--table-head-font-size, h.toRem(15));
+		font-size: var(--table-head-font-size, h.toRem(15px));
 		overflow: hidden;
 	}
 
 	tbody {
-		font-size: var(--table-data-font-size, h.toRem(14));
+		font-size: var(--table-data-font-size, h.toRem(14px));
 	}
 
 	th,
@@ -53,15 +53,15 @@
 		vertical-align: middle;
 
 		&:first-child {
-			padding-left: var(--table-side-padding, h.toEm(24));
+			padding-left: var(--table-side-padding, h.toEm(24px));
 		}
 
 		&:not(:first-child) {
-			padding-left: var(--table-gutter, h.toEm(24));
+			padding-left: var(--table-gutter, h.toEm(24px));
 		}
 
 		&:last-child {
-			padding-right: var(--table-side-padding, h.toEm(24));
+			padding-right: var(--table-side-padding, h.toEm(24px));
 		}
 
 		&.is-align-left {
@@ -78,7 +78,7 @@
 	}
 
 	td {
-		padding: var(--table-data-vertical-padding, h.toRem(16)) 0;
+		padding: var(--table-data-vertical-padding, h.toRem(16px)) 0;
 		white-space: nowrap;
 
 		p {
@@ -93,13 +93,13 @@
 	th {
 		font-family: var(--table-head-font-family, var(--ffml-secondary));
 		font-weight: var(--table-head-font-weight, 600);
-		padding: var(--table-head-vertical-padding, #{toRem(12)}) 0;
+		padding: var(--table-head-vertical-padding, #{h.toRem(12px)}) 0;
 		border-spacing: 5px 5px;
 
 		border-collapse: separate;
 		white-space: nowrap;
 		color: hsl(var(--hsl-content) / 1);
-		border-bottom: h.toRem(1) solid
+		border-bottom: h.toRem(1px) solid
 			var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
 		background: var(--table-head-background, hsl(var(--hsl-base-200)));
 
@@ -114,15 +114,15 @@
 
 	tr:not(:last-child) {
 		td {
-			border-bottom: h.toRem(1) solid
+			border-bottom: h.toRem(1px) solid
 				var(--table-data-border-color, hsl(var(--hsl-line) / 0.7));
 		}
 	}
 
 	&.is-variant-compact {
 		tr td {
-			padding-top: h.toRem(10);
-			padding-bottom: h.toRem(10);
+			padding-top: h.toRem(10px);
+			padding-bottom: h.toRem(10px);
 		}
 	}
 
